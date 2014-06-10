@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+  <bean id="xxx" class="BeanClass"/>
+  <aop:config>
+    <aop:pointcut expression="args()" id="aaa"/>
+    <aop:pointcut expression="args(arg1, arg2)" id="bbb"/>
+    <aop:aspect ref="xxx">
+      <aop:after-returning method="writeRes" <error descr="arg-names should match formal method parameter names">arg-names</error>= <error descr="Attribute value expected">r</error>eturning="arg2" pointcut="execution(* *(..)) and args(arg1)"/>
+      <<warning descr="arg-names attribute isn't defined">aop:before</warning> method="writeRes" pointcut-ref="bbb"/>
+      <<warning descr="ProceedingJoinPoint as first parameter is allowed only in @Around advices">aop:before</warning> method="writeRes2" pointcut-ref="aaa"/>
+    </aop:aspect>
+  </aop:config>
+</beans>

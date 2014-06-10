@@ -1,0 +1,3 @@
+#* @implicitly included *#
+#* @vtlvariable name="someVarExternal" type="long" file="externalImplicitVariable.test.vm" *#
+#* @velocityproperties path="velocity.properties"  runtime_root="runtime" *#

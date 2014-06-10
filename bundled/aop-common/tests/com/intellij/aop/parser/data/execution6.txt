@@ -1,0 +1,5 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiErrorElement:( expected
+      <empty list>

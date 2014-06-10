@@ -1,0 +1,26 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  AopBinaryExpression
+    PsiIfPointcutExpression
+      PsiElement(AOP_IF)('if')
+      PsiElement(AOP_LEFT_PAR)('(')
+      PsiElement(AOP_BOOLEAN_LITERAL)('true')
+      PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_OR)('||')
+    AopBinaryExpression
+      AopBinaryExpression
+        PsiIfPointcutExpression
+          PsiElement(AOP_IF)('if')
+          PsiElement(AOP_LEFT_PAR)('(')
+          PsiElement(AOP_BOOLEAN_LITERAL)('false')
+          PsiElement(AOP_RIGHT_PAR)(')')
+        PsiElement(AOP_AND)('&&')
+        PsiIfPointcutExpression
+          PsiElement(AOP_IF)('if')
+          PsiElement(AOP_LEFT_PAR)('(')
+          PsiElement(AOP_RIGHT_PAR)(')')
+      PsiElement(AOP_AND)('&&')
+      PsiIfPointcutExpression
+        PsiElement(AOP_IF)('if')
+        PsiElement(AOP_LEFT_PAR)('(')
+        PsiErrorElement:) expected
+          <empty list>

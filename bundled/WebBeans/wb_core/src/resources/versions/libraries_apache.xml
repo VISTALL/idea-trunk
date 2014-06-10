@@ -1,0 +1,6 @@
+<libraries default-ri="Apache"
+           default-download-url="http://download.jetbrains.com/idea/j2ee_libs/webBeans/$RI$/$VERSION$/"
+           default-presentation-url="http://download.jetbrains.com">
+  <lib version="1.0.0-incubating-M1" jar-name="openwebbeans-api.jar" required-classes="javax.annotation.Named"/>
+  <lib version="1.0.0-incubating-M1" jar-name="openwebbeans-impl.jar" required-classes="org.apache.webbeans.component.Component"/>
+</libraries>

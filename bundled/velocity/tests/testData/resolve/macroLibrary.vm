@@ -1,0 +1,2 @@
+#macro(secondMacro $param)
+#end

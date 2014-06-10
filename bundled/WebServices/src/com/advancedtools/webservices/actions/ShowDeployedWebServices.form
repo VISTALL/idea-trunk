@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.advancedtools.webservices.actions.ShowDeployedWebSevicesDialog">
+  <grid id="6710a" binding="panel" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="121" y="102" width="217" height="78"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="50e23" class="javax.swing.JLabel" binding="contextNameText">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Context name"/>
+        </properties>
+      </component>
+      <grid id="98ee8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="f6b3f" class="com.intellij.openapi.ui.ComboBox" binding="contextNames">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <editable value="true"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="9a2c9" class="javax.swing.JLabel" binding="statusText">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Status"/>
+          <toolTipText resource-bundle="com.advancedtools.webservices.WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="99a48" class="javax.swing.JLabel" binding="status">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="8c7fb" class="javax.swing.JLabel" binding="portText">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Monitoring port"/>
+          <toolTipText resource-bundle="com.advancedtools.webservices.WSBundle" key="webservice.monitoring.port.tooltip"/>
+        </properties>
+      </component>
+      <component id="c407" class="com.intellij.openapi.ui.ComboBox" binding="port">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com.advancedtools.webservices.WSBundle" key="webservice.monitoring.port.tooltip"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

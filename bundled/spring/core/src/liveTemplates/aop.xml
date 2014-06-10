@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="aop">
+  <template id="aop-auto-proxy-creator" name="aopautoproxycreator" value="&lt;bean class=&quot;org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator&quot;/&gt;" description="" toReformat="false" toShortenFQNames="true">
+      <context>
+        <option name="JAVA_CODE" value="false" />
+        <option name="JAVA_COMMENT" value="false" />
+        <option name="JAVA_STRING" value="false" />
+        <option name="XML" value="false" />
+        <option name="HTML" value="false" />
+        <option name="JSP" value="false" />
+        <option name="COMPLETION" value="false" />
+        <option name="OTHER" value="false" />
+      </context>
+    </template>
+
+  <template id="aop-auto-proxy" name="aopautoproxy" value="&lt;aop:aspectj-autoproxy/&gt;" description="" toReformat="false" toShortenFQNames="true">
+      <context>
+        <option name="JAVA_CODE" value="false" />
+        <option name="JAVA_COMMENT" value="false" />
+        <option name="JAVA_STRING" value="false" />
+        <option name="XML" value="false" />
+        <option name="HTML" value="false" />
+        <option name="JSP" value="false" />
+        <option name="COMPLETION" value="false" />
+        <option name="OTHER" value="false" />
+      </context>
+    </template>
+
+</templateSet>
+

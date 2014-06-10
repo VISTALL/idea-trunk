@@ -1,0 +1,12 @@
+#parse("File Header.java")
+#if (${PACKAGE_NAME} != "")
+package ${PACKAGE_NAME};
+#end
+
+public class ${CLASS_NAME} {
+  public String sayHelloWorldFrom(String from) {
+    String result = "Hello, world, from " + from;
+    System.out.println(result);
+    return result;
+  }
+}

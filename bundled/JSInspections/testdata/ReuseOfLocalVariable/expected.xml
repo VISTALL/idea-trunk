@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>10</line>
+    <problem_class>Reuse of local variable</problem_class>
+    <description>Reuse of local variable 'x' #loc</description>
+  </problem>
+</problems>

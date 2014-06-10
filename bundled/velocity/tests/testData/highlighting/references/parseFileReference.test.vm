@@ -1,0 +1,5 @@
+#set($fileRef = "file2.vm")
+#parse('file1.vm' <warning descr="Only first file will be parsed within #parse">'file2.vm'</warning> <warning descr="Only first file will be parsed within #parse">$fileRef</warning>)
+#parse('<warning descr="Cannot resolve file 'file3.vm'">file3.vm</warning>')
+$foo
+$<warning descr="Cannot resolve variable 'bar'">bar</warning>

@@ -1,0 +1,23 @@
+VtlFile:nofile.vm
+  DirectiveForeach
+    PsiElement(#FOREACH)('#foreach')
+    HeaderOfDirective
+      PsiElement(()('(')
+      PsiElement($)('$')
+      LoopVariable
+        PsiElement(identifier)('r')
+      PsiElement(IN)('in')
+      ListExpression
+        PsiElement([)('[')
+        RangeExpression
+          IntegerLiteral
+            PsiElement(number)('5')
+          PsiElement(RANGE)('..')
+          Interpolation
+            PsiElement($)('$')
+            ReferenceExpression
+              PsiElement(identifier)('t')
+        PsiElement(])(']')
+      PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    PsiElement(#END)('#end')

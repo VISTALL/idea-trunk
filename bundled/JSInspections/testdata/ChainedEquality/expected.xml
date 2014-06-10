@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Chained equality</problem_class>
+    <description>Chained equality comparison 'x == y == z'</description>
+  </problem>
+</problems>

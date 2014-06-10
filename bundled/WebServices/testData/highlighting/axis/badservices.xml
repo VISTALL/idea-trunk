@@ -1,0 +1,10 @@
+<service name="MyService">
+    <parameter name="ServiceClass" locked="false"><error>Axis2Ws2</error></parameter>
+    <operation name="<error>echo3</error>">
+        <messageReceiver class="<error>RPCMessageReceiver</error>"/>
+    </operation>
+    <parameter name="ServiceClass" locked="false">Axis2Ws</parameter>
+    <operation name="*">
+        <messageReceiver class="Axis2Ws"/>
+    </operation>
+</service>

@@ -1,0 +1,6 @@
+<DOO>
+    <BAR x = "3"/>
+    <BAR pre:x = "4"/>
+    <BAR pre:x = "5"/>
+    <BAR pre:x = "3"/>
+</DOO>

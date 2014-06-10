@@ -1,0 +1,90 @@
+<gen-config>
+  <!--<schema-path></schema-path>-->
+  <!--<dtd-path></dtd-path>-->
+  <!--<output-path></output-path>-->
+  <namespaces>
+    <schemaLocation name="http://www.springframework.org/schema/aop" file="spring-aop-2.0.xsd"/>
+    <namespace name="http://www.w3.org/2001/XMLSchema" skip="true"/>
+    <namespace name="http://www.w3.org/2001/XMLSchema-instance" skip="true"/>
+
+    <reserved-name name="Class" replace-with="${ns.prefix}Class"/>
+    <reserved-name name="Type" replace-with="${ns.prefix}Type"/>
+    <reserved-name name="Array" replace-with="${ns.prefix}Array"/>
+    <reserved-name name="List" replace-with="${ns.prefix}List"/>
+    <reserved-name name="Map" replace-with="${ns.prefix}Map"/>
+    <reserved-name name="Set" replace-with="${ns.prefix}Set"/>
+    <reserved-name name="Collection" replace-with="${ns.prefix}Collection"/>
+
+    <namespace name=""
+            prefix=""
+            package=""
+            super="com.intellij.util.xml.DomElement"
+            imports=""/>
+
+    <namespace name="http://java.sun.com/xml/ns/javaee"
+            package="com.intellij.javaee.model.xml"
+            enums="com.intellij.javaee.model.enums"
+            super="JavaeeDomModelElement">
+      <package file="javaee_5.xsd" name="com.intellij.javaee.model.xml"/>
+      <package file="ejb-jar_3_0.xsd" name="com.intellij.javaee.model.xml.ejb"/>
+      <package file="web-app_2_5.xsd" name="com.intellij.javaee.model.xml.web"/>
+      <!--<package file="jsp_2_1.xsd" name="com.intellij.javaee.model.xml.web.jsp"/>-->
+      <package file="application_5.xsd" name="com.intellij.javaee.model.xml.application"/>
+      <package file="application-client_5.xsd" name="com.intellij.javaee.model.xml.client"/>
+    </namespace>
+
+    <namespace name="http://java.sun.com/xml/ns/persistence"
+            package="com.intellij.javaee.model.xml.persistence"
+            super="com.intellij.javaee.model.JavaeeDomModelElement"/>
+    <namespace name="http://java.sun.com/xml/ns/persistence/orm"
+               package="com.intellij.javaee.model.xml.persistence.mapping"
+               super="com.intellij.javaee.model.JavaeeDomModelElement"/>
+    <!--<namespace name="http://java.sun.com/xml/ns/persistence_ORM"-->
+               <!--package="com.intellij.javaee.model.xml.persistence.orm"/>-->
+    <namespace name="http://www.bea.com/ns/weblogic/90"
+               package="com.intellij.javaee.weblogic.model"
+               super="com.intellij.javaee.model.JavaeeDomModelElement">
+      <package file="weblogic-rdbms20-persistence-90.xsd"
+               name="com.intellij.javaee.weblogic.model.persistence"
+               super="com.intellij.javaee.model.JavaeeDomModelElement"/>
+    </namespace>
+    <!--<namespace name="spring-beans_1.2.8.dtd"-->
+               <!--package="com.intellij.spring.model.xml"/>-->
+    <namespace name="spring-beans_1.2.8.dtd" package="com.intellij.spring.model.xml"/>
+    <namespace name="spring-beans-2.0.dtd" package="com.intellij.spring.model.xml"/>
+
+    <namespace name="http://www.springframework.org/schema/aop" package="com.intellij.spring.model.xml.aop"
+               super="com.intellij.util.xml.DomElement">
+      <property name="ns.prefix" value="Spring"/>
+    </namespace>
+    <namespace name="http://www.springframework.org/schema/beans" package="com.intellij.spring.model.xml.beans"
+               super="com.intellij.util.xml.DomElement">
+      <property name="ns.prefix" value="Spring"/>
+    </namespace>
+    <namespace name="http://www.springframework.org/schema/jee" package="com.intellij.spring.model.xml.jee"
+               super="com.intellij.util.xml.DomElement"/>
+    <namespace name="http://www.springframework.org/schema/lang" package="com.intellij.spring.model.xml.lang"
+               super="com.intellij.util.xml.DomElement"/>
+    <namespace name="http://www.springframework.org/schema/tool" package="com.intellij.spring.model.xml.tool"
+               super="com.intellij.util.xml.DomElement"/>
+    <namespace name="http://www.springframework.org/schema/tx" package="com.intellij.spring.model.xml.tx"
+               super="com.intellij.util.xml.DomElement"/>
+    <namespace name="http://www.springframework.org/schema/util" package="com.intellij.spring.model.xml.util"
+               super="com.intellij.util.xml.DomElement">
+      <property name="ns.prefix" value="Spring"/>
+    </namespace>
+
+
+    <namespace name="hibernate-mapping-3.0.dtd"
+               package="com.intellij.hibernate.model.xml.mapping"
+               super="com.intellij.util.xml.DomElement"
+               prefix="Hbm">
+      <property name="ns.prefix" value="Hibernate"/>
+    </namespace>
+    <namespace name="hibernate-configuration-3.0.dtd"
+               package="com.intellij.hibernate.model.xml.config"
+               super="com.intellij.util.xml.DomElement"
+               />
+
+  </namespaces>
+</gen-config>

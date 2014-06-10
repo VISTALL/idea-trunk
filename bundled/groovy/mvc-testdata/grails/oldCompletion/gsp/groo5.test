@@ -1,0 +1,11 @@
+<%
+  def foo = 5
+%>
+${foo}
+<html>
+  <%re<caret>%>
+</html>
+-----
+request
+response
+return

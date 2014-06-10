@@ -1,0 +1,57 @@
+Assignment outside of declared scope
+Unused parameter
+Mismatch query and update of collection
+Mismatched read and write of array
+collection added to self
+"Section 508 Accessibility compliance"
+Parameter hides global variable
+Empty method
+Floating point equality
+trailing comma on array/map literal
+Local variable with overly broad scope
+unused assignment
+Malformed regex
+
+Infinite recursion
+Reuse of local variable
+Redundant local variable
+Incompatible bitwise mask
+Pointless bitwise expression
+Bitwise shift out of range
+Magic Number
+Nested function call
+Chained function call
+For loop replaceable by while
+eval, Function, setTimeout, and setInterval
+Use of "caller" property
+Confusing sequence of + or -
+== or != causes type coercion    (0 '' undefined null false true)
+for-loop where increment or update doesn't use loop variable
+Tail recursion
+Constant if
+Unused catch parameter
+occurence of '</' in string literals
+Confusing floating point literal
+Unnecessary label
+Object allocation ignored
+Octal Integer
+Nested assignment
+reserved word used as identifier
+Text label in switch statement
+Constant conditional
+default not last in switch
+Divide by zero
+Chained equality
+Non-short-circuit boolean expression
+
+
+
+
+
+
+
+
+
+
+
+

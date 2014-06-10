@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <util:properties location="dataContext.properties" id="asd"/>
+  <util:properties location="<error>unknown.properties</error>" id="asd2"/>
+
+  <bean id="fooBean" class="FooBean"/>
+  <bean id="fooBean10" class="FooBean10"/>
+
+  <util:list id="list1" list-class="<error>java.lang.String</error>"/>
+                                       
+  <util:list id="list2" list-class="java.util.ArrayList">
+    <value>pechorin@hero.org</value>
+    <value>raskolnikov@slums.org</value>
+    <value>stavrogin@gov.org</value>
+    <value>porfiry@gov.org</value>
+  </util:list>
+
+  <util:list id="list3" value-type="FooBean">
+    <ref bean="fooBean"/>
+    <ref bean="<error>fooBean10</error>"/>
+  </util:list>
+
+  <util:set id="set" set-class="<error>java.lang.String</error>"/>
+
+  <util:map id="map" map-class="<error>java.lang.String</error>"/>
+
+
+  <bean id="bean12" class="FooBean12">
+     <property name="set" ref="set"/>
+     <property name="list" ref="list1"/>
+     <property name="map" ref="map"/>
+     <property name="properties" ref="asd"/>
+     <property name="strings" ref="set"/>
+  </bean>
+
+  <bean id="n1" class="NumberAndTimeUnitBean">
+    <property name="retentionPolicy">
+      <util:constant static-field="java.lang.annotation.RetentionPolicy.SOURCE"/>
+    </property>
+    <property name="number">
+      <util:constant static-field="FooBean2.AAA"/>
+    </property>
+  </bean>
+
+</beans>

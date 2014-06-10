@@ -1,0 +1,68 @@
+<project name="WebServices plugin deploy" default="copy_files" basedir=".">
+  <property name="idea.path" value="${sandbox.idea.path}"/>
+
+  <target name="copy_files">
+    <mkdir dir="${idea.path}/plugins/WebServices/lib" />
+
+    <delete file="${idea.path}/plugins/WebServices/lib/WebServices.jar" quiet="true"/>
+    <jar jarfile="${idea.path}/plugins/WebServices/lib/WebServices.jar" basedir="${project.path}/classes">
+      <exclude name="wstests/*" />
+      <exclude name="wstests" />
+      <exclude name="lib/**/*" />
+      <exclude name="lib" />
+      <exclude name="docs/**/*" />
+      <exclude name="docs" />
+      <exclude name="jgoodies-forms.jar" />
+    </jar>
+
+    <mkdir dir="${idea.path}/plugins/WebServices/lib/rt" />
+
+    <delete file="${idea.path}/plugins/WebServices/lib/rt/WebServicesRT.jar" quiet="true"/>
+    <jar jarfile="${idea.path}/plugins/WebServices/lib/rt/WebServicesRT.jar" basedir="${project.path}/classes_rt"/>
+
+    <mkdir dir="${idea.path}/plugins/WebServices/META-INF" />
+
+    <copy todir="${idea.path}/plugins/WebServices/META-INF" >
+       <fileset dir="${project.path}/resources/META-INF" includes="*.xml"/>
+    </copy>
+
+  </target>
+
+  <target name="copy_packed_jars" >
+    <mkdir dir="${idea.path}/plugins/WebServices/docs" />
+
+    <copy todir="${idea.path}/plugins/WebServices/docs" >
+       <fileset dir="${project.path}/resources/docs" includes="*/*.jar.pack.gz"/>
+    </copy>
+
+    <mkdir dir="${idea.path}/plugins/WebServices/help" />
+    <jar jarfile="${idea.path}/plugins/WebServices/help/WebServicesHelp.jar" basedir="${project.path}/help">
+      <exclude name="svn/*" />
+      <exclude name="svn" />
+    </jar>
+
+    <mkdir dir="${idea.path}/plugins/WebServices/lib" />
+    <copy todir="${idea.path}/plugins/WebServices/lib/axis-1.4.0" >
+       <fileset dir="resources/lib/axis-1.4.0" includes="*.pack.gz,*.LICENSE"/>
+    </copy>
+
+    <copy todir="${idea.path}/plugins/WebServices/lib/jaxws-ri-2.1" >
+       <fileset dir="resources/lib/jaxws-ri-2.1" includes="*.pack.gz,*.LICENSE"/>
+    </copy>
+
+    <!--<copy todir="${idea.path}/plugins/WebServices/lib/jetty-6.1.1" >-->
+       <!--<fileset dir="resources/lib/jetty-6.1.1" includes="*.pack.gz,*.LICENSE"/>-->
+    <!--</copy>-->
+
+    <copy todir="${idea.path}/plugins/WebServices/lib/xmlbeans-2.3.0" >
+       <fileset dir="resources/lib/xmlbeans-2.3.0" includes="*.pack.gz,*.LICENSE"/>
+    </copy>
+  </target>
+
+  <target name="release" depends="copy_files, copy_packed_jars">
+    <zip basedir="${idea.path}/plugins"
+         includes="WebServices/**/*.*"
+         excludes="WebServices/classes/**, WebServices/lib/*-*/*.jar, WebServices/lib/axis.jar, WebServices/META-INF/plugin.xml"
+         destfile="WebServices.zip"/>
+  </target>
+</project>

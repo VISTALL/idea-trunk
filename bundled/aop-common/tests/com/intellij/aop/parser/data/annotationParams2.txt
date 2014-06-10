@@ -1,0 +1,45 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiWithinExpression
+    PsiElement(AOP_WITHIN)('within')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopAnnotatedTypeExpression
+        AopAnnotationHolder
+          AopAnnotationExpression
+            PsiElement(AOP_AT)('@')
+            AopReferenceHolder
+              AopReferenceExpression
+                PsiElement(AOP_IDENTIFIER)('FooAnno')
+            PsiElement(AOP_LEFT_PAR)('(')
+            AopAnnotationValues
+              PsiElement(AOP_IDENTIFIER)('a')
+              PsiElement(BAD_CHARACTER)('=')
+              PsiElement(AOP_IDENTIFIER)('b')
+              PsiElement(AOP_COMMA)(',')
+              PsiElement(AOP_IDENTIFIER)('c')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('d')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('e')
+              PsiElement(BAD_CHARACTER)('=')
+              PsiElement(BAD_CHARACTER)('{')
+              PsiElement(AOP_AT)('@')
+              PsiElement(AOP_IDENTIFIER)('Smth')
+              PsiElement(BAD_CHARACTER)('}')
+            PsiElement(AOP_RIGHT_PAR)(')')
+          AopNotExpression
+            PsiElement(AOP_NOT)('!')
+            AopAnnotationExpression
+              PsiElement(AOP_AT)('@')
+              AopReferenceHolder
+                AopReferenceExpression
+                  PsiElement(AOP_IDENTIFIER)('BarAnno')
+              PsiElement(AOP_LEFT_PAR)('(')
+              AopAnnotationValues
+                PsiElement(AOP_IDENTIFIER)('C')
+                PsiElement(AOP_OR)('||')
+                PsiElement(AOP_IDENTIFIER)('A')
+              PsiElement(AOP_RIGHT_PAR)(')')
+        PsiErrorElement:Type name pattern expected
+          <empty list>
+    PsiElement(AOP_RIGHT_PAR)(')')

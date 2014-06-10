@@ -1,0 +1,1 @@
+#* @vtlvariable name="someVar" type="my.pack<caret>" *#

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2004 - 2009 by Fuhrer Engineering AG, CH-2504 Biel/Bienne, Switzerland -->
+<idea-plugin version="2">
+    <name>Geronimo Integration</name>
+    <id>Geronimo</id>
+    <version>1.0</version>
+    <depends>com.intellij.javaee</depends>
+    <vendor email="info@fuhrer.com" url="http://www.fuhrer.com/en/index.html" logo="/resources/fuhrer.png">
+        Fuhrer Engineering, Inc.
+    </vendor>
+    <idea-version since-build="5000"/>
+    <resource-bundle>com.fuhrer.idea.geronimo.GeronimoBundle</resource-bundle>
+    <category>Application Servers</category>
+    <extensions defaultExtensionNs="com.intellij">
+        <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+        <dom.fileDescription implementation="com.fuhrer.idea.geronimo.server.GeronimoAppDescription"/>
+        <dom.fileDescription implementation="com.fuhrer.idea.geronimo.server.GeronimoEjbDescription"/>
+        <dom.fileDescription implementation="com.fuhrer.idea.geronimo.server.GeronimoWebDescription"/>
+        <fileEditorProvider implementation="com.fuhrer.idea.geronimo.editor.GeronimoAppRootProvider"/>
+        <fileEditorProvider implementation="com.fuhrer.idea.geronimo.editor.GeronimoEjbRootProvider"/>
+        <fileEditorProvider implementation="com.fuhrer.idea.geronimo.editor.GeronimoWebRootProvider"/>
+        <fileEditorProvider implementation="com.fuhrer.idea.geronimo.editor.GeronimoBeanProvider"/>
+        <configurationType implementation="com.fuhrer.idea.geronimo.server.GeronimoConfiguration"/>
+        <javaee.appServerIntegration implementation="com.fuhrer.idea.geronimo.server.GeronimoIntegration"/>
+        <javaee.descriptorMetaDataProvider implementation="com.fuhrer.idea.javaee.descriptor.JavaeeDescriptors"/>
+        <fileTemplateGroup implementation="com.fuhrer.idea.javaee.descriptor.JavaeeTemplates"/>
+        <inspectionToolProvider implementation="com.fuhrer.idea.geronimo.server.GeronimoInspections"/>
+        <standardResourceProvider implementation="com.fuhrer.idea.geronimo.server.GeronimoResources"/>
+    </extensions>
+</idea-plugin>

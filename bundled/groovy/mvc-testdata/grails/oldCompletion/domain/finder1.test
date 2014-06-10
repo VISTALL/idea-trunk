@@ -1,0 +1,9 @@
+Product.findB<caret>
+-----
+findByDate
+findById
+findByName
+findByQuality
+findBySize
+findByVersion
+findByWeight

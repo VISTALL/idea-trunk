@@ -1,0 +1,2 @@
+#* @implicitly included *#
+#* @vtlmacrolibrary path="mylibrary.vm" *#

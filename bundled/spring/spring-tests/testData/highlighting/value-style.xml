@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="foo" class="ValueStyleBean">
+    <property name="boolean">
+      <warning><value>false</value></warning>
+    </property>
+    <property name="longString">
+      <value>
+        a,
+        b,c
+      </value>
+    </property>
+    <property name="classes">
+      <value>
+        java.lang.Object,
+        java.lang.String,
+        <error>java</error>,
+        java.lang.<error>Unknown</error>
+      </value>
+    </property>
+  </bean>
+
+  <!-- IDEADEV-18731 -->
+  <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="hibernateProperties">
+            <value>hibernate.dialect=org.hibernate.dialect.HSQLDialect</value>
+        </property>
+    </bean>
+</beans>

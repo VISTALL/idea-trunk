@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>8</line>
+    <problem_class>Unnecessary 'block' statement</problem_class>
+    <description>Unnecessary block statement</description>
+  </problem>
+</problems>

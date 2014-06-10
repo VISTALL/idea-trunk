@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.spring</id>
+  <name>Spring Support</name>
+
+  <description>Spring Support</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+
+  <resource-bundle>resources.messages.SpringBundle</resource-bundle>
+
+  <depends>com.intellij.java-i18n</depends>
+  <depends>com.intellij.properties</depends>
+  <depends optional="true" config-file="spring-javaee-integration.xml">com.intellij.javaee</depends>
+  <depends optional="true" config-file="spring-jsf-integration.xml">JSF</depends>
+  <depends optional="true" config-file="spring-js.xml">JavaScript</depends>
+  <depends optional="true" config-file="spring-tiles-integration.xml">StrutsAssistant</depends>
+
+  <depends>com.intellij.aop</depends>
+
+  <extensionPoints>
+    <extensionPoint name="modelProvider" interface="com.intellij.spring.SpringModelProvider"/>
+    <extensionPoint name="configurator" interface="com.intellij.spring.facet.SpringConfigurator"/>
+    <extensionPoint name="effective.types.provider" interface="com.intellij.spring.model.SpringBeanEffectiveTypeProvider"/>
+    <extensionPoint name="mvcViewProvider" interface="com.intellij.spring.web.mvc.MVCViewProvider"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+    <elementDescriptionProvider implementation="com.intellij.spring.model.jam.javaConfig.SpringJamPomTargetDescriptionProvider" />
+    <semContributor implementation="com.intellij.spring.model.jam.SpringSemContributor"/>
+
+    <renameHandler implementation="com.intellij.spring.model.properties.SpringPropertyRenameHandler"/>
+    <renameHandler implementation="com.intellij.spring.model.highlighting.jam.SpringExternalBeanRenameHandler"/>
+    <renameHandler implementation="com.intellij.spring.model.highlighting.jam.SpringExternalBeanReferencesRenameHandler"/>
+    <renameHandler implementation="com.intellij.spring.model.xml.custom.SpringCustomBeanRenameHandler"/>
+
+    <completion.contributor language="XML" implementationClass="com.intellij.spring.model.converters.SpringCompletionContributor"/>
+
+    <findUsagesHandlerFactory implementation="com.intellij.spring.SpringFindUsagesHandlerFactory"/>
+
+    <fileEditorProvider implementation="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider"/>
+    <multiHostInjector implementation="com.intellij.spring.aop.SpringAopInjector"/>
+    <aop.provider implementation="com.intellij.spring.aop.SpringAopProvider"/>
+
+    <projectService serviceInterface="com.intellij.spring.SpringManager"
+                    serviceImplementation="com.intellij.spring.impl.SpringManagerImpl"/>
+    <projectService serviceInterface="com.intellij.spring.CustomBeanRegistry"
+                    serviceImplementation="com.intellij.spring.CustomBeanRegistry"/>
+
+    <compiler.inspectionValidator implementation="com.intellij.spring.model.highlighting.SpringValidator"/>
+    <annotator language="JAVA" implementationClass="com.intellij.spring.gutter.SpringClassAnnotator"/>
+    <annotator language="XML" implementationClass="com.intellij.spring.model.highlighting.SpringDomAnnotator"/>
+    <codeInsight.lineMarkerProvider language="XML" implementationClass="com.intellij.spring.aop.SpringAopAnnotator"/>
+    <xmlStructureViewElementProvider implementation="com.intellij.spring.model.structure.SpringStructureViewElementProvider"/>
+    <xmlStructureViewBuilderProvider implementation="com.intellij.spring.model.structure.SpringXmlStructureViewBuilderProvider"/>
+    <fileStructureGroupRuleProvider implementation="com.intellij.spring.usages.SpringBeanGroupRuleProvider"/>
+
+    <dom.fileDescription implementation="com.intellij.spring.SpringDomFileDescription"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.Beans" extenderClass="com.intellij.spring.SpringDefaultDomExtender$BeansExtender"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.ListOrSet" extenderClass="com.intellij.spring.SpringDefaultDomExtender$ListOrSetExtender"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.SpringModelElement" extenderClass="com.intellij.spring.aop.SpringAopDomExtender"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.Beans" extenderClass="com.intellij.spring.aop.SpringTxDomExtender"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.SpringBean" extenderClass="com.intellij.spring.SpringPNamespaceDomExtender"/>
+    <dom.extender domClass="com.intellij.spring.model.xml.CustomBeanWrapper" extenderClass="com.intellij.spring.SpringToolDomExtender"/>
+
+    <frameworkSupport implementation="com.intellij.spring.facet.SpringFrameworkSupportProvider"/>
+
+    <referencesSearch implementation="com.intellij.spring.aop.SpringAopParameterReferencesSearcher"/>
+
+    <spring.effective.types.provider implementation="com.intellij.spring.model.SpringFactoryBeansEffectiveTypesProviders" id="factory" order="first"/>
+    <spring.effective.types.provider implementation="com.intellij.spring.aop.SpringAopEffectiveTypesProvider" />
+
+    <iconProvider implementation="com.intellij.spring.SpringIconProvider"/>
+    <typeDeclarationProvider implementation="com.intellij.spring.SpringTypeDeclarationProvider"/>
+
+    <moduleService serviceInterface="com.intellij.spring.model.jam.SpringJamModel" serviceImplementation="com.intellij.spring.model.jam.SpringJamModel"/>
+
+    <projectService serviceInterface="com.intellij.spring.model.actions.patterns.frameworks.util.StandardBeansDocLinksManager" serviceImplementation="com.intellij.spring.model.actions.patterns.frameworks.util.StandardBeansDocLinksManager"/>
+    <projectService serviceInterface="com.intellij.spring.model.actions.patterns.frameworks.util.LibrariesConfigurationManager" serviceImplementation="com.intellij.spring.model.actions.patterns.frameworks.util.LibrariesConfigurationManager"/>
+
+    <xml.schemaProvider implementation="com.intellij.spring.schemas.SpringSchemaProvider"/>
+    <psi.referenceContributor implementation="com.intellij.spring.references.SpringReferenceContributor"/>
+    <refactoring.moveHandler implementation="com.intellij.spring.refactoring.SpringBeanMoveHandler"/>
+    <refactoring.inlineHandler language="XML" implementationClass="com.intellij.spring.refactoring.SpringInlineHandler"/>
+
+    <gotoSymbolContributor implementation="com.intellij.spring.model.gotoSymbol.GotoSpringBeanProvider"/>
+
+    <psi.referenceContributor implementation="com.intellij.spring.references.SpringQualifierNameContributor" />
+    <psi.referenceContributor implementation="com.intellij.spring.references.SpringStereotypesNameContributor" />
+    <standardResourceProvider implementation="com.intellij.spring.SpringResourceProvider"/>
+
+    <completion.contributor language="PointcutExpression" implementationClass="com.intellij.aop.psi.SpringAopCompletionContributor" order="before aop"/>
+
+    <implicitUsageProvider implementation="com.intellij.spring.java.providers.SpringImplicitUsageProvider"/>
+
+    <intentionAction>
+      <className>com.intellij.spring.model.intentions.HardCodedStringToPlaceholderMoveIntention</className>
+      <category>Spring</category>
+    </intentionAction>
+
+    <intentionAction>
+      <className>com.intellij.spring.refactoring.SpringIntroduceBeanIntention</className>
+      <category>Spring</category>
+    </intentionAction>
+
+    <intentionAction>
+      <className>com.intellij.spring.refactoring.SpringUpdateSchemaIntention</className>
+      <category>Spring</category>
+    </intentionAction>
+    
+    <intentionAction>
+      <className>com.intellij.spring.model.xml.custom.ParseCustomBeanIntention</className>
+      <category>Spring</category>
+    </intentionAction>
+
+    <intentionAction>
+      <className>com.intellij.spring.refactoring.UsePNamespaceIntention</className>
+      <category>Spring</category>
+    </intentionAction>
+
+  </extensions>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.spring.SpringApplicationComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>com.intellij.spring.factories.SpringFactoryBeansManager</implementation-class>
+    </component>
+    <component>
+      <implementation-class>com.intellij.spring.SpringBeansTemplatesFactory</implementation-class>
+    </component>
+  </application-components>
+
+  <actions>
+    <action id="Spring.Beans.Generate.Action" class="com.intellij.spring.model.actions.GenerateSpringDomElementActionGroup" text="Generate">
+      <add-to-group anchor="last" group-id="GenerateGroup"/>
+    </action>
+
+   <action id="ShowBeansDependenciesPopup" class="com.intellij.spring.perspectives.graph.actions.ShowBeanDependenciesPopup" text="Show Bean Dependencies" popup="true">
+       <add-to-group group-id="EditorPopupMenu" anchor="last" />
+       <keyboard-shortcut first-keystroke="control shift alt U" keymap="$default"/>
+    </action>
+
+    <action id="Spring.Beans.Generate.Setter.Dependency.Action" class="com.intellij.spring.model.actions.GenerateSpringBeanSetterDependencyAction">
+      <add-to-group anchor="last" group-id="GenerateGroup"/>
+    </action>
+    <action id="Spring.Beans.Generate.Constructor.Dependency.Action" class="com.intellij.spring.model.actions.GenerateSpringBeanConstructorDependencyAction">
+      <add-to-group anchor="last" group-id="GenerateGroup"/>
+    </action>
+
+    <action id="Spring.Template.Beans.ActionGroup" class="com.intellij.spring.model.actions.patterns.GenerateTemplateBeansGroup" text="Template Beans">
+      <add-to-group anchor="last" group-id="GenerateGroup"/>
+    </action>
+
+    <action id="Spring.Patterns.ActionGroup" class="com.intellij.spring.model.actions.patterns.frameworks.FrameworkIntegrationActionGroup" text="Patterns">
+      <add-to-group anchor="last" group-id="GenerateGroup"/>
+    </action>
+
+    <action id="Spring.Beans.Show.Structure.View.Dialog" class="com.intellij.spring.perspectives.actions.ShowSpringModelStructureViewAction" text="Show Structure View" use-shortcut-of="FileStructurePopup" keymap="$default"/>
+
+    <group id="Spring.Create.Context.Group" popup="true" text="Spring">
+      <add-to-group anchor="last" group-id="NewGroup"/>
+    </group>
+
+    <action id="Spring.Create.Context.File" class="com.intellij.spring.model.actions.create.CreateSpringConfigAction" text="Spring Config">
+      <add-to-group anchor="last" group-id="Spring.Create.Context.Group"/>
+    </action>
+
+    <group id="Beans.Dependencies.PsiElement.Actions" popup="false">
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <reference ref="RenameElement"/>
+      <separator/>
+    </group>
+
+  </actions>
+</idea-plugin>

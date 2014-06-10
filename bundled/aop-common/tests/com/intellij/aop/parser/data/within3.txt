@@ -1,0 +1,5 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiWithinExpression
+    PsiElement(AOP_WITHIN)('within')
+    PsiErrorElement:( expected
+      <empty list>

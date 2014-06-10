@@ -1,0 +1,20 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiPointcutReferenceExpression
+    AopReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              PsiElement(AOP_IDENTIFIER)('com')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('xyz')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_IDENTIFIER)('within')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('SystemArchitecture')
+      PsiElement(AOP_DOT)('.')
+      PsiElement(AOP_IDENTIFIER)('businessService')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      <empty list>
+    PsiElement(AOP_RIGHT_PAR)(')')

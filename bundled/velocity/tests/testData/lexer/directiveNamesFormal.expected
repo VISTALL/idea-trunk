@@ -1,0 +1,238 @@
+TEMPLATE_TEXT ('#{a}
+')
+#FOREACH ('#{foreach}')
+( ('(')
+$ ('$')
+identifier ('a')
+WHITE_SPACE (' ')
+IN ('in')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#INCLUDE ('#{include}')
+( ('(')
+' (''')
+STRING_TEXT ('a')
+' (''')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_DECL ('#{macro}')
+( ('(')
+identifier ('a')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('c')
+) (')')
+TEMPLATE_TEXT ('
+')
+#PARSE ('#{parse}')
+( ('(')
+' (''')
+STRING_TEXT ('a')
+' (''')
+) (')')
+TEMPLATE_TEXT ('
+')
+#SET ('#{set}')
+( ('(')
+$ ('$')
+identifier ('a')
+WHITE_SPACE (' ')
+= ('=')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#STOP ('#{stop}')
+TEMPLATE_TEXT ('()
+')
+#LITERAL ('#{literal}')
+( ('(')
+$ ('$')
+identifier ('a')
+) (')')
+TEMPLATE_TEXT ('
+')
+#EVALUATE ('#{evaluate}')
+( ('(')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+{ ('{')
+identifier ('a')
+} ('}')
+( ('(')
+$ ('$')
+identifier ('a')
+) (')')
+TEMPLATE_TEXT ('
+
+')
+#FOREACH ('#{foreach}')
+WHITE_SPACE (' ')
+( ('(')
+$ ('$')
+identifier ('a')
+WHITE_SPACE (' ')
+IN ('in')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#INCLUDE ('#{include}')
+WHITE_SPACE (' ')
+( ('(')
+' (''')
+STRING_TEXT ('a')
+' (''')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_DECL ('#{macro}')
+WHITE_SPACE (' ')
+( ('(')
+identifier ('a')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('c')
+) (')')
+TEMPLATE_TEXT ('
+')
+#PARSE ('#{parse}')
+WHITE_SPACE (' ')
+( ('(')
+' (''')
+STRING_TEXT ('a')
+' (''')
+) (')')
+TEMPLATE_TEXT ('
+')
+#SET ('#{set}')
+WHITE_SPACE (' ')
+( ('(')
+$ ('$')
+identifier ('a')
+WHITE_SPACE (' ')
+= ('=')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#STOP ('#{stop}')
+TEMPLATE_TEXT (' ()
+')
+#LITERAL ('#{literal}')
+WHITE_SPACE (' ')
+( ('(')
+$ ('$')
+identifier ('a')
+) (')')
+TEMPLATE_TEXT ('
+')
+#EVALUATE ('#{evaluate}')
+WHITE_SPACE (' ')
+( ('(')
+$ ('$')
+identifier ('b')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+{ ('{')
+identifier ('a')
+} ('}')
+WHITE_SPACE (' ')
+( ('(')
+$ ('$')
+identifier ('a')
+) (')')
+TEMPLATE_TEXT ('
+
+#{foreach
+#{include
+#{macro
+#{parse
+#{set
+#{stop
+#{literal
+#{evaluate
+#{a
+#{a (')
+$ ('$')
+identifier ('a')
+TEMPLATE_TEXT (')
+
+')
+#FOREACH ('#foreach')
+TEMPLATE_TEXT ('}
+')
+#INCLUDE ('#include')
+TEMPLATE_TEXT ('}
+')
+#MACRO_DECL ('#macro')
+TEMPLATE_TEXT ('}
+')
+#PARSE ('#parse')
+TEMPLATE_TEXT ('}
+')
+#SET ('#set')
+TEMPLATE_TEXT ('}
+')
+#STOP ('#stop')
+TEMPLATE_TEXT ('}
+')
+#LITERAL ('#literal')
+TEMPLATE_TEXT ('}
+')
+#EVALUATE ('#evaluate')
+TEMPLATE_TEXT ('}
+#a}
+#a} (')
+$ ('$')
+identifier ('a')
+TEMPLATE_TEXT (')
+
+')
+#FOREACH ('#{foreach}')
+TEMPLATE_TEXT ('
+')
+#INCLUDE ('#{include}')
+TEMPLATE_TEXT ('
+')
+#MACRO_DECL ('#{macro}')
+TEMPLATE_TEXT ('
+')
+#PARSE ('#{parse}')
+TEMPLATE_TEXT ('
+')
+#SET ('#{set}')
+TEMPLATE_TEXT ('
+')
+#STOP ('#{stop}')
+TEMPLATE_TEXT ('
+')
+#LITERAL ('#{literal}')
+TEMPLATE_TEXT ('
+')
+#EVALUATE ('#{evaluate}')
+TEMPLATE_TEXT ('
+')

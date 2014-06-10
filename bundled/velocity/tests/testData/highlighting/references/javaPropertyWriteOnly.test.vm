@@ -1,0 +1,5 @@
+#* @vtlvariable name="foo" type="my.pack.MyClass" *#
+$foo.<warning descr="Cannot resolve property 'prop3' of class 'MyClass'">prop3</warning>
+$foo.<warning descr="Cannot resolve method 'getProp3' of class 'MyClass'">getProp3</warning>()
+$foo.setProp3(4)
+#set($foo.prop3 = 4)

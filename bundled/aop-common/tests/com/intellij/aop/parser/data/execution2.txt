@@ -1,0 +1,21 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      PsiElement(AOP_MODIFIER)('public')
+      PsiElement(AOP_MODIFIER)('final')
+      AopNotExpression
+        PsiElement(AOP_NOT)('!')
+        PsiElement(AOP_MODIFIER)('synchronized')
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      PsiElement(AOP_DOT_DOT)('..')
+    PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_RIGHT_PAR)(')')

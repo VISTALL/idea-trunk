@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<idea-plugin version="2">
+
+  <id>com.intellij.hibernate</id>
+  <name>Hibernate Support</name>
+
+  <description>Hibernate Support</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <depends>com.intellij.javaee</depends>
+  <depends>com.intellij.persistence</depends>
+  <depends>com.intellij.persistence.database</depends>
+  <depends optional="true" config-file="hibernate-spring.xml">com.intellij.spring</depends>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <javaee.treeRootProvider implementation="com.intellij.hibernate.view.HibernateFacetHolderTreeRootProvider"/>
+    <dom.fileDescription implementation="com.intellij.hibernate.HibernateConfigurationDomFileDescription"/>
+    <dom.fileDescription implementation="com.intellij.hibernate.HibernateMappingDomFileDescription"/>
+
+    <projectService serviceInterface="com.intellij.hibernate.HibernateManager"
+                    serviceImplementation="com.intellij.hibernate.HibernateManagerImpl"/>
+    <persistence.queryInjectionSupport implementation="com.intellij.hibernate.HibernateQueryInjectionSupport"/>
+    <persistence.database.dataSourceInfoProvider implementation="com.intellij.hibernate.HibernateDataSourceInfoProvider"/>
+    <xmlStructureViewBuilderProvider implementation="com.intellij.hibernate.model.structure.HbmStructureViewBuilderProvider"/>
+    <frameworkSupport implementation="com.intellij.hibernate.facet.HibernateFrameworkSupportProvider"/>
+    <compiler.inspectionValidator implementation="com.intellij.hibernate.highlighting.HibernateValidator"/>
+    <inspectionToolProvider implementation="com.intellij.hibernate.HibernateInspectionToolProvider"/>
+    <semContributor implementation="com.intellij.hibernate.model.annotations.mapping.HibernateJamContributor"/>
+
+    <persistence.database.consoleRunner implementation="com.intellij.hibernate.engine.HibernateConsoleContextProvider"/>
+
+    <intentionAction>
+      <className>com.intellij.hibernate.intentions.OpenHqlConsoleIntentionAction</className>
+      <bundleName>resources.messages.HibernateBundle</bundleName>
+      <categoryKey>intentions.category.hibernate</categoryKey>
+    </intentionAction>
+
+    <standardResourceProvider implementation="com.intellij.hibernate.HibernateResourceProvider"/>
+  </extensions>
+
+  <extensionPoints>
+    <extensionPoint name="sessionFactoryProvider" beanClass="com.intellij.hibernate.facet.HibernateSessionFactoryProvider"/>
+  </extensionPoints>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.hibernate.HibernateApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>com.intellij.hibernate.HibernateProjectComponent</implementation-class>
+      <skipForDefaultProject/>
+    </component>
+  </project-components>
+
+  <actions>
+    <action id="OpenHqlConsoleAction" class="com.intellij.hibernate.actions.OpenHqlConsoleAction" text="Open HQL Console" icon="/runConfigurations/ql_console.png">
+      <add-to-group group-id="J2EEViewPopupMenu" anchor="after" relative-to-action="OpenERDiagramAction"/>
+    </action>
+
+  </actions>
+
+</idea-plugin>

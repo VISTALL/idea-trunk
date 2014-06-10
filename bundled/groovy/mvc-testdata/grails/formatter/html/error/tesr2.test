@@ -1,0 +1,17 @@
+<html>
+            <g:form controller="${propertyName}" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+                <div/>
+                <div class="buttons">
+                    <span class="button"><g:actionSubmit class="save" value="Update" /></span>
+                </div>
+            </g:form>
+     </html>
+-----
+<html>
+<g:form controller="${propertyName}" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+  <div/>
+  <div class="buttons">
+    <span class="button"><g:actionSubmit class="save" value="Update"/></span>
+  </div>
+</g:form>
+</html>

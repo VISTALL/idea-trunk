@@ -1,0 +1,9 @@
+// AddBraces:false
+public class BazBar123 {
+    public static function foo():void {
+        var a:Array = [];
+        for each(var <caret>s:String in a) {
+            s.toUpperCase();
+        }
+    }
+}

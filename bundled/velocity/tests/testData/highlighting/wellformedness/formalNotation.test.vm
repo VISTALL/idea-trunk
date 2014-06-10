@@ -1,0 +1,9 @@
+#set($var1 = 5)
+
+#set(${<error descr="Formal notation is not allowed here">var1</error>} = 5)
+
+#macro(mymacroRight $p1 $p2)
+#end
+
+#macro(mymacroWrong ${<error descr="Formal notation is not allowed here">p1</error>} $p2)
+#end

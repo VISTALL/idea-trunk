@@ -1,0 +1,2 @@
+#macro(mymacro $p)
+#end

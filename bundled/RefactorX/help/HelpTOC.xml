@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="1.0">
+    <tocitem text="Refactor-X" target="refactorX" image="folder">
+        <tocitem text="Delete Tag" target="refactoring.deleteTag" image="doc"/>
+        <tocitem text="Delete Attribute" target="refactoring.deleteAttribute" image="doc"/>
+        <tocitem text="Rename Tag" target="refactoring.renameTag" image="doc"/>
+        <tocitem text="Rename Attribute" target="refactoring.renameAttribute" image="doc"/>
+        <tocitem text="Unwrap Tag" target="refactoring.unwrapTag" image="doc"/>
+        <tocitem text="Wrap Tag" target="refactoring.wrapTag" image="doc"/>
+        <tocitem text="Wrap Tag Contents" target="refactoring.wrapTagContents" image="doc"/>
+        <tocitem text="Replace Attribute With Tag" target="refactoring.attributeToTag" image="doc"/>
+        <tocitem text="Replace Tag With Attribute" target="refactoring.tagToAttribute" image="doc"/>
+        <tocitem text="Add Attribute" target="refactoring.addAttribute" image="doc"/>
+        <tocitem text="Add Subtag" target="refactoring.addSubtag" image="doc"/>
+        <tocitem text="Move Attribute In" target="refactoring.moveAttributeIn" image="doc"/>
+        <tocitem text="Move Attribute Out" target="refactoring.moveAttributeOut" image="doc"/>
+        <tocitem text="Change Attribute Value" target="refactoring.changeAttributeValue" image="doc"/>
+        <tocitem text="Convert Contents To Attribute" target="refactoring.convertContentsToAttribute" image="doc"/>
+        <tocitem text="Expand Tag" target="refactoring.expandTag" image="doc"/>
+        <tocitem text="Collapse Tag" target="refactoring.collapseTag" image="doc"/>
+        <tocitem text="Merge Tags" target="refactoring.mergeTags" image="doc"/>
+        <tocitem text="Split Tags" target="refactoring.splitTag" image="doc"/>
+    </tocitem>
+</toc>

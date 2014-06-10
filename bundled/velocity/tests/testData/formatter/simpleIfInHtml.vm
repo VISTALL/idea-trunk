@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<table>
+<tr>
+#set ($url = $!request.session.getAttribute('headerForm').professionDocumentURL)
+#set ($baseUrl = $!request.session.getAttribute('headerForm').documentBaseURL)
+<td colspan="2">
+<a href="http://some.url.org"/>
+</td>
+#if(!$baseUrl)
+<td colspan="2">
+<a href="http://other.url.org"/>
+</td>
+#end
+</tr>
+
+</table>
+
+</body>
+</html>

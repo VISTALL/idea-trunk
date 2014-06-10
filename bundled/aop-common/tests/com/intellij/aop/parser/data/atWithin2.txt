@@ -1,0 +1,7 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiAtWithinExpression
+    PsiElement(AOP_AT_WITHIN)('@within')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      PsiErrorElement:Annotation name expected
+        <empty list>

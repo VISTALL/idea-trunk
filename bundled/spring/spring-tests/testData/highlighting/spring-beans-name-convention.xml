@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="accountManager" />
+  <bean id="<warning>'test</warning>"/>
+
+  <bean name="/accountService" />
+
+  <bean name="userDao, loginController" />
+  <bean name="/userDao.html, /userDao_too.html" />
+
+  <bean name="int" />
+  <bean id="short" class="java.lang.String"/>
+  <bean id="class" class="java.lang.String"/>
+
+
+  <alias name="userDao" alias="/userDao2.html" />
+</beans>

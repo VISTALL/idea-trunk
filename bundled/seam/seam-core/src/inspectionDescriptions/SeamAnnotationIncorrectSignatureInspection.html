@@ -1,0 +1,92 @@
+<html>
+<body>
+<table>
+  <tr>
+    <td valign="top" height="150">
+      <font face="verdana" size="-1">
+        This inspection checks for Seam annotations that appear on classes or methods with invalid signatures or fields with invalid type.<br>
+
+        <ul>
+          <li>
+            <strong>@Name</strong><br>
+            @Name is invalid on interfaces or abstract classes. @Name annotation requires a no-argument constructor in the annotated class.
+          </li>
+          <li>
+            <strong>@In</strong><br>
+            Must appear either on a field or on a method that has "setter-signature": <span style="font-size:larger;font-family:monospace;">void setUser(User user)</span>
+            <ul>
+              <li>void return type</li>
+              <li>single argument</li>
+              <li>not static</li>
+              <li>name must start with "set"</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@Out</strong><br>
+            Must appear either on a field or on a method that has "getter-signature": <span style="font-size:larger;font-family:monospace;">User getUser()</span>
+            <ul>
+              <li>non-void return type</li>
+              <li>no arguments</li>
+              <li>not static</li>
+              <li>name must start with "get" or optionally "is" when return type is "boolean"</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@DataModel</strong><br>
+            If annotation is on method, then the method must have "getter-signature" (like for @Out annotation).
+            Additionally the type (field type or return type of getter) must be one of: 
+            <ul>
+              <li>java.util.List</li>
+              <li>java.util.Set</li>
+              <li>java.util.Map</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@DataModelSelection</strong><br>
+            If annotation is on method, then the method must have "setter-signature".
+          </li>
+          <li>
+            <strong>@DataModelSelectionIndex</strong><br>
+            If annotation is on method, then the method must have "setter-signature".
+          </li>
+          <li>
+            <strong>@Factory</strong><br>
+            Method that have this signature:
+            <ul>
+              <li>non-void return type</li>
+              <li>either no parameters or a single parameter of class 'org.jboss.seam.Component' (or super type)</li>
+              <li>not static</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@Unwrap</strong><br>
+            Annotated method must have this signature:
+            <ul>
+              <li>non-void return type</li>
+              <li>either no parameters or a single parameter of class 'org.jboss.seam.Component' (or super type)</li>
+              <li>not static</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@Create</strong><br>
+            Annotated method must have this signature:
+            <ul>
+              <li>either no parameters or a single parameter of class 'org.jboss.seam.Component' (or super type)</li>
+              <li>not static</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@Destroy</strong><br>
+            Annotated method must have this signature:
+            <ul>
+              <li>void return type</li>
+              <li>no parameters</li>
+              <li>not static</li>
+            </ul>
+          </li>
+        </ul>
+      </font></td>
+  </tr>
+</table>
+</body>
+</html>

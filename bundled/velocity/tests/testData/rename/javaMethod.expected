@@ -1,0 +1,2 @@
+#* @vtlvariable name="foo" type="my.pack.MyClass" *#
+$foo.returnNew().returnNew().r<caret>eturnNew()

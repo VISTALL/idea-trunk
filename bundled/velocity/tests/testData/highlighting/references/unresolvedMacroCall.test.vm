@@ -1,0 +1,5 @@
+#* @vtlvariable name="arg1" type="int" *#
+#* @vtlvariable name="arg2" type="int" *#
+
+#<warning descr="Cannot resolve macro 'macrocall'">macrocall</warning>($arg1 $arg2)
+#macrocall

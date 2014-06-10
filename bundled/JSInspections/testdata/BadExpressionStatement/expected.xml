@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Expression statement which is not assignment or call</problem_class>
+    <description>Expression is not assignment or call</description>
+  </problem>
+</problems>

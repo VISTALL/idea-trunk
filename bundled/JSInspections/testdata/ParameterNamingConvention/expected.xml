@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Function parameter naming convention</problem_class>
+    <description>Parameter name 'f2' doesn't match regex '[a-z][A-Za-z]*' #loc</description>
+  </problem>
+</problems>

@@ -1,0 +1,8 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop">
+  <bean id="newName"/>
+  <aop:config>
+    <aop:aspect ref="newName">
+      <aop:before pointcut="bean(n<caret>ewName)"/>
+    </aop:aspect>
+  </aop:config>
+</beans>

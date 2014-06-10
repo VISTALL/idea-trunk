@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+      <list>
+        <value>bundles.properties</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="placeholderConfig2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="locations">
+      <list>
+        <value>bundles2.properties</value>
+        <value>bundles3.properties</value>
+      </list>
+    </property>
+    <property name="placeholderPrefix" value="[start]"/>
+    <property name="placeholderSuffix" value="[end]"/>
+  </bean>
+
+  <bean id="dataSource" class="FooBean12">
+    <property name="driverClassName">
+      <value>${jdbc.driver}</value>
+    </property>
+    <property name="property">
+      <value>${<error>unknown</error>}</value>
+    </property>
+    <property name="url" value="${jdbc.driver}"/>
+    <property name="username" value="[start]jdbc.user[end]"/>
+    <property name="password" value="${<error>unknown</error>}  xxx ${jdbc.driver} xxx [start]<error>foo</error>[end]"/>
+    <property name="resource" value="${jdbc.driver}"/>   <!-- IDEADEV-16432-->
+  </bean>
+
+  <bean id="mapBean" class="BeanWithMap">
+    <property name="map">
+      <map>
+        <entry key="${jdbc.driver}" value="${jdbc.driver}"/>
+      </map>
+    </property>
+    <property name="stringMap">
+      <map>
+        <entry key="${jdbc.driver}" value="${jdbc.driver}"/>
+      </map>
+    </property>
+    <property name="objectMap">
+      <map>
+        <entry key="${jdbc.driver}" value="${jdbc.driver}"/>
+      </map>
+    </property>
+  </bean>
+</beans>            

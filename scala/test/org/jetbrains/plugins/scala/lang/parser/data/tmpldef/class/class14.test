@@ -1,0 +1,44 @@
+private[C] class a{
+  private[C] val m = 5
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      AccessModifier
+        PsiElement(private)('private')
+        PsiElement([)('[')
+        PsiElement(identifier)('C')
+        PsiElement(])(']')
+    PsiWhiteSpace(' ')
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScPatternDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            AccessModifier
+              PsiElement(private)('private')
+              PsiElement([)('[')
+              PsiElement(identifier)('C')
+              PsiElement(])(']')
+          PsiWhiteSpace(' ')
+          PsiElement(val)('val')
+          PsiWhiteSpace(' ')
+          ListOfPatterns
+            ReferencePattern
+              PsiElement(identifier)('m')
+          PsiWhiteSpace(' ')
+          PsiElement(=)('=')
+          PsiWhiteSpace(' ')
+          Literal
+            PsiElement(integer)('5')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

@@ -1,0 +1,334 @@
+Test Plan for Refactor-X 2.0
+
+Licensing
+---------
+If unlicensed, a pretty panel asks you for a license on application startup
+If you have a temporary license that is going to expire, you are told this.
+There should be some way of entering a new license even if you already have a valid license
+This pretty panel points you to the Six and Red River site, if you wish to purchase a license
+The pretty panel never shows up again, nor does anything else once you have entered a valid license
+If you enter an invalid license, you are warned, and told why it is invalid, before being asked to reenter
+When you do enter a valid license, you are thanked.
+You can cancel out of the license process (although then you'll be asked again on startup).
+If you don't have a license, no Refactor-X functionality is enabled.
+
+Split Tag
+---------
+!Split a tag
+!Split a tag on a non-leaf tag
+!Split a tag on a leaf tag
+!Fail to split a top-level tag
+!Split a tag with a name prefix
+!Split a tag with an attribute name prefix
+!Fail to split a tag if no tag selected
+!Fail to split a tag if not in an editor
+!Fail to split a tag if not in an XML editor
+!Split a tag in a JSPX file
+!Split a tag in a XHTML file
+Show help for split tag
+
+Merge tag
+---------
+!Merge two tags with the same name
+!Merge two tags with the same name and attributes
+!Merge tag where first tag is leaf
+!Merge tag where second tag is leaf
+!Merge tag where first and second tags are leaf
+!Fail to merge two tags with different name
+!Fail to merge two tags with same name and different prefixes
+!Fail to merge two tags with same name and different attribute
+!Fail to merge two tags with same name and different attribute prefixes
+Fail to merge a top-level tag
+Fail to merge the last child tage
+Fail to merge tags if not tag selected
+!Fail to merge tags if not in an editor
+!Fail to merge tags if not in an XML editor
+!Merge tags in a JSPX file
+!Merge tags in a XHTML file
+Show help for merge tag
+
+Delete Tag
+----------
+!Delete a tag in the current file
+!Delete a tag in a selected directory
+!Delete a tag in a selected directory, recursively
+!Delete a tag in a selected module
+!Delete a tag throughout the project
+!Delete a tag throughout the project, for a given DTD
+!Delete a tag with children
+!Delete a tag with a prefix
+!Fail to delete a tag because there are none in the selected module or directory
+!Fail to delete a top-level tag
+!Fail to delete a tag if no tag selected
+!Fail to delete a tag if not in an editor
+!Fail to delete a tag if not in an XML editor
+!Delete a tag in a JSPX file
+!Delete a tag in a XHTML file
+!Preview results for Delete Tag
+!Preview XSLT for Delete Tag
+Show help for Delete Tag
+
+Delete Attribute
+----------------
+!Delete an attribute in the current file
+!Delete an attribute in a selected directory
+!Delete an attribute in a selected directory, recursively
+!Delete an attribute in a selected module
+!Delete an attribute throughout the project
+!Delete an attribute throughout the project, for a given DTD
+!Delete an attribute with a prefix
+!Fail to delete an attribute because there are none in the selected module or directory
+!Fail to delete an attribute if no tag selected
+!Fail to delete an attribute if no attribute selected
+!Fail to delete an attribute if not in an editor
+!Fail to delete an attribute if not in an XML editor
+!Delete an attribute in a JSPX file
+!Preview results for Delete Attribute
+!review XSLT for Delete Attribute
+Show help for Delete Attribute
+
+Unwrap Tag
+----------
+!Unwrap a tag in the current file
+!Unwrap a tag in a selected directory
+!Unwrap a tag in a selected directory, recursively
+!Unwrap a tag in a selected module
+!Unwrap a tag throughout the project
+!Unwrap a tag throughout the project, for a given DTD
+!Unwrap a tag with children
+!Unwrap a tag with a prefix
+!Fail to unwrap a tag because there are none in the selected module or directory
+!Fail to unwrap a top-level tag
+!Fail to unwrap a tag if no tag selected
+!Fail to unwrap a tag if not in an editor
+!Fail to unwrap a tag if not in an XML editor
+Unwrap a tag in a JSPX file
+Unwrap a tag in a XHTML file
+!Preview results for Unwrap Tag
+!Preview XSLT for Unwrap Tag
+Show help for Unwrap Tag
+
+Wrap Tag
+----------
+!Wrap a tag in the current file
+!Wrap a tag in a selected directory
+!Wrap a tag in a selected directory, recursively
+!Wrap a tag in a selected module
+!Wrap a tag throughout the project
+!Wrap a tag throughout the project, for a given DTD
+!Wrap a tag with children
+!Wrap a tag with a prefix
+!Wrap a top-level tag
+!Fail to wrap a tag because no tag name is specified
+!Fail to wrap a tag because there are none in the selected module or directory
+!Fail to wrap a tag if no tag selected
+!Fail to wrap a tag if not in an editor
+!Fail to wrap a tag if not in an XML editor
+!Fail to wrap a tag because an invalid tag name is specified
+Wrap a tag in a JSPX file
+Wrap a tag in a XHTML file
+!Preview results for Wrap Tag
+!Preview XSLT for Wrap Tag
+Show help for Wrap Tag
+
+Wrap Tag Contents
+----------
+!Wrap tag contents in the current file
+!Wrap tag contents in a selected directory
+!Wrap tag contents in a selected directory, recursively
+!Wrap tag contents in a selected module
+!Wrap tag contents throughout the project
+!Wrap tag contents throughout the project, for a given DTD
+!Wrap tag contents with children
+!Wrap tag contents with a prefix
+!Fail to wrap tag contents because no tag name is specified
+!Fail to wrap tag contents because there are none in the selected module or directory
+!Fail to wrap tag contents if no tag selected
+!Fail to wrap tag contents if not in an editor
+!Fail to wrap tag contents if not in an XML editor
+!Fail to wrap a tag because an invalid tag name is specified
+Wrap a tag in a JSPX file
+Wrap a tag in a XHTML file
+!Preview results for Wrap Tag Contents
+!Preview XSLT for Wrap Tag Contents
+Show help for Wrap Tag Contents
+
+Replace Attribute with Tag
+--------------------------
+!Replace an attribute with a tag in the current file
+!Replace an attribute with a tag in a selected directory
+!Replace an attribute with a tag in a selected directory, recursively
+!Replace an attribute with a tag in a selected module
+!Replace an attribute with a tag throughout the project
+!Replace an attribute with a tag throughout the project, for a given DTD
+!Replace an attribute with a prefix with a tag
+!Fail to replace an attribute with a tag because no tag name is specified
+!Fail to replace an attribute with a tag because an invalid tag name is specified
+!Fail to replace an attribute with a tag because there are none in the selected module or directory
+!Fail to replace an attribute with a tag if no attribute selected
+!Fail to replace an attribute with a tag if not in an editor
+!Fail to replace an attribute with a tag if not in an XML editor
+Replace an attribute with a tag in a JSPX file
+Replace an attribute with a tag in a XHTML file
+!Preview results for Replace Attribute With Tag
+!Preview XSLT for Replace Attribute With Tag
+Show help for Replace Attribute with Tag
+
+Replace Tag with Attribute
+--------------------------
+!Replace a tag with an attribute in the current file
+!Replace a tag with an attribute in a selected directory
+!Replace a tag with an attribute in a selected directory, recursively
+!Replace a tag with an attribute in a selected module
+!Replace a tag with an attribute throughout the project
+!Replace a tag with an attribute throughout the project, for a given DTD
+!Replace an tag with a prefix with aan attribute
+!Fail to replace a tag with an attribute because no tag name is specified
+!Fail to replace a tag with an attribute because there are none in the selected module or directory
+!Fail to replace a tag with an attribute if no tag selected
+!Fail to replace a tag with an attribute if not in an editor
+!Fail to replace a tag with an attribute if not in an XML editor
+Fail to replace a tag with an attribute because an invalid attribute name is specified
+What if there are multiple tags with the same parent
+Replace a tag with an attribute in a JSPX file
+Replace a tag with an attribute in a XHTML file
+!Preview XSLT for Replace Tag With Attribute
+!Preview results for Replace Tag With Attribute
+Show help for Replace Tag With Attribute
+
+Add Attribute
+-------------
+!Add an attribute to a tag in the current file
+!Add an attribute to a tag in a selected directory
+!Add an attribute to a tag in a selected directory, recursively
+!Add an attribute to a tag in a selected module
+!Add an attribute to a tag in a throughout the project
+!Add an attribute to a tag in a throughout the project, for a given DTD
+!Add an attribute with a prefix to a tag
+!Add an attribute to a tag, overwriting existing attributes
+!Fail to add an attribute because no attribute name is specified
+!Fail to add an attribute because an invalid attribute name is specified
+!Fail to add an attribute because no tag is selected
+!Fail to add an attribute if not in an editor
+!Fail to add an attribute if not in an XML editor
+Add an attribute in a JSPX file
+Add an attribute in an XHTML file
+!Preview results for Add Attribute
+!Preview XSLT for Add Attribute
+Show help for Add Attribute
+
+
+Add Subtag
+----------
+!Add a subtag to a tag in the current file
+!Add a subtag to a tag in a selected directory
+!Add a subtag to a tag in a selected directory, recursively
+!Add a subtag to a tag in a selected module
+!Add a subtag to a tag in a throughout the project
+!Add a subtag to a tag in a throughout the project, for a given DTD
+!Add a subtag with a prefix to a tag
+!Fail to add a subtag because no subtag name is specified
+!Fail to add a subtag because an invalid subtag name is specified
+!Fail to add a subtag because no tag is selected
+!Fail to add a subtag if not in an editor
+!Fail to add a subtag if not in an XML editor
+Add an subtag in a JSPX file
+Add an subtag in an XHTML file
+!Preview results for Add Subtag
+!Preview XSLT for Add Subtag
+Show help for Add Subtag
+
+Change Attribute Value
+----------------------
+!Change an attribute value in the current file
+!Change an attribute value in a selected directory
+!Change an attribute value in a selected directory, recursively
+!Change an attribute value in a selected module
+!Change an attribute value in a throughout the project
+!Change an attribute value in a throughout the project, for a given DTD
+!Change value for an attribute with a prefix
+!Fail to change an attribute value because no attribute is selected
+!Fail to change an attribute if not in an editor
+!Fail to change an attribute if not in an XML editor
+Change an attribute value in a JSPX file
+Change an attribute value in an XHTML file
+!Preview results for Change Attribute Value
+!Preview XSLT for Change Attribute Value
+Show help for Change Attribute Value
+
+Move Attribute In
+-----------------
+!Move an attribute in from a tag in the current file
+!Move an attribute in from a tag in a selected directory
+!Move an attribute in from a tag in a selected directory, recursively
+!Move an attribute in from a tag in a selected module
+!Move an attribute in from a tag in a throughout the project
+!Move an attribute in from a tag in a throughout the project, for a given DTD
+!Move an attribute with a prefix in from a tag
+Don't move an attribute in from a leaf tag
+!Fail to move an attribute in from a tag because an invalid subtag is entered
+!Fail to move an attribute in from a tag because no subtag is entered
+!Fail to move an attribute in from a tag because no attribute is selected
+!Fail to move an attribute in from a tag if not in an editor
+!Fail to move an attribute in from a tag if not in an XML editor
+Move an attribute in from a tag in a JSPX file
+Move an attribute in from a tag in an XHTML file
+!Preview results for Move Attribute In
+!Preview XSLT for Move Attribute In
+Show help for Move Attribute In
+
+Move Attribute Out
+------------------
+!Move an attribute out from a tag in the current file
+!Move an attribute out from a tag in a selected directory
+!Move an attribute out from a tag in a selected directory, recursively
+!Move an attribute out from a tag in a selected module
+!Move an attribute out from a tag in a throughout the project
+!Move an attribute out from a tag in a throughout the project, for a given DTD
+!Move an attribute with a prefix out from a tag
+!Don't move an attribute out from a top-level tag
+!Fail to move an attribute out from a tag because no attribute is selected
+!Fail to move an attribute out from a tag if not in an editor
+!Fail to move an attribute out from a tag if not in an XML editor
+Move an attribute out from a tag in a JSPX file
+Move an attribute out from a tag in an XHTML file
+!Preview results for Move Attribute Out
+!Preview XSLT for Move Attribute Out
+Show help for Move Attribute Out
+
+Convert Contents to Attribute
+-----------------------------
+!Convert contents to attribute for a tag in the current file
+!Convert contents to attribute for a tag in a selected directory
+!Convert contents to attribute for a tag in a selected directory, recursively
+!Convert contents to attribute for a tag in a selected module
+!Convert contents to attribute for a tag in a throughout the project
+!Convert contents to attribute for a tag in a throughout the project, for a given DTD
+!Convert contents to attribute with a prefix
+!Check that empty tags convert correctly
+!Fail to convert contents to attribute because no attribute name is specified
+!Fail to convert contents to attribute because an invalid attribute name is specified
+!Fail to convert contents to attribute because no tag is selected
+!Fail to convert contents to attribute if not in an editor
+!Fail to convert contents to attribute if not in an XML editor
+Convert contents to attribute for a tag in a JSPX file
+Convert contents to attribute for a tag in an XHTML file
+!Preview results for Convert Contents to Attribute
+!Preview XSLT for Move Attribute Out
+Show help for Convert Contents to Attribute
+
+Collapse Empty Tag
+------------------
+!Collapse an empty tag
+!Collapse an empty tag with an attribute
+!Collapse an empty tag with a prefix
+!Fail to collapse a non-empty tag
+Show help for collapse empty tag
+
+Expand Empty Tag
+----------------
+!expand an empty tag
+!expand an empty tag with an attribute
+!expand an empty tag with a prefix
+!Fail to expand a non-empty tag
+Show help for expand empty tag

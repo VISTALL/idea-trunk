@@ -1,0 +1,2 @@
+#* @implicitly included *#
+#* @vtlmacrolibrary path="macroLibraryForTests.vm" file="defineMacroLibraryExternallyLocal.test.vm" *#

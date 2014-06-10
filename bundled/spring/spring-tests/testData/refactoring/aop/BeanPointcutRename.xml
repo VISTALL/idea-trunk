@@ -1,0 +1,8 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop">
+  <bean id="aspectBean"/>
+  <aop:config>
+    <aop:aspect ref="aspectBean">
+      <aop:before pointcut="bean(a<caret>spectBean)"/>
+    </aop:aspect>
+  </aop:config>
+</beans>

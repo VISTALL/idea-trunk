@@ -1,0 +1,3 @@
+#* @vtlvariable name="foo" type="my.pack.MyClass" *#
+#set($bar = $foo.meth1())
+$<caret>

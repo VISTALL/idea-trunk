@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <bean id="fooBean" class="FooBean"/>
+  <bean id="fooBeanAbstract" abstract="true" class="FooBean"/>
+
+  <bean id="foo_1" class="FooBean11">
+    <property name="fooBean" ref="fooBean" />
+    <property name ="fooBeanArray">
+       <list>
+         <ref bean="fooBean"/>
+         <ref local="fooBean"/>
+         <bean class="FooBean"/>
+       </list>
+    </property>
+  </bean>
+
+  <bean id="foo_2" class="FooBean11">
+    <property name="fooBean">
+      <ref bean="fooBean"/>
+    </property>
+  </bean>
+
+  <bean id="foo_3" class="FooBean11">
+    <property name="fooBean">
+      <ref local="fooBean"/>
+    </property>
+  </bean>
+
+  <bean id="foo_4" class="FooBean11">
+    <property name="fooBean" ref="<error>fooBeanAbstract</error>" />
+    <property name ="fooBeanArray">
+       <list>
+         <ref bean="<error>fooBeanAbstract</error>"/>
+         <ref local="<error>fooBeanAbstract</error>"/>
+         <<error>idref</error> bean="<error>fooBeanAbstract</error>"/>
+         <<error>bean</error> class="FooBean11" abstract="true"/>
+       </list>
+    </property>
+  </bean>
+
+  <bean id="foo_5" class="FooBean11">
+    <property name="fooBean">
+      <ref bean="<error>fooBeanAbstract</error>"/>
+    </property>
+  </bean>
+
+  <bean id="foo_6" class="FooBean11">
+    <property name="fooBean">
+      <ref local="<error>fooBeanAbstract</error>"/>
+    </property>
+  </bean>
+
+  <bean id="foo_7" class="FooBean11">
+    <property name="fooBean">
+      <<error>bean</error> class="FooBean11" abstract="true"/>
+    </property>
+  </bean>
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+<bea<caret>n name="parent0 parent" abstract="true">
+        <property name="p1" value="p1_value"></property>
+</bean>
+
+<bean id="child" class="beans.A" parent="parent"/>
+</beans>

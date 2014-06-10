@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>'default' not last case in 'switch'</problem_class>
+    <description>'default' branch not last case in 'switch'</description>
+  </problem>
+</problems>

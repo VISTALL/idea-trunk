@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Constant on right side of comparison</problem_class>
+    <description>x &gt; 3: constant on right side of comparison #loc</description>
+  </problem>
+</problems>

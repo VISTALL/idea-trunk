@@ -1,0 +1,11 @@
+TEMPLATE_TEXT ('text  ')
+${ ('${')
+identifier ('myobj')
+} ('}')
+TEMPLATE_TEXT ('
+text text text ')
+${ ('${')
+identifier ('myobj')
+JAVA_DOT ('.')
+identifier ('ddd')
+} ('}')

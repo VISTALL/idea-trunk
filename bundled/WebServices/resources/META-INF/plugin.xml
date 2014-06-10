@@ -1,0 +1,237 @@
+<idea-plugin url="http://www.jetbrains.net/jira/browse/WSVC">
+  <name>WebServicesPlugin</name>
+  <description>Web services support using Axis (version 1.4), Axis 2 (1.X), Glassfish / JAX-RS / JAX-WS 2 RI / Metro 1.X / JWSDP 2.0, XFire 1.X / Apache CXF
+    and JBossWS (1.X/2.X) / WebSphere 6.X / JAXRPC / Sun WebDev Pack R2</description>
+  <change-notes>
+&lt;ul&gt;
+&lt;li&gt;Bugfixes.
+&lt;/ul&gt;
+  </change-notes>
+  <version>0.9 build 5</version>
+  <vendor email="support@youradvancedtools.com" url="http://www.jetbrains.net/jira/browse/WSVC">AdvancedTools</vendor>
+  <idea-version since-build="6000"/>
+  <depends optional="true">com.intellij.javaee</depends>
+  <category>Web/JavaEE Technologies</category>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileBasedIndex implementation="com.advancedtools.webservices.index.FileBasedWSIndex"/>
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <completion.contributor language="JAVA" implementationClass="com.advancedtools.webservices.completion.RestMimeCompletion" order="FIRST"/>
+    <completion.contributor language="JAVA" implementationClass="com.advancedtools.webservices.completion.RestPathParamCompletion" order="FIRST"/>
+    <fileTypeFactory implementation="com.advancedtools.webservices.WebServicesPluginSettings"/>
+    <standardResourceProvider implementation="com.advancedtools.webservices.WebServicesResourceProvider"/>
+  </extensions>
+  <project-components>
+     <component>
+       <interface-class>com.advancedtools.webservices.WebServicesPlugin</interface-class>
+       <implementation-class>com.advancedtools.webservices.WebServicesPlugin</implementation-class>
+       <skipForDefaultProject/>
+       <skipForDummyProject/>
+     </component>
+  </project-components>
+  <module-components>
+    <component>
+      <implementation-class>com.advancedtools.webservices.WSLibrarySynchronizer</implementation-class>
+    </component>    
+  </module-components>
+  <application-components>
+     <component>
+       <interface-class>com.advancedtools.webservices.WebServicesPluginSettings</interface-class>
+       <implementation-class>com.advancedtools.webservices.WebServicesPluginSettings</implementation-class>
+     </component>
+  </application-components>
+  <actions>
+    <group id="MyEditorPopupMenu" text="WebServices" popup="true" description="Axis specific actions">
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+      <add-to-group group-id="ScopeViewPopupMenu" anchor="last"/>
+    </group>
+
+    <action class="com.advancedtools.webservices.actions.GenerateJavaFromWsdlAction" text="Generate Java Code From Wsdl or Wadl"
+      id="WebServicesPlugin.GenerateJavaFromWsdl">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.actions.GenerateWsdlFromJavaAction" text="Generate Wsdl From Java Code"
+      id="WebServicesPlugin.GenerateWsdlFromJava">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.create.CreateWebServiceAction" text="Web Service"
+      id="WebServicesPlugin.CreateWebService">
+      <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.actions.create.CreateWebServiceClientAction" text="Web Service Client"
+      id="WebServicesPlugin.CreateWebServiceClient">
+      <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+    
+    <action class="com.advancedtools.webservices.jaxb.GenerateJAXBSchemasFromJavaAction" text="Generate Xml Schema from Java using JAXB"
+      id="WebServicesPlugin.GenerateJAXBSchemasFromJava">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.actions.DeployWebServiceAction" text="Expose Class as Web Service" id="WebServicesPlugin.DeployWebService">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.actions.UndeployWebServiceAction" text="Unexpose Class as Web Service"
+      id="WebServicesPlugin.RemoveWebService">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.jaxb.GenerateJavaFromJAXBSchemasAction" text="Generate Java Code From Xml Schema using JAXB"
+      id="WebServicesPlugin.GenerateJavaFromJAXBSchemas">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <action class="com.advancedtools.webservices.xmlbeans.GenerateJavaFromXmlBeansSchemasAction" text="Generate Java Code From Xml Schema using XmlBeans"
+      id="WebServicesPlugin.GenerateJavaFromXmlBeansSchemas">
+      <add-to-group group-id="MyEditorPopupMenu" anchor="last"/>
+    </action>
+    <!--<action class="com.advancedtools.webservices.xmlbeans.GenerateSchemaFromInstanceDocumentAction" text="Generate Xml Schema From Document"-->
+      <!--id="WebServicesPlugin.GenerateSchemaFromInstance">-->
+      <!--<add-to-group group-id="ToolsMenu" anchor="last" />-->
+      <!--<add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+      <!--<add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>-->
+    <!--</action>-->
+    <!--<action class="com.advancedtools.webservices.xmlbeans.GenerateInstanceDocumentFromSchemaAction" text="Generate Xml Document From Schema"-->
+      <!--id="WebServicesPlugin.GenerateInstanceFromSchema">-->
+      <!--<add-to-group group-id="ToolsMenu" anchor="last" />-->
+      <!--<add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+      <!--<add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>-->
+    <!--</action>-->
+
+    <action class="com.advancedtools.webservices.actions.EnableWebServicesSupportAction" text="Enable Web Service Support"
+      id="WebServicesPlugin.EnableWebServicesSupport">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.ShowDeployedWebServicesAction" text="Show Deployed Web Services"
+      id="WebServicesPlugin.ShowDeployedWebServices">
+    </action>
+
+    <action class="com.advancedtools.webservices.axis.MonitorSoapMessagesAction" text="Monitor SOAP Messages"
+      id="WebServicesPlugin.MonitorSoapMessages">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateAxis2WSCall" text="Generate WS Call for Axis 2"
+      id="WebServicesPlugin.GenerateAxis2WSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateWebSphereWSCall" text="Generate WS Call for WebSphere"
+      id="WebServicesPlugin.GenerateWebSphereWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateJaxRPCWSCall" text="Generate WS Call for JAXRPC"
+      id="WebServicesPlugin.GenerateJAXRPCWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateAxisWSCall" text="Generate WS Call for Axis"
+      id="WebServicesPlugin.GenerateAxisWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateRestWSCall" text="Generate WS Call for Axis"
+      id="WebServicesPlugin.GenerateRestWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateJWSDPWSCall" text="Generate WS Call for JAXWS RI/Glassfish/JWSDP"
+      id="WebServicesPlugin.GenerateJWSDPWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateXFireWSCall" text="Generate WS Call for XFire"
+      id="WebServicesPlugin.GenerateXFireWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateXFireUntypedWSCall" text="Generate WS Untyped Call for XFire"
+      id="WebServicesPlugin.GenerateXFireUntypedWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateAxisUntypedWSCall" text="Generate WS Untyped Call for Axis"
+      id="WebServicesPlugin.GenerateAxisUntypedWSCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateJAXBMarshalCall" text="Generate JAXB marshal code (java object to XML)"
+      id="WebServicesPlugin.GenerateMarshalJAXBCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateJAXBUnmarshalCall" text="Generate JAXB unmarshal code (java object from XML)"
+      id="WebServicesPlugin.GenerateUnmarshalJAXBCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateXmlBeansMarshalCall" text="Generate XmlBeans marshal code (java object to XML)"
+      id="WebServicesPlugin.GenerateMarshalXmlBeanCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.generate.GenerateXmlBeansUnmarshalCall" text="Generate XmlBeans unmarshal code (java object from XML)"
+      id="WebServicesPlugin.GenerateUnmarshalXmlBeanCall">
+    </action>
+
+    <action class="com.advancedtools.webservices.actions.CreateRestClientAction" text="Test RESTful Web Service" id="WebServicesPlugin.CreateRESTClient" icon="/com/advancedtools/webservices/rest/client/icons/rest_client_icon.png">
+    </action>
+    <action class="com.advancedtools.webservices.actions.GenerateWadlFromJavaAction" text="Generate WADL From Java Code" id="WebServicesPlugin.GenerateWADL">
+    </action>
+
+    <group id="WebServicesActions" text="_WebServices" popup="true" description="Web Services actions">
+      <reference ref="WebServicesPlugin.GenerateJavaFromWsdl" />
+      <reference ref="WebServicesPlugin.GenerateWsdlFromJava" />
+      <reference ref="WebServicesPlugin.EnableWebServicesSupport" />
+
+      <reference ref="WebServicesPlugin.DeployWebService" />
+      <reference ref="WebServicesPlugin.ShowDeployedWebServices" />
+      <reference ref="WebServicesPlugin.RemoveWebService" />
+      <add-to-group group-id="ToolsMenu" anchor="last" />
+    </group>
+
+    <group id="AxisActions" text="_Axis" popup="true" description="Axis specific actions">
+      <reference ref="WebServicesPlugin.MonitorSoapMessages" />
+      <add-to-group group-id="WebServicesActions" anchor="last" />
+    </group>
+
+    <group id="JAXB" text="JA_XB" popup="true" description="JAXB actions">
+      <reference ref="WebServicesPlugin.GenerateJAXBSchemasFromJava" />
+      <reference ref="WebServicesPlugin.GenerateJavaFromJAXBSchemas" />
+      <add-to-group group-id="ToolsMenu" anchor="last" />
+    </group>
+
+    <group id="XmlBeans" text="Xml_Beans" popup="true" description="XmlBeans actions">
+      <reference ref="WebServicesPlugin.GenerateJavaFromXmlBeansSchemas" />
+      <add-to-group group-id="ToolsMenu" anchor="last" />
+    </group>
+
+    <group id="WebServicesGenerate" text="WebServices Client Code" popup="true" description="Generate WS code" class="com.advancedtools.webservices.utils.BaseWSGenerateActionGroup">
+      <reference ref="WebServicesPlugin.GenerateAxisWSCall" />
+      <reference ref="WebServicesPlugin.GenerateAxis2WSCall" />
+      <reference ref="WebServicesPlugin.GenerateJWSDPWSCall" />
+      <reference ref="WebServicesPlugin.GenerateXFireWSCall" />
+      <reference ref="WebServicesPlugin.GenerateJAXRPCWSCall" />
+      <reference ref="WebServicesPlugin.GenerateAxisUntypedWSCall" />
+      <reference ref="WebServicesPlugin.GenerateXFireUntypedWSCall" />
+      <reference ref="WebServicesPlugin.GenerateWebSphereWSCall" />
+      <add-to-group group-id="GenerateGroup" anchor="last" />
+      <add-to-group anchor="last" group-id="MyEditorPopupMenu"/>
+      <add-to-group anchor="last" group-id="WebServicesActions"/>
+    </group>
+
+    <group id="JAXBGenerate" text="JAXB Client Code" popup="true" description="Generate JAXB code" class="com.advancedtools.webservices.utils.BaseWSGenerateActionGroup">
+      <reference ref="WebServicesPlugin.GenerateMarshalJAXBCall" />
+      <reference ref="WebServicesPlugin.GenerateUnmarshalJAXBCall" />
+      <add-to-group group-id="GenerateGroup" anchor="last" />
+      <add-to-group anchor="last" group-id="MyEditorPopupMenu"/>
+      <add-to-group anchor="last" group-id="JAXB"/>
+    </group>
+
+    <group id="XmlBeansGenerate" text="XmlBeans Client Code" popup="true" description="Generate XmlBeans code" class="com.advancedtools.webservices.utils.BaseWSGenerateActionGroup">
+      <reference ref="WebServicesPlugin.GenerateMarshalXmlBeanCall" />
+      <reference ref="WebServicesPlugin.GenerateUnmarshalXmlBeanCall" />
+      <add-to-group group-id="GenerateGroup" anchor="last" />
+      <add-to-group anchor="last" group-id="MyEditorPopupMenu"/>
+      <add-to-group anchor="last" group-id="XmlBeans"/>
+    </group>
+    <group id="REST" text="RESTful Web Services" popup="true" description="REST specific actions">
+      <reference ref="WebServicesPlugin.CreateRESTClient" />
+      <reference ref="WebServicesPlugin.GenerateWADL" />
+      <add-to-group group-id="WebServicesActions" anchor="first" />
+      <add-to-group group-id="MyEditorPopupMenu" anchor="first"/>            
+    </group>
+    <action class="com.advancedtools.webservices.actions.InstallSoapUIAction" text="Install SoapUI" id="WebServicesPlugin.InstallSoapUI">
+      <add-to-group group-id="WebServicesActions" anchor="first" />
+      <add-to-group group-id="MyEditorPopupMenu" anchor="first"/>
+    </action>
+
+  </actions>
+</idea-plugin>

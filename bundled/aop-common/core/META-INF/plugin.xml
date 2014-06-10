@@ -1,0 +1,31 @@
+<idea-plugin version="2">
+  <name>Spring-AOP and AspectJ support</name>
+  <id>com.intellij.aop</id>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+  <resource-bundle>messages.AopBundle</resource-bundle>
+  <description>Support for Spring AOP pointcut language</description>
+  <category>Web/JavaEE Technologies</category>
+
+  <extensionPoints>
+    <extensionPoint name="provider" interface="com.intellij.aop.AopProvider"/>
+  </extensionPoints>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <concatenationAwareInjector implementation="com.intellij.aop.jam.AopLanguageInjector"/>
+    <moduleService serviceInterface="com.intellij.aop.jam.AopModuleService" serviceImplementation="com.intellij.aop.jam.AopModuleService"/>
+    <semContributor implementation="com.intellij.aop.jam.AopJamContributor"/>
+    <codeInsight.lineMarkerProvider language="JAVA" implementationClass="com.intellij.aop.jam.AopJavaAnnotator"/>
+    <annotator language="PointcutExpression" implementationClass="com.intellij.aop.psi.AopAnnotator"/>
+    <inspectionToolProvider implementation="com.intellij.aop.jam.AopInspectionToolProvider"/>
+    <implicitUsageProvider implementation="com.intellij.aop.psi.AopImplicitUsageProvider"/>
+    <lang.parserDefinition language="PointcutExpression" implementationClass="com.intellij.aop.psi.AopPointcutExpressionParserDefinition"/>
+    <lang.findUsagesProvider language="PointcutExpression" implementationClass="com.intellij.aop.psi.AopPointcutExpressionFindUsagesProvider"/>
+    <highlightErrorFilter implementation="com.intellij.aop.jam.AopHighlightErrorFilter"/>
+    <completion.contributor language="PointcutExpression" implementationClass="com.intellij.aop.psi.AopCompletionData" order="before javaClassName" id="aop"/>
+    <jam.meta class="com.intellij.aop.jam.AopAdviceMetas" field="AFTER_RETURNING_METHOD_META"/>
+    <jam.meta class="com.intellij.aop.jam.AopAdviceMetas" field="AFTER_THROWING_METHOD_META"/>
+  </extensions>
+
+</idea-plugin>

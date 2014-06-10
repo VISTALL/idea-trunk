@@ -1,0 +1,33 @@
+#SET ('#set')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('mytext')
+WHITE_SPACE (' ')
+= ('=')
+WHITE_SPACE (' ')
+" ('"')
+#IF ('#if')
+( ('(')
+$ ('$')
+identifier ('var1')
+WHITE_SPACE (' ')
+LT ('<')
+WHITE_SPACE (' ')
+number ('5')
+) (')')
+TEMPLATE_TEXT ('
+!!!
+')
+#ELSE ('#else')
+TEMPLATE_TEXT ('
+???
+')
+#END ('#end')
+TEMPLATE_TEXT ('
+')
+" ('"')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+')

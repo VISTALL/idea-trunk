@@ -1,0 +1,23 @@
+#parse("File Header.java")
+#if (${PACKAGE_NAME} != "")
+package ${PACKAGE_NAME};
+#end
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
+
+@WebService(#if (${PACKAGE_NAME} == "")targetNamespace = "http://test"#end)
+public class ${CLASS_NAME} {
+  @WebMethod
+  public String sayHelloWorldFrom(String from) {
+    String result = "Hello, world, from " + from;
+    System.out.println(result);
+    return result;
+  }
+  public static void main(String[] argv) {
+    Object implementor = new ${CLASS_NAME} ();
+    String address = "http://localhost:9000/${CLASS_NAME}";
+    Endpoint.publish(address, implementor);
+  }
+}

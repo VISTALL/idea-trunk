@@ -1,0 +1,17 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  AopBinaryExpression
+    AopParenthesizedExpression
+      PsiElement(AOP_LEFT_PAR)('(')
+      PsiPointcutReferenceExpression
+        AopReferenceExpression
+          PsiElement(AOP_IDENTIFIER)('anyPublicOperation')
+        PsiElement(AOP_LEFT_PAR)('(')
+        AopParameterList
+          <empty list>
+        PsiElement(AOP_RIGHT_PAR)(')')
+      PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_AND)('and')
+    AopNotExpression
+      PsiElement(AOP_NOT)('not')
+      PsiErrorElement:Pointcut expression expected
+        <empty list>

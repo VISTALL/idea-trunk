@@ -1,0 +1,11 @@
+template
+#*multiline
+1
+2
+3
+     *#
+not a comment
+## oneline
+not a comment 2 ## oneline
+not a comment 3
+## EOF comment

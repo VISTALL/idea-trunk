@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aopp="http://www.springframework.org/schema/aop">
+    <bean class="Foo"/>
+    <aopp:aspectj-autoproxy/>
+</beans>

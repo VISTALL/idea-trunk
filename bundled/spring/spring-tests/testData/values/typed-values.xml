@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="collectionsBean" class="CollectionsBean">
+  <property name="someSet">
+    <set>
+      <value>classpath:/foo.txt</value>
+      <list>
+        <value type="org.springframework.core.io.Resource">classpath:/<error>foo.txt</error></value>
+      </list>
+    </set>
+  </property>
+  <property name="someMap">
+    <map>
+      <entry>
+        <key>
+          <value type="org.springframework.core.io.Resource">classpath:/<error>foo.txt</error></value>
+        </key>
+        <value type="org.springframework.core.io.Resource">classpath:/<error>foo.txt</error></value>
+      </entry>
+    </map>
+  </property>
+    <property name="someVal">
+        <value type="<error>org.springframework.core.io.Resource</error>"><error>eeee</error></value>
+    </property>
+  </bean>
+
+</beans>

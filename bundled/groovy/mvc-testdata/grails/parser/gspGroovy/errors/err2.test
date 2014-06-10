@@ -1,0 +1,24 @@
+<abc>
+<p><%= 3+ 1 ->%></p>
+</abc>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<abc>\n<p>')
+        PsiElement(java expression begin)('<%=')
+        Groovy Expression Injection
+          PsiWhiteSpace(' ')
+          Additive expression
+            Literal
+              PsiElement(Integer)('3')
+            PsiElement(+)('+')
+            PsiWhiteSpace(' ')
+            Literal
+              PsiElement(Integer)('1')
+          PsiWhiteSpace(' ')
+          PsiErrorElement:Wrong Groovy code
+            PsiElement(->)('->')
+        PsiElement(java expression end)('%>')
+        Outer: GSP TEMPLATE STATEMENTS('</p>\n</abc>')

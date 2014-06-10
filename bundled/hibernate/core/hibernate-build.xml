@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project name="HibernateSupport">
+  <dirname property="hibernate.core" file="${ant.file}"/>
+  <property name="project.home" value="${hibernate.core}/../../../"/>
+  <property name="production.output" value="${project.home}/out/classes/production"/>
+
+  <target name="CopyConsoleBaseClass">
+    <copy todir="${production.output}/hibernate-console">
+      <fileset dir="${production.output}/jdbc-console">
+        <include name="**/ConsoleBase*.*" />
+      </fileset>
+    </copy>
+  </target>
+  <target name="ClearConsoleBaseClass">
+    <delete>
+      <fileset dir="${production.output}/hibernate-console">
+        <include name="**/ConsoleBase*.*" />
+      </fileset>
+    </delete>
+  </target>
+</project>

@@ -1,0 +1,208 @@
+<!--
+  ~ Copyright 2000-2008 JetBrains s.r.o.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin url="http://www.jetbrains.net/confluence/display/SCA/Scala+Plugin+for+IntelliJ+IDEA">
+  <id>org.intellij.scala</id>
+  <name>Scala</name>
+  <description>Plugin for Scala language support</description>
+  <version>VERSION</version>
+  <vendor logo="/org/jetbrains/plugins/scala/images/scala16.png" url="http://www.jetbrains.com">JetBrains Inc.</vendor>
+  <idea-version since-build="SINCE_IDEA" until-build="UNTIL_IDEA"/>
+  <depends optional="true" config-file="scala-maven-integration.xml">org.jetbrains.idea.maven</depends>
+  <resource-bundle xmlns="">org.jetbrains.plugins.scala.ScalaBundle</resource-bundle>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <iconProvider implementation="org.jetbrains.plugins.scala.components.ScalaIconProvider"/>
+    <colorSettingsPage implementation="org.jetbrains.plugins.scala.highlighter.ScalaColorsAndFontsPage"/>
+    <applicationService serviceInterface="org.jetbrains.plugins.scala.settings.ScalaApplicationSettings"
+        serviceImplementation="org.jetbrains.plugins.scala.settings.ScalaApplicationSettings"/>
+    <annotator language="Scala" implementationClass="org.jetbrains.plugins.scala.annotator.ScalaAnnotator"/>
+    <!--<errorHandler implementation="org.jetbrains.plugins.scala.error.ErrorReportSubmitter"/>-->
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <fileTypeFactory implementation="org.jetbrains.plugins.scala.ScalaFileTypeFactory"/>
+    <syntaxHighlighter key="Scala" implementationClass="org.jetbrains.plugins.scala.highlighter.ScalaSyntaxHighlighter"/>
+    <treeStructureProvider language="Scala" implementation="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider"/>
+    <lang.braceMatcher language="Scala" implementationClass="org.jetbrains.plugins.scala.highlighter.ScalaBraceMatcher"/>
+    <lang.parserDefinition language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.parser.ScalaParserDefinition"/>
+    <lang.commenter language="Scala" implementationClass="org.jetbrains.plugins.scala.highlighter.ScalaCommenter"/>
+    <lang.foldingBuilder language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.folding.ScalaFoldingBuilder"/>
+    <lang.formatter language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.formatting.ScalaFormattingModelBuilder"/>
+    <lang.refactoringSupport language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.refactoring.ScalaRefactoringSupportProvider"/>
+    <lang.surroundDescriptor language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.surroundWith.descriptors.ScalaExpressionSurroundDescriptor"/>
+    <lang.psiStructureViewFactory language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.structureView.ScalaStructureViewFactory"/>
+    <frameworkSupport implementation="org.jetbrains.plugins.scala.config.ScalaFacetSupportProvider"/>
+    <completion.contributor language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.completion.ScalaKeywordCompletionContributor"/>
+    <completion.contributor language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.completion.ScalaSmartCompletionContributor"/>
+    <completion.contributor language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.completion.ScalaCompletionContributor"/>
+    <codeInsight.overrideMethod language="Scala" implementationClass="org.jetbrains.plugins.scala.overrideImplement.ScalaOverrideMethodsHandler"/>
+    <codeInsight.implementMethod language="Scala" implementationClass="org.jetbrains.plugins.scala.overrideImplement.ScalaImplementMethodsHandler"/>
+    <lang.findUsagesProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.findUsages.ScalaFindUsagesProvider"/>
+    <codeStyleSettingsProvider implementation="org.jetbrains.plugins.scala.lang.formatting.settings.ScalaCodeStyleSettingsProvider"/>
+    <compilerSettingsFactory implementation="org.jetbrains.plugins.scala.compiler.ScalaCompilerSettingsFactory"/>
+    <fileTemplateGroup implementation="org.jetbrains.plugins.scala.actions.ScalaTemplatesFactory"/>
+    <indexPatternBuilder implementation="org.jetbrains.plugins.scala.editor.todo.ScalaIndexPatternBuilder"/>
+    <readWriteAccessDetector implementation="org.jetbrains.plugins.scala.highlighter.readWriteAccess.ScalaReadWriteAccessDetector"/>
+    <directClassInheritorsSearch implementation="org.jetbrains.plugins.scala.lang.psi.impl.search.ScalaDirectClassInheritorsSearcher"/>
+    <codeInsight.lineMarkerProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.annotator.gutter.ScalaLineMarkerProvider"/>
+    <codeInsight.gotoSuper language="Scala" implementationClass="org.jetbrains.plugins.scala.annotator.gutter.ScalaGoToSuperActionHandler"/>
+    <gotoDeclarationHandler implementation="org.jetbrains.plugins.scala.annotator.gutter.ScalaGoToDeclarationHandler"/>
+    <debuggerClassFilterProvider implementation="org.jetbrains.plugins.scala.debugger.filters.ScalaDebuggerClassFilterProvider"/>
+    <xdebugger.settings implementation="org.jetbrains.plugins.scala.debugger.filters.ScalaDebuggerSettings"/>
+    <fileTypeIndentOptionsProvider implementation="org.jetbrains.plugins.scala.lang.formatting.settings.ScalaIndentOptionsProvider"/>
+    <lang.documentationProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.editor.documentationProvider.ScalaDocumentationProvider"/>
+    <renamePsiElementProcessor implementation="org.jetbrains.plugins.scala.lang.refactoring.rename.RenameScalaMethodProcessor" order="first"/>
+    <renamePsiElementProcessor implementation="org.jetbrains.plugins.scala.lang.refactoring.rename.RenameScalaValsProcessor" order="first"/>
+    <renamePsiElementProcessor implementation="org.jetbrains.plugins.scala.lang.refactoring.rename.RenameFakeMethodProcessor" order="first"/>
+    <renamePsiElementProcessor implementation="org.jetbrains.plugins.scala.lang.refactoring.rename.RenameScalaClassProcessor" order="first"/>
+    <nameSuggestionProvider implementation="org.jetbrains.plugins.scala.lang.refactoring.namesSuggester.ScalaNameSuggestionProvider"/>
+    <definitionsSearch implementation="org.jetbrains.plugins.scala.lang.psi.impl.search.MethodImplementationsSearch"/>
+    <antCustomCompiler implementation="org.jetbrains.plugins.scala.ant.ScalaAntCustomCompilerProvider"/>
+    <refactoring.moveHandler implementation="org.jetbrains.plugins.scala.lang.refactoring.moveHandler.MoveClassHandler" order="first"/>
+    <refactoring.inlineHandler language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.refactoring.inline.ScalaInlineHandler"/>
+    <!--<refactoring.introduceParameterMethodUsagesProcessor implementation="org.jetbrains.plugins.scala.lang.refactoring.introduceParameter.ScalaIntroduceParameterMethodUsagesProcessor"/>-->
+
+    <javaMainMethodProvider implementation="org.jetbrains.plugins.scala.runner.ScalaMainMethodProvider"/>
+    <annotatedElementsSearch implementation="org.jetbrains.plugins.scala.lang.psi.impl.search.ScalaAnnotatedMembersSearcher"/>
+    <referencesSearch implementation="org.jetbrains.plugins.scala.findUsages.parameters.NamingParamsSearcher"/>
+    <referencesSearch implementation="org.jetbrains.plugins.scala.findUsages.vals.JavaValsUsagesSearcher"/>
+    <findUsagesHandlerFactory implementation="org.jetbrains.plugins.scala.findUsages.factory.ScalaFindUsagesHandlerFactory"/>
+    <codeInsight.parameterInfo language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.parameterInfo.ScalaFunctionParameterInfoHandler"/>
+    <codeInsight.parameterInfo language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.parameterInfo.ScalaPatternParameterInfoHandler"/>
+    <codeInsight.parameterInfo language="Scala" implementationClass="org.jetbrains.plugins.scala.lang.parameterInfo.ScalaTypeParameterInfoHandler"/>
+    <defaultLiveTemplatesProvider implementation="org.jetbrains.plugins.scala.codeInsight.template.impl.ScalaDefaultLiveTemplatesProvider"/>
+    <liveTemplateContext implementation="org.jetbrains.plugins.scala.codeInsight.template.impl.ScalaLiveTemplateContextType"/>
+    <liveTemplateMacro implementation="org.jetbrains.plugins.scala.codeInsight.template.macros.ScalaVariableOfTypeMacro"/>
+    <liveTemplateMacro implementation="org.jetbrains.plugins.scala.codeInsight.template.macros.SuggestScalaVariableNameMacro"/>
+    <testSrcLocator implementation="org.jetbrains.plugins.scala.testingSupport.scalaTest.locationProvider.ScalaTestLocationProvider"/>
+    <java.elementFinder implementation="org.jetbrains.plugins.scala.lang.psi.impl.toplevel.synthetic.SyntheticClasses"/>
+    <java.elementFinder implementation="org.jetbrains.plugins.scala.finder.ScalaClassFinder"/>
+    <java.shortNamesCache implementation="org.jetbrains.plugins.scala.caches.ScalaShortNamesCache"/>
+    <typeHierarchyProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.hierarchy.ScalaTypeHierarchyProvider"/>
+    <methodHierarchyProvider language="Scala" implementationClass="org.jetbrains.plugins.scala.hierarchy.ScalaMethodHierarchyProvider"/>
+
+    <gotoClassContributor implementation="org.jetbrains.plugins.scala.gotoclass.ScalaGoToClassContributor"/>
+    <gotoSymbolContributor implementation="org.jetbrains.plugins.scala.gotoclass.ScalaGoToSymbolContributor"/>
+    <lang.importOptimizer language="Scala" implementationClass="org.jetbrains.plugins.scala.editor.importOptimizer.ScalaImportOptimizer"/>
+
+    <configurationType implementation="org.jetbrains.plugins.scala.script.ScalaScriptConfigurationType"/>
+    <configurationType implementation="org.jetbrains.plugins.scala.console.ScalaScriptConsoleConfigurationType"/>
+    <configurationType implementation="org.jetbrains.plugins.scala.testingSupport.scalaTest.ScalaTestConfigurationType"/>
+    <configurationType implementation="org.jetbrains.plugins.scala.testingSupport.specs.SpecsConfigurationType"/>
+    <configurationProducer implementation="org.jetbrains.plugins.scala.testingSupport.specs.SpecsConfigurationProducer"/>
+    <configurationProducer implementation="org.jetbrains.plugins.scala.testingSupport.scalaTest.ScalaTestConfigurationProducer"/>
+
+    <stubElementTypeHolder class="org.jetbrains.plugins.scala.lang.parser.ScalaElementTypes"/>
+    <!--Stub indeces -->
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScShortClassNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScFullClassNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScPackageObjectIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScFullPackagingNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScFunctionNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScFunctionNameToClassIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScValueNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScVariableNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScTypeAliasNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScDirectInheritorsIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.scala.lang.psi.stubs.index.ScAnnotatedMemberIndex"/>
+
+    <projectService serviceInterface="org.jetbrains.plugins.scala.annotator.importsTracker.ImportTracker"
+                    serviceImplementation="org.jetbrains.plugins.scala.annotator.importsTracker.ImportTracker"/>
+
+    <!--Extensions for class-files treatment-->
+    <clsStubBuilderFactory implementation="org.jetbrains.plugins.scala.decompiler.ScClsStubBuilderFactory"/>
+    <contentBasedClassFileProcessor implementation="org.jetbrains.plugins.scala.decompiler.ScContentBasedClassFileProcessor"/>
+    <lang.fileViewProviderFactory language="Scala" implementationClass="org.jetbrains.plugins.scala.decompiler.ScClassFileViewProviderFactory"/>
+
+  </extensions>
+
+
+  <application-components>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.error.ErrorReportConfigurable</implementation-class>
+      <interface-class>org.jetbrains.plugins.scala.error.ErrorReportConfigurable</interface-class>
+    </component>
+    <component>
+      <interface-class>org.jetbrains.plugins.scala.util.ScalaToolsFactory</interface-class>
+      <implementation-class>org.jetbrains.plugins.scala.util.ScalaToolsFactoryImpl</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.ScalaLoader</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.components.ScalaIconProvider</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.config.ScalaFacetLoader</implementation-class>
+      <interface-class>org.jetbrains.plugins.scala.config.ScalaFacetLoader</interface-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.codeInspection.ScalaInspectionsProvider</implementation-class>
+    </component>
+  </application-components>
+
+
+  <module-components>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.config.ScalaFacetListener</implementation-class>
+    </component>
+  </module-components>
+
+  <project-components>
+    <component>
+      <interface-class>com.intellij.ide.projectView.TreeStructureProvider</interface-class>
+      <implementation-class>org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.lang.psi.impl.toplevel.synthetic.SyntheticClasses
+      </implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.lang.psi.impl.ScalaPsiManager</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.codeInspection.unusedInspections.ScalaUnusedImportsPassFactory
+      </implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.caches.ScalaCachesManager</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.compiler.ScalacSettings</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.scala.compiler.component.CompilerProjectComponent
+      </implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <action id="Scala.NewClass" class="org.jetbrains.plugins.scala.actions.NewScalaTypeDefinitionAction"
+        text="Scala Class" description="Create new Scala class">
+      <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+    <action id="Scala.RunConsole" class="org.jetbrains.plugins.scala.console.RunConsoleAction"
+            text="Run Scala Console" description="Run Scala console">
+      <add-to-group group-id="RunContextPopupGroup" anchor="last"/>
+      <keyboard-shortcut first-keystroke="control shift D" keymap="$default"/>
+    </action>
+    <!--<action id="Scala.RenameJavaToScala" class="org.jetbrains.plugins.scala.conversion.RenameJavaToScalaAction"
+            text="Convert Java File To Scala" description="Rename Java File To Scala">
+      <add-to-group group-id="RefactoringMenu" anchor="last"/>
+      <keyboard-shortcut first-keystroke="control shift G" keymap="$default"/>
+    </action>-->
+  </actions>
+
+</idea-plugin>

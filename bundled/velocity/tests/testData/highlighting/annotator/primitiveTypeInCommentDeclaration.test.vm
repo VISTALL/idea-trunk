@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo1" type="double" *#
+#* @vtlvariable name="foo2" type="boolean" *#
+#* @vtlvariable name="foo3" type="int" *#
+$foo1 $foo2 $foo3

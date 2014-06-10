@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="bean1" class="<error>FooBean</error>" >
+    <constructor-arg value = "s1"/>
+  </bean>
+
+  <bean id="bean2" class="<error>java.lang.Integer</error>" >
+    <constructor-arg value = "s1"/>
+    <constructor-arg value = "s2"/>
+  </bean>
+
+  <bean id="goodInteger" class="java.lang.Integer" >
+    <constructor-arg value = "s1"/>
+  </bean>
+
+  <bean id="bean3" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg value = "s1"/>
+  </bean>
+
+  <bean id="bean4" class="<error>FooBeanWithConstructors2</error>" />
+
+  <!-- factory methods-->
+  <bean id="factory" class="FactoryBean"/>
+  
+  <bean id="bean5" factory-bean="factory" factory-method="<error>createFooBean</error>">
+    <constructor-arg value = "s1"/>
+  </bean>
+
+  <bean id="bean6" factory-bean="factory" factory-method="<error>createFooBeanWithConstructors2</error>" >
+    <constructor-arg value = "s1"/>
+    <constructor-arg value = "s2"/>
+  </bean>
+
+  <bean id="goodFactoryBean" factory-bean="factory" factory-method="createFooBeanWithConstructors2" >
+    <constructor-arg value = "s1"/>
+  </bean>
+
+  <bean id="bean7" factory-bean="factory" factory-method="<error>createFooBeanWithConstructors2</error>" />
+</beans>

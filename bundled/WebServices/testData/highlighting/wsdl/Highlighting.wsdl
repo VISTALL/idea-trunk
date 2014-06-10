@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:ns0="http://localhost/services/MyService" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns1="<error>http://org.apache.axis2/xsd</error>"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  targetNamespace="http://localhost/services/MyService">
+  <wsdl:import namespace="urn:aaa" location="Highlighting.wsdl"/>
+  <wsdl:import namespace="urn:aaa2" location="<error>Highlighting2.wsdl</error>"/>
+
+  <wsdl:types>
+    <xs:schema xmlns:ns="http://localhost/services/MyService" attributeFormDefault="qualified"
+               elementFormDefault="qualified" targetNamespace="http://localhost/services/MyService">
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="XMLStreamException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="XMLStreamException" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="echo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="element" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="echoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ping">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="element" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="pingF">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="element" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="pingFRequest">
+    <wsdl:part name="parameters" element="ns0:pingF"/>
+  </wsdl:message>
+  <wsdl:message name="pingFResponse"/>
+  <wsdl:message name="echoRequest">
+    <wsdl:part name="parameters" element="ns0:echo"/>
+  </wsdl:message>
+  <wsdl:message name="echoResponse">
+    <wsdl:part name="parameters" element="ns0:echoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="XMLStreamException">
+    <wsdl:part name="parameters" element="ns0:XMLStreamException"/>
+  </wsdl:message>
+  <wsdl:message name="pingRequest">
+    <wsdl:part name="parameters" element="ns0:<error>ping2</error>"/>
+  </wsdl:message>
+  <wsdl:message name="pingResponse"/>
+  <wsdl:portType name="MyServicePortType">
+    <wsdl:operation name="pingF">
+      <wsdl:input message="ns0:pingFRequest" wsaw:Action="urn:pingF"/>
+      <wsdl:output message="ns0:pingFResponse" wsaw:Action="urn:pingFResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <wsdl:input message="ns0:echoRequest" wsaw:Action="urn:echo"/>
+      <wsdl:output message="ns0:<error>echoResponse2</error>" wsaw:Action="urn:echoResponse"/>
+      <wsdl:fault message="ns0:XMLStreamException" name="XMLStreamException" wsaw:Action="urn:echoXMLStreamException"/>
+      <wsdl:fault message="ns0:<error>XMLStreamException2</error>" name="XMLStreamException"
+                  wsaw:Action="urn:echoXMLStreamException"/>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="ns0:pingRequest" wsaw:Action="urn:ping"/>
+      <wsdl:output message="ns0:pingResponse" wsaw:Action="urn:pingResponse"/>
+      <wsdl:fault message="ns0:XMLStreamException" name="XMLStreamException" wsaw:Action="urn:pingXMLStreamException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MyServiceSOAP12Binding" type="ns0:<error>MyServicePortType2</error>">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="pingF">
+      <soap:operation soapAction="urn:pingF" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="urn:echo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="XMLStreamException">
+        <soap:fault use="literal" name="XMLStreamException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="urn:ping" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="XMLStreamException">
+        <soap:fault use="literal" name="XMLStreamException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MyServiceSOAP11Binding" type="ns0:MyServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="pingF">
+      <soap:operation soapAction="urn:pingF" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="echo">
+      <soap:operation soapAction="urn:echo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="XMLStreamException">
+        <soap:fault use="literal" name="XMLStreamException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="urn:ping" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="XMLStreamException">
+        <soap:fault use="literal" name="XMLStreamException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="MyServiceSOAP11port_http" binding="ns0:MyServiceSOAP11Binding">
+      <soap:address location="http://localhost:8080/services/userguide/example1/MyService"/>
+    </wsdl:port>
+    <wsdl:port name="MyServiceSOAP12port_http" binding="ns0:<error>MyServiceSOAP12Binding2</error>">
+      <soap12:address location="http://localhost:8080/services/userguide/example1/MyService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

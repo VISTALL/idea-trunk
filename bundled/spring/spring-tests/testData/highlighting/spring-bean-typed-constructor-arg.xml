@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="fooBean" class="FooBean"/>
+
+  <bean id="bean" class="FooBeanWithConstructors" >
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "int" value=<error>""</error> />
+    <constructor-arg type = "boolean" value=<error>""</error> />
+  </bean>
+
+  <bean id="bean_1" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "java.lang.String" value="" />
+  </bean>
+
+ <bean id="bean_2" class="FooBeanWithConstructors" >
+    <constructor-arg type = "boolean" value=<error>""</error> />
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "int" value=<error>""</error> />
+  </bean>
+
+  <!-- bean references  -->
+  <bean id="bean_3_1_1" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+       <bean class="FooBean"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_1_2" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+       <bean class="FooBean2"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_2" class="FooBeanWithConstructors2" >
+    <constructor-arg ref="fooBean"/>
+  </bean>
+  <bean id="bean_3_3" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <warning><ref bean="fooBean"/></warning>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_4" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <ref local="fooBean"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_5" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <ref parent="<error>fooBean</error>"/>
+    </constructor-arg>
+  </bean>
+
+  <!-- bean idref  -->
+  <bean id="bean_idref_1" class="java.lang.String" >
+    <constructor-arg>
+      <idref bean="fooBean"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_idref_2" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <idref local="fooBean"/>
+    </constructor-arg>
+  </bean>
+
+  <!-- java.util.*  -->
+  <bean id="bean_3_6" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <map/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_7" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <list/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_8" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+      <set/>
+    </constructor-arg>
+  </bean>
+
+  <!-- <null/> -->
+  <bean id="bean_3_10" class="FooBeanWithConstructors2" >
+    <constructor-arg>
+        <null/>
+    </constructor-arg>
+  </bean>
+
+  <!-- <null/> for bean with primitive arg type constructor -->
+  <bean id="bean_3_11" class="<error>FooBean</error>" >
+    <constructor-arg>
+        <null/>
+    </constructor-arg>
+  </bean>
+
+
+  <!-- test incorrect value types-->
+  <bean id="some_bean" class="FooBeanWithConstructors" >
+    <constructor-arg type = "boolean" >
+       <warning><ref bean="fooBean"/></warning>
+    </constructor-arg>
+
+    <constructor-arg type = "java.lang.String">
+      <warning><value>asd</value></warning>
+    </constructor-arg>
+
+    <constructor-arg type = "int" >
+      <bean class="FooBean" />
+    </constructor-arg>
+  </bean>
+
+<bean id="some_bean2" class="FooBeanWithConstructors" >
+    <constructor-arg type = "boolean" value="true" />
+
+    <constructor-arg type = "java.lang.String">
+      <warning><value>asd</value></warning>
+    </constructor-arg>
+
+    <constructor-arg type="int" >
+      <warning><value>123</value></warning>
+    </constructor-arg>
+  </bean>
+
+
+  <!-- *************** factory methods **************** -->
+
+  <bean id="bean_f" class="FooBeanWithConstructors" factory-method="getInstance" >
+    <constructor-arg type = "java.lang.String" value=""/>
+    <constructor-arg type = "int" value=<error>""</error>/>
+    <constructor-arg type = "boolean" value="true"/>
+  </bean>
+
+  <bean id="bean_1_f" class="FooBeanWithConstructors" factory-method="<error>getInstance</error>" >
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "java.lang.String"value="" />
+  </bean>
+
+ <bean id="bean_2_f" class="FooBeanWithConstructors" factory-method="getInstance">
+    <constructor-arg type = "boolean" value=<error>""</error> />
+    <constructor-arg type = "java.lang.String" value="" />
+    <constructor-arg type = "int" value=<error>""</error> />
+  </bean>
+
+  <!-- bean references  -->
+  <bean id="bean_3_1_1_f" class="FooBeanWithConstructors2" factory-method="getInstance" >
+    <constructor-arg>
+       <bean class="FooBean"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_1_2_f" class="FooBeanWithConstructors2" factory-method="getInstance" >
+    <constructor-arg>
+       <bean class="FooBean2"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_2_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg ref="fooBean"/>
+  </bean>
+  <bean id="bean_3_3_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <warning><ref bean="fooBean"/></warning>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_4_f" class="FooBeanWithConstructors2" factory-method="getInstance" >
+    <constructor-arg>
+      <ref local="fooBean"/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_5_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <ref parent="<error>fooBean</error>"/>
+    </constructor-arg>
+  </bean>
+
+  <!-- bean idref  -->
+  <bean id="bean_idref_1_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <idref bean="fooBean"/>
+    </constructor-arg>
+  </bean>
+
+  <bean id="bean_idref_2_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <idref local="fooBean"/>
+    </constructor-arg>
+  </bean>
+
+  <!-- java.util.*  -->
+  <bean id="bean_3_6_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <map/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_7_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <list/>
+    </constructor-arg>
+  </bean>
+  <bean id="bean_3_8_f" class="FooBeanWithConstructors2" factory-method="getInstance">
+    <constructor-arg>
+      <set/>
+    </constructor-arg>
+  </bean>
+
+  <!-- <null/> -->
+  <bean id="bean_3_10_f" class="FooBeanWithConstructors2" factory-method="getInstance" >
+    <constructor-arg>
+        <null/>
+    </constructor-arg>
+  </bean>
+
+  <!-- test incorrect value types-->
+  <bean id="some_bean_f" class="FooBeanWithConstructors" factory-method="getInstance">
+    <constructor-arg type = "boolean" >
+       <warning><ref bean="fooBean"/></warning>
+    </constructor-arg>
+
+    <constructor-arg type = "java.lang.String">
+      <warning><value>asd</value></warning>
+    </constructor-arg>
+
+    <constructor-arg type = "int" >
+      <bean class="FooBean" />
+    </constructor-arg>
+  </bean>
+
+  <bean id="some_bean2_f" class="FooBeanWithConstructors" factory-method="getInstance">
+    <constructor-arg type = "boolean" value="true" />
+
+    <constructor-arg type = "java.lang.String">
+      <warning><value>asd</value></warning>
+    </constructor-arg>
+
+    <constructor-arg type="int" >
+      <warning><value>123</value></warning>
+    </constructor-arg>
+  </bean>
+
+
+</beans>
+
+  

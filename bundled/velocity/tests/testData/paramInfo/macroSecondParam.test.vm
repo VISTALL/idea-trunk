@@ -1,0 +1,4 @@
+#macro(mmm $a $b)
+#end
+
+#mmm(3 5<caret>)

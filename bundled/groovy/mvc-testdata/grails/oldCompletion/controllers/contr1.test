@@ -1,0 +1,12 @@
+class MyController {
+  def foo = {
+    re<caret>
+  }
+}
+-----
+redirect
+registerNatives
+render
+request
+response
+return

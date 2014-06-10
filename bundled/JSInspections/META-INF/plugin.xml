@@ -1,0 +1,16 @@
+<idea-plugin version="2">
+    <name>Inspection-JS</name>
+    <id>Inspection-JS-2</id>
+    <description>Adds over 100 new automated code inspections for auditing JavaScript.</description>
+    <vendor url="http://www.sixthandredriver.com"
+            email="info@sixthandredriver.com">Sixth and Red River Software</vendor>
+    <version>2.0</version>
+    <idea-version since-build="5000"/>
+    <category>HTML/JavaScript Development</category>
+    <extensions defaultExtensionNs="com.intellij">
+      <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+      <inspectionToolProvider implementation="com.sixrr.inspectjs.InspectionJSPlugin"/>
+    </extensions>
+    <depends>JavaScript</depends>
+    <depends>com.intellij.modules.xml</depends>
+</idea-plugin>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="lookupTest" class="FooLookupBean" >
+      <lookup-method bean="<error>xxx</error>" name="createCommand" />
+      <lookup-method bean="fooBean" name="createCommand" />
+      <lookup-method name="<error>createCommandStatic</error>" />
+      <!-- private -->
+        <lookup-method bean="fooBean" name="<error>createCommand1</error>" />
+        <lookup-method bean="fooBean" name="createCommand2" />
+        <lookup-method bean="fooBean" name="createCommand3" />
+        <lookup-method bean="fooBean2" name="createCommand4" />
+      <!-- argument -->
+        <lookup-method bean="fooBean" name="<error>createCommand5</error>" />
+      <!-- not exist -->
+      <lookup-method bean="fooBean" name="<error>createCommand6</error>" />
+      <!-- mismatch -->
+      <lookup-method bean="<error>fooBean</error>" name="<error>createCommand7</error>" />
+
+    </bean>
+
+    <bean id="fooBean" class="FooBean"/>
+    <bean id="fooBean2" class="FooBean2"/>
+    <bean id="fooBean3" class="FooBean3"/>
+</beans>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>'this' expression which references the global object</problem_class>
+    <description>Top-level 'this' expression</description>
+  </problem>
+</problems>

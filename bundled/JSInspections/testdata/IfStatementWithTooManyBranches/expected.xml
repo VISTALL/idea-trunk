@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+    <problem>
+        <file>test.js</file>
+        <line>2</line>
+        <problem_class>'if' statement with too many branches</problem_class>
+        <description>'if' has too many branches (4) #loc</description>
+    </problem>
+</problems>

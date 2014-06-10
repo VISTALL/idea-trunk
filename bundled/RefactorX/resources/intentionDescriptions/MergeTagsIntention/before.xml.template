@@ -1,0 +1,8 @@
+<FOO>
+    <spot><BAR x="true"></spot>
+        <BAZ/>
+    </BAR>
+    <BAR x="true">
+        <BAZ2/>
+    </BAR>
+</FOO>

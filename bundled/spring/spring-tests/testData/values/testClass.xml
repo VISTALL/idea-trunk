@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="test" class="BeanWithClass">
+    <property name="class" value=<error>""</error>/>
+  </bean>
+  
+  <bean id="test1" class="BeanWithClass">
+    <property name="class" value="java.lang.String"/>
+  </bean>
+
+  <bean id="test2" class="BeanWithClass">
+    <property name="class" value="java.lang.<error>unknown</error>"/>
+  </bean>
+
+  <bean id="test3" class="BeanWithClass">
+    <property name="classesArray">
+      <list>
+        <value>java.lang.String</value>
+        <value>java.lang.<error>unknown</error></value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="test4" class="BeanWithClass">
+    <property name="classesArray">
+      <set>
+        <value>java.lang.String</value>
+        <value>java.lang.<error>unknown</error></value>
+      </set>
+    </property>
+  </bean>
+
+</beans>

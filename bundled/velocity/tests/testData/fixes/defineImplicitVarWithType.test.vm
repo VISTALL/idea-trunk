@@ -1,0 +1,2 @@
+$fo<caret>o.replaceFirst('f','d')
+#set($bar = $foo.substring(4))

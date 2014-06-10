@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="target" class="TargetBean"/>
+  <bean id="singleInterface" class="TargetBeanImplementingInterface"/>
+  <bean id="multiInterface" class="TargetBeanImplementingMultipleInterfaces"/>
+
+  <!-- BeanReferenceFactoryBean -->
+  <bean id="beanReference" class="org.springframework.beans.factory.config.BeanReferenceFactoryBean">
+    <property name="targetBeanName" value="target"/>
+  </bean>
+
+  <!-- ScopedProxyFactoryBean -->
+  <bean id="scopedProxy" class="org.springframework.aop.scope.ScopedProxyFactoryBean">
+    <property name="targetBeanName" value="singleInterface"/>
+  </bean>
+
+  <bean id="scopedProxyUsingInterface" class="org.springframework.aop.scope.ScopedProxyFactoryBean">
+    <property name="proxyTargetClass" value="false"/>
+    <property name="targetBeanName" value="singleInterface"/>
+  </bean>
+
+  <!-- ProxyFactoryBean -->
+  <bean id="proxyFromRef" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="singleInterface"/>
+  </bean>
+
+  <bean id="proxyFromRefTwoInterfaces" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <bean id="proxyFromName" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="targetName" value="singleInterface"/>
+  </bean>
+
+  <bean id="proxyFromTargetClass" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="targetClass" value="TargetBeanImplementingInterface"/>
+  </bean>
+
+  <bean id="proxyUsingCglib" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyTargetClass" value="true"/>
+    <property name="target" ref="singleInterface"/>
+  </bean>
+
+  <bean id="proxySpecificInterface" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="proxyInterfaces" value="TargetInterfaceTwo"/>
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <bean id="proxyNoAutodetectInterfaces" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <property name="autodetectInterfaces" value="false"/>
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <!-- TransactionProxyFactoryBean -->
+  <bean id="txProxyNoInterfaces" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target" ref="target"/>
+  </bean>
+
+  <bean id="txProxyNestedTarget" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target">
+      <bean class="TargetBean"/>
+    </property>
+  </bean>
+
+  <bean id="txProxyAllInterfaces" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <bean id="txProxyUsingCglib" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="proxyTargetClass" value="true"/>
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <bean id="txProxySpecificInterface" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="proxyInterfaces" value="TargetInterfaceOne"/>
+    <property name="target" ref="multiInterface"/>
+  </bean>
+
+  <!-- IDEA-13844 -->
+  <bean id="doubleProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target">
+      <bean class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces" value="TargetInterfaceOne"/>
+        <property name="target">
+          <bean class="TargetBeanImplementingMultipleInterfaces"/>
+        </property>
+      </bean>
+    </property>
+  </bean>
+
+  <!-- Should not cause stack overflow -->
+  <bean id="circularOne" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target" ref="circularTwo"/>
+  </bean>
+
+  <bean id="circularTwo" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <property name="target" ref="circularOne"/>
+  </bean>
+
+</beans>

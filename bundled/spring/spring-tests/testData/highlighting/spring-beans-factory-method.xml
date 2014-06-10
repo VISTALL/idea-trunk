@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="factorybean" class="FactoryBean" factory-method="getInstance"/>
+
+  <bean id="factorybean2" class="FactoryBean" factory-method="<error>unknownMethod</error>"/>
+  <bean id="factorybean3" class="<error>NoClass</error>" factory-method="<error>getInstance</error>"/>
+  <bean id="factorybean4" class="FactoryBean" factory-method="<error>getInstanceNonStatic</error>"/>
+  <bean id="factorybean5" class="FactoryBean" factory-method="<error>getInstanceBadReturnType</error>"/>
+
+
+  <bean id="foobean" class="FooBean" factory-bean="factorybean" factory-method="createFooBean"/>
+
+  <bean id="foobean1" class="FooBean" factory-bean="<error>unknown-factory-bean</error>" factory-method="<error>createFooBean</error>"/>
+  <bean id="foobean2" class="<error>NoClass</error>" factory-bean="<error>unknown-factory-bean</error>" factory-method="<error>createFooBean</error>"/>
+
+
+  <bean id="foobean3" class="FooBean" factory-bean="factorybean" factory-method="createFooBeanNonStatic"/>
+  <bean id="foobean4" class="FooBean" factory-bean="factorybean" factory-method="createFooBeanBadReturnType" />
+
+  <bean id="testStackOverflow" factory-bean="testStackOverflow" factory-method="<error>unknown</error>" />
+
+  <bean id="testStackOverflow1" factory-bean="testStackOverflow2" factory-method="<error>unknown</error>" />
+  <bean id="testStackOverflow2" factory-bean="testStackOverflow1" factory-method="<error>unknown</error>" />
+
+</beans>
+

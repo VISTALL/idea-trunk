@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema xmlns="foo"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tool="http://www.springframework.org/schema/tool"
+            targetNamespace="foo"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xsd:element name="recursive" type="recursiveType"/>
+
+  <xsd:complexType name="recursiveType" type="recursiveType">
+    <xsd:attribute name="recursive" type="recursiveType"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="txRefType">
+    <xsd:annotation>
+      <xsd:appinfo>
+        <tool:annotation kind="ref">
+          <tool:expected-type type="org.springframework.transaction.PlatformTransactionManager"/>
+        </tool:annotation>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:union memberTypes="xsd:string"/>
+  </xsd:simpleType>
+
+  <xsd:element name="annotated">
+    <xsd:complexType>
+      <xsd:attribute name="tm" type="txRefType" use="optional"/>
+      <xsd:attribute name="transaction-manager" type="xsd:string" default="transactionManager">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <tool:annotation kind="ref">
+              <tool:expected-type type="org.springframework.transaction.PlatformTransactionManager"/>
+            </tool:annotation>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="bool" type="xsd:string" use="optional">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <tool:annotation>
+              <tool:expected-type type="java.lang.Boolean"/>
+            </tool:annotation>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="clazz" type="xsd:string" use="optional">
+        <xsd:annotation>
+          <xsd:appinfo>
+            <tool:annotation>
+              <tool:expected-type type="java.lang.Class"/>
+              <tool:assignable-to type="java.util.List"/>
+            </tool:annotation>
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="any-bean">                          
+      <xsd:annotation>
+        <xsd:appinfo>
+          <tool:annotation kind="ref"/>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="collection-bean">
+      <xsd:annotation>
+        <xsd:appinfo>
+          <tool:annotation kind="ref">
+            <tool:expected-type type="java.util.Collection"/>
+          </tool:annotation>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="list-bean">
+      <xsd:annotation>
+        <xsd:appinfo>
+          <tool:annotation kind="ref">
+            <tool:expected-type type="java.util.List"/>
+          </tool:annotation>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="exporting">
+    <xsd:complexType>
+      <xsd:attribute name="xxx" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:annotation>
+      <xsd:appinfo>
+        <tool:annotation>
+          <tool:exports type="java.util.List" identifier="@xxx"/>
+        </tool:annotation>
+      </xsd:appinfo>
+    </xsd:annotation>
+  </xsd:element>
+
+  <xsd:element name="exporting2">
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:string"/>
+      <xsd:annotation>
+        <xsd:appinfo>
+          <tool:annotation>
+            <tool:exports type="java.util.List"/>
+          </tool:annotation>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:complexType>
+  </xsd:element>
+
+
+</xsd:schema>

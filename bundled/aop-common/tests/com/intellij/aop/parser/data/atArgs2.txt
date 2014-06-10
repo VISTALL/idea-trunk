@@ -1,0 +1,8 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiAtArgsExpression
+    PsiElement(AOP_AT_ARGS)('@args')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      AopReferenceHolder
+        PsiErrorElement:Annotation name expected
+          <empty list>

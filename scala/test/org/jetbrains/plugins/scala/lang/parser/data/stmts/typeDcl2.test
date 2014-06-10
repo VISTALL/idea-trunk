@@ -1,0 +1,38 @@
+abstract class base{
+  type f >:Int <:Any
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      PsiElement(abstract)('abstract')
+    PsiWhiteSpace(' ')
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('base')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScTypeAliasDeclaration
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(type)('type')
+          PsiWhiteSpace(' ')
+          PsiElement(identifier)('f')
+          PsiWhiteSpace(' ')
+          PsiElement(>:)('>:')
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('Int')
+          PsiWhiteSpace(' ')
+          PsiElement(<:)('<:')
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('Any')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

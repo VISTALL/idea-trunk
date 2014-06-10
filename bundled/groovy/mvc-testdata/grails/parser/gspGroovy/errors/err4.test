@@ -1,0 +1,34 @@
+<abc>
+<% %>
+printsmth
+<% println 3 >
+<%%>
+</abc>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<abc>\n')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        PsiElement(java scriptlet end)('%>')
+        Outer: GSP TEMPLATE STATEMENTS('\nprintsmth\n')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        Call expression
+          Reference expression
+            PsiElement(identifier)('println')
+          PsiWhiteSpace(' ')
+          Command arguments
+            Relational expression
+              Literal
+                PsiElement(Integer)('3')
+              PsiWhiteSpace(' ')
+              PsiElement(>)('>')
+              PsiElement(new line)('\n')
+        PsiErrorElement:';', '}' or new line expected
+          PsiElement(<)('<')
+          PsiElement(%)('%')
+        PsiElement(java scriptlet end)('%>')
+        Outer: GSP TEMPLATE STATEMENTS('\n</abc>')

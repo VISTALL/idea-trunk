@@ -1,0 +1,16 @@
+/**
+ * @link scala.collection.mutable.HashMap
+ */
+-----
+ScalaFile
+  DocComment
+    PsiElement(DOC_COMMENT_START)('/**')
+    PsiElement(DOC_WHITESPACE)('\n ')
+    PsiElement(DOC_COMMENT_LEADING_ASTERISKS)('*')
+    PsiElement(DOC_COMMENT_DATA)(' ')
+    DocTag
+      PsiElement(DOC_TAG_NAME)('@link')
+      PsiElement(DOC_WHITESPACE)(' ')
+      PsiElement(DOC_TAG_VALUE_TOKEN)('scala.collection.mutable.HashMap')
+      PsiElement(DOC_WHITESPACE)('\n ')
+    PsiElement(DOC_COMMENT_END)('*/')

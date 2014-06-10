@@ -1,0 +1,7 @@
+<html>
+  <%re<caret>%>
+</html>
+-----
+request
+response
+return

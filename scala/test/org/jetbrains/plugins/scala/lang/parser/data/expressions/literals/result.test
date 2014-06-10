@@ -1,0 +1,57 @@
+class A{
+val foo=(a:T,b:S)=>true
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('A')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n')
+        ScPatternDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(val)('val')
+          PsiWhiteSpace(' ')
+          ListOfPatterns
+            ReferencePattern
+              PsiElement(identifier)('foo')
+          PsiElement(=)('=')
+          FunctionExpression
+            Parameters
+              ParametersClause
+                PsiElement(()('(')
+                Parameter
+                  AnnotationsList
+                    <empty list>
+                  PsiElement(identifier)('a')
+                  PsiElement(:)(':')
+                  ParameterType
+                    SimpleTypeElement
+                      CodeReferenceElement
+                        PsiElement(identifier)('T')
+                PsiElement(,)(',')
+                Parameter
+                  AnnotationsList
+                    <empty list>
+                  PsiElement(identifier)('b')
+                  PsiElement(:)(':')
+                  ParameterType
+                    SimpleTypeElement
+                      CodeReferenceElement
+                        PsiElement(identifier)('S')
+                PsiElement())(')')
+            PsiElement(=>)('=>')
+            Literal
+              PsiElement(true)('true')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

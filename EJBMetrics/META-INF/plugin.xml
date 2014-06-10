@@ -1,0 +1,14 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+    <name>EJB Metrics</name>
+    <description>MetricsReloaded plugin for calculating metrics on EJBs in a project</description>
+    <version>1.0</version>
+    <vendor>Sixth and Red River Software</vendor>
+    <idea-version since-build="3000"/>
+    <depends>MetricsReloaded</depends>
+    <application-components>
+        <component>
+            <implementation-class>com.sixrr.ejbmetrics.EJBMetricsPlugin</implementation-class>
+        </component>
+    </application-components>
+</idea-plugin>

@@ -1,0 +1,12 @@
+<TEST>
+
+    <BAR></BAR>
+
+    <BAR></BAR>
+
+    <pre:FOO pre:arg="3">
+        <BAR></BAR>
+        <BAZ/>
+        <BARANGUS/>
+    </pre:FOO>
+</TEST>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java-wsdl-mapping xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   version="1.1"
+                   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">
+<package-mapping>
+  <package-type>aaa</package-type>
+  <namespaceURI>http://somewhere</namespaceURI>
+</package-mapping>
+
+<java-xml-type-mapping>
+  <java-type><error>aaa.IAAA_doIt_ResponseStruct2</error> []</java-type>
+  <root-type-qname xmlns:typeNS="<error>http://somewhere</error>">typeNS:doItResponse</root-type-qname>
+  <qname-scope>complexType</qname-scope>
+</java-xml-type-mapping>
+
+<java-xml-type-mapping>
+  <java-type>aaa.Param</java-type>
+  <root-type-qname xmlns:typeNS="<error>http://somewhere</error>">typeNS:doItResponse</root-type-qname>
+  <qname-scope>complexType</qname-scope>
+</java-xml-type-mapping>
+
+<java-xml-type-mapping>
+  <java-type><error>aaa.Param2</error></java-type>
+  <root-type-qname xmlns:typeNS="<error>http://somewhere</error>">typeNS:Param</root-type-qname>
+  <qname-scope>complexType</qname-scope>
+  <variable-mapping>
+  <java-variable-name><error>param</error></java-variable-name>
+  <xml-element-name>param</xml-element-name>
+  </variable-mapping>
+</java-xml-type-mapping>
+
+<java-xml-type-mapping>
+  <java-type>aaa.IAAA_doIt_RequestStruct</java-type>
+  <root-type-qname xmlns:typeNS="<error>http://somewhere</error>">typeNS:doIt</root-type-qname>
+  <qname-scope>complexType</qname-scope>
+  <variable-mapping>
+    <java-variable-name>Param_1</java-variable-name>
+    <xml-element-name>Param_1</xml-element-name>
+  </variable-mapping>
+</java-xml-type-mapping>
+
+<service-interface-mapping>
+  <service-interface><error>aaa.AAA</error></service-interface>
+  <wsdl-service-name xmlns:serviceNS="<error>http://somewhere</error>">serviceNS:AAA</wsdl-service-name>
+  <port-mapping>
+  <port-name>IAAAPort</port-name>
+  <java-port-name>IAAAPort</java-port-name>
+  </port-mapping>
+</service-interface-mapping>
+
+<service-interface-mapping>
+  <service-interface>aaa.Param</service-interface>
+  <wsdl-service-name xmlns:serviceNS="<error>http://somewhere</error>">serviceNS:AAA</wsdl-service-name>
+  <port-mapping>
+  <port-name>IAAAPort</port-name>
+  <java-port-name>IAAAPort</java-port-name>
+  </port-mapping>
+</service-interface-mapping>
+
+  <service-endpoint-interface-mapping>
+    <service-endpoint-interface><error>aaa.IAAA</error></service-endpoint-interface>
+    <wsdl-port-type xmlns:portTypeNS="<error>http://somewhere</error>">portTypeNS:IAAA</wsdl-port-type>
+    <wsdl-binding xmlns:bindingNS="<error>http://somewhere</error>">bindingNS:IAAABinding</wsdl-binding>
+
+    <service-endpoint-method-mapping>
+      <java-method-name><error>doIt</error></java-method-name>
+      <wsdl-operation>doIt</wsdl-operation>
+      <wrapped-element/>
+      <method-param-parts-mapping>
+      <param-position>0</param-position>
+      <param-type><error>aaa.Param2</error></param-type>
+      <wsdl-message-mapping>
+      <wsdl-message xmlns:wsdlMsgNS="<error>http://somewhere</error>">wsdlMsgNS:IAAA_doIt</wsdl-message>
+      <wsdl-message-part-name>Param_1</wsdl-message-part-name>
+      <parameter-mode>IN</parameter-mode>
+      </wsdl-message-mapping>
+      </method-param-parts-mapping>
+    </service-endpoint-method-mapping>
+  </service-endpoint-interface-mapping>
+
+<service-endpoint-interface-mapping>
+  <service-endpoint-interface>aaa.Param</service-endpoint-interface>
+  <wsdl-port-type xmlns:portTypeNS="<error>http://somewhere</error>">portTypeNS:IAAA</wsdl-port-type>
+  <wsdl-binding xmlns:bindingNS="<error>http://somewhere</error>">bindingNS:IAAABinding</wsdl-binding>
+
+  <service-endpoint-method-mapping>
+    <java-method-name>doIt</java-method-name>
+    <wsdl-operation>doIt</wsdl-operation>
+    <wrapped-element/>
+    <method-param-parts-mapping>
+    <param-position>0</param-position>
+    <param-type>aaa.Param</param-type>
+    <wsdl-message-mapping>
+    <wsdl-message xmlns:wsdlMsgNS="<error>http://somewhere</error>">wsdlMsgNS:IAAA_doIt</wsdl-message>
+    <wsdl-message-part-name>Param_1</wsdl-message-part-name>
+    <parameter-mode>IN</parameter-mode>
+    </wsdl-message-mapping>
+    </method-param-parts-mapping>
+  </service-endpoint-method-mapping>
+</service-endpoint-interface-mapping>
+
+</java-wsdl-mapping>

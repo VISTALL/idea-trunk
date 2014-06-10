@@ -1,0 +1,20 @@
+#SET ('#set')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('mytext')
+WHITE_SPACE (' ')
+= ('=')
+WHITE_SPACE (' ')
+' (''')
+STRING_TEXT ('#if($var1 < 5)
+!!!
+#else
+???
+#end
+"')
+' (''')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+')

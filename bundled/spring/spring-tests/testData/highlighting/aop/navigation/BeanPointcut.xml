@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+  <aop:aspectj-autoproxy/>
+
+  <bean class="Bean" id="abc"/>
+  <bean class="Bean2" id="abcd">
+    <property name="name">
+      <bean class="Bean3" id="axxxd"/>
+    </property>
+  </bean>
+
+  <aop:config>
+    <aop:aspect ref="aspectBean">
+      <aop:before method="before" pointcut="execution(* foo()) and bean(a*d)"/>
+    </aop:aspect>
+  </aop:config>
+
+  <bean class="foo.bar.testcase.AspectBean" id="aspectBean"/>
+
+  
+
+</beans>
+

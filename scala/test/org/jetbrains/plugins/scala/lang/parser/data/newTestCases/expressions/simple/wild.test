@@ -1,0 +1,32 @@
+class a {
+  2 + x _
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        InfixExpression
+          Literal
+            PsiElement(integer)('2')
+          PsiWhiteSpace(' ')
+          ReferenceExpression
+            PsiElement(identifier)('+')
+          PsiWhiteSpace(' ')
+          UnderscoreSection
+            ReferenceExpression
+              PsiElement(identifier)('x')
+            PsiWhiteSpace(' ')
+            PsiElement(_)('_')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

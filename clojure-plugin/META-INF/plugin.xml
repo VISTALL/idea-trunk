@@ -1,0 +1,165 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <module-components>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.config.ClojureFacetListener</implementation-class>
+    </component>
+  </module-components>
+
+  <name>La Clojure</name>
+  <id>org.intellij.clojure</id>
+  <description>Plugin for Clojure language support</description>
+  <category>Custom Languages</category>
+  <version>VERSION</version>
+  <vendor logo="/org/jetbrains/plugins/clojure/icons/clojure_icon_16x16.png" url="http://www.jetbrains.com">JetBrains
+    Inc.
+  </vendor>
+  <idea-version since-build="9100" until-build="9999"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <fileTypeFactory implementation="org.jetbrains.plugins.clojure.file.ClojureFileTypeLoader"/>
+    <lang.braceMatcher language="Clojure"
+                       implementationClass="org.jetbrains.plugins.clojure.highlighter.ClojureBraceMatcher"/>
+    <syntaxHighlighter key="Clojure"
+                       implementationClass="org.jetbrains.plugins.clojure.highlighter.ClojureSyntaxHighlighter"/>
+    <colorSettingsPage implementation="org.jetbrains.plugins.clojure.highlighter.ClojureColorsAndFontsPage"/>
+    <lang.commenter language="Clojure"
+                    implementationClass="org.jetbrains.plugins.clojure.highlighter.ClojureCommenter"/>
+    <lang.parserDefinition language="Clojure"
+                           implementationClass="org.jetbrains.plugins.clojure.parser.ClojureParserDefinition"/>
+    <lang.foldingBuilder language="Clojure"
+                         implementationClass="org.jetbrains.plugins.clojure.ClojureFoldingBuilder"/>
+    <lang.psiStructureViewFactory language="Clojure"
+                                  implementationClass="org.jetbrains.plugins.clojure.structure.ClojureStructureViewBuilderFactory"/>
+    <lang.formatter language="Clojure"
+                    implementationClass="org.jetbrains.plugins.clojure.formatter.ClojureFormattingModelBuilder"/>
+    <codeStyleSettingsProvider language="Clojure"
+                               implementation="org.jetbrains.plugins.clojure.formatter.codeStyle.ClojureCodeStyleSettingsProvider"/>
+    <lang.findUsagesProvider language="Clojure" implementationClass="org.jetbrains.plugins.clojure.findUsages.ClojureFindUsagesProvider"/>
+    <consoleFilterProvider
+        implementation="org.jetbrains.plugins.clojure.runner.console.ClojureConsoleFilterProvider"/>
+    <completion.contributor implementation="org.jetbrains.plugins.clojure.completion.ClojureCompletionContributor"/>
+    <configurationType implementation="org.jetbrains.plugins.clojure.runner.ClojureScriptRunConfigurationType"/>
+    <configurationProducer
+        implementation="org.jetbrains.plugins.clojure.runner.ClojureScriptRunConfigurationProducer"/>
+    <fileTemplateGroup implementation="org.jetbrains.plugins.clojure.actions.ClojureTemplatesFactory"/>
+    <fileTypeIndentOptionsProvider
+        implementation="org.jetbrains.plugins.clojure.formatter.ClojureIndentOptionsProvider"/>
+    <quoteHandler fileType="Clojure" className="org.jetbrains.plugins.clojure.editor.ClojureQuoteHandler"/>
+    <annotator language="Clojure" implementationClass="org.jetbrains.plugins.clojure.annotator.ClojureAnnotator"/>
+
+    <gotoSymbolContributor implementation="org.jetbrains.plugins.clojure.gotoclass.ClojureGoToSymbolContributor"/>
+    <gotoClassContributor implementation="org.jetbrains.plugins.clojure.gotoclass.ClojureGoToClassContributor"/>
+
+    <stubElementTypeHolder class="org.jetbrains.plugins.clojure.parser.ClojureElementTypes"/>
+
+    <stubIndex implementation="org.jetbrains.plugins.clojure.psi.stubs.index.ClDefNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.clojure.psi.stubs.index.ClojureNsNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.clojure.psi.stubs.index.ClojureClassNameIndex"/>
+    <stubIndex implementation="org.jetbrains.plugins.clojure.psi.stubs.index.ClojureFullScriptNameIndex"/>
+
+    <extendWordSelectionHandler
+        implementation="org.jetbrains.plugins.clojure.editor.selection.ClojureListSelectioner"/>
+    <extendWordSelectionHandler
+        implementation="org.jetbrains.plugins.clojure.editor.selection.ClojureLiteralSelectioner"/>
+    <debugger.codeFragmentFactory
+        implementation="org.jetbrains.plugins.clojure.debugger.ClojureCodeFragementFactory"/>
+    <compilerSettingsFactory implementation="org.jetbrains.plugins.clojure.compiler.ClojureCompilerSettingsFactory"/>
+    <frameworkSupport implementation="org.jetbrains.plugins.clojure.config.ClojureFacetSupportProvider"/>
+    <applicationService serviceInterface="org.jetbrains.plugins.clojure.settings.ClojureApplicationSettings"
+                        serviceImplementation="org.jetbrains.plugins.clojure.settings.ClojureApplicationSettings"/>
+
+    <projectService serviceInterface="org.jetbrains.plugins.clojure.psi.util.ClojurePsiElementFactory"
+                    serviceImplementation="org.jetbrains.plugins.clojure.psi.util.ClojurePsiElementFactoryImpl"/>
+
+  </extensions>
+
+  <application-components>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.ClojureLoader</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.config.ClojureFacetLoader</implementation-class>
+      <interface-class>org.jetbrains.plugins.clojure.config.ClojureFacetLoader</interface-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.compiler.ClojureCompilerSettings</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.compiler.component.ClojureCompilerProjectComponent
+      </implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.psi.impl.javaView.ClojureClassFinder
+      </implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.psi.impl.ClojurePsiManager</implementation-class>
+    </component>
+    <component>
+      <implementation-class>org.jetbrains.plugins.clojure.repl.ReplToolWindow</implementation-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <!-- Create file actions -->
+    <action id="Clojure.ClojureFile" class="org.jetbrains.plugins.clojure.actions.NewClojureFileAction"
+            text="Clojure File" description="Create new Clojure File">
+      <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+
+
+
+    <!-- REPL-related actions -->
+    <action id="org.jetbrains.plugins.clojure.actions.repl.GoToReplAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.GoToReplAction" text="Go To REPL"
+    description="Go to the last Clojure REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"/>
+    </action>
+
+    <action id="org.jetbrains.plugins.clojure.actions.repl.RunSelectedTextAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.RunSelectedTextAction" text="Run selected in REPL"
+            description="Run selected Clojure text in REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt S"/>
+    </action>
+
+    <action id="org.jetbrains.plugins.clojure.actions.repl.AddReplAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.AddReplAction" text="Add new Clojure REPL"
+            description="Add REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt A"/>
+    </action>
+    <action id="org.jetbrains.plugins.clojure.actions.repl.RemoveReplAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.RemoveReplAction" text="Remove REPL"
+            description="Remove current Clojure REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt M"/>
+    </action>
+    <action id="org.jetbrains.plugins.clojure.actions.repl.LoadCurrentfileInReplAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.LoadCurrentfileInReplAction" text="Load file to REPL"
+            description="Load current file to REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="alt L"/>
+    </action>
+    <action id="org.jetbrains.plugins.clojure.actions.repl.RenameReplAction"
+            class="org.jetbrains.plugins.clojure.actions.repl.RenameReplAction" text="Rename REPL"
+            description="Renamce current Clojure REPL">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt SLASH"/>
+    </action>
+
+    <group id="ClojureReplActionGroup"
+           class="org.jetbrains.plugins.clojure.repl.ClojureReplActionGroup" text="Clojure REPL" description="Clojure">
+    </group>
+
+
+  </actions>
+
+
+</idea-plugin>

@@ -1,0 +1,2 @@
+// SplitDeclarationAndInitialization:true
+var va<caret>l:int = 1

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xi="http://www.w3.org/2001/XInclude"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/><bean name="x" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x1" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x2" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x3" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x4" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x5" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x6" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x7" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x8" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x9" p:foo-ref="ttzz" parent="ttz"/>
+    <bean name="x10" p:foo-ref="ttzz" parent="ttz"/>
+
+
+    <bean class="java.lang.String" name="ttzz"/>
+    <bean class="foo.bar.testcase.Target" name="ttz"/>
+
+
+</beans>

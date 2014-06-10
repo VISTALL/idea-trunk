@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Assignment replaceable with operator assignment</problem_class>
+    <description>i = i + 3 could be simplified to i += 3 #loc</description>
+  </problem>
+</problems>

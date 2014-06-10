@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">  
+<beans>
+  <bean name="factoryBean" class="FactoryBean"/>
+  <bean id="fooBean3_1" class="FooBean3">
+    <property name="fooBean">
+      <bean class="FooBean"/>
+    </property>
+  </bean>
+  <bean id="fooBean3_2" class="FooBean3">
+    <property name="fooBean">
+      <bean class="FooBean2"/>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_1" factory-bean="factoryBean" factory-method="createFooBean3">
+    <property name="fooBean">
+      <<error>bean</error> class="FooBean3"/>
+    </property>
+  </bean>
+  <bean id="fooBean2_2" factory-bean="factoryBean" factory-method="createFooBean3">
+    <property name="fooBean">
+      <bean factory-bean="factoryBean" factory-method="createFooBean2"/>
+    </property>
+  </bean>
+  <bean id="fooBean2_3" factory-bean="factoryBean" factory-method="createFooBean2">
+    <property name="fooBean3">
+       <<error>bean</error> factory-bean="factoryBean" factory-method="createFooBean2"/>
+    </property>
+  </bean>
+</beans>

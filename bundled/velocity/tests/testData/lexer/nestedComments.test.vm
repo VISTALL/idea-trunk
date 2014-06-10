@@ -1,0 +1,9 @@
+template
+#*multiline
+    #*  multiline nested     *#
+#end    ## oneline nested
+    *#
+not a comment *#
+
+#*
+ EOF comment

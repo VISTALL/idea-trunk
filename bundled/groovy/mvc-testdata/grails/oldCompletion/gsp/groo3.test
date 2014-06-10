@@ -1,0 +1,12 @@
+<html>
+  <%=re<caret>%>
+</html>
+-----
+remoteField
+remoteFunction
+remoteLink
+render
+renderErrors
+renderNoSelectionOption
+request
+response

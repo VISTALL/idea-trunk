@@ -1,0 +1,17 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiWithinExpression
+    PsiElement(AOP_WITHIN)('within')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              PsiElement(AOP_IDENTIFIER)('com')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('execution')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_IDENTIFIER)('service')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_RIGHT_PAR)(')')

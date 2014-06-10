@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+  "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="1.0">
+  <tocitem text="WebServices" target="webservices" image="folder">
+    <tocitem text="Generating Java from WSDL" target="webservices.GenerateJavaFromWSDL" image="doc"/>
+    <tocitem text="Generating WSDL from Java" target="webservices.GenerateWsdlFromJava" image="doc"/>
+
+    <tocitem text="Generating Xml Schema From Instance Document" target="webservices.GenerateSchemaFromInstanceDocument"
+             image="doc"/>
+    <tocitem text="Generating Instance Document From Xml Schema" target="webservices.GenerateInstanceDocumentFromSchema"
+             image="doc"/>
+    <tocitem text="Generating Xml Schema From Java using JAXB" target="webservices.GenerateJAXBSchemasFromJava"
+             image="doc"/>
+    <tocitem text="Generating Java from Xml Schema using XmlBeans" target="webservices.GenerateJavaFromXmlBeansSchemas"
+             image="doc"/>
+    <tocitem text="Generating Java from Xml Schema using JAXB" target="webservices.GenerateJavaFromJAXBSchemas"
+             image="doc"/>
+
+    <tocitem text="Enabling Web Services Support" target="webservices.EnableWebServicesSupport" image="doc"/>
+    <tocitem text="Deploying Web Services" target="webservices.DeployWebServices" image="doc"/>
+    <tocitem text="Show Deployed Web Services" target="webservices.ShowDeployedWebServices" image="doc"/>
+    <tocitem text="Monitor SOAP Messages" target="webservices.MonitorSoapMessages" image="doc"/>
+    <tocitem text="Undeploying Web Services" target="webservices.UndeployWebServices" image="doc"/>
+  </tocitem>
+</toc>

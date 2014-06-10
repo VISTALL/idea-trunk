@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+  <bean class="RefArrayBean" id="bean">
+    <property name="ref" ref="s"/>
+  </bean>
+
+  <bean class="RefArrayBean" id="bean2">
+    <property name="ref" ref="<error>o</error>"/>
+  </bean>
+
+  <bean class="java.lang.String" id="s"/>
+  <bean class="java.lang.Object" id="o"/>
+</beans>

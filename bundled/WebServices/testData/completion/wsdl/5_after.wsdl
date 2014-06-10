@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:ns0="http://localhost/services/MyService" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  targetNamespace="http://localhost/services/MyService">
+  <wsdl:message name="echoRequest">
+    <wsdl:part name="parameters" element="ns0:echo"/>
+  </wsdl:message>
+  <wsdl:portType name="MyServicePortType">
+    <wsdl:operation name="echo">
+      <wsdl:fault message="ns0:echoRequest<caret>" name="XMLStreamException" wsaw:Action="urn:echoXMLStreamException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

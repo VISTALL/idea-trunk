@@ -1,0 +1,10 @@
+#define($def1)
+
+#end
+
+$def1
+
+#define($)
+
+#end
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+
+  <endpoint
+    name='hello'
+    implementation='<error>aaa</error>.<error>SayHelloService2</error>'
+    url-pattern='<error>/services/hello</error>'/>
+
+  <endpoint
+    name='hello'
+    implementation='JaxWsRuntimeConfig'
+    url-pattern='/zzz'/>
+</endpoints>

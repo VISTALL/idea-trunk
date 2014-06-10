@@ -1,0 +1,8 @@
+/*
+ * XSD/DTD Model generator tool/template
+ *
+ * By Gregory Shrago
+ * 2002 - 2006
+ *
+ * Requirements: xerses 2.7.1 or later (XSD) and wutka dtdparser113.jar library (DTD)
+ */

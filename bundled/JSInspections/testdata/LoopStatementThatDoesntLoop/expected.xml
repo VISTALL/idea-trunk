@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Loop statement that doesn't loop</problem_class>
+    <description>'while' statement doesn't loop</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>9</line>
+    <problem_class>Loop statement that doesn't loop</problem_class>
+    <description>'do' statement doesn't loop</description>
+  </problem>
+</problems>

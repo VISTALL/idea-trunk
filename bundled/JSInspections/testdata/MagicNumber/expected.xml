@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Magic number</problem_class>
+    <description>Magic number '30'</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>10</line>
+    <problem_class>Magic number</problem_class>
+    <description>Magic number '30'</description>
+  </problem>
+</problems>

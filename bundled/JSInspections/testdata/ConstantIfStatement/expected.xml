@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Constant if statement</problem_class>
+    <description>'if' statement can be simplified #loc</description>
+  </problem>
+</problems>

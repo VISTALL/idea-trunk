@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>'for' loop where update or condition does not use loop variable</problem_class>
+    <description>'for' statement has condition which does not use the for loop variable #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>'for' loop where update or condition does not use loop variable</problem_class>
+    <description>'for' statement has update which does not use the for loop variable #loc</description>
+  </problem>
+</problems>

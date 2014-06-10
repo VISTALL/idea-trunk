@@ -1,0 +1,8 @@
+<BODY>
+    <pre:Foo>
+        <Bar>asdf</Bar>
+    </pre:Foo>
+    <pre:Foo>
+        <Bar>qwer</Bar>
+    </pre:Foo>
+</BODY>

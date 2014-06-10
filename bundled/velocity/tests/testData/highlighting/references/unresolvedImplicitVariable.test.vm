@@ -1,0 +1,2 @@
+#* @vtlvariable name="foo" type="int" *#
+$<warning descr="Cannot resolve variable 'bar'">bar</warning>

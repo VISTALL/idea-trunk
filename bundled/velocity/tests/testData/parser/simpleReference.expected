@@ -1,0 +1,65 @@
+VtlFile:nofile.vm
+  PsiElement(TEMPLATE_TEXT)(' ')
+  Interpolation
+    PsiElement($)('$')
+    ReferenceExpression
+      PsiElement(identifier)('refName')
+  PsiElement(TEMPLATE_TEXT)(' \r\n ')
+  Interpolation
+    PsiElement($)('$')
+    ReferenceExpression
+      PsiElement(identifier)('refName')
+  PsiElement(TEMPLATE_TEXT)('() \r\n ')
+  Interpolation
+    PsiElement($)('$')
+    ReferenceExpression
+      ReferenceExpression
+        PsiElement(identifier)('refName')
+      PsiElement(JAVA_DOT)('.')
+      PsiElement(identifier)('prop')
+  PsiElement(TEMPLATE_TEXT)('   \r\n ')
+  Interpolation
+    PsiElement($)('$')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          PsiElement(identifier)('refName')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('method')
+      PsiElement(()('(')
+      ArgumentList
+        <empty list>
+      PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('xx \r\n ')
+  Interpolation
+    PsiElement($)('$')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('refName')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('prop')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('method')
+      PsiElement(()('(')
+      ArgumentList
+        <empty list>
+      PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('. \r\n ')
+  Interpolation
+    PsiElement($)('$')
+    ReferenceExpression
+      MethodCallExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('refName')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('method')
+        PsiElement(()('(')
+        ArgumentList
+          <empty list>
+        PsiElement())(')')
+      PsiElement(JAVA_DOT)('.')
+      PsiElement(identifier)('prop')
+  PsiElement(TEMPLATE_TEXT)('.\r\n')

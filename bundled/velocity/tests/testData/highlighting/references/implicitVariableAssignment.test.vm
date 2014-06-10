@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo" type="int" *#
+#* @vtlvariable name="bar" type="int" *#
+#set($bar = $foo)
+${bar}

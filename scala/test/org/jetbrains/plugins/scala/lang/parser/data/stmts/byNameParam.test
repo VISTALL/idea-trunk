@@ -1,0 +1,65 @@
+object main{
+  def whileLoop (cond: => Boolean) (stat: => Unit): Unit
+}
+-----
+ScalaFile
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('main')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScFunctionDeclaration
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(def)('def')
+          PsiWhiteSpace(' ')
+          PsiElement(identifier)('whileLoop')
+          PsiWhiteSpace(' ')
+          Parameters
+            ParametersClause
+              PsiElement(()('(')
+              Parameter
+                AnnotationsList
+                  <empty list>
+                PsiElement(identifier)('cond')
+                PsiElement(:)(':')
+                PsiWhiteSpace(' ')
+                ParameterType
+                  PsiElement(=>)('=>')
+                  PsiWhiteSpace(' ')
+                  SimpleTypeElement
+                    CodeReferenceElement
+                      PsiElement(identifier)('Boolean')
+              PsiElement())(')')
+            PsiWhiteSpace(' ')
+            ParametersClause
+              PsiElement(()('(')
+              Parameter
+                AnnotationsList
+                  <empty list>
+                PsiElement(identifier)('stat')
+                PsiElement(:)(':')
+                PsiWhiteSpace(' ')
+                ParameterType
+                  PsiElement(=>)('=>')
+                  PsiWhiteSpace(' ')
+                  SimpleTypeElement
+                    CodeReferenceElement
+                      PsiElement(identifier)('Unit')
+              PsiElement())(')')
+          PsiElement(:)(':')
+          PsiWhiteSpace(' ')
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('Unit')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

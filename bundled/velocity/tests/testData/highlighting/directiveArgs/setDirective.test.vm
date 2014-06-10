@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo" type="my.pack.MyClass" *#
+<warning descr="Assignment of void has no effect">#set</warning>($bar = $foo.setProp3(-7))
+#set($bar = $foo.getProp1())
+<warning descr="Assignment to method call has no effect">#set</warning>($foo.getProp1() = $foo.prop2)

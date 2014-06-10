@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="test" class="BeanWithClass">
+    <constructor-arg value=<error>""</error>/>
+  </bean>
+  
+  <bean id="test1" class="BeanWithClass">
+    <constructor-arg value="java.lang.String"/>
+  </bean>
+
+  <bean id="test2" class="BeanWithClass">
+    <constructor-arg value="java.lang.<error>unknown</error>"/>
+  </bean>
+
+  <bean id="beanWithBoolean" class="BeanWithBoolean">
+    <constructor-arg value="true"/>
+  </bean>
+
+  <bean id="badBeanWithBoolean" class="BeanWithBoolean">
+    <constructor-arg value="<error>tru</error>"/>
+  </bean>
+
+  <bean id="badBeanWithBooleanAndString" class="BeanWithBoolean">
+    <constructor-arg index="0" value="string"/>
+    <constructor-arg value="<error>tru</error>"/>
+  </bean>
+
+</beans>

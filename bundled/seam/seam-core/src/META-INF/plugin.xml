@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.seam</id>
+  <name>Seam Support</name>
+
+  <description>Seam Support</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+
+  <depends>com.intellij.javaee</depends>
+  <depends>JSF</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.seam.SeamApplicationComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>com.intellij.seam.PageflowApplicationComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>com.intellij.seam.PagesApplicationComponent</implementation-class>
+    </component>
+    <component>
+      <implementation-class>com.intellij.seam.dependencies.SeamDependenciesVirtualFileSystem</implementation-class>
+    </component>
+  </application-components>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <semContributor implementation="com.intellij.seam.model.jam.SeamSemContributor"/>
+
+    <dom.fileDescription implementation="com.intellij.seam.SeamDomFileDescription"/>
+
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+    <moduleService serviceInterface="com.intellij.seam.impl.model.jam.SeamJamModuleService"
+                   serviceImplementation="com.intellij.seam.impl.model.jam.SeamJamModuleService"/>
+
+    <moduleService serviceInterface="com.intellij.seam.model.jam.SeamJamModel" serviceImplementation="com.intellij.seam.model.jam.SeamJamModel"/>
+    <psi.referenceContributor implementation="com.intellij.seam.model.references.SeamReferenceContributor" />
+
+    <!-- todo remove -->
+    <javaee.treeRootProvider implementation="com.intellij.seam.structure.SeamStructureTreeRootProvider"/>
+    <toolWindow id="Seam"
+                anchor="left"
+                secondary="true"
+                icon="/resources/icons/seam.png"
+                factoryClass="com.intellij.seam.structure.SeamToolWindowFactory"
+                conditionClass="com.intellij.seam.structure.SeamToolWindowFactory"/>
+
+    <inspectionToolProvider implementation="com.intellij.seam.PageflowInspectionProvider"/>
+    <iconProvider implementation="com.intellij.seam.PageflowIconProvider"/>
+
+    <projectService serviceInterface="com.intellij.seam.model.xml.SeamDomModelManager"
+                    serviceImplementation="com.intellij.seam.impl.model.xml.SeamDomModelManagerImpl"/>
+
+    <projectService serviceInterface="com.intellij.seam.model.jam.roles.SeamClassRoleHolder"
+                    serviceImplementation="com.intellij.seam.impl.model.jam.roles.SeamClassRoleHolderImpl"/>
+
+    <moduleService serviceInterface="com.intellij.seam.model.metadata.SeamEventTypeFactory"
+                   serviceImplementation="com.intellij.seam.impl.model.metadata.SeamEventTypeFactoryImpl"/>
+
+    <javaee.jsp.el.customJsfContextBeansProvider implementation="com.intellij.seam.jsf.SeamJsfContexBeansProvider"/>
+    <customPropertyScopeProvider implementation="com.intellij.seam.el.SeamModelPropertyScopeProvider"/>
+
+    <dom.extender domClass="com.intellij.seam.model.xml.components.SeamComponents"
+                  extenderClass="com.intellij.seam.model.xml.SeamComponentsExtender"/>
+    <annotator language="JAVA" implementationClass="com.intellij.seam.gutter.SeamConversationAnnotator"/>
+
+    <gotoSymbolContributor implementation="com.intellij.seam.model.gotosymbol.GotoSeamComponentsProvider"/>
+
+    <implicitUsageProvider implementation="com.intellij.seam.providers.SeamImplicitUsageProvider"/>
+
+    <fileEditorProvider implementation="com.intellij.seam.dependencies.SeamDependenciesEditorProvider"/>
+    <!-- pageflow -->
+    <fileEditorProvider implementation="com.intellij.seam.fileEditor.PageflowDesignerFileEditorProvider"/>
+    <projectService serviceInterface="com.intellij.seam.model.xml.PageflowDomModelManager"
+                    serviceImplementation="com.intellij.seam.impl.PageflowDomModelManagerImpl"/>
+    <dom.fileDescription implementation="com.intellij.seam.PageflowDomFileDescription"/>
+
+    <typedHandler implementation="com.intellij.seam.el.typedHandler.SeamElXmlTypedHandler"/>
+    <typedHandler implementation="com.intellij.seam.el.typedHandler.SeamElPsiClassTypedHandler"/>
+
+    <!-- pages navigation -->
+    <fileEditorProvider implementation="com.intellij.seam.fileEditor.PagesGraphFileEditorProvider"/>
+    <projectService serviceInterface="com.intellij.seam.model.xml.PagesDomModelManager"
+                    serviceImplementation="com.intellij.seam.impl.PagesDomModelManagerImpl"/>
+    <dom.fileDescription implementation="com.intellij.seam.PagesDomFileDescription"/>
+    <dom.fileDescription implementation="com.intellij.seam.PagesFileDomFileDescription"/>
+
+    <multiHostInjector implementation="com.intellij.seam.el.SeamClassELInjector"/>
+    <multiHostInjector implementation="com.intellij.seam.SeamElXmlConfigProvider"/>
+    <standardResourceProvider implementation="com.intellij.seam.SeamResourceProvider"/>
+  </extensions>
+
+  <actions>
+    <action id="Seam.Create.Components.Xml" class="com.intellij.seam.actions.CreateSeamComponentsAction" text="Seam components.xml">
+      <add-to-group anchor="last" group-id="NewGroup"/>
+    </action>
+    <action id="Seam.Create.Pages.Xml" class="com.intellij.seam.actions.CreateSeamPagesAction" text="Seam pages.xml">
+      <add-to-group anchor="last" group-id="NewGroup"/>
+    </action>
+    <action id="Seam.Create.Pageflow" class="com.intellij.seam.actions.CreatePageflowFileAction" text="Seam Pageflow">
+      <add-to-group anchor="last" group-id="NewGroup"/>
+    </action>
+
+    <action id="ShowSeamDependenciesGraph" class="com.intellij.seam.dependencies.ShowSeamDependenciesGraph" text="Show Seam Components Dependencies">
+      <add-to-group group-id="J2EEViewPopupMenu" anchor="after" relative-to-action="EditSource"/>
+    </action>
+
+    <group id="Pageflow.Designer" popup="false">
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <reference ref="RenameElement"/>
+      <separator/>
+    </group>
+  </actions>
+</idea-plugin>

@@ -1,0 +1,38 @@
+<!ELEMENT beans (xfire,(service))*>
+<!ELEMENT xfire (inHandlers)>
+<!ELEMENT inHandlers (handler)* >
+<!ELEMENT outHandlers (handler)* >
+<!ELEMENT faultHandlers (handler)* >
+
+<!ELEMENT handler (#PCDATA)>
+
+<!ATTLIST handler handlerClass #REQUIRED>
+
+<!ELEMENT service (name, namespace?, serviceClass, implementationClass, serviceFactory?, bindingProvider?, style?, use?,
+  scope?, invoker?, wsdlURL?, executor?, inHandlers?, outHandlers?, faultHandlers?, createDefaultBindings?, bindings?)>
+
+<!ELEMENT bindings (soap11Binding,soap12Binding)>
+
+<!ELEMENT soap11Binding (endpoints)>
+<!ATTLIST soap11Binding name CDATA #REQUIRED transport CDATA #REQUIRED allowUndefinedEndpoints CDATA #IMPLIED>
+
+<!ELEMENT soap12Binding (endpoints)>
+<!ATTLIST soap12Binding name CDATA #REQUIRED transport CDATA #REQUIRED allowUndefinedEndpoints CDATA #IMPLIED>
+
+<!ELEMENT endpoints (endpoint)*>
+<!ELEMENT endpoint >
+<!ATTLIST endpoint name CDATA #REQUIRED url CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT namespace (#PCDATA)>
+<!ELEMENT serviceClass (#PCDATA)>
+<!ELEMENT implementationClass (#PCDATA)>
+<!ELEMENT serviceFactory (#PCDATA)>
+<!ELEMENT bindingProvider (#PCDATA)>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT use (#PCDATA)>
+<!ELEMENT scope (#PCDATA)>
+<!ELEMENT executor (#PCDATA)>
+<!ELEMENT createDefaultBindings (#PCDATA)>
+<!ELEMENT wsdlURL (#PCDATA)>

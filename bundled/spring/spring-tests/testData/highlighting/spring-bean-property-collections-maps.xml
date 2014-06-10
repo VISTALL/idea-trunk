@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="factoryBean" class="FactoryBean"/>
+  <bean id="stringBean" class="java.lang.String"/>
+  <bean id="fooBean3" class="FooBean3"/>
+
+  <bean id="fooBean2_1" class="FooBean2">
+    <property name="listProperty">
+      <list>
+        <value>foo</value>
+        <value>foo2</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="fooBean2_2" class="FooBean2">
+    <property name="setProperty">
+      <set>
+        <value>foo</value>
+        <value>foo2</value>
+      </set>
+    </property>
+  </bean>
+  <bean id="fooBean2_3" class="FooBean2">
+    <property name="propertiesProperty">
+      <props>
+        <prop key="aaa_1">aaa_1</prop>
+        <prop key="aaa_2">aaa_2</prop>
+      </props>
+    </property>
+  </bean>
+  <bean id="fooBean2_4" class="FooBean2">
+    <property name="mapProperty">
+      <map>
+        <entry key="aaa" value="aaa"/>
+        <entry key="aaa1" value="aaa2"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_5" class="FooBean2">
+    <property name="fooBean3" >
+      <<error>list</error>>
+        <value>foo</value>
+        <value>foo2</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="fooBean2_6" class="FooBean2">
+    <property name="fooBean3" >
+      <<error>set</error>>
+        <value>foo</value>
+        <value>foo2</value>
+      </set>
+    </property>
+  </bean>
+  <bean id="fooBean2_8" class="FooBean2">
+    <property name="fooBean3" >
+      <<error>map</error>>
+        <entry key="aaa" value="aaa"/>
+        <entry key="aaa1" value="aaa2"/>
+      </map>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_list" class="FooBean2">
+    <property name="listProperty">
+      <list value-type = "java.lang.String">
+        <idref local="stringBean"/>
+        <idref bean="stringBean"/>
+        <idref local="fooBean3"/>
+        <idref bean="fooBean3" />
+
+        <ref local="stringBean"/>
+        <ref bean="stringBean"/>
+        <ref parent="<error>stringBean</error>"/>
+        <ref local="<error>fooBean3</error>" />
+        <ref bean="<error>fooBean3</error>" />
+        <ref parent="<error>fooBean3</error>" />
+
+        <bean class="java.lang.String"/>
+        <<error>bean</error> class="FooBean2"/>
+
+        <value>foo2</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="fooBean2_list_1" class="FooBean2">
+    <property name="listProperty">
+      <list value-type = "java.lang.Integer">
+        <<error>idref</error> local="stringBean"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_list2" class="FooBean2">
+    <property name="listProperty">
+
+      <list value-type = "java.util.List">
+        <list value-type = "java.lang.String">
+          <idref local="stringBean"/>
+          <idref bean="stringBean"/>
+          <idref local="fooBean3"/>
+          <idref bean="fooBean3"/>
+
+          <ref local="stringBean"/>
+          <ref bean="stringBean"/>
+          <ref parent="<error>stringBean</error>"/>
+          <ref local="<error>fooBean3</error>" />
+          <ref bean="<error>fooBean3</error>" />
+          <ref parent="<error>fooBean3</error>" />
+
+          <bean class="java.lang.String"/>
+          <<error>bean</error> class="FooBean2"/>
+
+          <value>foo2</value>
+        </list>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_9" class="FooBean2">
+    <property name="fooBean3">
+      <bean class="FooBean3"/>
+    </property>
+  </bean>
+
+  <bean id="fooBean2_10" class="FooBean2">
+    <property name="fooBean3">
+      <<error>bean</error> class="FooBean"/>
+    </property>
+  </bean>
+
+  <bean id="fooBean" class="FooBean"/>
+  <bean name="fooBean2" class="FooBean"/>
+
+  <bean id="fooBean3_1" class="FooBean3">
+    <property name="fooBean">
+      <warning><ref bean="fooBean"/></warning>
+    </property>
+  </bean>
+
+  <bean id="fooBean3_2" class="FooBean3">
+    <property name="fooBean">
+      <warning><ref bean="fooBean2_1"/></warning>
+    </property>
+  </bean>
+
+  <bean id="fooBean3_3" class="FooBean3">
+    <property name="fooBean" ref="<error>stringBean</error>">
+    </property>
+  </bean>
+
+  <bean id="fooBean3_7" class="FooBean3">
+    <property name="fooBean">
+      <ref local="fooBean"/>
+    </property>
+  </bean>
+
+  <bean id="fooBean3_8" class="FooBean3">
+    <property name="fooBean">
+      <ref local="fooBean2_1"/>
+    </property>
+  </bean>
+
+  <bean id="fooBean3_9" class="FooBean3">
+    <property name="fooBean">
+      <ref local="<error>stringBean</error>" />
+    </property>
+  </bean>
+
+  <bean id="jee_team" class="FooBean10">
+    <constructor-arg>
+      <list>
+        <value>Peter</value>
+        <value>Nick</value>
+        <value>Grisha</value>
+      </list>
+     </constructor-arg>
+  </bean>
+
+  <!-- -->
+  <bean class="IntArrayProperty" id="test">
+        <property name="ints">
+            <list>
+                <value>1</value>
+                <value>2</value>
+            </list>
+        </property>
+    </bean>
+</beans>

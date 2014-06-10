@@ -1,0 +1,13 @@
+#* @vtlvariable name="foo1" type="java.util.Collection" *#
+#* @vtlvariable name="foo2" type="java.util.Iterator" *#
+#* @vtlvariable name="foo3" type="java.util.Map" *#
+        
+#foreach($loopVar in $foo1)
+$loopVar
+#end
+#foreach($loopVar in $foo2)
+$loopVar
+#end
+#foreach($loopVar in $foo3)
+$loopVar
+#end

@@ -1,0 +1,109 @@
+VtlFile:nofile.vm
+  Interpolation
+    PsiElement($)('$')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          PsiElement(identifier)('tt')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('gg')
+      PsiElement(()('(')
+      ArgumentList
+        IntegerLiteral
+          PsiElement(number)('5')
+        PsiElement(,)(',')
+        IntegerLiteral
+          PsiElement(number)('6')
+        PsiErrorElement:',' expected
+          <empty list>
+        IntegerLiteral
+          PsiElement(number)('6')
+        PsiElement(,)(',')
+        IntegerLiteral
+          PsiElement(number)('5')
+        PsiErrorElement:',' expected
+          <empty list>
+        IntegerLiteral
+          PsiElement(number)('5')
+      PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement($)('$')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          PsiElement(identifier)('tt')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('gg')
+      PsiElement(()('(')
+      ArgumentList
+        ListExpression
+          PsiElement([)('[')
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiElement(,)(',')
+          IntegerLiteral
+            PsiElement(number)('2')
+          PsiErrorElement:',' expected
+            <empty list>
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiElement(,)(',')
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiErrorElement:',' expected
+            <empty list>
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiElement(])(']')
+      PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement($)('$')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          PsiElement(identifier)('tt')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('gg')
+      PsiElement(()('(')
+      ArgumentList
+        MapExpression
+          PsiElement({)('{')
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiElement(:)(':')
+          IntegerLiteral
+            PsiElement(number)('2')
+          PsiErrorElement:',' expected
+            <empty list>
+          IntegerLiteral
+            PsiElement(number)('46')
+          PsiElement(:)(':')
+          IntegerLiteral
+            PsiElement(number)('4')
+          PsiElement(,)(',')
+          Interpolation
+            PsiElement($)('$')
+            ReferenceExpression
+              PsiElement(identifier)('r')
+          PsiElement(:)(':')
+          IntegerLiteral
+            PsiElement(number)('9')
+          PsiElement(,)(',')
+          Interpolation
+            PsiElement($)('$')
+            ReferenceExpression
+              PsiElement(identifier)('t')
+          PsiErrorElement:':' expected
+            <empty list>
+          Interpolation
+            PsiElement($)('$')
+            ReferenceExpression
+              PsiElement(identifier)('y')
+          PsiElement(:)(':')
+          IntegerLiteral
+            PsiElement(number)('8')
+          PsiElement(})('}')
+      PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('\r\n')

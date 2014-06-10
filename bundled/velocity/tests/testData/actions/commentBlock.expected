@@ -1,0 +1,4 @@
+<selection>#*
+#set($r = 3)
+<caret>*#
+</selection>

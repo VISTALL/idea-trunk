@@ -1,0 +1,55 @@
+#foreach($a in $b)
+#include('a')
+#macro(a $b $c)
+#parse('a')
+#set($a = $b)
+#stop()
+#literal($a)
+#evaluate($b)
+#a($a)
+
+#foreach ($a in $b)
+#include ('a')
+#macro (a $b $c)
+#parse ('a')
+#set ($a = $b)
+#stop ()
+#literal ($a)
+#evaluate ($b)
+#a ($a)
+
+#foreach
+#include
+#macro
+#parse
+#set
+#stop
+#literal
+#evaluate
+
+#foreacha
+#includea
+#macroa
+#parsea
+#seta
+#stopa
+#literala
+#evaluatea
+
+#foreacha()
+#includea()
+#macroa()
+#parsea()
+#seta()
+#stopa()
+#literala()
+#evaluatea()
+
+#foreacha ()
+#includea ()
+#macroa ()
+#parsea ()
+#seta ()
+#stopa ()
+#literala ()
+#evaluatea ()

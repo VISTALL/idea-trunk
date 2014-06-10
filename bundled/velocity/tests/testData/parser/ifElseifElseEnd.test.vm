@@ -1,0 +1,26 @@
+
+#if($ref1)
+
+	#elseif($ref2)
+
+	#elseif($ref3)
+
+	#else
+
+#end
+
+#if($ref4)
+
+	#else
+
+#end
+
+#if($ref1)
+
+	#elseif($ref5)
+
+#end
+
+#if($ref1)
+
+#end

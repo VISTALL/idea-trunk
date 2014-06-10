@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!--  - Application context definition for "springapp" DispatcherServlet.  -->
+<beans>
+
+    <bean id="MyDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="java.sql.Driver"/>
+        <property name="url" value="someUrl"/>
+        <property name="username" value="someUser"/>
+        <property name="password" value="somePassword"/>
+    </bean>
+
+    <bean id="abstractSessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" abstract="true">
+        <property name="dataSource">
+            <ref local="MyDataSource"/>
+        </property>
+        <property name="annotatedPackages" value="  pkg, <error>bad_pkg</error>"/>
+        <property name="mappingResources" value="/pkg/mapping.hbm.xml, /pkg/mapping2.hbm.xml" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.default_schema">test</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.generate_statistics">true</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="sessionFactory2" parent="abstractSessionFactory"/>
+
+</beans>

@@ -1,0 +1,15 @@
+Product.findByNameEqual<caret>
+-----
+findByNameEqual
+findByNameEqualAndDate
+findByNameEqualAndId
+findByNameEqualAndQuality
+findByNameEqualAndSize
+findByNameEqualAndVersion
+findByNameEqualAndWeight
+findByNameEqualOrDate
+findByNameEqualOrId
+findByNameEqualOrQuality
+findByNameEqualOrSize
+findByNameEqualOrVersion
+findByNameEqualOrWeight

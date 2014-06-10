@@ -1,0 +1,5 @@
+<Foo id = "3">
+    <BAR id = "5" x = "4"/>
+    <BAR idref = "3"></BAR>
+    <BAR></BAR>
+</Foo>

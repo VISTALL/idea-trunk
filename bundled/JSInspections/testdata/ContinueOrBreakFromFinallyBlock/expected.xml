@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>11</line>
+    <problem_class>'continue' or 'break' inside 'finally' block</problem_class>
+    <description>'continue' inside 'finally' block</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>25</line>
+    <problem_class>'continue' or 'break' inside 'finally' block</problem_class>
+    <description>'break' inside 'finally' block</description>
+  </problem>
+</problems>

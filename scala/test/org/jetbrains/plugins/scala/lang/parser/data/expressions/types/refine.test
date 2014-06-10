@@ -1,0 +1,59 @@
+class A(a: T with S with U {val i:T})
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('A')
+    PrimaryConstructor
+      AnnotationsList
+        <empty list>
+      Parameters
+        ParametersClause
+          PsiElement(()('(')
+          ClassParameter
+            AnnotationsList
+              <empty list>
+            Modifiers
+              <empty list>
+            PsiElement(identifier)('a')
+            PsiElement(:)(':')
+            PsiWhiteSpace(' ')
+            ParameterType
+              CompoundType
+                SimpleTypeElement
+                  CodeReferenceElement
+                    PsiElement(identifier)('T')
+                PsiWhiteSpace(' ')
+                PsiElement(with)('with')
+                PsiWhiteSpace(' ')
+                SimpleTypeElement
+                  CodeReferenceElement
+                    PsiElement(identifier)('S')
+                PsiWhiteSpace(' ')
+                PsiElement(with)('with')
+                PsiWhiteSpace(' ')
+                SimpleTypeElement
+                  CodeReferenceElement
+                    PsiElement(identifier)('U')
+                PsiWhiteSpace(' ')
+                Refinement
+                  PsiElement({)('{')
+                  ScValueDeclaration
+                    PsiElement(val)('val')
+                    PsiWhiteSpace(' ')
+                    ListOfIdentifiers
+                      Field identifier
+                        PsiElement(identifier)('i')
+                    PsiElement(:)(':')
+                    SimpleTypeElement
+                      CodeReferenceElement
+                        PsiElement(identifier)('T')
+                  PsiElement(})('}')
+          PsiElement())(')')
+    ExtendsBlock
+      <empty list>

@@ -1,0 +1,3 @@
+If a stereotype declares a requiredType, and the Web Bean API types do not include the type, a DefinitionException is thrown by the Web Bean manager at initialization time.
+If a stereotype explicitly declares a set of scope types using supportedScopes, and the Web Bean scope is not in that set, a DefinitionException is thrown by the Web Bean manager at initialization time.
+If a Web Bean declares multiple stereotypes, it must satisfy every restriction declared by every declared stereotype. Multiple stereotypes must specify the same scope OR a scope must be specified on the bean.

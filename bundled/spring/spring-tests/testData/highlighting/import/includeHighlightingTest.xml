@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <import resource="classpath:/org/springframework/jdbc/support/sql-error-codes.xml"/>
+  <import resource="classpath:org/springframework/jdbc/support/sql-error-codes.xml"/>
+  
+  <import resource="/<error>import.xml</error>"/>
+  <import resource="/import/import.xml"/>
+  <import resource="import2.xml"/>
+  <import resource="./import2.xml"/>
+  <import resource="../import/import2.xml"/>
+
+  <bean name="foo" class="java.lang.String" depends-on="PostgreSQL,stringBean,stringBean2">
+  </bean>
+</beans>

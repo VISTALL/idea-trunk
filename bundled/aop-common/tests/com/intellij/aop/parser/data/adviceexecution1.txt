@@ -1,0 +1,5 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiAdviceExecutionExpression
+    PsiElement(AOP_ADVICEEXECUTION)('adviceexecution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    PsiElement(AOP_RIGHT_PAR)(')')

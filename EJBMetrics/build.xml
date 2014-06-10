@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="EJBMetrics" default="compile">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2"
+             classpathref="plugin.class.path"/>
+    <property file="build.properties"/>
+    <property name="openapi.src.dir" value="openapi\src"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.root" value="${my.user.dir}\builds\EJBMetrics"/>
+    <property name="official.build.dir"
+              value="${my.user.dir}\officialbuilds\EJBMetrics"/>
+    <property name="idea.dir" value="\Applications\Demetra"/>
+    <property name="idea.plugin.dir"
+              value="${my.user.dir}\Library\Application Support\IntelliJIDEA60"/>
+    <property name="debug" value="true"/>
+    <property name="optimize" value="off"/>
+    <property name="deprecation" value="off"/>
+    <property name="project.fullname" value="EJBMetrics"/>
+    <property name="project.version" value="1.0.1"/>
+    <property name="jar.file" value="${build.root}/EJBMetrics.jar"/>
+    <property name="dist.zip.file"
+              value="${build.root}/${project.fullname}.${project.version}.zip"/>
+    <property name="build.classes.dir" value="${build.root}/classes"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.compiler" value="modern"/>
+
+    <path id="plugin.class.path">
+        <pathelement location="${my.user.dir}/builds/MetricsReloaded/MetricsReloadedOpenAPI.jar"/>
+        <pathelement location="${idea.dir}/lib/openAPI.jar"/>
+        <pathelement location="${idea.dir}/lib/jdom.jar"/>
+        <pathelement location="${idea.dir}/lib/extensions.jar"/>
+        <pathelement location="${idea.dir}/redist/forms_rt.jar"/>
+        <pathelement location="${idea.dir}/redist/javac2.jar"/>
+        <pathelement location="${idea.dir}/redist/annotations.jar"/>
+    </path>
+
+    <target name="init">
+
+        <mkdir dir="${build.root}"/>
+    </target>
+
+    <target name="prepare" depends="init">
+        <mkdir dir="${build.classes.dir}"/>
+    </target>
+
+    <target name="compile" depends="prepare">
+        <javac2 srcdir="${src.dir}" destdir="${build.classes.dir}"
+                includes="com/sixrr/**" debug="${debug}">
+            <classpath refid="plugin.class.path"/>
+        </javac2>
+    </target>
+
+    <target name="create_jars" depends="compile">
+
+        <jar jarfile="${jar.file}">
+            <fileset dir="${build.classes.dir}"/>
+            <fileset dir=".">
+                <include name="META-INF/plugin.xml"/>
+            </fileset>
+            <fileset dir="resources">
+                <include name="**/**"/>
+            </fileset>
+        </jar>
+
+    </target>
+
+    <target name="deploy" depends="clean, compile, create_jars"
+            description="deploy the plugin">
+
+        <mkdir dir="${idea.plugin.dir}"/>
+        <mkdir dir="${idea.plugin.dir}/EJBMetrics"/>
+        <mkdir dir="${idea.plugin.dir}/EJBMetrics/lib"/>
+        <copy file="${jar.file}" todir="${idea.plugin.dir}/EJBMetrics/lib"
+              overwrite="true"/>
+    </target>
+
+    <target name="clean" depends="init"
+            description="Cleans up the distribution">
+        <delete failonerror="false" dir="${build.classes.dir}"/>
+        <delete failonerror="false" file="${jar.file}"/>
+    </target>
+
+
+    <target name="remove-svn">
+        <delete dir="." includes="**/.svn/**" defaultexcludes="false"/>
+        <delete dir="." includes="**/.svn" defaultexcludes="false"/>
+    </target>
+
+    <target name="package">
+        <zip zipfile="../EJBMetrics.zip">
+            <fileset dir=".">
+                <include name="**/**"/>
+            </fileset>
+        </zip>
+    </target>
+</project>

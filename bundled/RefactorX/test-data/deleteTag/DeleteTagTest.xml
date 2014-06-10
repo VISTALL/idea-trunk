@@ -1,0 +1,6 @@
+<Foo>
+    <BAR>
+        <pre:BAZ/>
+        <Foo></Foo>
+    </BAR>
+</Foo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Variable is assigned to itself</problem_class>
+    <description>Variable is assigned to itself</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>Variable is assigned to itself</problem_class>
+    <description>Variable is assigned to itself</description>
+  </problem>
+</problems>

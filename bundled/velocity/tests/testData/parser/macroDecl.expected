@@ -1,0 +1,33 @@
+VtlFile:nofile.vm
+  DirectiveMacroDecl
+    PsiElement(#MACRO_DECL)('#macro')
+    HeaderOfDirective
+      PsiElement(()('(')
+      PsiElement(identifier)('tablerows')
+      Parameter
+        PsiElement($)('$')
+        PsiElement(identifier)('color')
+      Parameter
+        PsiElement($)('$')
+        PsiElement(identifier)('somelist')
+      PsiElement(,)(',')
+      Parameter
+        PsiElement($)('$')
+        PsiElement(identifier)('rr')
+      Parameter
+        PsiElement($)('$')
+        PsiElement(identifier)('tt')
+      PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n    <tr><td bgcolor=')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('color')
+    PsiElement(TEMPLATE_TEXT)('>')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('something')
+    PsiElement(TEMPLATE_TEXT)('</td></tr>\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n')

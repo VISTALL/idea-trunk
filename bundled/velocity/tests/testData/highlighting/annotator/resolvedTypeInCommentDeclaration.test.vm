@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo1" type="java.util.List" *#
+#* @vtlvariable name="foo2" type="java.lang.String" *#
+#* @vtlvariable name="foo3" type="java.util.Map<java.lang.Double,java.lang.Integer>" *#
+$foo1 $foo2 $foo3

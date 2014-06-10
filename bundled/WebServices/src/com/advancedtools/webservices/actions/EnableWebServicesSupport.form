@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.advancedtools.webservices.actions.EnableWebServicesSupportDialog">
+  <grid id="4a291" binding="panel" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="169" y="155" width="327" height="174"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="84352" class="com.intellij.openapi.ui.ComboBox" binding="modules">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.name.of.module.tooltip"/>
+        </properties>
+      </component>
+      <component id="d83ae" class="javax.swing.JLabel" binding="chooseModuleText">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Choose module:"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.name.of.module.tooltip"/>
+        </properties>
+      </component>
+      <component id="1500c" class="javax.swing.JLabel" binding="statusText">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Status"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="3c2e6" class="javax.swing.JLabel" binding="status">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="e6058" class="javax.swing.JLabel" binding="clientServerSwitchText">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Type"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.support.type.tooltip"/>
+        </properties>
+      </component>
+      <component id="76d3d" class="com.intellij.openapi.ui.ComboBox" binding="clientServerSwitch">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.support.type.tooltip"/>
+        </properties>
+      </component>
+      <component id="3631b" class="javax.swing.JLabel" binding="webServicePlatformText">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Web Service Platform"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.support.type.tooltip"/>
+        </properties>
+      </component>
+      <component id="b7faf" class="com.intellij.openapi.ui.ComboBox" binding="webServicePlatform">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.support.type.tooltip"/>
+        </properties>
+      </component>
+      <component id="a1708" class="javax.swing.JCheckBox" binding="addSimpleCodeSwitch">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text resource-bundle="com/advancedtools/webservices/WSBundle" key="enable.web.services.support.add.sample.code"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="enable.webservices.support.add.sample.code.for.selected.web.services.support.type"/>
+        </properties>
+      </component>
+      <component id="55989" class="javax.swing.JLabel" binding="packageNameText">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Package name"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="package.name.for.generated.class"/>
+        </properties>
+      </component>
+      <component id="8b1a2" class="javax.swing.JTextField" binding="packageName">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="package.name.for.generated.class"/>
+        </properties>
+      </component>
+      <component id="36f40" class="javax.swing.JTextField" binding="className">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="class.name.for.generated.class"/>
+        </properties>
+      </component>
+      <component id="cda39" class="javax.swing.JLabel" binding="classNameText">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Class name"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="class.name.for.generated.class"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

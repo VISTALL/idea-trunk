@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Duplicate case label</problem_class>
+    <description>Duplicate case label 3 #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>8</line>
+    <problem_class>Duplicate case label</problem_class>
+    <description>Duplicate case label (3) #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>10</line>
+    <problem_class>Duplicate case label</problem_class>
+    <description>Duplicate case label default</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>12</line>
+    <problem_class>Duplicate case label</problem_class>
+    <description>Duplicate case label default</description>
+  </problem>
+</problems>

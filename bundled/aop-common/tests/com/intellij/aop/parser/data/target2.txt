@@ -1,0 +1,7 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiTargetExpression
+    PsiElement(AOP_TARGET)('target')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      PsiErrorElement:Type name pattern expected
+        <empty list>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean name="foo" class="Foo"/>
+  <bean name="foo_2" class="Foo">
+    <property name="public" value="zzz"/>
+  </bean>
+
+  <bean name="collections" class="FooCollectionsAndMapsProperties"/>
+  <bean name="fooWithReferences" class="FooWithReferences"/>
+
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"/>
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"/>
+</beans>

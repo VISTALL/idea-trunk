@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean name="newName"/>
+  <bean id="next" depends-on=" newName, next ">
+    <property name="" ref="newName">
+        <ref bean="newName" local="newName" parent="beanName"/>
+        <idref bean="newName" local="newName" />
+    </property>
+  </bean>
+  <bean id="third" parent="newName">
+
+  </bean>
+  <alias name="newName" alias="alias"/>
+</beans>

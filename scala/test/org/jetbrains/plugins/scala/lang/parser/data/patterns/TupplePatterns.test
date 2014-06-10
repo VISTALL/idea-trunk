@@ -1,0 +1,118 @@
+object A{
+  def foo() = a match {
+    case (1,6,7,8) => {}
+    case (2,) => {}
+    case (x,"abc",_) => {}
+  }
+}
+-----
+ScalaFile
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('A')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScFunctionDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(def)('def')
+          PsiWhiteSpace(' ')
+          PsiElement(identifier)('foo')
+          Parameters
+            ParametersClause
+              PsiElement(()('(')
+              PsiElement())(')')
+          PsiWhiteSpace(' ')
+          PsiElement(=)('=')
+          PsiWhiteSpace(' ')
+          MatchStatement
+            ReferenceExpression
+              PsiElement(identifier)('a')
+            PsiWhiteSpace(' ')
+            PsiElement(match)('match')
+            PsiWhiteSpace(' ')
+            PsiElement({)('{')
+            PsiWhiteSpace('\n    ')
+            CaseClauses
+              CaseClause
+                PsiElement(case)('case')
+                PsiWhiteSpace(' ')
+                TuplePattern
+                  PsiElement(()('(')
+                  ArgumentPatterns
+                    LiteralPattern
+                      Literal
+                        PsiElement(integer)('1')
+                    PsiElement(,)(',')
+                    LiteralPattern
+                      Literal
+                        PsiElement(integer)('6')
+                    PsiElement(,)(',')
+                    LiteralPattern
+                      Literal
+                        PsiElement(integer)('7')
+                    PsiElement(,)(',')
+                    LiteralPattern
+                      Literal
+                        PsiElement(integer)('8')
+                  PsiElement())(')')
+                PsiWhiteSpace(' ')
+                PsiElement(=>)('=>')
+                PsiWhiteSpace(' ')
+                BlockExpression
+                  PsiElement({)('{')
+                  PsiElement(})('}')
+              PsiWhiteSpace('\n    ')
+              CaseClause
+                PsiElement(case)('case')
+                PsiWhiteSpace(' ')
+                TuplePattern
+                  PsiElement(()('(')
+                  ArgumentPatterns
+                    LiteralPattern
+                      Literal
+                        PsiElement(integer)('2')
+                    PsiElement(,)(',')
+                  PsiElement())(')')
+                PsiWhiteSpace(' ')
+                PsiElement(=>)('=>')
+                PsiWhiteSpace(' ')
+                BlockExpression
+                  PsiElement({)('{')
+                  PsiElement(})('}')
+              PsiWhiteSpace('\n    ')
+              CaseClause
+                PsiElement(case)('case')
+                PsiWhiteSpace(' ')
+                TuplePattern
+                  PsiElement(()('(')
+                  ArgumentPatterns
+                    ReferencePattern
+                      PsiElement(identifier)('x')
+                    PsiElement(,)(',')
+                    LiteralPattern
+                      Literal
+                        PsiElement(string content)('"abc"')
+                    PsiElement(,)(',')
+                    WildcardPattern
+                      PsiElement(_)('_')
+                  PsiElement())(')')
+                PsiWhiteSpace(' ')
+                PsiElement(=>)('=>')
+                PsiWhiteSpace(' ')
+                BlockExpression
+                  PsiElement({)('{')
+                  PsiElement(})('}')
+            PsiWhiteSpace('\n  ')
+            PsiElement(})('}')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

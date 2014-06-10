@@ -1,0 +1,16 @@
+
+<map version="1.0">
+    <mapID target="refactorX" url="refactoring/refactorX.html"/>
+    <mapID target="refactoring.deleteAttribute" url="refactoring/deleteAttribute.html"/>
+    <mapID target="refactoring.deleteTag" url="refactoring/deleteTag.html"/>
+    <mapID target="refactoring.wrapTag" url="refactoring/wrapTag.html"/>
+    <mapID target="refactoring.unwrapTag" url="refactoring/unwrapTag.html"/>
+    <mapID target="refactoring.attributeToTag" url="refactoring/attributeToTag.html"/>
+    <mapID target="refactoring.tagToAttribute" url="refactoring/tagToAttribute.html"/>
+    <mapID target="refactoring.collapseTag" url="refactoring/collapseTag.html"/>
+    <mapID target="refactoring.expandTag" url="refactoring/expandTag.html"/>
+    <mapID target="refactoring.splitTag" url="refactoring/splitTag.html"/>
+    <mapID target="refactoring.mergeTags" url="refactoring/mergeTags.html"/>
+    <mapID target="folder" url="images/secondary/bookClosedGreen.gif"/>
+    <mapID target="doc" url="images/secondary/list_shadow.gif"/>
+</map>

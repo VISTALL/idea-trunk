@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="bean" class="FooBeanWithConstructors" >
+    <constructor-arg index="0" type = "java.lang.String" value="" />
+    <constructor-arg index="1" type = "int" value=<error>""</error> />
+    <constructor-arg index="2" type = "boolean" value=<error>""</error> />
+  </bean>
+
+  <bean id="bean_1" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index="0" type = "java.lang.String" value="" />
+    <constructor-arg index="1" type = "<error>java.lang.String</error>" value="" />
+    <constructor-arg index="2" type = "<error>java.lang.String</error>" value="" />
+  </bean>
+
+ <bean id="bean_2" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index="0" type = "<error>boolean</error>" value="true" />
+    <constructor-arg index="2" type = "<error>java.lang.String</error>" value="" />
+    <constructor-arg index="1" type = "int" value=<error>""</error> />
+
+  </bean>
+
+ <bean id="bean_3" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index="0" type = "java.lang.String" value="" />
+    <constructor-arg index="1" type = "<error>boolean</error>" value=<error>""</error> />
+    <constructor-arg index="2" type = "<error>int</error>" value=<error>""</error> />
+  </bean>
+
+
+  <bean id="foo_abstract" class="FooBean13" abstract="true"/>
+
+  <bean id="parent" class="FooBean13" abstract="true">
+        <constructor-arg index="0" value="1"/>
+    </bean>
+
+    <bean id="child" parent="parent">
+        <constructor-arg index="0" value="1"/>
+    </bean>
+</beans>

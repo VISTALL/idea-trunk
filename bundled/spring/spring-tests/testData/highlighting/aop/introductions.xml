@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    <aop:config>
+      <aop:pointcut id="zzz" expression="args()"/>
+        <aop:aspect ref="xxx">
+          <aop:declare-parents types-matching="*" implement-interface="<error descr="Interface expected here">java.lang.Object</error>" default-impl="java.lang.Object"/>
+          <aop:declare-parents types-matching="*" implement-interface="java.lang.Runnable" default-impl="<error descr="Non-abstract class implementing java.lang.Runnable expected">java.lang.Object</error>"/>
+          <aop:declare-parents types-matching="*" implement-interface="java.lang.Runnable" default-impl="<error descr="Non-abstract class implementing java.lang.Runnable expected">java.lang.AbstractRunnable</error>"/>
+          <aop:declare-parents types-matching="*" implement-interface="java.lang.Runnable" default-impl="java.lang.RunnableImpl"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

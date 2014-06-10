@@ -1,0 +1,30 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopAnnotationHolder
+      AopAnnotationExpression
+        PsiElement(AOP_AT)('@')
+        AopReferenceHolder
+          AopReferenceExpression
+            PsiElement(AOP_IDENTIFIER)('FooAnno')
+      AopNotExpression
+        PsiElement(AOP_NOT)('!')
+        AopAnnotationExpression
+          PsiElement(AOP_AT)('@')
+          AopReferenceHolder
+            AopReferenceExpression
+              PsiElement(AOP_IDENTIFIER)('BarAnno')
+    AopModifierList
+      <empty list>
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      PsiElement(AOP_DOT_DOT)('..')
+    PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_RIGHT_PAR)(')')

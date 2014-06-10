@@ -1,0 +1,14 @@
+
+#foreach($next in $iter)
+
+	${next}
+
+#end
+
+#foreach($ in $iter)
+	${next}
+#end
+
+#foreach($next in $)
+	${next}
+#end

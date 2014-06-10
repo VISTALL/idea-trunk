@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo1" type="<error descr="Invalid Java type">ouble</error>" *#
+#* @vtlvariable name="foo2" type="<error descr="Invalid Java type">String</error>" *#
+#* @vtlvariable name="foo3" type="java.util.Map<<error descr="Invalid Java type">Date</error>,java.util.Date>" *#
+$foo1 $foo2 $foo3

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+  ~ Copyright 2000-2008 JetBrains s.r.o.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~  http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<idea-plugin version="2">
+  <id>com.intellij.uml</id>
+  <name>UML Support</name>
+
+  <description>Support for UML class diagrams</description>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png" email="Konstantin.Bulenkov@jetbrains.com">JetBrains</vendor>
+
+  <idea-version since-build="8000"/>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.uml.UmlVirtualFileSystem</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+
+  </project-components>
+
+  <extensionPoints>
+      <extensionPoint name="umlProvider" interface="com.intellij.uml.UmlProvider"/>
+  </extensionPoints>
+  <extensions defaultExtensionNs="com.intellij">
+    <fileEditorProvider implementation="com.intellij.uml.UmlClassDiagramEditorProvider"/>
+    <fileEditorProvider implementation="com.intellij.uml.UmlEditorProvider"/>    
+    <fileTypeFactory implementation="com.intellij.uml.UmlFileTypeFactory"/>            
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <applicationService serviceImplementation="com.intellij.uml.settings.UmlConfiguration" serviceInterface="com.intellij.uml.settings.UmlConfiguration"/>
+    <applicationService serviceImplementation="com.intellij.uml.settings.UmlSettings" serviceInterface="com.intellij.uml.settings.UmlSettings"/>
+    <applicationConfigurable implementation="com.intellij.uml.settings.UmlConfigurable"/>
+    <uml.umlProvider implementation="com.intellij.uml.java.JavaUmlProvider" />
+    <uml.umlProvider implementation="com.intellij.uml.project.ModulesUmlProvider" />        
+  </extensions>
+  <actions>
+    <group id="UML.EditorGroup" description="UML" popup="true" text="UML" icon="/resources/icons/uml.png">
+      <add-to-group group-id="EditorPopupMenu" anchor="last" />
+    </group>
+    <group id="UML.Group" description="UML" popup="true" text="UML" icon="/resources/icons/uml.png">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="last" />
+      <add-to-group group-id="TypeHierarchyPopupMenu" anchor="last" />
+      <add-to-group group-id="StructureViewPopupMenu" anchor="last" />
+    </group>
+
+     <action id="ShowUmlClassDiagramForClass" class="com.intellij.uml.actions.ShowUmlClassDiagram" text="Show Class Diagram" icon="/resources/icons/uml.png">
+      <keyboard-shortcut first-keystroke="control shift alt U" keymap="$default"/>
+       <add-to-group group-id="UML.EditorGroup" anchor="last" />
+       <add-to-group group-id="UML.Group" anchor="last" />
+    </action>
+    <action id="ShowUmlDiagram" class="com.intellij.uml.core.actions.ShowUmlDiagram" text="Show UML Diagram" icon="/resources/icons/uml.png">
+      <keyboard-shortcut first-keystroke="control shift alt U" keymap="$default"/>
+      <add-to-group group-id="UML.EditorGroup" anchor="last" />
+      <add-to-group group-id="UML.Group" anchor="last" />
+    </action>
+    <action id="ShowUmlDiagramPopup" class="com.intellij.uml.core.actions.ShowUmlHierarchyPopup" text="Show UML Popup" icon="/resources/icons/uml.png">
+      <keyboard-shortcut first-keystroke="control alt U" keymap="$default"/>
+      <add-to-group group-id="UML.EditorGroup" anchor="last" />
+      <add-to-group group-id="UML.Group" anchor="last" />
+    </action>
+    <action id="ShowChangedClasses" class="com.intellij.uml.actions.diff.ShowChangedClasses" text="Show Changed Classes" icon="/resources/icons/uml.png">
+     <keyboard-shortcut first-keystroke="control shift alt D" keymap="$default"/>
+      <add-to-group group-id="UML.EditorGroup" anchor="last" />
+      <add-to-group group-id="UML.Group" anchor="last" />
+      <add-to-group group-id="ChangesViewToolbar" anchor="last"/>
+   </action>
+    <action id="Uml.ShowSubtypes" class="com.intellij.uml.actions.popup.ShowSubtypes" text="Show Subtypes" />
+    <action id="Uml.ShowSupers" class="com.intellij.uml.actions.popup.ShowParents" text="Show Super Classes" />
+    <action id="Uml.ShowUsed" class="com.intellij.uml.actions.popup.ShowClassesUsed" text="Show Classes From Signature"/>
+
+    <action id="Uml.AddClass" class="com.intellij.uml.actions.UmlAddClassAction" text="Add Class"/>
+    <action id="Uml.CollapseToPackage" class="com.intellij.uml.actions.CollapseToPackage" text="Collapse to package"/>
+    <action id="Uml.ExpandPackage" class="com.intellij.uml.actions.ExpandPackage" text="Expand package"/>
+    <action id="Uml.ActualSize" class="com.intellij.uml.actions.UmlActualZoomAction" text="Actual Size" icon="/resources/icons/actualsize.png"/>
+
+    <action id="Uml.CollapseNodes" class="com.intellij.uml.core.actions.CollapseNodesAction" text="Collapse Nodes" />
+    <action id="Uml.ExpandNodes" class="com.intellij.uml.core.actions.ExpandNodesAction" text="Expand Nodes" />
+
+    <action id="Uml.SelectAll" class="com.intellij.uml.actions.SelectAllAction" text="Select All UML Elements"/>
+    <action id="Uml.ZoomIn" class="com.intellij.uml.actions.ZoomIn" text="Zoom In" icon="/resources/icons/zoomIn.png" />
+    <action id="Uml.ZoomOut" class="com.intellij.uml.actions.ZoomOut" text="Zoom Out" icon="/resources/icons/zoomOut.png" />
+
+    <action id="Uml.FitContent" class="com.intellij.uml.actions.UmlFitContentAction" text="Fit Content" icon="/resources/icons/fitcontent.png">
+
+    </action>
+    <action id="Uml.ApplyCurrentLayout" class="com.intellij.uml.actions.UmlApplyCurrentLayoutAction" text="Apply Current Layout" icon="/resources/icons/layout.png">
+
+    </action>
+
+    <action id="Uml.ExportToFile" class="com.intellij.uml.actions.ExportToFile" text="Export to file" icon="/resources/icons/export.png" />
+    <action id="Uml.PrintGraph" class="com.intellij.uml.actions.PrintGraph" text="Print Graph" icon="/resources/icons/print.png" />
+    <action id="Uml.PrintPreview" class="com.intellij.uml.actions.PrintPreview" text="Print Preview" icon="/resources/icons/printPreview.png" />
+
+    <action id="Uml.ShowHideFields" class="com.intellij.uml.actions.presentation.ShowHideFields" text="Show Fields" icon="/resources/icons/field.png" />
+    <action id="Uml.ShowHideProperties" class="com.intellij.uml.actions.presentation.ShowHideProperties" text="Show Properties" icon="/resources/icons/property.png"/>
+    <action id="Uml.ShowHideConstructors" class="com.intellij.uml.actions.presentation.ShowHideConstructors" text="Show Constructors" icon="/resources/icons/constructor.png"/>
+    <action id="Uml.ShowHideMethods" class="com.intellij.uml.actions.presentation.ShowHideMethods" text="Show Methods" icon="/resources/icons/method.png"/>
+    <action id="Uml.EnableVcsFilter" class="com.intellij.uml.actions.presentation.ShowHideVCSFilter" text="Show only changed elements" icon="/resources/icons/diff.png"/>
+    <action id="Uml.ShowHideInners" class="com.intellij.uml.actions.presentation.ShowHideInnerClasses" text="Show Inner Classes" icon="/resources/icons/innerclass.png"/>
+
+    <action id="Uml.CreateNewClass" class="com.intellij.uml.actions.create.CreateClass" text="Class" icon="/resources/icons/class.png"/>
+    <action id="Uml.CreateNewInterface" class="com.intellij.uml.actions.create.CreateInterface" text="Interface" icon="/resources/icons/interface.png"/>
+    <action id="Uml.CreateNewEnum" class="com.intellij.uml.actions.create.CreateEnum" text="Enum" icon="/resources/icons/enum.png"/>
+    <action id="Uml.CreateNewField" class="com.intellij.uml.actions.create.AddFieldAction" text="Field" icon="/resources/icons/field.png"/>
+    <action id="Uml.CreateNewMethod" class="com.intellij.uml.actions.create.AddNewMethodAction" text="Method" icon="/resources/icons/method.png"/>
+    <action id="Uml.CreateNewConstructor" class="com.intellij.uml.actions.create.AddNewConstructorAction" text="Constructor" icon="/resources/icons/constructor.png"/>
+    <action id="Uml.CreateNewEnumConstant" class="com.intellij.uml.actions.create.AddEnumConstant" text="Enum Constant" icon="/resources/icons/enumfield.png"/>
+
+    <action id="Uml.ShowCamelNames" class="com.intellij.uml.actions.presentation.ShowHideCamelNames" text="Show Camel Names" icon="/resources/icons/camelcase.png"/>
+    <action id="Uml.ShowColors" class="com.intellij.uml.actions.presentation.EnableColorManager" text="Enable Colors" icon="/resources/icons/colormanager.png"/>
+    <action id="Uml.ShowDependencies" class="com.intellij.uml.actions.presentation.ShowDependencies" text="Show dependencies" icon="/resources/icons/dependencies.png"/>
+    
+    <action id="Uml.EdgeCreationMode" class="com.intellij.uml.actions.presentation.TurnOnEdgeCreationAction" text="Edge Creation Mode" icon="/resources/icons/edgemode.png"/>
+
+    <action id="Uml.SaveDiagram" class="com.intellij.uml.actions.fs.SaveClassDiagramAction" icon="/resources/icons/save.png" text="Save diagram"/>          
+
+    <group id="Uml.Visibility" popup="true" text="Show Members" class="com.intellij.uml.actions.presentation.ChangeVisibilityLevel$ChangeVisibilityGroup" icon="/resources/icons/visibility.png"/>
+
+    <action id="Uml.Visibility.Public" class="com.intellij.uml.actions.presentation.ChangeVisibilityLevel$ChangeVisibilityLevelToPublic" text="Public" description="Show only public elements of a class">
+      <add-to-group group-id="Uml.Visibility" anchor="last"/>
+    </action>
+    <action id="Uml.Visibility.Package" class="com.intellij.uml.actions.presentation.ChangeVisibilityLevel$ChangeVisibilityLevelToPackage" text="Package" description="Show only public and package local elements of a class">
+      <add-to-group group-id="Uml.Visibility" anchor="last"/>
+    </action>
+    <action id="Uml.Visibility.Protected" class="com.intellij.uml.actions.presentation.ChangeVisibilityLevel$ChangeVisibilityLevelToProtected" text="Protected" description="Show only public, package local and protected elements of a class">
+      <add-to-group group-id="Uml.Visibility" anchor="last"/>
+    </action>
+    <action id="Uml.Visibility.Private" class="com.intellij.uml.actions.presentation.ChangeVisibilityLevel$ChangeVisibilityLevelToPrivate" text="All" description="Show all elements of a class without filtering">
+      <add-to-group group-id="Uml.Visibility" anchor="last"/>
+    </action>
+
+    <action id="ShowClassHierarchy" class="com.intellij.uml.actions.ShowClassHierarchy" text="Show Class Hierarchy" icon="/resources/icons/uml.png">
+     <keyboard-shortcut first-keystroke="control alt U" keymap="$default"/>
+     <add-to-group group-id="UML.EditorGroup" anchor="last" />
+     <add-to-group group-id="UML.Group" anchor="last" />      
+   </action>
+
+    <action id="Uml.ShowDiff" class="com.intellij.uml.actions.diff.ShowDiffOnUmlAction" text="Compare all classes from revision on UML" icon="/resources/icons/uml.png">
+      <keyboard-shortcut first-keystroke="control shift D" keymap="$default"/>
+      <add-to-group group-id="VcsHistoryActionsGroup" anchor="last"/>
+    </action>
+
+
+
+    <action id="UML.SelectAll" class="com.intellij.uml.actions.SelectAllAction" text="Select All UML Elements" />
+
+    <action id="UML.ZoomIn" class="com.intellij.uml.core.actions.ZoomIn" text="Zoom In" icon="/resources/icons/zoomIn.png" />
+    <action id="UML.ZoomOut" class="com.intellij.uml.core.actions.ZoomOut" text="Zoom Out" icon="/resources/icons/zoomOut.png" />
+    <action id="UML.ActualSize" class="com.intellij.uml.core.actions.UmlActualZoomAction" text="Actual Size" icon="/resources/icons/actualsize.png"/>
+    <action id="UML.FitContent" class="com.intellij.uml.core.actions.UmlFitContentAction" text="Fit Content" icon="/resources/icons/fitcontent.png"/>
+    <action id="UML.ApplyCurrentLayout" class="com.intellij.uml.core.actions.UmlApplyCurrentLayoutAction" text="Apply Current Layout" icon="/resources/icons/layout.png"/>
+    <action id="UML.SaveDiagram" class="com.intellij.uml.core.actions.fs.SaveUmlAction" icon="/resources/icons/save.png" text="Save diagram"/>
+    <action id="UML.ExportToFile" class="com.intellij.uml.core.actions.ExportToFile" text="Export to file" icon="/resources/icons/export.png" />
+    <action id="UML.PrintGraph" class="com.intellij.uml.core.actions.PrintGraph" text="Print Graph" icon="/resources/icons/print.png" />
+    <action id="UML.PrintPreview" class="com.intellij.uml.core.actions.PrintPreview" text="Print Preview" icon="/resources/icons/printPreview.png" />
+
+    <group id="Uml.PsiElement.Actions" popup="false">
+      <reference ref="Uml.CollapseToPackage"/>
+      <reference ref="Uml.ExpandPackage"/>
+      <separator/>
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <reference ref="RenameElement"/>
+      <separator/>
+    </group>
+    <group id="Uml.CreateNew.Actions" text="New" description="New" popup="true">
+      <reference ref="Uml.CreateNewClass" />
+      <reference ref="Uml.CreateNewInterface" />
+      <reference ref="Uml.CreateNewEnum" />
+      <separator/>
+      <reference ref="Uml.CreateNewField" />
+      <reference ref="Uml.CreateNewMethod"/>
+      <reference ref="Uml.CreateNewConstructor" />
+      <reference ref="Uml.CreateNewEnumConstant" />
+    </group>
+    <group id="Uml.Analyze" text="Analyze" popup="true">
+      <reference ref="AnalyzeJavaMenu" />
+    </group>
+
+
+    <group id="Uml.DefaultGraphPopup">
+      <reference ref="Uml.CreateNew.Actions" />
+      <separator/>
+      <reference ref="Uml.AddClass"/>
+      <reference ref="Uml.ShowSubtypes"/>
+      <reference ref="Uml.ShowSupers"/>
+      <reference ref="Uml.ShowUsed"/>
+      <reference ref="Uml.CollapseToPackage"/>
+      <reference ref="Uml.ExpandPackage"/>
+      <separator/>
+      <reference ref="RefactoringMenu" />
+      <reference ref="Uml.Analyze"/>
+      <separator />
+      <reference ref="Uml.Visibility" />
+      <separator />
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <separator />
+      <reference ref="VcsGroup" />
+      <separator/>
+      <reference ref="Uml.ZoomIn"/>
+      <reference ref="Uml.ZoomOut"/>
+      <reference ref="Uml.ActualSize"/>
+      <reference ref="Graph.FitContent"/>
+      <reference ref="Graph.ExportToFile"/>
+      <separator/>
+      <reference ref="Graph.Print"/>
+      <reference ref="Graph.Print.Preview"/>
+      <separator/>
+      <reference ref="Graph.CommonLayoutGroup"/>
+      <reference ref="Graph.Layout.Fit.Content"/>
+      <separator/>
+      <reference ref="Graph.Show.Edge.Labels"/>
+      <reference ref="Graph.Current.Node.Dependencies.Filter"/>
+    </group>
+
+    <group id="UML.DefaultGraphPopup">
+      <reference ref="RefactoringMenu" />
+      <reference ref="Uml.Analyze"/>
+      <separator />
+      <reference ref="Uml.Visibility" />
+      <separator />
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <separator />
+      <reference ref="VcsGroup" />
+      <separator/>
+      <reference ref="Uml.ZoomIn"/>
+      <reference ref="Uml.ZoomOut"/>
+      <reference ref="Uml.ActualSize"/>
+      <reference ref="Graph.FitContent"/>
+      <reference ref="Graph.ExportToFile"/>
+      <separator/>
+      <reference ref="Graph.Print"/>
+      <reference ref="Graph.Print.Preview"/>
+      <separator/>
+      <reference ref="Graph.CommonLayoutGroup"/>
+      <reference ref="Graph.Layout.Fit.Content"/>
+      <separator/>
+      <reference ref="Graph.Show.Edge.Labels"/>
+      <reference ref="Graph.Current.Node.Dependencies.Filter"/>
+    </group>
+
+    <group id="Uml.Toolbar">
+      <reference ref="Uml.ShowHideFields" />
+      <reference ref="Uml.ShowHideConstructors" />
+      <reference ref="Uml.ShowHideMethods" />
+      <reference ref="Uml.ShowHideProperties" />
+      <reference ref="Uml.ShowHideInners" />
+      <reference ref="Uml.ShowCamelNames" />
+      <reference ref="Uml.EnableVcsFilter" />
+      <reference ref="Uml.Visibility" />
+      <separator/>
+      <reference ref="Uml.ShowDependencies" />
+      <reference ref="Uml.EdgeCreationMode" />
+      <separator/>
+      <reference ref="Uml.ZoomIn" />
+      <reference ref="Uml.ZoomOut" />
+      <reference ref="Uml.ActualSize" />
+      <reference ref="Uml.FitContent" />
+      <reference ref="Uml.ApplyCurrentLayout" />
+      <reference ref="Uml.ShowColors" />
+      <reference ref="Uml.SaveDiagram" />
+      <separator/>
+      <reference ref="Uml.ExportToFile" />
+      <reference ref="Uml.PrintGraph" />
+      <reference ref="Uml.PrintPreview" />
+    </group>
+    <group id="Uml.Standard.Toolbar.Actions">
+      <reference ref="UML.ZoomIn" />
+      <reference ref="UML.ZoomOut" />
+      <reference ref="UML.ActualSize" />
+      <reference ref="UML.FitContent" />
+      <reference ref="UML.ApplyCurrentLayout" />
+      <reference ref="UML.SaveDiagram" />
+      <separator/>
+      <reference ref="UML.ExportToFile" />
+      <reference ref="UML.PrintGraph" />
+      <reference ref="UML.PrintPreview" />
+    </group>
+
+    <group id="Uml.Refactoring" popup="false">
+      <reference ref="RefactoringMenu" />
+    </group>
+    <group id="Uml.NodeCellEditorPopup" popup="false" >
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>
+      <separator/>      
+      <reference ref="Uml.Refactoring"/>
+    </group>
+  </actions>
+</idea-plugin>

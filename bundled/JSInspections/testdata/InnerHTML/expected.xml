@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Use of 'innerHTML' property</problem_class>
+    <description>use of 'document.foo.innerHTML' property #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Use of 'innerHTML' property</problem_class>
+    <description>use of 'document.innerHTML' property #loc</description>
+  </problem>
+</problems>

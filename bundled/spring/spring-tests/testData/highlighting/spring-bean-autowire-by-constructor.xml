@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="constructor" >
+  <bean id="fooBean" class="FooBean"/>
+  <bean id="fooBean2" class="FooBean2"/>
+  <bean id="fooBean3" class="java.lang.String"/>
+  <bean id="fooBean4" class="FooBean3"/>
+
+  <bean id="testBean"  class ="FooBeanWithConstructors3$StringConstructor" autowire="constructor" />
+  <bean id="testBean2"  class ="FooBeanWithConstructors3" factory-method="getInstance" autowire="constructor" />
+
+  <bean id="testBean3"  class ="<error>FooBeanWithConstructors4</error>" autowire="constructor" />
+  <bean id="testBean4"  class ="<error>FooBeanWithConstructors4</error>" factory-method="<error>getInstance</error>" autowire="constructor" />
+
+  <bean id="testBean5"  class ="FooBeanWithConstructors4" autowire="constructor">
+     <constructor-arg value="1" />
+  </bean>
+
+  <bean id="testBean6"  class ="FooBeanWithConstructors4" factory-method="getInstance" >
+     <constructor-arg value="1" />
+  </bean>
+
+  <bean id="testBean7"  class ="FooBeanWithConstructors4" autowire="constructor">
+     <constructor-arg index="0" value="1" />
+  </bean>
+
+   <bean id="testBean8"  class ="<error>FooBeanWithConstructors4</error>" factory-method="<error>getInstance</error>">
+     <constructor-arg index="1" value="1" />
+  </bean>
+</beans>

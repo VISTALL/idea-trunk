@@ -1,0 +1,128 @@
+<root>
+  <links>
+    <!-- Data Source-->
+    <docLink beanId="datasource"
+             api="http://java.sun.com/javase/6/docs/api/javax/sql/DataSource.html"/>
+    <docLink beanId="jndi-datasource"
+             api="http://www.springframework.org/docs/api/org/springframework/jndi/JndiObjectFactoryBean.html"/>
+
+    <!-- Hibernate -->
+    <docLink beanId="hibernatefactory"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/hibernate/LocalSessionFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-session-factory-setup"/>
+    <docLink beanId="hibernate-tm"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/hibernate/HibernateTransactionManager.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-hibernate-template"/>
+
+    <!-- JPA -->
+    <docLink beanId="jpa-entity-manager-factory"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jpa/LocalEntityManagerFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-setup-lemfb"/>
+
+    <docLink beanId="jpa-container-entity-manager-factory"                              
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jpa/LocalContainerEntityManagerFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-setup-lcemfb"/>
+
+    <docLink beanId="jpa-persistent-unit-manager"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jpa/persistenceunit/DefaultPersistenceUnitManager.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-multiple-pu"/>
+
+    <docLink beanId="jpa-transaction-manager"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jpa/JpaTransactionManager.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-tx"/>
+
+    <docLink beanId="jpa-anno-post-processor"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-straight"/>
+
+    <docLink beanId="jpa-ex-translation-post-processor"  
+             api="http://www.springframework.org/docs/api/org/springframework/dao/annotation/PersistenceExceptionTranslationPostProcessor.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jpa-exceptions"/>
+
+    <!-- JDO -->
+    <docLink beanId="jdo-persistance-manager"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jdo/LocalPersistenceManagerFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jdo-setup"/>
+
+    <docLink beanId="jpox-pmf"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jdo-setup"/>
+
+    <docLink beanId="jdo-persistance-manager-proxy"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jdo/TransactionAwarePersistenceManagerFactoryProxy.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jdo-template"/>
+
+    <docLink beanId="jdo-transaction-manager"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/jdo/JdoTransactionManager.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-jdo-tx"/>
+
+    <!-- iBatis -->
+    <docLink beanId="ibatis-client-factory"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/ibatis/SqlMapClientFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-ibatis"/>
+
+    <!-- Toplink -->
+    <docLink beanId="toplink-session-factory"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/toplink/LocalSessionFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-toplink-abstraction"/>
+
+    <docLink beanId="toplink-session-adapter"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/toplink/support/TransactionAwareSessionAdapter.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-toplink-straight"/>
+
+    <docLink beanId="toplink-transaction-manager"
+             api="http://www.springframework.org/docs/api/org/springframework/orm/toplink/TopLinkTransactionManager.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/orm.html#orm-toplink-tx"/>
+
+    <!-- JDK Timer -->
+    <docLink beanId="jdk-scheduled-timer-task"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/timer/ScheduledTimerTask.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-jdk-timer-creating"/>
+
+    <docLink beanId="jdk-timer-factory-bean"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/timer/TimerFactoryBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-jdk-timer-factory-bean"/>
+
+    <!-- OpenSymphony Quartz Scheduler -->
+    <docLink beanId="quartz-job-detail"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/quartz/JobDetailBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-quartz-jobdetail"/>
+    <docLink beanId="quartz-simple-trigger"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/quartz/SimpleTriggerBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-quartz-cron"/>
+    <docLink beanId="quartz-cron-trigger"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/quartz/CronTriggerBean.html"
+             reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-quartz-cron"/>
+    <docLink beanId="quartz-scheduler-factory"
+             api="http://www.springframework.org/docs/api/org/springframework/scheduling/quartz/SchedulerFactoryBean.html"
+          reference="http://static.springframework.org/spring/docs/2.0.x/reference/scheduling.html#scheduling-quartz-cron"/>
+
+    <!-- Webflow -->
+    <docLink beanId="flow-registry"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/webflow/definition/registry/FlowDefinitionRegistry.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s03.html#basic-setup-flow-registry"/>
+
+    <docLink beanId="flow-executor"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/webflow/executor/FlowExecutor.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s03.html#basic-setup-flow-registry"/>
+
+    <docLink beanId="flow-execution-listener"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/webflow/execution/FlowExecutionListener.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s05.html#flow-executor-execution-listeners"/>
+
+    <docLink beanId="flow-builder-serices"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/webflow/engine/builder/support/FlowBuilderServices.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s04.html#flow-registry-builder-services"/>
+
+    <docLink beanId="conversation-service"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/binding/convert/ConversionService.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s04.html#flow-registry-builder-services"/>
+
+    <docLink beanId="expression-parser"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/binding/expression/ExpressionParser.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s04.html#flow-registry-builder-services"/>
+
+    <docLink beanId="factory-creator"
+             api="http://static.springframework.org/spring-webflow/docs/2.0.x/javadoc-api/org/springframework/webflow/engine/builder/ViewFactoryCreator.html"
+             reference="http://static.springframework.org/spring-webflow/docs/2.0.x/reference/html/ch09s04.html#flow-registry-builder-services"/>
+    </links>
+</root>  

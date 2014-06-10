@@ -1,0 +1,63 @@
+<html>
+<%while (true) {%>
+!{ def foo = 5 }
+<%} %>
+</html>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<html>\n')
+        PsiElement(java scriptlet begin)('<%')
+        WHILE statement
+          PsiElement(while)('while')
+          PsiWhiteSpace(' ')
+          PsiElement(()('(')
+          Literal
+            PsiElement(true)('true')
+          PsiElement())(')')
+          PsiWhiteSpace(' ')
+          Block statement
+            Open block
+              PsiElement({)('{')
+              PsiElement(java scriptlet end)('%>')
+              Outer: GSP TEMPLATE STATEMENTS('\n')
+              PsiElement(groovy declaration begin)('!{')
+              Groovy class level declaration element
+                PsiWhiteSpace(' ')
+                Variable definitions
+                  Modifiers
+                    PsiElement(def)('def')
+                  PsiWhiteSpace(' ')
+                  Field
+                    PsiElement(identifier)('foo')
+                    PsiWhiteSpace(' ')
+                    PsiElement(=)('=')
+                    PsiWhiteSpace(' ')
+                    Literal
+                      PsiElement(Integer)('5')
+                PsiWhiteSpace(' ')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(})('}')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(new line)('\n')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(<)('<')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(%)('%')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(})('}')
+                PsiWhiteSpace(' ')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(%)('%')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(>)('>')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(new line)('\n')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(<)('<')
+                PsiErrorElement:Wrong Groovy code
+                  PsiElement(wrong regex)('/html>')
+              PsiErrorElement:Expression closing tag expected
+                <empty list>

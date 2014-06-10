@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <extensions xmlns="com.intellij">
+    <hibernate.sessionFactoryProvider implementation="com.intellij.hibernate.springIntegration.SpringSessionFactoryProvider"/>
+    <persistence.queryInjectionSupport implementation="com.intellij.hibernate.springIntegration.SpringQueryInjectionSupport"/>
+    <persistence.database.dataSourceInfoProvider implementation="com.intellij.hibernate.springIntegration.SpringDataSourceInfoProvider"/>
+  </extensions>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.hibernate.springIntegration.SpringIntegrationApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+  <project-components>
+    <component>
+      <implementation-class>com.intellij.hibernate.springIntegration.SpringIntegrationProjectComponent</implementation-class>
+    </component>
+  </project-components>
+</idea-plugin>

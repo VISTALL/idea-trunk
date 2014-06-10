@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.spring.webflow</id>
+  <name>Spring Web Flow</name>
+
+  <description>Spring Web Flow</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+  <depends>com.intellij.spring</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.spring.webflow.WebflowApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <fileEditorProvider implementation="com.intellij.spring.webflow.fileEditor.WebflowDesignerFileEditorProvider"/>
+    <dom.fileDescription implementation="com.intellij.spring.webflow.WebflowDomFileDescription"/>
+    <projectService serviceInterface="com.intellij.spring.webflow.model.xml.WebflowDomModelManager"
+                    serviceImplementation="com.intellij.spring.webflow.impl.WebflowDomModelManagerImpl"/>
+
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.Beans" extenderClass="com.intellij.spring.webflow.WebflowDomExtender"/>
+    <dynamicContextProvider implementation="com.intellij.spring.webflow.model.converters.ViewStateDynamicContextProvider" />
+
+    <standardResourceProvider implementation="com.intellij.spring.webflow.WebflowResourceProvider"/>
+    <moduleService serviceInterface="com.intellij.spring.webflow.el.WebflowScopeProviderManager" serviceImplementation="com.intellij.spring.webflow.el.WebflowScopeProviderManager"/>
+
+    <multiHostInjector implementation="com.intellij.spring.webflow.el.WebflowELInjector"/>
+  </extensions>
+
+  <actions>
+    <group id="Webflow.Designer" popup="false">
+      <reference ref="EditSource"/>
+      <reference ref="FindUsages"/>           
+      <reference ref="RenameElement"/>
+      <separator/>
+    </group>
+
+    <action id="Webflow.Config.Create.Context.File" class="com.intellij.spring.webflow.actions.CreateWebflowConfigAction" text="Spring Webflow Config">
+       <add-to-group anchor="last" group-id="Spring.Create.Context.Group"/>
+    </action>
+
+    <action id="Webflow.Create.Context.File" class="com.intellij.spring.webflow.actions.CreateWebflowFileAction" text="Spring Webflow">
+       <add-to-group anchor="last" group-id="Spring.Create.Context.Group"/>
+    </action>
+  </actions>
+</idea-plugin>

@@ -1,0 +1,8 @@
+#parse("File Header.java")
+#if (${PACKAGE_NAME} != "")
+package ${PACKAGE_NAME};
+#end
+
+public interface ${INTERFACE_NAME} extends java.rmi.Remote {
+  public String sayHelloWorldFrom(String from) throws java.rmi.RemoteException;
+}

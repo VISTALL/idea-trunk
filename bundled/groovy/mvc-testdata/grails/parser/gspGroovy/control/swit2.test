@@ -1,0 +1,58 @@
+<%switch (k) {%>
+<%case 1 :%> preved!
+<%case 2 :%> <%=medved%>
+%{}}%
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        PsiElement(java scriptlet begin)('<%')
+        Switch statement
+          PsiElement(switch)('switch')
+          PsiWhiteSpace(' ')
+          PsiElement(()('(')
+          Reference expression
+            PsiElement(identifier)('k')
+          PsiElement())(')')
+          PsiWhiteSpace(' ')
+          PsiElement({)('{')
+          PsiErrorElement:'case' or 'default' expected
+            <empty list>
+          PsiElement(java scriptlet end)('%>')
+          PsiErrorElement:'case' or 'default' expected
+            <empty list>
+          Outer: GSP TEMPLATE STATEMENTS('\n')
+          PsiErrorElement:'case' or 'default' expected
+            <empty list>
+          PsiElement(java scriptlet begin)('<%')
+          Case section
+            Case label
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(Integer)('1')
+              PsiWhiteSpace(' ')
+              PsiElement(:)(':')
+            PsiElement(java scriptlet end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS(' preved!\n')
+            PsiElement(java scriptlet begin)('<%')
+          Case section
+            Case label
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(Integer)('2')
+              PsiWhiteSpace(' ')
+              PsiElement(:)(':')
+            PsiElement(java scriptlet end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS(' ')
+            PsiElement(java expression begin)('<%=')
+            Groovy Expression Injection
+              Reference expression
+                PsiElement(identifier)('medved')
+            PsiElement(java expression end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS('\n')
+            PsiElement(groovy scriptlet begin)('%{')
+          PsiElement(})('}')
+        PsiElement(groovy scriptlet end)('}%')

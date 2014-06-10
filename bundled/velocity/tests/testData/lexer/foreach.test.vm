@@ -1,0 +1,3 @@
+#foreach( $something in $somelist )
+    <tr><td bgcolor=$color>$something</td></tr>
+#end

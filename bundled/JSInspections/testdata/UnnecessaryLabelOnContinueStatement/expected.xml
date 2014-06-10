@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Unnecessary label on 'continue' statement</problem_class>
+    <description>continue statement with unnecessary label</description>
+  </problem>
+</problems>

@@ -1,0 +1,2 @@
+#* @velocityproperties path="velocity.properties" *#
+#parse('myfile.vm')

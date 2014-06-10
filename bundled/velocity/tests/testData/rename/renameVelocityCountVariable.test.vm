@@ -1,0 +1,5 @@
+#set($velocityCount = 'aaa')
+#foreach($forVar in [2..3])
+$velocityCount
+#end
+$<caret>velocityCount

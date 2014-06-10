@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="my" class="MyBean" abstract="false" scope="globalSession" lazy-init="false" autowire-candidate="true"
+          autowire="constructor" dependency-check="objects" depends-on="my" factory-bean="my" factory-method="factory"
+          init-method="disable" destroy-method="disable">
+        <constructor-arg ref="my"/>
+        <constructor-arg value="val"/>
+        <property name="s" value="overriden"/>
+        <property name="set">
+            <set>
+                <value>rr</value>
+            </set>
+        </property>
+    </bean>
+</beans>

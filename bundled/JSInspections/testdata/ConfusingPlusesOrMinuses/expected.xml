@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Confusing sequence of '+' or '-'</problem_class>
+    <description>Sequence of '+' or '-' may change meaning if whitespace removed #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Confusing sequence of '+' or '-'</problem_class>
+    <description>Sequence of '+' or '-' may change meaning if whitespace removed #loc</description>
+  </problem>
+</problems>

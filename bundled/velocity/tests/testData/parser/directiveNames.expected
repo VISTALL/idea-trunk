@@ -1,0 +1,36 @@
+VtlFile:nofile.vm
+  DirectiveLiteral
+    PsiElement(#LITERAL)('#literal')
+    PsiElement(()('(')
+    ArgumentList
+      <empty list>
+    PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    DirectiveSet
+      PsiElement(#SET)('#set')
+      PsiElement(()('(')
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('var1')
+      PsiElement(=)('=')
+      Interpolation
+        PsiElement(${)('${')
+        ReferenceExpression
+          PsiElement(identifier)('val2')
+        PsiElement(})('}')
+      PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  DirectiveEvaluate
+    PsiElement(#EVALUATE)('#evaluate')
+    PsiElement(()('(')
+    ArgumentList
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('var1')
+    PsiElement())(')')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  PsiElement(#STOP)('#stop')
+  PsiElement(TEMPLATE_TEXT)('\r\n')

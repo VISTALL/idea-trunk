@@ -1,0 +1,3 @@
+// SplitDeclarationAndInitialization:true
+var val:int;
+val = 1;

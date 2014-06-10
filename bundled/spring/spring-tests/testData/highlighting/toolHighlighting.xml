@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:lang="http://www.springframework.org/schema/lang"
+       xmlns:foo="foo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <bean id="fooBean2_3" class="FooBean2"/>
+  <foo:exporting xxx="expBean"/>
+  <foo:exporting2 id="expBean2"/>
+
+  <foo:annotated transaction-manager="<error descr="Bean must be of 'org.springframework.transaction.PlatformTransactionManager' type">fooBean2_3</error>"
+                 clazz="<error descr="Cannot resolve class 'zzz'">zzz</error>"
+                 bool="<error descr="Cannot convert string 239 to target class boolean">239</error>"/>
+  <foo:annotated tm="<error descr="Bean must be of 'org.springframework.transaction.PlatformTransactionManager' type">fooBean2_3</error>"/>
+  <foo:annotated collection-bean="fooBean2_3"/>
+  <foo:annotated list-bean="expBean" tm="<error descr="Bean must be of 'org.springframework.transaction.PlatformTransactionManager' type">expBean2</error>"/>
+
+</beans>

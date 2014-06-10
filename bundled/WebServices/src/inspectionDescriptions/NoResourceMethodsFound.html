@@ -1,0 +1,20 @@
+<html>
+<body>
+<font face="verdana" size="-1">
+<b>Root resource class</b> is a POJO annotated with @Path. Root resource class <b>MUST</b> have atleast one resource method -
+method annotated with @Path or with @HttpMethod (@GET, @POST, etc).
+<br/>
+Root resource classes are instantiated by the JAX-RS runtime and MUST have a public constructor for which
+the JAX-RS runtime can provide all parameter values. Note that a zero argument constructor is permissible
+under this rule.
+<br/>
+A public constructor MAY include parameters annotated with one of the following: @Context, @HeaderParam,
+@CookieParam, @MatrixParam, @QueryParam or @PathParam. However, depending on the
+resource class lifecycle and concurrency, per-request information may not make sense in a constructor. If
+more than one public constructor is suitable then an implementation MUST use the one with the most
+parameters.
+<br/>
+The validation works in Java files.<br>
+</font>
+</body>
+</html>

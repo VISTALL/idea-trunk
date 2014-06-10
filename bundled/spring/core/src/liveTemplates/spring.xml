@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="spring">
+  <template id="spring-bean" name="sb"
+            value="&lt;bean id=&quot;$NAME$&quot; class=&quot;$CLASS$&quot;&gt;&#10;    $END$&#10;&lt;/bean&gt;&#10;"
+            description="Spring Bean" toReformat="true" toShortenFQNames="false">
+    <variable name="CLASS" expression="qualifiedClassName()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="spring-bean-with-factory-method" name="sbf"
+            value="&lt;bean id=&quot;$NAME$&quot; class=&quot;$CLASS$&quot; factory-method=&quot;$METHOD$&quot;&gt;&#10;    $END$&#10;&lt;/bean&gt;&#10;"
+            description="Spring Bean Instantiated by a Factory Method" toReformat="true" toShortenFQNames="false">
+    <variable name="CLASS" expression="qualifiedClassName()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="spring-bean-with-factory-bean" name="sbfb"
+            value="&lt;bean id=&quot;$NAME$&quot; factory-bean=&quot;$BEAN$&quot; factory-method=&quot;$METHOD$&quot;&gt;&#10;    $END$&#10;&lt;/bean&gt;&#10;"
+            description="Spring Bean Instantiated by a Factory Bean" toReformat="true" toShortenFQNames="false">
+    <variable name="BEAN" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="METHOD" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+</templateSet>
+

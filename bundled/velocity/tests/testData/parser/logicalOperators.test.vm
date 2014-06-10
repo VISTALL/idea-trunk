@@ -1,0 +1,3 @@
+#if( !$foo && ($bar || $bazz) &&  !($qux == 4 || $quuz > $qux) && ($corge != 5 || !($bar)) && (($corge <= 3 || $qux < -1) || $quuz >= -0.6) )
+
+#end

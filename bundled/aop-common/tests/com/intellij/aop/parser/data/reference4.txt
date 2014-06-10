@@ -1,0 +1,8 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  AopParenthesizedExpression
+    PsiElement(AOP_LEFT_PAR)('(')
+    PsiPointcutReferenceExpression
+      AopReferenceExpression
+        PsiElement(AOP_IDENTIFIER)('anyPublicOperation')
+      PsiErrorElement:( expected
+        <empty list>

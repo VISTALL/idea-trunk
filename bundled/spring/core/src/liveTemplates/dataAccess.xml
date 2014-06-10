@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="spring">
+  <template id="hibernatefactory" name="hibernatefactory"
+            value="&lt;bean id=&quot;$SESSION_FACTORY_NAME$&quot;
+          class=&quot;$SESSION_FACTORY_CLASS$&quot;&gt;&#10;
+          &lt;property name=&quot;dataSource&quot; ref=&quot;$DATASOURCE$&quot;/&gt;&#10;
+          &lt;property name=&quot;mappingLocations&quot; value=&quot;*.hbm.xml&quot; /&gt;&#10;
+          &lt;property name=&quot;hibernateProperties&quot;&gt;&#10;        &lt;props&gt;&#10;           &lt;prop key=&quot;hibernate.dialect&quot;&gt;$DIALECT_CLASS$&lt;/prop&gt;&#10;        &lt;/props&gt;&#10;    &lt;/property&gt;&#10;  &lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="SESSION_FACTORY_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.orm.hibernate3.AbstractSessionFactoryBean&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="org.springframework.orm.hibernate3.LocalSessionFactoryBean" alwaysStopAt="true"/>
+    <variable name="SESSION_FACTORY_NAME" expression="complete()" defaultValue="sessionFactory" alwaysStopAt="true"/>
+    <variable name="DATASOURCE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="DIALECT_CLASS" expression="complete()" defaultValue="org.hibernate.dialect.HSQLDialect" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="datasource" name="datasource"
+            value="&lt;bean id=&quot;$DATASOURCE_NAME$&quot; class=&quot;$DATASOURCE_CLASS$&quot;&gt; &#10;&lt;/bean&gt;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="DATASOURCE_CLASS"
+              expression="descendantClassesEnum(&quot;javax.sql.DataSource&quot;, &quot;true&quot;, &quot;false&quot;)" defaultValue=""
+              alwaysStopAt="true"/>
+    <variable name="DATASOURCE_NAME" expression="complete()" defaultValue="dataSource" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="hibernate-tm" name="hibernatetm"
+            value="&lt;bean id=&quot;$TM_NAME$&quot; class=&quot;org.springframework.orm.hibernate3.HibernateTransactionManager&quot;&gt;&#10;    &lt;property name=&quot;sessionFactory&quot; ref=&quot;$SESSION_FACTORY$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_NAME" expression="complete()" defaultValue="transactionManager" alwaysStopAt="true"/>
+    <variable name="SESSION_FACTORY" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="transaction-manager" name="transactionmanager" value="&lt;bean id=&quot;$TM_NAME$&quot; class=&quot;$TM_CLASS$&quot;/&gt;"
+            description=""
+            toReformat="false" toShortenFQNames="true">
+    <variable name="TM_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.transaction.PlatformTransactionManager&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="TM_NAME" expression="complete()" defaultValue="transactionManager" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jndi-datasource" name="jndids"
+            value="&lt;bean id=&quot;$DS_NAME$&quot; class=&quot;org.springframework.jndi.JndiObjectFactoryBean&quot;&gt;&#10;    &lt;property name=&quot;jndiName&quot; value=&quot;&quot;/&gt;&#10;    &lt;property name=&quot;expectedType&quot; value=&quot;javax.sql.DataSource&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="DS_NAME" expression="complete()" defaultValue="dataSource" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jdo-persistance-manager" name="jdopmf"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean&quot;&gt;&#10;   &lt;property name=&quot;configLocation&quot; value=&quot;classpath:*.properties&quot;/&gt;&#10;&lt;/bean&gt;&#10;  "
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="pmf" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jdo-persistance-manager-proxy" name="jdopmfproxy"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot;&#10;      class=&quot;org.springframework.orm.jdo.TransactionAwarePersistenceManagerFactoryProxy&quot;&gt;&#10;    &lt;property name=&quot;targetPersistenceManagerFactory&quot; ref=&quot;$PMF_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="pmfProxy" alwaysStopAt="true"/>
+    <variable name="PMF_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jdo-transaction-manager" name="jdotm"
+            value="&lt;bean id=&quot;$TM_NAME$&quot; class=&quot;org.springframework.orm.jdo.JdoTransactionManager&quot;&gt;&#10;    &lt;property name=&quot;persistenceManagerFactory&quot; ref=&quot;$PMF_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_NAME" expression="complete()" defaultValue="txManager" alwaysStopAt="true"/>
+    <variable name="PMF_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpox-pmf" name="jpoxpmf"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.jpox.PersistenceManagerFactoryImpl&quot; destroy-method=&quot;close&quot;&gt;&#10;   &lt;property name=&quot;connectionFactory&quot; ref=&quot;$DATASOURCE_NAME$&quot;/&gt;&#10;   &lt;property name=&quot;nontransactionalRead&quot; value=&quot;true&quot;/&gt;&#10; &lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="pmf" alwaysStopAt="true"/>
+    <variable name="DATASOURCE_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="toplink-session-factory" name="toplinklsf"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.toplink.LocalSessionFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;configLocation&quot; value=&quot;&quot;/&gt;&#10;  &lt;property name=&quot;dataSource&quot; ref=&quot;$DS_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="DS_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="toplink-session-adapter" name="toplinktasa"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.toplink.support.TransactionAwareSessionAdapter&quot;&gt;&#10;    &lt;property name=&quot;sessionFactory&quot; ref=&quot;$SESSION_FACTORY$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="SESSION_FACTORY" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="toplink-transaction-manager" name="toplinktm"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.toplink.TopLinkTransactionManager&quot;&gt;&#10;  &lt;property name=&quot;sessionFactory&quot; ref=&quot;$SESSION_FACTORY_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="transactionManager" alwaysStopAt="true"/>
+    <variable name="SESSION_FACTORY_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="ibatis-client-factory" name="ibatisfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.ibatis.SqlMapClientFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;configLocation&quot; value=&quot;&quot;/&gt;&#10;  &lt;property name=&quot;dataSource&quot; ref=&quot;$DATASOURCE_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="DATASOURCE_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-entity-manager-factory" name="jpaemfb"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.jpa.LocalEntityManagerFactoryBean&quot;&gt;&#10;   &lt;property name=&quot;persistenceUnitName&quot; value=&quot;$PERSISTENCE_UNIT$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="PERSISTENCE_UNIT" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-container-entity-manager-factory" name="jpacemf"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;dataSource&quot; ref=&quot;$DATASOURCE_REF$&quot;/&gt;&#10;  &lt;property name=&quot;loadTimeWeaver&quot;&gt;&#10;    &lt;bean class=&quot;$LOAD_TIME_WEAVER_CLASS$&quot;/&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="entityManager" alwaysStopAt="true"/>
+    <variable name="DATASOURCE_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="LOAD_TIME_WEAVER_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.instrument.classloading.LoadTimeWeaver&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-persistent-unit-manager" name="jpapum"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager&quot;&gt;&#10;  &lt;property name=&quot;persistenceXmlLocations&quot;&gt;&#10;    &lt;list&gt;&#10;      &lt;value&gt;classpath*:META-INF/persistence.xml&lt;/value&gt;&#10;    &lt;/list&gt;&#10;  &lt;/property&gt;&#10;  &lt;property name=&quot;dataSources&quot;&gt;&#10;    &lt;map&gt;&#10;      &lt;entry key=&quot;$DS_KEY$&quot; value-ref=&quot;$DS_REF$&quot;/&gt;&#10;    &lt;/map&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="persistenceUnitManager" alwaysStopAt="true"/>
+    <variable name="DS_KEY" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="DS_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-anno-post-processor" name="jpapabpp"
+            value="&lt;bean class=&quot;org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor&quot;/&gt;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-ex-translation-post-processor" name="jpapetpp"
+            value="&lt;bean class=&quot;org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor&quot;/&gt;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jpa-transaction-manager" name="jpatm"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.orm.jpa.JpaTransactionManager&quot;&gt;&#10;    &lt;property name=&quot;entityManagerFactory&quot; ref=&quot;$EM_REF$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="EM_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="included" class="FooBean">
+    <property name="public" value="on"/>
+    <property name="<error>protected</error>" value="on"/>
+    <property name="<error>private</error>" value="on"/>
+    <property name="<error>local</error>" value="on"/>
+    <property name="<error>static</error>" value="on"/>
+    <property name="<error>unknown</error>" value="on"/>
+  </bean>
+</beans>

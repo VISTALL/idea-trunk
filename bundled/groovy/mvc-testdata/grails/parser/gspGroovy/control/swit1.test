@@ -1,0 +1,81 @@
+<%
+def k = 2
+switch (k) {
+case 2:
+%>
+<%
+println "medved!"%> <%%>;; <%=3%> <% println "preved"
+}
+%>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        PsiElement(java scriptlet begin)('<%')
+        PsiElement(new line)('\n')
+        Variable definitions
+          Modifiers
+            PsiElement(def)('def')
+          PsiWhiteSpace(' ')
+          Variable
+            PsiElement(identifier)('k')
+            PsiWhiteSpace(' ')
+            PsiElement(=)('=')
+            PsiWhiteSpace(' ')
+            Literal
+              PsiElement(Integer)('2')
+        PsiElement(new line)('\n')
+        Switch statement
+          PsiElement(switch)('switch')
+          PsiWhiteSpace(' ')
+          PsiElement(()('(')
+          Reference expression
+            PsiElement(identifier)('k')
+          PsiElement())(')')
+          PsiWhiteSpace(' ')
+          PsiElement({)('{')
+          PsiWhiteSpace('\n')
+          Case section
+            Case label
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(Integer)('2')
+              PsiElement(:)(':')
+            PsiElement(new line)('\n')
+            PsiElement(java scriptlet end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS('\n')
+            PsiElement(java scriptlet begin)('<%')
+            PsiElement(new line)('\n')
+            Call expression
+              Reference expression
+                PsiElement(identifier)('println')
+              PsiWhiteSpace(' ')
+              Command arguments
+                Literal
+                  PsiElement(Gstring)('"medved!"')
+            PsiElement(java scriptlet end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS(' ')
+            PsiElement(java scriptlet begin)('<%')
+            PsiElement(java scriptlet end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS(';; ')
+            PsiElement(java expression begin)('<%=')
+            Groovy Expression Injection
+              Literal
+                PsiElement(Integer)('3')
+            PsiElement(java expression end)('%>')
+            Outer: GSP TEMPLATE STATEMENTS(' ')
+            PsiElement(java scriptlet begin)('<%')
+            PsiWhiteSpace(' ')
+            Call expression
+              Reference expression
+                PsiElement(identifier)('println')
+              PsiWhiteSpace(' ')
+              Command arguments
+                Literal
+                  PsiElement(Gstring)('"preved"')
+            PsiElement(new line)('\n')
+          PsiElement(})('}')
+        PsiElement(new line)('\n')
+        PsiElement(java scriptlet end)('%>')

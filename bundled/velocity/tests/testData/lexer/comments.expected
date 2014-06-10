@@ -1,0 +1,18 @@
+TEMPLATE_TEXT ('template
+')
+MULTILINE_COMMENT ('#*multiline
+1
+2
+3
+     *#')
+TEMPLATE_TEXT ('
+not a comment
+')
+ONELINE_COMMENT ('## oneline
+')
+TEMPLATE_TEXT ('not a comment 2 ')
+ONELINE_COMMENT ('## oneline
+')
+TEMPLATE_TEXT ('not a comment 3
+')
+ONELINE_COMMENT ('## EOF comment')

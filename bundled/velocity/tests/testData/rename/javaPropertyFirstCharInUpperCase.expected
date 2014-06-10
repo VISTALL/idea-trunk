@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo" type="my.pack.GetterOwner" *#
+$foo.l<caret>owerCase
+$foo.LowerCase
+$foo.getlowerCase()

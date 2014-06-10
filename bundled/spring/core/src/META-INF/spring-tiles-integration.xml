@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+
+<idea-plugin version="2">
+  
+  <extensions xmlns="com.intellij">
+    <!--
+    <spring.mvcViewProvider implementation="com.intellij.spring.web.mvc.tiles.TilesViewProvider"/>
+    -->
+    <struts.tilesModelProvider implementation="com.intellij.spring.web.mvc.tiles.MVCTilesModelProvider"/>
+  </extensions>
+</idea-plugin>
+ 

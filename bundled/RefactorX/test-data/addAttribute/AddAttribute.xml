@@ -1,0 +1,5 @@
+<Foo>
+    <BAR x = "4"></BAR>
+    <BAR></BAR>
+    <BAR></BAR>
+</Foo>

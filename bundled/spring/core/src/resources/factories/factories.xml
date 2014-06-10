@@ -1,0 +1,72 @@
+<root>
+  <factories>
+    <!-- factories with known objectType -->
+    <factoryBean factory="org.springframework.beans.factory.config.CommonsLogFactoryBean" objectType="org.apache.commons.logging.Log"/>
+    <factoryBean factory="org.springframework.beans.factory.config.ResourceFactoryBean" objectType="org.springframework.core.io.Resource"/>
+
+    <factoryBean factory="org.springframework.cache.ehcache.EhCacheFactoryBean" objectType="net.sf.ehcache.Ehcache,net.sf.ehcache.Cache"/>
+    <factoryBean factory="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" objectType="net.sf.ehcache.CacheManager"/>
+
+    <factoryBean factory="org.springframework.jmx.support.ConnectorServerFactoryBean" objectType="javax.management.remote.JMXConnectorServer"/>
+    <factoryBean factory="org.springframework.jmx.support.MBeanServerConnectionFactoryBean" objectType="javax.management.MBeanServerConnection"/>
+    <factoryBean factory="org.springframework.jmx.support.MBeanServerFactoryBean" objectType="javax.management.MBeanServer"/>
+    <factoryBean factory="org.springframework.jmx.support.WebLogicJndiMBeanServerFactoryBean" objectType="javax.management.MBeanServer"/>
+    <factoryBean factory="org.springframework.jmx.support.WebLogicMBeanServerFactoryBean" objectType="javax.management.MBeanServer"/>
+
+    <factoryBean factory="org.springframework.orm.hibernate3.LocalSessionFactoryBean" objectType="org.hibernate.SessionFactory"/>
+    <factoryBean factory="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" objectType="org.hibernate.SessionFactory"/>
+    <factoryBean factory="org.springframework.orm.hibernate3.AbstractSessionFactoryBean" objectType="org.hibernate.SessionFactory"/>
+
+    <factoryBean factory="org.springframework.orm.ibatis.SqlMapClientFactoryBean" objectType="com.ibatis.sqlmap.client.SqlMapClient"/>
+    <factoryBean factory="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean" objectType="javax.jdo.PersistenceManagerFactory"/>
+    <factoryBean factory="org.springframework.orm.jpa.support.SharedEntityManagerBean" objectType="javax.persistence.EntityManager"/>
+    <factoryBean factory="org.springframework.orm.jpa.AbstractEntityManagerFactoryBean" objectType="javax.persistence.EntityManagerFactory"/>
+    <factoryBean factory="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" objectType="javax.persistence.EntityManagerFactory"/>
+    <factoryBean factory="org.springframework.orm.jpa.LocalEntityManagerFactoryBean" objectType="javax.persistence.EntityManagerFactory"/>
+    <factoryBean factory="org.springframework.orm.toplink.LocalSessionFactoryBean" objectType="org.springframework.orm.toplink.SessionFactory"/>
+
+    <factoryBean factory="org.springframework.remoting.jaxrpc.LocalJaxRpcServiceFactoryBean" objectType="javax.xml.rpc.Service"/>
+    <factoryBean factory="org.springframework.remoting.rmi.RmiRegistryFactoryBean" objectType="java.rmi.registry.Registry"/>
+
+    <factoryBean factory="org.springframework.scheduling.backportconcurrent.ScheduledExecutorFactoryBean" objectType="edu.emory.mathcs.backport.java.util.concurrent.ScheduledExecutorService"/>
+    <factoryBean factory="org.springframework.scheduling.quartz.SchedulerFactoryBean" objectType="org.quartz.Scheduler,org.quartz.impl.StdScheduler"/>
+
+    <factoryBean factory="org.springframework.transaction.jta.JotmFactoryBean" objectType="org.objectweb.jotm.Current"/>
+    <factoryBean factory="org.springframework.transaction.jta.WebLogicServerTransactionManagerFactoryBean" objectType="javax.transaction.TransactionManager"/>
+    <factoryBean factory="org.springframework.transaction.jta.WebSphereTransactionManagerFactoryBean" objectType="javax.transaction.TransactionManager"/>
+
+    <factoryBean factory="org.springframework.web.context.support.ServletContextFactoryBean" objectType="javax.servlet.ServletContext"/>
+    <factoryBean factory="org.springframework.web.servlet.view.velocity.VelocityConfigurer" objectType="org.apache.velocity.app.VelocityEngine"/>
+
+     <!-- object type resolved from properties of FactoryBean(in order of evaluation) -->
+    <factoryBean factory="org.springframework.beans.factory.config.ServiceLocatorFactoryBean" propertyNames="serviceLocatorInterface"/>
+    <factoryBean factory="org.springframework.beans.factory.serviceloader.ServiceFactoryBean" propertyNames="serviceType"/>
+    <factoryBean factory="org.springframework.jms.remoting.JmsInvokerProxyFactoryBean" propertyNames="proxyInterface"/>
+    <factoryBean factory="org.springframework.jmx.access.MBeanProxyFactoryBean" propertyNames="proxyInterface"/>
+    <factoryBean factory="org.springframework.remoting.caucho.BurlapProxyFactoryBean" propertyNames="serviceInterface"/>
+    <factoryBean factory="org.springframework.remoting.caucho.HessianProxyFactoryBean" propertyNames="serviceInterface"/>
+    <factoryBean factory="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean" propertyNames="serviceInterface"/>
+    <factoryBean factory="org.springframework.remoting.jaxrpc.JaxRpcPortProxyFactoryBean" propertyNames="serviceInterface"/>
+    <factoryBean factory="org.springframework.remoting.rmi.JndiRmiProxyFactoryBean" propertyNames="serviceInterface"/>
+    <factoryBean factory="org.springframework.remoting.rmi.RmiProxyFactoryBean" propertyNames="serviceInterface"/>
+    
+    <!-- type is (or could be) resolved by a custom ObjectTypeResolver -->
+    <factoryBean factory="org.springframework.aop.framework.ProxyFactoryBean" resolver="ProxyFactoryBeanTypeResolver"/>
+    <factoryBean factory="org.springframework.aop.scope.ScopedProxyFactoryBean" resolver="ScopedProxyFactoryBeanTypeResolver"/>
+    <factoryBean factory="org.springframework.beans.factory.config.BeanReferenceFactoryBean" resolver="BeanReferenceFactoryBeanTypeResolver"/>
+    <factoryBean factory="org.springframework.beans.factory.config.MethodInvokingFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.beans.factory.config.PropertyPathFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.transaction.interceptor.TransactionProxyFactoryBean" resolver="TransactionProxyFactoryBeanTypeResolver"/>
+    <factoryBean factory="org.springframework.jndi.JndiObjectFactoryBean" resolver="JndiObjectFactoryBeanTypeResolver"/>
+    <factoryBean factory="org.springframework.ejb.access.LocalStatelessSessionProxyFactoryBean" objectType="" resolver="SpringEjbTypeResolver"/>
+    <factoryBean factory="org.springframework.ejb.access.SimpleRemoteStatelessSessionProxyFactoryBean" objectType="" resolver="SpringEjbTypeResolver"/>
+
+    <!-- type can not be resolved or has no meaning. listed for completeness -->
+    <factoryBean factory="org.springframework.aop.framework.AbstractSingletonProxyFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.beans.factory.config.AbstractFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.jca.support.LocalConnectionFactoryBean" objectType=""/>
+    <factoryBean factory="org.springframework.web.context.support.ServletContextAttributeFactoryBean" objectType=""/>
+  </factories>
+</root>
+

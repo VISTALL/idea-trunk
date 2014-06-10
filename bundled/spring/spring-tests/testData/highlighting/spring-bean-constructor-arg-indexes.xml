@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="fooBean" class="FooBean"/>
+
+  <bean id="bean" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index = "<error>-1</error>" value="" />
+  </bean>
+
+  <bean id="bean2" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index = "1" value=<error>""</error> />
+  </bean>
+
+  <bean id="bean3" class="<error>FooBeanWithConstructors</error>" >
+    <constructor-arg index = "<error>0</error>"  value=""/>
+    <constructor-arg index = "<error>0</error>" value="" />
+    <constructor-arg index = "1" value=<error>""</error> />
+  </bean>
+
+  <bean id="bean_factory_1" class="FooBeanWithConstructors" factory-method="<error>getInstance</error>" >
+    <constructor-arg index = "<error>-1</error>" value="" />
+  </bean>
+
+  <bean id="bean_factory_2" class="FooBeanWithConstructors" factory-method="<error>getInstance</error>" >
+    <constructor-arg index = "1" value="<error>not an int</error>" />
+  </bean>
+
+  <bean id="bean_factory_3" class="FooBeanWithConstructors" factory-method="<error>getInstance</error>" >
+    <constructor-arg index = "<error>0</error>" value="" />
+    <constructor-arg index = "<error>0</error>" value="" />
+    <constructor-arg index = "1" value=<error>""</error> />
+  </bean>
+
+</beans>

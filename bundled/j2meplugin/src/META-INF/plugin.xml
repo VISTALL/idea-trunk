@@ -1,0 +1,54 @@
+<idea-plugin version="2">
+  <name>J2ME</name>
+  <id>J2ME</id>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+  <idea-version since-build="3000"/>
+  <resource-bundle>com.intellij.j2meplugin.J2MEBundle</resource-bundle>
+  <depends>com.intellij.java-i18n</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+    <antBuildGen implementation="com.intellij.j2meplugin.compiler.ant.ChunkBuildJ2MEExtension"/>
+    <java-i18n.resourceBundleManager implementation="com.intellij.j2meplugin.i18n.MobileResourceBundleManager"/>
+    <createFromTemplateActionReplacer implementation="com.intellij.j2meplugin.i18n.CreateMobileResourcePackActionReplacer"/>
+    <moduleService serviceInterface="com.intellij.j2meplugin.module.settings.doja.DOJASettings"
+                   serviceImplementation="com.intellij.j2meplugin.module.settings.doja.DOJASettings"/>
+    <moduleService serviceInterface="com.intellij.j2meplugin.module.settings.midp.MIDPSettings"
+                   serviceImplementation="com.intellij.j2meplugin.module.settings.midp.MIDPSettings"/>
+    <configurationType implementation="com.intellij.j2meplugin.run.J2MEConfigurationType"/>
+    <moduleType id="J2ME_MODULE" implementationClass="com.intellij.j2meplugin.module.J2MEModuleType" classpathProvider="true"/>
+    <intentionAction>
+      <className>com.intellij.j2meplugin.module.intentions.EditModuleSettingsIntentionAction</className>
+    </intentionAction>
+    <inspectionToolProvider implementation="com.intellij.j2meplugin.J2MEInspectionToolProvider"/>
+    <sdkType implementation="com.intellij.j2meplugin.emulator.MobileSdk"/>
+    <compiler implementation="com.intellij.j2meplugin.compiler.J2MEPreverifier"/>
+    <compiler implementation="com.intellij.j2meplugin.compiler.J2MEPackagingCompiler"/>
+    <createFromTemplateHandler implementation="com.intellij.j2meplugin.i18n.CreateMobileResourcePackHandler"/>
+    <refactoring.elementListenerProvider implementation="com.intellij.j2meplugin.module.J2MERefactoringListenerProvider"/>
+    <moduleConfigurationEditorProvider implementation="com.intellij.j2meplugin.module.J2MEModuleEditorsProvider"/>
+    <projectService serviceInterface="com.intellij.j2meplugin.i18n.ResourceBeansContainer"
+                    serviceImplementation="com.intellij.j2meplugin.i18n.ResourceBeansContainer"/>
+  </extensions>
+  
+  <extensions defaultExtensionNs="J2ME.com.intellij">
+    <applicationType implementation="com.intellij.j2meplugin.module.settings.doja.DOJAApplicationType"/>
+    <applicationType implementation="com.intellij.j2meplugin.module.settings.midp.MIDPApplicationType"/>
+    <emulatorType implementation="com.intellij.j2meplugin.emulator.midp.nokia.NokiaEmulatorType"/>
+    <emulatorType implementation="com.intellij.j2meplugin.emulator.midp.uei.UnifiedEmulatorType"/>
+    <emulatorType implementation="com.intellij.j2meplugin.emulator.midp.wtk.WTKEmulatorType"/>
+    <emulatorType implementation="com.intellij.j2meplugin.emulator.doja.DOJAEmulatorType"/>
+  </extensions>
+  <extensionPoints>
+    <extensionPoint name="com.intellij.emulatorType" interface="com.intellij.j2meplugin.emulator.EmulatorType"/>
+    <extensionPoint name="com.intellij.applicationType" interface="com.intellij.j2meplugin.module.settings.MobileApplicationType"/>
+  </extensionPoints>
+
+  <module-components>
+    <component>
+      <implementation-class>com.intellij.j2meplugin.module.J2MEModuleProperties</implementation-class>
+      <option name="type" value="J2ME_MODULE"/>
+    </component>
+ </module-components>
+</idea-plugin>

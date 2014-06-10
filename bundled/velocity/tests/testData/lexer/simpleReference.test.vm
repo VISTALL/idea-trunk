@@ -1,0 +1,6 @@
+ text$refName 
+ text$refName() 
+ text$refName.prop   
+ text$refName.method()xx 
+ $refName.prop.method(). 
+ $refName.method().prop.

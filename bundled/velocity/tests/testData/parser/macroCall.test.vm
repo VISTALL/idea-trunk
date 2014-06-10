@@ -1,0 +1,7 @@
+<table>
+    #tablerows( $color, $greatlakes 55 66)
+</table>
+
+<table>
+    #{tablerows}( $color $greatlakes, 55, $rr )
+</table>

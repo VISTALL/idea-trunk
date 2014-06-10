@@ -1,0 +1,5 @@
+#* @vtlvariable name="var" type="my.pack.SomeInterface" *#
+#macro(mmm $p1 $p2)
+$var.foo('str', $p1, $p2)
+$var.<warning descr="There is no method 'foo' in 'SomeInterface' applicable to (String, int, ???)">foo</warning>('str', 1, $p2)
+#end

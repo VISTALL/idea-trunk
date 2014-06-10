@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=Windows-1251">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <title>Refactor-X Help: Wrap Tag Refactoring</title>
+</head>
+
+<body style="font-family: Verdana; font-size: 13px;" leftmargin="0" rightmargin="0" topmargin="0" alink="#669999"
+      bgcolor="#ffffff" link="#336666" marginheight="0" marginwidth="0" vlink="#669999">
+<table border="0" cellpadding="0" cellspacing="0" height="30" width="65%">
+    <tbody>
+        <tr>
+            <td background="../images/secondary/headerBg.gif" bgcolor="#669999" valign="center" width="70%">
+                <font class="mainheader">&nbsp;&nbsp;Wrap Tag Refactoring</font>
+            </td>
+            <td align="right" background="../images/secondary/headerBg.gif" height="25" valign="center" width="30%">
+                <img src="../images/secondary/headerSec.gif">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><img src="../images/secondary/transparency.gif" border="0" height="1" width="600">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table border="0" cellpadding="15" width="750">
+    <tbody>
+        <tr>
+            <td colspan="2">
+                The <font class="detailedbrown">Wrap Tag</font> refactoring allows you to wrap a set of XML tags in
+                newly
+                created parent
+                If this refactoring is invoked, all tags matching the selected tag name
+                may be wrapped. This bulk wrapping of tags may be useful as XML schemas evolve.
+                <br>
+                <br>
+                To <font class="detailedbrown">wrap a tag</font>, position the caret on the tag to
+                wrap in the editor, right-click, and select the
+                <font class="detailedtext">XML Refactorings| Wrap Tag...</font> menu item.
+                <br>
+                <br>
+                The following dialog will appear:
+                <br>
+                <br>
+                <img src="../images/refactoring/wrapTag.PNG">
+                <br>
+                <font class="orangeb">1.</font> Determine the name of the new tags which will wrap the selected
+                tags.<br>
+                <font class="orangeb">2.</font> Determine the scope of the wrapping. All tags matching name of the tag
+                selected will be wrapped, if they are in the selected scope. Scopes available include the current
+                file, the entire project, or a specified directory or module. Directory scopes can either include
+                sub-directories,
+                or not, based on whether the <font class="detailedtext">Recursively</font> checkbox is selected.
+                If the "Limit to files with DTD:..." checkbox is selected, the scope will be limited to those files
+                with the same DOCTYPE as the current file.<br>
+                <font class="orangeb">3.</font> Press <font class="detailedtext">Preview</font> button to make IDEA
+                to search for usages of the selected tag <font class="detailedtext">Find</font> window.<br>
+                <font class="orangeb">4.</font> Click <font class="detailedtext">OK</font> to continue. If you do not
+                select
+                the <font class="detailedtext">Preview</font> option, all usages will be changed immediately.
+                <br>
+                Pressing <font class="detailedtext">Preview</font> opens
+                the <font class="detailedtext">Refactoring preview</font>
+                window displaying all found usages of the tags to be wrapped. In
+                this window you can exclude/include usages you want to refactor. <br>
+                <br>
+                Pressing <font class="detailedtext">Show XSLT...</font> opens
+                the <font class="detailedtext">XSLT preview</font>
+                window displaying an small fragment of XSLT equivalent to the refactoring requested. This fragment
+                can be used by XSLT processors to perform the requested refactoring on files external to your IDEA
+                project.
+                <br>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+<table border="0" cellpadding="5" width="100%">
+    <tbody>
+        <tr>
+            <td valign="top" width="5%">
+                <img src="../images/secondary/bell2.gif" border="0">
+            </td>
+            <td width="95%"><font class="note">The <font class="notebold">Refactoring preview</font> window may appear
+                anyway, if the files to be affected are read-only.
+            </font>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+</body>
+</html>

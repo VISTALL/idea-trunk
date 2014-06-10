@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Statement with empty body</problem_class>
+    <description>'while' statement has empty body</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Statement with empty body</problem_class>
+    <description>'while' statement has empty body</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Statement with empty body</problem_class>
+    <description>'if' statement has empty branch</description>
+  </problem>
+</problems>

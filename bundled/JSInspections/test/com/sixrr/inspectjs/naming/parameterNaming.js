@@ -1,0 +1,4 @@
+
+function fool(f2)
+{
+}

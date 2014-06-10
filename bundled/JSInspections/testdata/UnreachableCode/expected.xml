@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>12</line>
+    <problem_class>Unreachable code</problem_class>
+    <description>Unreachable code</description>
+  </problem>
+</problems>

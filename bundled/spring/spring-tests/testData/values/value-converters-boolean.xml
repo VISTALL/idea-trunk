@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <bean id="foo" class="FooBean10">
+     <property name="boolean" value=""/>
+     <property name="bool" value="<error> </error>"/>
+  </bean>
+
+  <bean id="foo2" class="FooBean10">
+     <property name="boolean" value="true"/>
+     <property name="bool" value="true" />
+  </bean>
+
+  <bean id="foo2_2" class="FooBean10">
+     <property name="boolean" >
+       <warning><value>on</value></warning>
+     </property>
+     <property name="bool">
+       <warning><value>off</value></warning>
+     </property>
+  </bean>
+
+  <bean id="foo3" class="FooBean10">
+     <property name="boolean" value="false"/>
+     <property name="bool" value="false" />
+  </bean>
+
+  <bean id="foo4" class="FooBean10">
+     <property name="boolean" value="0"/>
+     <property name="bool" value="0" />
+  </bean>
+
+  <bean id="foo5" class="FooBean10">
+     <property name="boolean" value="1"/>
+     <property name="bool" value="1" />
+  </bean>
+
+  <bean id="foo6" class="FooBean10">
+     <property name="boolean" value="on"/>
+     <property name="bool" value="on" />
+  </bean>
+
+  <bean id="foo7" class="FooBean10">
+     <property name="boolean" value="off"/>
+     <property name="bool" value="off" />
+  </bean>
+
+  <bean id="foo8" class="FooBean10">
+     <property name="boolean" value="yes"/>
+     <property name="bool" value="yes" />
+  </bean>
+
+  <bean id="foo9" class="FooBean10">
+     <property name="boolean" value="no"/>
+     <property name="bool" value="no" />
+  </bean>
+
+
+  <bean id="foo10" class="FooBean10">
+     <property name="boolean" value="<error>xxx</error>" />
+     <property name="bool" value="<error>xxx</error>" />
+  </bean>
+  
+  <bean id="foo11" class="FooBean10" p:boolean="no" p:bool="<error>xxx</error>" <error descr="Attribute p:zzz is not allowed here">p:zzz</error>="zzz"/>
+  
+  <bean id="foo12" class="FooBean10" <error descr="Attribute boolean is not allowed here">boolean</error>="no"/>
+</beans>

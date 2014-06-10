@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Redundant local variable</problem_class>
+    <description>Unnecessary local variable</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Redundant local variable</problem_class>
+    <description>Unnecessary local variable</description>
+  </problem>
+</problems>

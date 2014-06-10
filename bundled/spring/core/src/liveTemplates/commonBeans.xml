@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="spring">
+  <template id="placeholder-configurer" name="placeholder"
+            value="&lt;bean class=&quot;org.springframework.beans.factory.config.PropertyPlaceholderConfigurer&quot;&gt;&#10;    &lt;property name=&quot;location&quot; value=&quot;classpath:$LOCATION$&quot; /&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LOCATION" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="property-override-configurer" name="propertyoverrideconfigurer"
+            value="&lt;bean class=&quot;org.springframework.beans.factory.config.PropertyOverrideConfigurer&quot;&gt;&#10;    &lt;property name=&quot;locations&quot;&gt;&#10;        &lt;value&gt;classpath:$LOCATION$&lt;/value&gt;&#10;    &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="LOCATION" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="resource-factory" name="resourcefb"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.ResourceFactoryBean&quot;&gt;&#10;    &lt;property name=&quot;location&quot; value=&quot;classpath:$RES_LOCATION$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="RES_LOCATION" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="commons-log-factory" name="commonslogfb"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.CommonsLogFactoryBean&quot;&gt;&#10;    &lt;property name=&quot;logName&quot; value=&quot;$LOG_NAME$&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="LOG_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="field-factory" name="fieldretrfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.FieldRetrievingFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;staticField&quot; value=&quot;$VALUE$&quot;/&gt;&#10;&lt;/bean&gt;&#10;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="VALUE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="list-factory" name="listfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.ListFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;sourceList&quot;&gt;&#10;      &lt;list&gt;&#10;        &lt;value&gt;$VALUE$&lt;/value&gt;&#10;      &lt;/list&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="" defaultValue="" alwaysStopAt="true"/>
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="map-factory" name="mapfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.MapFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;sourceMap&quot;&gt;&#10;      &lt;map&gt;&#10;        &lt;entry key=&quot;$KEY$&quot; value=&quot;$VALUE$&quot;/&gt;&#10;      &lt;/map&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="KEY" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="VALUE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="properties-factory" name="proprsfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.PropertiesFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;location&quot; value=&quot;classpath:*.properties&quot;/&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+  <template id="set-factory" name="setfactory"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.beans.factory.config.SetFactoryBean&quot;&gt;&#10;  &lt;property name=&quot;sourceSet&quot;&gt;&#10;      &lt;set&gt;&#10;        &lt;value&gt;$VALUE$&lt;/value&gt;&#10;      &lt;/set&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="VALUE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+</templateSet>

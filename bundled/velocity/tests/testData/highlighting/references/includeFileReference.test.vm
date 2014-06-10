@@ -1,0 +1,5 @@
+#set($file1 = "file1")
+#set($file2 = 'file2')
+
+#include("file.xml" 'dir/file.html')
+#include($file1 $file2 '<warning descr="Cannot resolve file 'non-existent-file.txt'">non-existent-file.txt</warning>')

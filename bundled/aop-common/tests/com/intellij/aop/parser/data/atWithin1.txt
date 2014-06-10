@@ -1,0 +1,20 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiAtWithinExpression
+    PsiElement(AOP_AT_WITHIN)('@within')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              AopReferenceExpression
+                PsiElement(AOP_IDENTIFIER)('org')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('springframework')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('transaction')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_IDENTIFIER)('annotation')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('Transactional')
+    PsiElement(AOP_RIGHT_PAR)(')')

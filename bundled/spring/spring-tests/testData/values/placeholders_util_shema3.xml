@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <bean id="propertiesFactoryBean" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="location" value="classpath:bundles.properties"/>
+  </bean>
+
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="properties" ref="propertiesFactoryBean"/>
+  </bean>
+
+  <bean id="dataSource" class="FooBean12">
+    <property name="url" value="${jdbc.driver}"/>
+  </bean>
+</beans>

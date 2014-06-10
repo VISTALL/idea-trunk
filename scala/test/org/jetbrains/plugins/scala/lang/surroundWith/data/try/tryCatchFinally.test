@@ -1,0 +1,13 @@
+class a {
+  <start>CNN<try>
+}
+-----
+class a {
+  try {
+    CNN
+  }
+  catch {
+    case  =>
+  }
+  finally {}
+}

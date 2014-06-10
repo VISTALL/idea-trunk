@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Unnecessary 'return' statement</problem_class>
+    <description>return is unnecessary as the last statement in a function with no return value</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>10</line>
+    <problem_class>Unnecessary 'return' statement</problem_class>
+    <description>return is unnecessary as the last statement in a function with no return value</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>15</line>
+    <problem_class>Unnecessary 'return' statement</problem_class>
+    <description>return is unnecessary as the last statement in a function with no return value</description>
+  </problem>
+</problems>

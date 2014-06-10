@@ -1,0 +1,13 @@
+<!ELEMENT endpoints (endpoint)*>
+<!ELEMENT endpoint EMPTY>
+
+<!ATTLIST endpoints version CDATA #REQUIRED>
+<!ATTLIST endpoint name CDATA #REQUIRED
+                   implementation CDATA #REQUIRED
+                   tie CDATA #REQUIRED
+                   urlpattern CDATA #REQUIRED
+                   model CDATA #REQUIRED
+                   port CDATA #IMPLIED
+                   service CDATA #IMPLIED
+                   wsdl CDATA #IMPLIED
+                   interface CDATA #IMPLIED>

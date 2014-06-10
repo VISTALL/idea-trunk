@@ -1,0 +1,66 @@
+VtlFile:nofile.vm
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  DirectiveIf
+    PsiElement(#IF)('#if')
+    PsiElement(()('(')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('ref1')
+    PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n\r\n\t')
+    DirectiveElse
+      PsiElement(#ELSE)('#else')
+      PsiElement(TEMPLATE_TEXT)('\r\n\r\n\t')
+    PsiErrorElement:Invalid token '#elseif'
+      <empty list>
+    DirectiveElseif
+      PsiElement(#ELSEIF)('#elseif')
+      PsiElement(()('(')
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('ref2')
+      PsiElement())(')')
+      PsiElement(TEMPLATE_TEXT)('\r\n\r\n\t')
+    PsiErrorElement:Invalid token '#elseif'
+      <empty list>
+    DirectiveElseif
+      PsiElement(#ELSEIF)('#elseif')
+      PsiElement(()('(')
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('ref3')
+      PsiElement())(')')
+      PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+  DirectiveIf
+    PsiElement(#IF)('#if')
+    PsiElement(()('(')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('ref4')
+    PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n\r\n\t')
+    DirectiveElse
+      PsiElement(#ELSE)('#else')
+      PsiElement(TEMPLATE_TEXT)('\r\n\r\n\t')
+    PsiErrorElement:Invalid token '#else'
+      <empty list>
+    DirectiveElse
+      PsiElement(#ELSE)('#else')
+      PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n\r\n\r\n')
+  PsiErrorElement:'#end' expected
+    PsiElement(#IF)('#if')
+    PsiElement(()('(')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('ref1')
+    PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n\r\n')

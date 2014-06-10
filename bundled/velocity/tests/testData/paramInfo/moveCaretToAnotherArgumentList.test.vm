@@ -1,0 +1,8 @@
+#macro(m2 $bb $aa $cc)
+#end
+
+#macro(mmm $a $b)
+#end
+
+#mmm(33 5<caret>5)
+#m2(111 333 555)

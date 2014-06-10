@@ -1,0 +1,6 @@
+#set($bool = true)                $bool.booleanValue()
+#set($numb = 5)                   $numb.longValue()
+#set($strOne = 'str')             $strOne.charAt(1)
+#set($strTwo = "$strOne")         $strTwo.charAt(1)
+#set($list = [2,4,'c'])           $list.indexOf('c')
+#set($map = {4:true,'c':""})      $map.keySet() $map.values()

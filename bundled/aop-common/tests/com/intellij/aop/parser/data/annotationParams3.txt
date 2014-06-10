@@ -1,0 +1,17 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiWithinExpression
+    PsiElement(AOP_WITHIN)('within')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopAnnotatedTypeExpression
+        AopAnnotationHolder
+          AopAnnotationExpression
+            PsiElement(AOP_AT)('@')
+            AopReferenceHolder
+              AopReferenceExpression
+                PsiElement(AOP_IDENTIFIER)('FooAnno')
+            PsiElement(AOP_LEFT_PAR)('(')
+            PsiElement(AOP_RIGHT_PAR)(')')
+        AopReferenceExpression
+          PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_RIGHT_PAR)(')')

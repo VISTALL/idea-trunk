@@ -1,0 +1,8 @@
+<FOO>
+    <BAR x="true">
+        <BAZ/>
+    </BAR>
+    <BAR x="true">
+        <BAZ2/>
+    </BAR>
+</FOO>

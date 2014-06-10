@@ -1,0 +1,8 @@
+AOP_ARGS ('args')
+AOP_LEFT_PAR ('(')
+AOP_IDENTIFIER ('java')
+AOP_DOT ('.')
+AOP_IDENTIFIER ('io')
+AOP_DOT ('.')
+AOP_IDENTIFIER ('Serializable')
+AOP_RIGHT_PAR (')')

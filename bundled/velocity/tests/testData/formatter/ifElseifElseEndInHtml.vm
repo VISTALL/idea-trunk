@@ -1,0 +1,48 @@
+<html>
+
+<body>
+
+<table>
+
+<tr>
+#set ($url = $!request.session.getAttribute('headerForm').professionDocumentURL)
+#set ($baseUrl = $!request.session.getAttribute('headerForm').documentBaseURL)
+    <td colspan="2">
+        <a href="javascript:lienPDF('$baseUrl','$url')">
+            <img src="web/img/comprendrelecalcul.gif" alt="" height="42" width="350" border="0">
+        </a>
+    </td>
+    <td/>
+    <td colspan="2">
+#if ($!mustDisplayContributionOption)
+#set ($link = $request.session.getAttribute('link'))
+#if ($!isVeterinary)
+                <a href="$link.setAction('/enterWorkforceVeterinaire')?dispatch=consult">
+                    <img src="web/img/consultdeclaration.gif" alt="" height="21" width="350" border="0">
+                </a>
+#else
+                <a href="$link.setAction('/enterWorkforce')?dispatch=consult">
+                    <img src="web/img/consultdeclaration.gif" alt="" height="21" width="350" border="0">
+                </a>
+#end
+#elseif ($!displayDownPaymentOption)
+#if ($!displayReceiptAndContribution)
+                <a href="$link.setAction('/memberLinkAction')?whichMemberLink=supprimeracompte">...</a>
+#else
+#if ($!displayReceiptOnly)
+                    <a href="$link.setAction('/downPaymentTaxAmountAndVatAction')?dispatch=prepare">...</a>
+#else
+#if ($!displayNoReceiptNorContribution)
+                        <a href="$link.setAction('/enterWorkforceDownPayment')?dispatch=consult">...</a>
+#end
+#end
+#end
+#end
+    </td>
+</tr>
+
+</table>
+
+</body>
+
+</html>

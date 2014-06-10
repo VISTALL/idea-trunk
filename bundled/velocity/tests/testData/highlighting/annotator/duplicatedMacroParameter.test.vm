@@ -1,0 +1,5 @@
+#macro(mymacro <error descr="Duplicated parameter name 'p1'">$p1</error> $p2 <error descr="Duplicated parameter name 'p1'">$p1</error> $p3)
+#end
+
+
+

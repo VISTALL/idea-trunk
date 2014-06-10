@@ -1,0 +1,5 @@
+##
+#* @vtlvariable name="var1" type="foo.Bar" *#
+#* todo abc *#
+$<caret>var1
+## todo fix this

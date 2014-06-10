@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Octal Integer</problem_class>
+    <description>Octal integer '03'</description>
+  </problem>
+</problems>

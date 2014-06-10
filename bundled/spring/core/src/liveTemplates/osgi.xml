@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="Spring Dynamic Modules">
+  <template id="osgi_simple_service" name="osgisimpleservice"
+            value="&lt;osgi:service  id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot; ref=&quot;$REF$&quot; /&gt;" description=""
+            toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_multiple_service" name="osgimultiservice"
+            value="&lt;osgi:service id=&quot;$ID$&quot; ref=&quot;$REF$&quot; &gt;&#10;    &lt;osgi:interfaces&gt;&#10;        &lt;value&gt;$INTERFACE_1$&lt;/value&gt;&#10;        &lt;value&gt;$INTERFACE_2$&lt;/value&gt;&#10;    &lt;/osgi:interfaces&gt;&#10;&lt;/osgi:service&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE_1" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE_2" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_ref" name="osgisimpleref" value="&lt;osgi:reference id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot;/&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_multi_ref" name="osgimultiref"
+            value="&lt;osgi:reference id=&quot;$ID$&quot;&gt;&#10;  &lt;osgi:interfaces&gt;&#10;     &lt;value&gt;$INTERFACE_1$&lt;/value&gt;&#10;     &lt;value&gt;$INTERFACE_2$&lt;/value&gt;&#10;  &lt;/osgi:interfaces&gt;&#10;&lt;/osgi:reference&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE_1" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE_2" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_ref_with_bean" name="osgibeannameref"
+            value="&lt;osgi:reference id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot; bean-name=&quot;$BEAN_NAME$&quot;/&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_ref_listener" name="osgirefwithlistener"
+            value="&lt;osgi:reference id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot;&gt;&#10;  &lt;osgi:listener ref=&quot;$REF$&quot; bind-method=&quot;$BIND_METHOD$&quot; unbind-method=&quot;$UNBIND_METHOD$&quot;/&gt;&#10;&lt;/osgi:reference&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="BIND_METHOD" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="UNBIND_METHOD" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_list" name="osgisimplelist" value="&lt;osgi:list id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot; /&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_set" name="osgisimpleset" value="&lt;osgi:set id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot; /&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_list_comparator" name="osgilistwithcomp"
+            value="&lt;osgi:list id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot;&gt;&#10;  &lt;comparator&gt;&lt;natural-ordering basis=&quot;$BASIS$&quot;/&gt;&lt;/comparator&gt;&#10;&lt;/osgi:list&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="BASIS" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+    </context>
+  </template>
+
+  <template id="osgi_set_comparator" name="osgisetwithcomparator"
+            value="&lt;osgi:set id=&quot;$ID$&quot; interface=&quot;$INTERFACE$&quot;&gt;&#10;  &lt;comparator&gt;&lt;natural-ordering basis=&quot;$BASIS$&quot;/&gt;&lt;/comparator&gt;&#10;&lt;/osgi:set&gt;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="INTERFACE" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="BASIS" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+</templateSet>
+

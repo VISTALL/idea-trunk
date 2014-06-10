@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+  package="pkg">
+  <typedef class="java.lang.Integer" name="MyInt"/>
+  <query name="<error>qname1</error>" />
+  <query name="<error>qname1</error>" />
+  <class name="User" entity-name="user-uu" table="&quot;user&quot;" lazy="true"/>
+  <<error>class</error> name="User" table="&quot;<error>user`</error>" lazy="true"/>
+  <<error>class</error> name="User" table="`User`" lazy="true">
+    <comment>Users may bid for or sell auction items.</comment>
+    <synchronize table="test"/>
+    <synchronize table="<error>bad_test</error>"/>
+    <query name="q1">
+      <query-param name="<error>name</error>" type="integer"/>
+      <query-param name="<error>name</error>" type="<error>bad_integer</error>"/>
+        from User where id = :name</query>
+    <query name="hbmQuery">
+      <query-param name="<error>name</error>" type="integer"/>
+      <query-param name="hbmParam" type="integer"/>
+      from User where id = :hbmParam and <error>badId</error> = :badId
+    </query>
+    <query name="cdata"><![CDATA[from User]]></query>
+    <query name="cdata2"><![CDATA[
+        from User
+        ]]> </query>
+    <query name="hbmQuery1">from User</query>
+    <query name="hbmQuery2">from User </query>
+
+  <id name="id" column="id" unsaved-value="42" access="field">
+      <generator class="hilo">
+        <param name="table">test</param>
+        <param name="max_lo"><error>adf</error></param>
+      </generator>
+    </id>
+
+    <natural-id mutable="true">
+      <property name="<error>userName</error>" column="`NAME`"
+                length="10"/>
+    </natural-id>
+
+    <<error>property</error> column="`NAME`"
+            length="10"/>
+
+
+    <property name="<error>password</error>"
+              type="<error>AAA</error>"
+              not-null="true"
+              length="15"
+              column="`password`"/>
+
+    <property name="<error>email</error>"
+              type="MyInt"/>
+
+    <component name="<error>name</error>">
+      <property name="<error>firstName</error>"
+                length="50"
+                not-null="true"/>
+      <property name="<error>initial</error>"
+                column="`<error>initial</error>`"/>
+      <property name="<error>lastName</error>"
+                length="50"
+                not-null="true"/>
+    </component>
+    <bag name="<error>bids</error>"
+         inverse="true"
+         cascade="save-update,lock,<error>foolock</error>">
+      <key column="<error>bidder</error>"/>
+      <one-to-many class="<error>Bid</error>"/>
+    </bag>
+
+    <bag name="<error>auctions</error>"
+         inverse="true"
+         cascade="save-update,lock">
+      <key column="<error>seller</error>"/>
+      <one-to-many class="<error>AuctionItem</error>"/>
+    </bag>
+
+    <subclass name="SubUser1">
+      <subclass name="SubSubUser1"/>
+      <subclass name="<error>SubUser2</error>"/>
+    </subclass>
+    <subclass name="<error>NotSubUser</error>" />
+</class>
+<subclass name="SubUser1" extends="User"/>
+<subclass name="<error>pkg.NotSubUser</error>" extends="User"/>
+<class name="pkg.Honey" table="<error>honey</error>">
+  <id name="id" type="java.lang.Integer" access="field">
+    <generator class="increment"/>
+  </id>
+  <property name="name" type="java.lang.String" access="field"/>
+  <property name="<error>taste</error>" type="java.lang.String"/>
+  <query name="someName">from pkg.Honey</query>
+</class>
+
+  <class name="IDEADEV_18929_A">
+    <property name="enabled" type="boolean"/>
+    <set name="assignedBees" cascade="all">
+      <key column="<error>aid</error>"/>
+      <one-to-many class="IDEADEV_18929_B"/>
+    </set>
+  </class>
+
+  <class name="IDEADEV_18929_B"/>
+
+  <class name="IDEADEV_22684">
+    <component name="<error>d</error>"/>
+    <component name="c">
+      <property name="p"/>
+    </component>
+  </class>
+
+  <class name="IDEADEV_22810" table="item">
+    <set name="set" access="field" table="item">
+      <key column="seller_id"/>
+      <element column="description" type="string"/>
+    </set>
+  </class>
+
+  <class name="IDEADEV_24493">
+    <component name="c1" access="field">
+      <component name="c1" access="field"/>
+      <component name="c2" access="field"/>
+    </component>
+    <component name="<error>c2</error>" access="field"/>
+    <component name="<error>c2</error>" access="field"/>
+  </class>
+
+</hibernate-mapping>

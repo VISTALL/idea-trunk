@@ -1,0 +1,23 @@
+package a.b.c
+
+{}
+-----
+ScalaFile
+  ScPackaging
+    PsiElement(package)('package')
+    PsiWhiteSpace(' ')
+    CodeReferenceElement
+      CodeReferenceElement
+        CodeReferenceElement
+          PsiElement(identifier)('a')
+        PsiElement(.)('.')
+        PsiElement(identifier)('b')
+      PsiElement(.)('.')
+      PsiElement(identifier)('c')
+    PsiElement(newline)('\n\n')
+    PsiErrorElement:Wrong top statement declaration
+      <empty list>
+    PsiElement({)('{')
+    PsiErrorElement:Wrong top statement declaration
+      <empty list>
+    PsiElement(})('}')

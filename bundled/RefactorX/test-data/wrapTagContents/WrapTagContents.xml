@@ -1,0 +1,6 @@
+
+<FOO>
+    <pre:BAR>asdf</pre:BAR>
+    <BAR x="3"></BAR>
+    <BAR/>
+</FOO>

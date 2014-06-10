@@ -1,0 +1,12 @@
+<FOO>
+    <pre:BAR>
+        <BAZ2>
+        </BAZ2>
+        <BAZ>
+        </BAZ>
+        <BAZ>
+        </BAZ>
+        <BAZ/>
+    </pre:BAR>
+    <BAR>asdf</BAR>
+</FOO>

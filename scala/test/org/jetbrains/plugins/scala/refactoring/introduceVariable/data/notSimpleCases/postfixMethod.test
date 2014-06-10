@@ -1,0 +1,12 @@
+class a {
+  def foo = {
+    a <begin>{22; 33}<end>
+  }
+}
+------
+class a {
+  def foo = {
+    val value: Int = {22; 33}
+    a (value)
+  }
+}

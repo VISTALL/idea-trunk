@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-rpc/ri/runtime' version='1.0'>
+    <endpoint
+            name='AAA'
+            interface='<error>aaa</error>.<error>IAAA</error>'
+            implementation='<error>aaa</error>.<error>AAA</error>'
+            tie='<error>aaa</error>.<error>IAAA_Tie</error>'
+            model='/<error>WEB-INF2</error>/<error>AAA.model.xml</error>'
+            wsdl='/<error>WEB-INF2</error>/<error>AAA.wsdl</error>'
+            service='{http://somewhere}AAA'
+            port='{http://somewhere}IAAA'
+            urlpattern='<error>/services</error>'/>
+
+  <endpoint
+            name='AAA'
+            interface='JaxRPCRuntimeConfig'
+            implementation='JaxRPCRuntimeConfig'
+            tie='JaxRPCRuntimeConfig'
+            model='/zzz'
+            wsdl='/zzz'
+            service='{http://somewhere}AAA'
+            port='{http://somewhere}IAAA'
+            urlpattern='/zzz'/>
+</endpoints>

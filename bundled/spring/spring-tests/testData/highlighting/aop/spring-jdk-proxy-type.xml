@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+  <bean id="target" class="Target"/>
+  <bean id="nonTarget" class="NonTarget"/>
+  <bean id="classTarget" class="ClassTarget"/>
+  <bean id="introTarget" class="IntroTarget"/>
+  <bean id="dummyAspect" class="DummyAspect"/>
+
+  <bean id="other" class="Other">
+    <property name="targetClass" ref="<error descr="Bean must implement one of 'Target' interfaces: 'Intf'">target</error>"/>
+    <property name="targetIntf" ref="target"/>
+    <property name="classTarget" ref="classTarget"/>
+    <property name="introTarget" ref="<error descr="Bean must implement one of 'IntroTarget' interfaces: 'Intf'">introTarget</error>"/>
+    <property name="nonTargetClass" ref="nonTarget"/>
+    <property name="nonTargetIntf" ref="nonTarget"/>
+  </bean>
+
+  <aop:config>
+    <aop:aspect ref="dummyAspect">
+      <aop:before method="xxx" pointcut="within(Target) || within(ClassTarget)"/>
+      <aop:declare-parents types-matching="IntroTarget"
+                           implement-interface="Mixin"
+                           default-impl="MixinImpl"/>
+
+    </aop:aspect>
+  </aop:config>
+
+</beans>

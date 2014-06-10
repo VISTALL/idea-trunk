@@ -1,0 +1,74 @@
+VtlFile:nofile.vm
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  PsiErrorElement:#BREAK directive should be within #FOREACH directive
+    <empty list>
+  DirectiveBreak
+    PsiElement(#BREAK)('#break')
+  PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+  DirectiveIf
+    PsiElement(#IF)('#if')
+    PsiElement(()('(')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('hello')
+    PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\nHello ')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('who')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    PsiErrorElement:#BREAK directive should be within #FOREACH directive
+      <empty list>
+    DirectiveBreak
+      PsiElement(#BREAK)('#break')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+  DirectiveForeach
+    PsiElement(#FOREACH)('#foreach')
+    HeaderOfDirective
+      PsiElement(()('(')
+      PsiElement($)('$')
+      LoopVariable
+        PsiElement(identifier)('rrr555')
+      PsiElement(IN)('in')
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('fooVar')
+      PsiElement())(')')
+    PsiElement(TEMPLATE_TEXT)('\r\n')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('velocityCount')
+    PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+    DirectiveIf
+      PsiElement(#IF)('#if')
+      PsiElement(()('(')
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('hello')
+      PsiElement())(')')
+      PsiElement(TEMPLATE_TEXT)('\r\nHello ')
+      Interpolation
+        PsiElement($)('$')
+        ReferenceExpression
+          PsiElement(identifier)('who')
+      PsiElement(TEMPLATE_TEXT)('\r\n')
+      DirectiveBreak
+        PsiElement(#BREAK)('#break')
+      PsiElement(TEMPLATE_TEXT)('\r\n')
+      PsiElement(#END)('#end')
+    PsiElement(TEMPLATE_TEXT)('\r\n\r\n')
+    Interpolation
+      PsiElement($)('$')
+      ReferenceExpression
+        PsiElement(identifier)('hello')
+    PsiElement(TEMPLATE_TEXT)(' ')
+    PsiComment(ONELINE_COMMENT)('## displays Hello World!\r\n')
+    PsiElement(#END)('#end')
+  PsiElement(TEMPLATE_TEXT)('\r\n\r\n\r\n')

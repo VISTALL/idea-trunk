@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="replacer" class="FooReplacerBean" />
+
+  <bean id="foo" class="FooBean" />
+  <bean id="foo2" class="FooBean2" />
+
+
+    <bean id="testReplacer" class="FooBean7" >
+        <replaced-method name="setFooBean" replacer="replacer" />
+        <replaced-method name="setFooBean" replacer="<error>foo</error>" />
+        <replaced-method name="setFooBean" replacer="<error>foo2</error>" />
+    </bean>
+</beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application-client xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="5"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/application-client_5.xsd">
+<service-ref>
+<description>WSDL Service GeographicLookupService</description>
+
+<service-ref-name>service/GeographicLookupService</service-ref-name>
+
+<service-interface><error>com.ihg.www.GeographicLookup.GeographicLookupService</error></service-interface>
+
+<wsdl-file><error>META-INF</error>/<error>wsdl</error>/<error>GeographicLookupService.wsdl</error></wsdl-file>
+<jaxrpc-mapping-file><error>META-INF</error>/<error>GeographicLookupService_mapping.xml</error></jaxrpc-mapping-file>
+
+<service-qname xmlns:pfx="<error>aaa</error>">pfx:GeographicLookupService</service-qname>
+<port-component-ref>
+
+<service-endpoint-interface><error>com.ihg.www.GeographicLookup.GeographicLookupPortType</error></service-endpoint-interface>
+</port-component-ref>
+</service-ref>
+<service-ref>
+<description>WSDL Service GeographicLookupService2</description>
+
+<service-ref-name>service/GeographicLookupService2</service-ref-name>
+
+<service-interface> WSRefsInApplicationClientJavaEE5 </service-interface>
+                
+<wsdl-file> zzz/WSRefsInApplicationClientJavaEE5.xml </wsdl-file>
+<jaxrpc-mapping-file> zzz/WSRefsInApplicationClientJavaEE5.xml </jaxrpc-mapping-file>
+
+<service-qname xmlns:pfx="<error>aaa</error>">pfx:GeographicLookupService</service-qname>
+<port-component-ref>
+
+<service-endpoint-interface> WSRefsInApplicationClientJavaEE5 </service-endpoint-interface>
+</port-component-ref>
+</service-ref>
+</application-client>
+

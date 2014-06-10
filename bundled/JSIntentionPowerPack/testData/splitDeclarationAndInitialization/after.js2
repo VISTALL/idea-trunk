@@ -1,0 +1,9 @@
+// SplitDeclarationAndInitialization:true
+var xm<caret>l:XML;
+xml = <user>
+    <name>Nick</name>
+    <address>
+        <country>Russia</country>
+        <city>Moscow</city>
+    </address>
+</user>;

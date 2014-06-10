@@ -1,0 +1,7 @@
+${myobj}
+${myobj.ddd}
+${myobj.ddd()}
+${myobj.ddd.ddd()}
+${myobj.ddd().ddd}
+${myobj.ddd.ddd()
+${myobj.ddd().ddd

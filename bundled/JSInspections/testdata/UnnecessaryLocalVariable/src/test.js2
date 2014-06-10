@@ -1,0 +1,16 @@
+class FooTest {
+    private function tileMovedHandler(event:FooEvent):void {
+        var tile:FooTile = event.tile;
+        FooTile.foo(tile)
+    }
+}
+
+class FooTile {
+    static function foo(a:FooTile):void {
+      if (1 === 1) foo(a)
+    }
+}
+
+class FooEvent {
+    public var tile:FooTile = new FooTile();
+}

@@ -1,0 +1,13 @@
+TEMPLATE_TEXT ('template
+')
+MULTILINE_COMMENT ('#*multiline
+    #*  multiline nested     *#
+#end    ## oneline nested
+    *#')
+TEMPLATE_TEXT ('
+not a comment *#
+
+')
+MULTILINE_COMMENT ('#*
+ EOF comment
+')

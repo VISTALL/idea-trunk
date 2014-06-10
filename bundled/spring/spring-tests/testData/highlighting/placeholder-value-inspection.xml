@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="placeholderPrefix" value="#{"/>
+    <property name="placeholderSuffix" value="}"/>
+    <property name="location" value="classpath:dataContext.properties"/>
+  </bean>
+
+  <bean id="propertyConfigurer2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" p:location="classpath:dataContext2.properties"/>
+
+  <bean id="foo" class="FooBean2">
+    <property name="public" value="false"/>
+    <property name="stringProperty" value="aaa" />
+  </bean>
+
+  <bean id="foo2" class="FooBean2">
+    <property name="stringProperty" value="#{zzz}"/>
+  </bean>
+
+  <bean id="foo3" class="FooBean2">
+    <property name="stringProperty" value="${bbb}"/>
+  </bean>
+
+  <bean id="foo5" class="FooBean2">
+    <property name="stringProperty">
+        <value>
+          aaa
+          aaa
+        </value>
+    </property>
+  </bean>
+
+  <bean id="foo6" class="FooBean2">
+    <property name="stringProperty">
+        <value type="<error>java.lang.Integer</error>">111</value>
+    </property>
+  </bean>
+
+</beans>

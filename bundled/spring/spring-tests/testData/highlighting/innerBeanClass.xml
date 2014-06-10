@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="inner" class="InnerBeanClass$Inner">
+    <property name="string" value=""/>
+    <property name="<error>notExisted</error>" value=""/>
+  </bean>
+
+  <bean id="wrong" class="InnerBeanClass.<error>Inner</error>">
+    <property name="string" value=""/>
+  </bean>
+
+  <bean id="wrong2" class="InnerBeanClass$<error>Wrong</error>">
+  </bean>
+</beans>

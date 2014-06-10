@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Redundant 'if' statement</problem_class>
+    <description>if statement can be simplified</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>12</line>
+    <problem_class>Redundant 'if' statement</problem_class>
+    <description>if statement can be simplified</description>
+  </problem>
+</problems>

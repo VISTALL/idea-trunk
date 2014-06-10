@@ -1,0 +1,7 @@
+#set($velocityCount = '')
+
+#foreach($loopVar in $foo)
+#foreach($loopVar in $foo)
+#end
+$ve<caret>locityCount
+#end

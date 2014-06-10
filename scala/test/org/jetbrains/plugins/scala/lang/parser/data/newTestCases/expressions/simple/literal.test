@@ -1,0 +1,52 @@
+class a {
+  1
+  null
+  true
+  "one"
+  -1
+  -1.0
+  'a'
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        Literal
+          PsiElement(integer)('1')
+        PsiElement(newline)('\n  ')
+        Literal
+          PsiElement(null)('null')
+        PsiElement(newline)('\n  ')
+        Literal
+          PsiElement(true)('true')
+        PsiElement(newline)('\n  ')
+        Literal
+          PsiElement(string content)('"one"')
+        PsiElement(newline)('\n  ')
+        PrefixExpression
+          ReferenceExpression
+            PsiElement(identifier)('-')
+          Literal
+            PsiElement(integer)('1')
+        PsiElement(newline)('\n  ')
+        PrefixExpression
+          ReferenceExpression
+            PsiElement(identifier)('-')
+          Literal
+            PsiElement(float)('1.0')
+        PsiElement(newline)('\n  ')
+        Literal
+          PsiElement(Character)(''a'')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

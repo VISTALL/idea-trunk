@@ -1,0 +1,6 @@
+  <service>
+    <name>$name$</name>
+    <namespace>$wsns$</namespace>
+    <serviceClass>$serviceClass$</serviceClass>
+    <implementationClass>$serviceClass$</implementationClass>
+  </service>

@@ -1,0 +1,9 @@
+<html>
+  ${c<caret>}
+</html>
+-----
+char
+checkBox
+createLink
+createLinkTo
+currencySelect

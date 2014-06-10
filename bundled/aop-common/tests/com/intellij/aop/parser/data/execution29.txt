@@ -1,0 +1,24 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            PsiElement(AOP_IDENTIFIER)('abc')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_ASTERISK)('*')
+          PsiElement(AOP_IDENTIFIER)('Impl')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('foo')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      PsiElement(AOP_DOT_DOT)('..')
+    PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_RIGHT_PAR)(')')

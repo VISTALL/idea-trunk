@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Unterminated statement</problem_class>
+    <description>Unterminated statement</description>
+  </problem>
+  <problem>
+    <file>test.html</file>
+    <line>6</line>
+    <problem_class>Unterminated statement</problem_class>
+    <description>Unterminated statement</description>
+  </problem>
+  <problem>
+    <file>test.html</file>
+    <line>6</line>
+    <problem_class>Unterminated statement</problem_class>
+    <description>Unterminated statement</description>
+  </problem>
+  <problem>
+    <file>test.html</file>
+    <line>6</line>
+    <problem_class>Unterminated statement</problem_class>
+    <description>Unterminated statement</description>
+  </problem>  
+</problems>

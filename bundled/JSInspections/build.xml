@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Inspection-JS" default="compile">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="project.class.path"/>
+    <property file="build.properties"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.root" value="${my.user.dir}\builds\InspectionJS"/>
+    <property name="official.build.dir" value="${my.user.dir}\officialbuilds\InspectionJS"/>
+    <property name="idea.dir" value="\Applications\Demetra.app"/>
+    <property name="idea.plugin.dir" value="${my.user.dir}\Library\Application Support\IntelliJIdea60"/>
+    <property name="debug" value="true"/>
+    <property name="optimize" value="off"/>
+    <property name="deprecation" value="off"/>
+    <property name="project.fullname" value="Inspection-JS"/>
+    <property name="project.version" value="1.0.1"/>
+    <property name="jar.file" value="${build.root}/InspectionJS.jar"/>
+    <property name="resources.jar.file" value="${build.root}/resources_en.jar"/>
+    <property name="dist.zip.file" value="${build.root}/${project.fullname}.${project.version}.zip"/>
+    <property name="build.classes.dir" value="${build.root}/classes"/>
+    <property name="src.dir" value="src"/>
+    <property name="build.compiler" value="modern"/>
+
+    <path id="project.class.path">
+        <pathelement location="${idea.dir}/lib/idea.jar"/>
+        <pathelement location="${idea.dir}/plugins/JavascriptLanguage/lib/JavascriptLanguage.jar"/>
+        <pathelement location="${idea.dir}/lib/openAPI.jar"/>
+        <pathelement location="${idea.dir}/lib/idea.jar"/>
+        <pathelement location="${idea.dir}/lib/jdom.jar"/>
+        <pathelement location="${idea.dir}/lib/extensions.jar"/>
+        <pathelement location="${idea.dir}/redist/forms_rt.jar"/>
+        <pathelement location="${idea.dir}/redist/javac2.jar"/>
+        <pathelement location="${idea.dir}/redist/annotations.jar"/>
+    </path>
+
+    <target name="init">
+        <mkdir dir="${build.root}"/>
+    </target>
+
+    <target name="prepare" depends="init">
+        <mkdir dir="${build.classes.dir}"/>
+    </target>
+
+
+    
+    <target name="compile" depends="prepare">
+        <javac2 srcdir="${src.dir}" destdir="${build.classes.dir}" includes="com/sixrr/**" debug="${debug}">
+            <classpath refid="project.class.path"/>
+        </javac2>
+    </target>
+
+    <target name="create_jars" depends="compile">
+        <jar jarfile="${jar.file}">
+            <fileset dir="${build.classes.dir}"/>
+            <fileset dir=".">
+                <include name="META-INF/plugin.xml"/>
+            </fileset>
+        </jar>
+        <jar jarfile="${resources.jar.file}">
+
+            <fileset dir="src">
+                <include name="inspectionDescriptions/*.html"/>
+            </fileset>
+            <fileset dir="resources">
+                <include name="*.html"/>
+            </fileset>
+            <fileset dir="src">
+                <include name="com/sixrr/inspectjs/InspectionJSBundle.properties"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="deploy" depends="clean, compile, create_jars"
+            description="deploy the plugin">
+
+        <mkdir dir="${idea.plugin.dir}"/>
+        <mkdir dir="${idea.plugin.dir}/InspectionJS"/>
+        <mkdir dir="${idea.plugin.dir}/InspectionJS/lib"/>
+        <copy file="${jar.file}" todir="${idea.plugin.dir}/InspectionJS/lib" overwrite="true"/>
+        <copy file="${resources.jar.file}" todir="${idea.plugin.dir}/InspectionJS/lib" overwrite="true"/>
+    </target>
+
+    <target name="clean" depends="init" description="Cleans up the distribution">
+        <delete failonerror="false" dir="classes"/>
+        <delete failonerror="false" dir="${build.classes.dir}"/>
+        <delete failonerror="false" file="${jar.file}"/>
+    </target>
+
+    <target name="remove-svn">
+        <delete dir="." includes="**/.svn/**" defaultexcludes="false"/>
+        <delete dir="." includes="**/.svn" defaultexcludes="false"/>
+    </target>
+
+    <target name="package">
+        <zip zipfile="../inspection-js.zip">
+            <fileset dir=".">
+                <include name="**/**"/>
+            </fileset>
+        </zip>
+    </target>
+</project>

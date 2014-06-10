@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Refactor-X" default="compile">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="project.class.path"/>
+    <property name="src.dir" value="src"/>
+    <property name="tests.dir" value="tests"/>
+    <property name="build.root" value="${user.home}\builds\RefactorX"/>
+    <property name="official.build.dir" value="${user.home}\officialbuilds\RefactorX"/>
+    <property name="idea.dir" value="\Applications\Selena.app"/>
+    <property name="idea.plugin.dir" value="\${user.home}\Library\Application Support\IntelliJIdea70"/>
+    <property name="debug" value="true"/>
+    <property name="optimize" value="off"/>
+    <property name="deprecation" value="off"/>
+    <property name="project.fullname" value="RefactorX"/>
+    <property name="project.version" value="2.0"/>
+    <property name="jar.file" value="${build.root}/RefactorX.jar"/>
+    <property name="test.jar.file" value="${build.root}/RefactorX-tests.jar"/>
+    <property name="help.jar.file" value="${build.root}/refactorXHelp.jar"/>
+    <property name="dist.zip.file" value="${build.root}/${project.fullname}.${project.version}.zip"/>
+
+    <path id="project.class.path">
+        <pathelement location="${idea.dir}/lib/idea.jar"/>
+        <pathelement location="${idea.dir}/lib/openAPI.jar"/>
+        <pathelement location="${idea.dir}/lib/jdom.jar"/>
+
+    </path>
+
+    <path id="tests.class.path">
+        <path refid="project.class.path"/>
+        <pathelement location="${idea.dir}/lib/junit.jar"/>
+        <pathelement location="lib/xmlunit-1.1.jar"/>
+        <pathelement location="${jar.file}"/>
+    </path>
+
+    <path id="run.tests.class.path">
+        <path refid="tests.class.path"/>
+        <pathelement location="${test.jar.file}"/>
+    </path>
+
+    <target name="init">
+        <property name="build.classes.dir" value="${build.root}/classes"/>
+        <property name="test.classes.dir" value="${build.root}/tests"/>
+        <property name="src.dir" value="src"/>
+        <property name="build.compiler" value="modern"/>
+        <mkdir dir="${build.root}"/>
+    </target>
+
+    <target name="prepare" depends="init">
+        <mkdir dir="${build.classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+    </target>
+
+    <target name="compile" depends="prepare">
+        <javac2 srcdir="${src.dir}" destdir="${build.classes.dir}" includes="com/sixrr/**" debug="${debug}">
+            <classpath refid="project.class.path"/>
+        </javac2>
+    </target>
+
+    <target name="compile-tests" depends="create_jars">
+        <javac2 srcdir="${tests.dir}" destdir="${test.classes.dir}" includes="com/sixrr/**" debug="${debug}">
+            <classpath refid="tests.class.path"/>
+        </javac2>
+    </target>
+
+
+    <target name="create_jars" depends="compile">
+        <jar jarfile="${jar.file}">
+            <fileset dir="${build.classes.dir}"/>
+            <fileset dir=".">
+                <include name="META-INF/plugin.xml"/>
+            </fileset>
+            <fileset dir="resources">
+                <include name="**/*"/>
+            </fileset>
+        </jar>
+        <jar jarfile="${help.jar.file}">
+            <fileset dir="help">
+                <include name="**/**"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="jar-tests" depends="compile-tests">
+        <jar jarfile="${test.jar.file}">
+            <fileset dir="${test.classes.dir}"/>
+        </jar>
+    </target>
+
+    <target name="deploy" depends="clean, compile, create_jars"
+            description="deploy the plugin">
+
+        <mkdir dir="${idea.plugin.dir}"/>
+        <mkdir dir="${idea.plugin.dir}/RefactorX"/>
+        <mkdir dir="${idea.plugin.dir}/RefactorX/lib"/>
+        <mkdir dir="${idea.plugin.dir}/RefactorX/help"/>
+        <copy file="${jar.file}" todir="${idea.plugin.dir}/RefactorX/lib" overwrite="true"/>
+        <copy file="${help.jar.file}" todir="${idea.plugin.dir}/RefactorX/help" overwrite="true"/>
+    </target>
+
+
+    <target name="clean" depends="init" description="Cleans up the distribution">
+        <delete failonerror="false" dir="${build.classes.dir}"/>
+        <delete failonerror="false" file="${jar.file}"/>
+        <delete failonerror="false" file="${help.jar.file}"/>
+    </target>
+
+
+</project>

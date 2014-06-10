@@ -1,0 +1,21 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiArgsExpression
+    PsiElement(AOP_ARGS)('args')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      PsiElement(AOP_DOT_DOT)('..')
+      PsiElement(AOP_COMMA)(',')
+      AopReferenceHolder
+        AopReferenceExpression
+          PsiElement(AOP_ASTERISK)('*')
+      PsiElement(AOP_COMMA)(',')
+      AopReferenceHolder
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              PsiElement(AOP_IDENTIFIER)('java')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('io')
+          PsiElement(AOP_DOT_DOT)('..')
+          PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_RIGHT_PAR)(')')

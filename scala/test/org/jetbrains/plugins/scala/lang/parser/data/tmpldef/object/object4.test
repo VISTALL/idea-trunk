@@ -1,0 +1,22 @@
+object a [T]
+-----
+ScalaFile
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      <empty list>
+  PsiErrorElement:';' or newline expected
+    <empty list>
+  PsiElement([)('[')
+  ReferenceExpression
+    PsiElement(identifier)('T')
+  PsiErrorElement:';' or newline expected
+    <empty list>
+  PsiElement(])(']')

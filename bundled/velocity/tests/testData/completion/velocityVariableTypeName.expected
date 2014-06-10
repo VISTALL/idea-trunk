@@ -1,0 +1,5 @@
+#* @vtlvariable name="fooVar" type="foo.Bar" *#
+#set($barVar = 5.56)
+#foreach($loopVar in {3:7})
+$<caret>
+#end

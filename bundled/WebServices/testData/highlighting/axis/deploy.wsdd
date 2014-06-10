@@ -1,0 +1,20 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+    <service name="Bid" provider="java:RPC" use="aaa" style="zzz">
+        <namespace>http://www.soapinterop.org/Bid</namespace>
+        <parameter name="className" value="axis.AxisWs2"/>
+        <parameter name="allowedMethods" value="sayHello"/>
+    </service>
+
+    <service name="BidRegistry" provider="java:RPC" style="aaa" use="aaa">
+        <parameter name="className" value="axis.AxisWs"/>
+        <parameter name="allowedMethods" value="*"/>
+    </service>
+    <service name="HelloWorld" provider="java:RPC" style="aaa" use="aaa">
+      <parameter name="className" value="axis.AxisWebMethodInspections"/>
+      <parameter name="allowedMethods" value="*"/>
+    </service>
+    <service name="WebMethodCheck" provider="java:RPC" style="aaa" use="aaa">
+      <parameter name="className" value="axis.AxisWebMethodCheck"/>
+      <parameter name="allowedMethods" value="*"/>
+    </service>
+</deployment>

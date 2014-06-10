@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Assignment to function parameter</problem_class>
+    <description>Assignment to function parameter 'i'</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Assignment to function parameter</problem_class>
+    <description>Assignment to function parameter 'i'</description>
+  </problem>
+</problems>

@@ -1,0 +1,7 @@
+Validate if a top-level Java class is a simple bean:
+- It is not a parameterized type.
+- It is not a non-static inner class.
+- It is a concrete class, or is annotated @Decorator.
+- It does not implement any of the following interfaces: javax.servlet.Servlet, javax.servlet.Filter, javax.servlet.ServletContextListener, javax.servlet.http.HttpSessionListener, javax.servlet.ServletRequestListener, javax.ejb.EnterpriseBean
+- It does not extend javax.faces.component.UIComponent.
+- It has an appropriate constructor - either: the class has a constructor with no parameters, or the class declares a constructor annotated @Initializer.

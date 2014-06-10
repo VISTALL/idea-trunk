@@ -1,0 +1,3 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiErrorElement:Pointcut expression expected
+    <empty list>

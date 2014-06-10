@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+
+<idea-plugin version="2">
+  
+  <extensions xmlns="com.intellij">
+    <moduleService serviceInterface="com.intellij.spring.integration.ContextImplicitVariableFactory" serviceImplementation="com.intellij.spring.integration.ContextImplicitVariableFactoryImpl"/>
+
+    <spring.configurator implementation="com.intellij.spring.jsf.SpringJsfConfigurator"/>
+    <javaee.jsp.el.customJsfVariableResolver implementation="com.intellij.spring.integration.SpringJsfVariableResolverProvider"/>
+    <javaee.jsp.el.customJsfVariableResolver implementation="com.intellij.spring.integration.SpringWebApplicationContextVariableResolverProvider"/>
+  </extensions>
+</idea-plugin>
+ 

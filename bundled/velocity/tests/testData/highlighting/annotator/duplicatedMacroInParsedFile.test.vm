@@ -1,0 +1,4 @@
+#macro(mymacro)
+#end
+
+#parse(<warning descr="Macro 'mymacro' is already defined in 'duplicatedMacroInParsedFile.test.vm' and will be ignored in 'file1.vm'">'file1.vm'</warning>)

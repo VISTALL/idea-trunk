@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+  <on-start>
+    <evaluate expression="bookingService.createBooking(1, 'guest')" result="flowScope.booking"/>
+
+    <evaluate expression="springBean" result="flowScope.var"/>
+
+    <evaluate expression="aliasName" result="flowScope.var2" />
+
+    <evaluate expression="<warning>unknownBean</warning>" />
+    
+    <evaluate expression="aliasName.<warning>unknownMethod</warning>" />
+  </on-start>
+
+  <bean-import resource="spring-beans.xml" />
+</flow>

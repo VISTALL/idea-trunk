@@ -1,0 +1,45 @@
+<abc>
+<% while (true) {%>
+printsmth
+<% println 3%>
+<% /* } */%>
+</abc>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<abc>\n')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        WHILE statement
+          PsiElement(while)('while')
+          PsiWhiteSpace(' ')
+          PsiElement(()('(')
+          Literal
+            PsiElement(true)('true')
+          PsiElement())(')')
+          PsiWhiteSpace(' ')
+          Block statement
+            Open block
+              PsiElement({)('{')
+              PsiElement(java scriptlet end)('%>')
+              Outer: GSP TEMPLATE STATEMENTS('\nprintsmth\n')
+              PsiElement(java scriptlet begin)('<%')
+              PsiWhiteSpace(' ')
+              Call expression
+                Reference expression
+                  PsiElement(identifier)('println')
+                PsiWhiteSpace(' ')
+                Command arguments
+                  Literal
+                    PsiElement(Integer)('3')
+              PsiElement(java scriptlet end)('%>')
+              Outer: GSP TEMPLATE STATEMENTS('\n')
+              PsiElement(java scriptlet begin)('<%')
+              PsiWhiteSpace(' ')
+              PsiComment(block comment)('/* } */')
+              PsiElement(java scriptlet end)('%>')
+              Outer: GSP TEMPLATE STATEMENTS('\n</abc>')
+              PsiErrorElement:'}' expected
+                <empty list>

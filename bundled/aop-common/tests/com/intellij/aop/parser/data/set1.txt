@@ -1,0 +1,16 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  FieldPatternPointcut
+    PsiElement(AOP_SET)('set')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      PsiElement(AOP_MODIFIER)('static')
+    AopReferenceHolder
+      AopPrimitiveTypeExpression
+        PsiElement(AOP_INT)('int')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          PsiElement(AOP_IDENTIFIER)('T')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('x')
+    PsiElement(AOP_RIGHT_PAR)(')')

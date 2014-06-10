@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Duplicate property on object literal</problem_class>
+    <description>Duplicate object property property</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Duplicate property on object literal</problem_class>
+    <description>Duplicate object property property</description>
+  </problem>
+</problems>

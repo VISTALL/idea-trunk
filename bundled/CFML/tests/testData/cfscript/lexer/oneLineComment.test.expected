@@ -1,0 +1,17 @@
+OPENER ('<')
+CF_TAG_NAME ('cfscript')
+R_ANGLEBRACKET ('>')
+WHITE_SPACE ('
+')
+COMMENT ('// comment
+')
+IDENTIFIER ('a')
+INC ('++')
+SEMICOLON (';')
+WHITE_SPACE ('
+')
+COMMENT ('// comment
+')
+LSLASH_ANGLEBRACKET ('</')
+CF_TAG_NAME ('cfscript')
+CLOSER ('>')

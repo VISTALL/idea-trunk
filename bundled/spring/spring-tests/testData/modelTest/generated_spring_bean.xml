@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans >
+
+    <bean id="fooBean_0" class="FooClass1">
+        <property name="dependency0" ref="fooBean_0"/>
+        <property name="dependency41" ref="fooBean_41"/>
+        <property name="dependency85" ref="fooBean_85"/>
+        <property name="dependency87" ref="fooBean_87"/>
+    </bean>
+    <bean id="fooBean_1" class="FooClass1">
+        <property name="dependency12" ref="fooBean_12"/>
+        <property name="dependency14" ref="fooBean_14"/>
+        <property name="dependency16" ref="fooBean_16"/>
+        <property name="dependency28" ref="fooBean_28"/>
+    </bean>
+    <bean id="fooBean_2" class="FooClass1">
+        <property name="dependency26" ref="fooBean_26"/>
+        <property name="dependency35" ref="fooBean_35"/>
+        <property name="dependency50" ref="fooBean_50"/>
+        <property name="dependency82" ref="fooBean_82"/>
+    </bean>
+    <bean id="fooBean_3" class="FooClass1">
+        <property name="dependency18" ref="fooBean_18"/>
+        <property name="dependency60" ref="fooBean_60"/>
+        <property name="dependency63" ref="fooBean_63"/>
+    </bean>
+    <bean id="fooBean_4" class="FooClass1">
+        <property name="dependency45" ref="fooBean_45"/>
+    </bean>
+    <bean id="fooBean_5" class="FooClass1">
+        <property name="dependency15" ref="fooBean_15"/>
+        <property name="dependency34" ref="fooBean_34"/>
+    </bean>
+    <bean id="fooBean_6" class="FooClass1">
+        <property name="dependency32" ref="fooBean_32"/>
+        <property name="dependency70" ref="fooBean_70"/>
+    </bean>
+   
+    <bean id="fooBean_8" class="FooClass1">
+        <property name="dependency48" ref="fooBean_48"/>
+        <property name="dependency72" ref="fooBean_72"/>
+        <property name="dependency78" ref="fooBean_78"/>
+    </bean>
+    <bean id="fooBean_9" class="FooClass1"/>
+    <bean id="fooBean_10" class="FooClass1">
+        <property name="dependency15" ref="fooBean_15"/>
+        <property name="dependency60" ref="fooBean_60"/>
+    </bean>
+    <bean id="fooBean_11" class="FooClass1">
+        <property name="dependency14" ref="fooBean_14"/>
+        <property name="dependency21" ref="fooBean_21"/>
+        <property name="dependency24" ref="fooBean_24"/>
+    </bean>
+    <bean id="fooBean_12" class="FooClass1">
+        <property name="dependency77" ref="fooBean_77"/>
+    </bean>
+    <bean id="fooBean_13" class="FooClass1">
+        <property name="dependency33" ref="fooBean_33"/>
+    </bean>
+    <bean id="fooBean_14" class="FooClass1"/>
+    <bean id="fooBean_15" class="FooClass1">
+        <property name="dependency34" ref="fooBean_34"/>
+        <property name="dependency98" ref="fooBean_98"/>
+    </bean>
+    <bean id="fooBean_16" class="FooClass1">
+        <property name="dependency12" ref="fooBean_12"/>
+        <property name="dependency25" ref="fooBean_25"/>
+    </bean>
+    <bean id="fooBean_17" class="FooClass1"/>
+    <bean id="fooBean_18" class="FooClass1">
+        <property name="dependency59" ref="fooBean_59"/>
+    </bean>
+    <bean id="fooBean_19" class="FooClass1">
+        <property name="dependency12" ref="fooBean_12"/>
+        <property name="dependency34" ref="fooBean_34"/>
+        <property name="dependency36" ref="fooBean_36"/>
+        <property name="dependency41" ref="fooBean_41"/>
+        <property name="dependency95" ref="fooBean_95"/>
+    </bean>
+    <bean id="fooBean_20" class="FooClass1">
+        <property name="dependency37" ref="fooBean_37"/>
+        <property name="dependency48" ref="fooBean_48"/>
+        <property name="dependency72" ref="fooBean_72"/>
+        <property name="dependency88" ref="fooBean_88"/>
+    </bean>
+    <bean id="fooBean_21" class="FooClass1">
+        <property name="dependency10" ref="fooBean_10"/>
+        <property name="dependency58" ref="fooBean_58"/>
+        <property name="dependency70" ref="fooBean_70"/>
+        <property name="dependency72" ref="fooBean_72"/>
+        <property name="dependency99" ref="fooBean_99"/>
+    </bean>
+    <bean id="fooBean_22" class="FooClass1">
+        <property name="dependency14" ref="fooBean_14"/>
+        <property name="dependency81" ref="fooBean_81"/>
+    </bean>
+    <bean id="fooBean_23" class="FooClass1">
+        <property name="dependency47" ref="fooBean_47"/>
+    </bean>
+    <bean id="fooBean_24" class="FooClass1">
+        <property name="dependency65" ref="fooBean_65"/>
+        <property name="dependency77" ref="fooBean_77"/>
+    </bean>
+    <bean id="fooBean_25" class="FooClass1">
+        <property name="dependency4" ref="fooBean_4"/>
+        <property name="dependency6" ref="fooBean_6"/>
+        <property name="dependency23" ref="fooBean_23"/>
+        <property name="dependency49" ref="fooBean_49"/>
+        <property name="dependency75" ref="fooBean_75"/>
+        <property name="dependency87" ref="fooBean_87"/>
+        <property name="dependency98" ref="fooBean_98"/>
+    </bean>
+    <bean id="fooBean_26" class="FooClass1">
+        <property name="dependency27" ref="fooBean_27"/>
+        <property name="dependency84" ref="fooBean_84"/>
+    </bean>
+    <bean id="fooBean_27" class="FooClass1">
+        <property name="dependency4" ref="fooBean_4"/>
+        <property name="dependency43" ref="fooBean_43"/>
+        <property name="dependency44" ref="fooBean_44"/>
+        <property name="dependency54" ref="fooBean_54"/>
+        <property name="dependency60" ref="fooBean_60"/>
+    </bean>
+    <bean id="fooBean_28" class="FooClass1">
+        <property name="dependency71" ref="fooBean_71"/>
+        <property name="dependency81" ref="fooBean_81"/>
+    </bean>
+    <bean id="fooBean_29" class="FooClass1">
+        <property name="dependency71" ref="fooBean_71"/>
+    </bean>
+    <bean id="fooBean_30" class="FooClass1">
+        <property name="dependency86" ref="fooBean_86"/>
+    </bean>
+    <bean id="fooBean_31" class="FooClass1">
+        <property name="dependency53" ref="fooBean_53"/>
+    </bean>
+    <bean id="fooBean_32" class="FooClass1">
+        <property name="dependency52" ref="fooBean_52"/>
+        <property name="dependency87" ref="fooBean_87"/>
+    </bean>
+    <bean id="fooBean_33" class="FooClass1">
+        <property name="dependency27" ref="fooBean_27"/>
+        <property name="dependency32" ref="fooBean_32"/>
+        <property name="dependency76" ref="fooBean_76"/>
+    </bean>
+    <bean id="fooBean_34" class="FooClass1">
+        <property name="dependency29" ref="fooBean_29"/>
+        <property name="dependency36" ref="fooBean_36"/>
+        <property name="dependency75" ref="fooBean_75"/>
+        <property name="dependency99" ref="fooBean_99"/>
+    </bean>
+    <bean id="fooBean_35" class="FooClass1">
+        <property name="dependency22" ref="fooBean_22"/>
+        <property name="dependency87" ref="fooBean_87"/>
+    </bean>
+    <bean id="fooBean_36" class="FooClass1">
+        <property name="dependency32" ref="fooBean_32"/>
+        <property name="dependency54" ref="fooBean_54"/>
+        <property name="dependency57" ref="fooBean_57"/>
+        <property name="dependency86" ref="fooBean_86"/>
+    </bean>
+    <bean id="fooBean_37" class="FooClass1">
+        <property name="dependency4" ref="fooBean_4"/>
+        <property name="dependency43" ref="fooBean_43"/>
+        <property name="dependency69" ref="fooBean_69"/>
+    </bean>
+    <bean id="fooBean_38" class="FooClass1">
+        <property name="dependency23" ref="fooBean_23"/>
+        <property name="dependency67" ref="fooBean_67"/>
+        <property name="dependency79" ref="fooBean_79"/>
+    </bean>
+    <bean id="fooBean_39" class="FooClass1">
+        <property name="dependency18" ref="fooBean_18"/>
+        <property name="dependency29" ref="fooBean_29"/>
+        <property name="dependency33" ref="fooBean_33"/>
+        <property name="dependency76" ref="fooBean_76"/>
+    </bean>
+    <bean id="fooBean_40" class="FooClass1">
+        <property name="dependency34" ref="fooBean_34"/>
+        <property name="dependency40" ref="fooBean_40"/>
+        <property name="dependency59" ref="fooBean_59"/>
+        <property name="dependency66" ref="fooBean_66"/>
+    </bean>
+    <bean id="fooBean_41" class="FooClass1">
+        <property name="dependency15" ref="fooBean_15"/>
+        <property name="dependency40" ref="fooBean_40"/>
+        <property name="dependency87" ref="fooBean_87"/>
+    </bean>
+    <bean id="fooBean_42" class="FooClass1">
+        <property name="dependency61" ref="fooBean_61"/>
+        <property name="dependency74" ref="fooBean_74"/>
+        <property name="dependency90" ref="fooBean_90"/>
+    </bean>
+    <bean id="fooBean_43" class="FooClass1">
+        <property name="dependency3" ref="fooBean_3"/>
+        <property name="dependency21" ref="fooBean_21"/>
+        <property name="dependency39" ref="fooBean_39"/>
+        <property name="dependency44" ref="fooBean_44"/>
+        <property name="dependency97" ref="fooBean_97"/>
+    </bean>
+    <bean id="fooBean_44" class="FooClass1">
+        <property name="dependency92" ref="fooBean_92"/>
+    </bean>
+    <bean id="fooBean_45" class="FooClass1">
+        <property name="dependency3" ref="fooBean_3"/>
+        <property name="dependency14" ref="fooBean_14"/>
+    </bean>
+    <bean id="fooBean_46" class="FooClass1">
+        <property name="dependency83" ref="fooBean_83"/>
+    </bean>
+    <bean id="fooBean_47" class="FooClass1">
+        <property name="dependency27" ref="fooBean_27"/>
+        <property name="dependency28" ref="fooBean_28"/>
+        <property name="dependency90" ref="fooBean_90"/>
+        <property name="dependency99" ref="fooBean_99"/>
+    </bean>
+    <bean id="fooBean_48" class="FooClass1">
+        <property name="dependency36" ref="fooBean_36"/>
+        <property name="dependency45" ref="fooBean_45"/>
+        <property name="dependency48" ref="fooBean_48"/>
+        <property name="dependency87" ref="fooBean_87"/>
+        <property name="dependency92" ref="fooBean_92"/>
+    </bean>
+    <bean id="fooBean_49" class="FooClass1">
+        <property name="dependency87" ref="fooBean_87"/>
+        <property name="dependency89" ref="fooBean_89"/>
+    </bean>
+    <bean id="fooBean_50" class="FooClass1">
+        <property name="dependency7" ref="fooBean_7"/>
+        <property name="dependency95" ref="fooBean_95"/>
+    </bean>
+    <bean id="fooBean_51" class="FooClass1">
+        <property name="dependency40" ref="fooBean_40"/>
+        <property name="dependency53" ref="fooBean_53"/>
+    </bean>
+    <bean id="fooBean_52" class="FooClass1">
+        <property name="dependency63" ref="fooBean_63"/>
+    </bean>
+    <bean id="fooBean_53" class="FooClass1">
+        <property name="dependency10" ref="fooBean_10"/>
+        <property name="dependency39" ref="fooBean_39"/>
+        <property name="dependency68" ref="fooBean_68"/>
+        <property name="dependency78" ref="fooBean_78"/>
+    </bean>
+    <bean id="fooBean_54" class="FooClass1">
+        <property name="dependency32" ref="fooBean_32"/>
+        <property name="dependency39" ref="fooBean_39"/>
+        <property name="dependency48" ref="fooBean_48"/>
+        <property name="dependency51" ref="fooBean_51"/>
+        <property name="dependency99" ref="fooBean_99"/>
+    </bean>
+    <bean id="fooBean_55" class="FooClass1">
+        <property name="dependency26" ref="fooBean_26"/>
+        <property name="dependency38" ref="fooBean_38"/>
+        <property name="dependency53" ref="fooBean_53"/>
+        <property name="dependency54" ref="fooBean_54"/>
+    </bean>
+    <bean id="fooBean_56" class="FooClass1">
+        <property name="dependency35" ref="fooBean_35"/>
+        <property name="dependency36" ref="fooBean_36"/>
+        <property name="dependency41" ref="fooBean_41"/>
+        <property name="dependency76" ref="fooBean_76"/>
+        <property name="dependency82" ref="fooBean_82"/>
+        <property name="dependency93" ref="fooBean_93"/>
+    </bean>
+    <bean id="fooBean_57" class="FooClass1"/>
+    <bean id="fooBean_58" class="FooClass1"/>
+    <bean id="fooBean_59" class="FooClass1">
+        <property name="dependency3" ref="fooBean_3"/>
+        <property name="dependency22" ref="fooBean_22"/>
+        <property name="dependency53" ref="fooBean_53"/>
+    </bean>
+    <bean id="fooBean_60" class="FooClass1"/>
+    <bean id="fooBean_61" class="FooClass1">
+        <property name="dependency31" ref="fooBean_31"/>
+    </bean>
+    <bean id="fooBean_62" class="FooClass1">
+        <property name="dependency27" ref="fooBean_27"/>
+        <property name="dependency54" ref="fooBean_54"/>
+    </bean>
+    <bean id="fooBean_63" class="FooClass1">
+        <property name="dependency7" ref="fooBean_7"/>
+        <property name="dependency70" ref="fooBean_70"/>
+        <property name="dependency89" ref="fooBean_89"/>
+    </bean>
+    <bean id="fooBean_64" class="FooClass1">
+        <property name="dependency21" ref="fooBean_21"/>
+    </bean>
+    <bean id="fooBean_65" class="FooClass1"/>
+    <bean id="fooBean_66" class="FooClass1">
+        <property name="dependency3" ref="fooBean_3"/>
+        <property name="dependency55" ref="fooBean_55"/>
+    </bean>
+    <bean id="fooBean_67" class="FooClass1">
+        <property name="dependency30" ref="fooBean_30"/>
+        <property name="dependency50" ref="fooBean_50"/>
+        <property name="dependency51" ref="fooBean_51"/>
+        <property name="dependency67" ref="fooBean_67"/>
+    </bean>
+    <bean id="fooBean_68" class="FooClass1">
+        <property name="dependency61" ref="fooBean_61"/>
+    </bean>
+    <bean id="fooBean_69" class="FooClass1">
+        <property name="dependency2" ref="fooBean_2"/>
+        <property name="dependency74" ref="fooBean_74"/>
+        <property name="dependency79" ref="fooBean_79"/>
+        <property name="dependency95" ref="fooBean_95"/>
+    </bean>
+    <bean id="fooBean_70" class="FooClass1"/>
+    <bean id="fooBean_71" class="FooClass1">
+        <property name="dependency62" ref="fooBean_62"/>
+        <property name="dependency74" ref="fooBean_74"/>
+        <property name="dependency75" ref="fooBean_75"/>
+        <property name="dependency90" ref="fooBean_90"/>
+    </bean>
+    <bean id="fooBean_72" class="FooClass1">
+        <property name="dependency28" ref="fooBean_28"/>
+        <property name="dependency66" ref="fooBean_66"/>
+        <property name="dependency72" ref="fooBean_72"/>
+    </bean>
+    <bean id="fooBean_73" class="FooClass1">
+        <property name="dependency5" ref="fooBean_5"/>
+        <property name="dependency10" ref="fooBean_10"/>
+        <property name="dependency17" ref="fooBean_17"/>
+    </bean>
+    <bean id="fooBean_74" class="FooClass1">
+        <property name="dependency10" ref="fooBean_10"/>
+        <property name="dependency37" ref="fooBean_37"/>
+        <property name="dependency51" ref="fooBean_51"/>
+        <property name="dependency59" ref="fooBean_59"/>
+        <property name="dependency98" ref="fooBean_98"/>
+    </bean>
+    <bean id="fooBean_75" class="FooClass1">
+        <property name="dependency97" ref="fooBean_97"/>
+    </bean>
+    <bean id="fooBean_76" class="FooClass1">
+        <property name="dependency93" ref="fooBean_93"/>
+    </bean>
+    <bean id="fooBean_77" class="FooClass1">
+        <property name="dependency6" ref="fooBean_6"/>
+        <property name="dependency49" ref="fooBean_49"/>
+        <property name="dependency84" ref="fooBean_84"/>
+        <property name="dependency85" ref="fooBean_85"/>
+    </bean>
+    <bean id="fooBean_78" class="FooClass1">
+        <property name="dependency33" ref="fooBean_33"/>
+    </bean>
+    <bean id="fooBean_79" class="FooClass1">
+        <property name="dependency16" ref="fooBean_16"/>
+        <property name="dependency31" ref="fooBean_31"/>
+        <property name="dependency97" ref="fooBean_97"/>
+    </bean>
+    <bean id="fooBean_80" class="FooClass1">
+        <property name="dependency80" ref="fooBean_80"/>
+        <property name="dependency86" ref="fooBean_86"/>
+    </bean>
+    <bean id="fooBean_81" class="FooClass1">
+        <property name="dependency53" ref="fooBean_53"/>
+    </bean>
+    <bean id="fooBean_82" class="FooClass1">
+        <property name="dependency66" ref="fooBean_66"/>
+    </bean>
+    <bean id="fooBean_83" class="FooClass1">
+        <property name="dependency18" ref="fooBean_18"/>
+        <property name="dependency34" ref="fooBean_34"/>
+    </bean>
+    <bean id="fooBean_84" class="FooClass1">
+        <property name="dependency28" ref="fooBean_28"/>
+        <property name="dependency45" ref="fooBean_45"/>
+        <property name="dependency59" ref="fooBean_59"/>
+        <property name="dependency83" ref="fooBean_83"/>
+    </bean>
+    <bean id="fooBean_85" class="FooClass1">
+        <property name="dependency2" ref="fooBean_2"/>
+        <property name="dependency3" ref="fooBean_3"/>
+        <property name="dependency18" ref="fooBean_18"/>
+        <property name="dependency38" ref="fooBean_38"/>
+        <property name="dependency86" ref="fooBean_86"/>
+        <property name="dependency91" ref="fooBean_91"/>
+    </bean>
+    <bean id="fooBean_86" class="FooClass1">
+        <property name="dependency87" ref="fooBean_87"/>
+    </bean>
+    <bean id="fooBean_87" class="FooClass1">
+        <property name="dependency2" ref="fooBean_2"/>
+        <property name="dependency13" ref="fooBean_13"/>
+        <property name="dependency19" ref="fooBean_19"/>
+    </bean>
+    <bean id="fooBean_88" class="FooClass1">
+        <property name="dependency15" ref="fooBean_15"/>
+    </bean>
+    <bean id="fooBean_89" class="FooClass1">
+        <property name="dependency8" ref="fooBean_8"/>
+        <property name="dependency50" ref="fooBean_50"/>
+    </bean>
+    <bean id="fooBean_90" class="FooClass1">
+        <property name="dependency24" ref="fooBean_24"/>
+        <property name="dependency39" ref="fooBean_39"/>
+        <property name="dependency58" ref="fooBean_58"/>
+        <property name="dependency69" ref="fooBean_69"/>
+        <property name="dependency92" ref="fooBean_92"/>
+        
+        <property name="dependency98" ref="fooBean_98"/>
+    </bean>
+    <bean id="fooBean_91" class="FooClass1">
+        <property name="dependency82" ref="fooBean_82"/>
+    </bean>
+    <bean id="fooBean_92" class="FooClass1">
+        <property name="dependency75" ref="fooBean_75"/>
+    </bean>
+    <bean id="fooBean_93" class="FooClass1">
+        <property name="dependency34" ref="fooBean_34"/>
+        <property name="dependency39" ref="fooBean_39"/>
+        <property name="dependency85" ref="fooBean_85"/>
+    </bean>
+    <bean id="fooBean_94" class="FooClass1">
+        <property name="dependency44" ref="fooBean_44"/>
+        <property name="dependency59" ref="fooBean_59"/>
+        <property name="dependency65" ref="fooBean_65"/>
+    </bean>
+    <bean id="fooBean_95" class="FooClass1">
+        <property name="dependency22" ref="fooBean_22"/>
+        <property name="dependency89" ref="fooBean_89"/>
+    </bean>
+    <bean id="fooBean_96" class="FooClass1">
+        <property name="dependency92" ref="fooBean_92"/>
+    </bean>
+    <bean id="fooBean_97" class="FooClass1">
+        <property name="dependency11" ref="fooBean_11"/>
+        <property name="dependency19" ref="fooBean_19"/>
+        <property name="dependency74" ref="fooBean_74"/>
+    </bean>
+    <bean id="fooBean_98" class="FooClass1">
+        <property name="dependency60" ref="fooBean_60"/>
+        <property name="dependency90" ref="fooBean_90"/>
+    </bean>
+    <bean id="fooBean_99" class="FooClass1">
+        <property name="dependency13" ref="fooBean_13"/>
+        <property name="dependency81" ref="fooBean_81"/>
+    </bean>
+</beans>

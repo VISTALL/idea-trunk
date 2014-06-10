@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/mvc-testdata" />
+    <content url="file://$MODULE_DIR$/mvc-tests">
+      <sourceFolder url="file://$MODULE_DIR$/mvc-tests" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="groovy-mvc" />
+    <orderEntry type="module" module-name="jetgroovy-tests" />
+    <orderEntry type="module" module-name="testFramework-java" />
+    <orderEntry type="module" module-name="jetgroovy" />
+    <orderEntry type="module" module-name="spring-web" />
+    <orderEntry type="module" module-name="idea" />
+    <orderEntry type="module" module-name="xml" />
+    <orderEntry type="library" name="Groovy" level="project" />
+  </component>
+</module>
+

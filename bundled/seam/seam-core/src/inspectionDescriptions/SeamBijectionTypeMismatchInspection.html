@@ -1,0 +1,15 @@
+<html>
+<body>
+<table><tr><td valign="top" height="150">
+    <font face="verdana" size="-1">
+        This inspection reports JBoss Seam Dependency Bijection annotations where the type of the bijected property (field or accessor parameter)
+        does not match the type of the context variable.<br>
+        Example code:
+        <pre>
+            @In("loggedInUser")
+            private User user;</pre>
+        The inspection shows a warning if the context variable "loggedInUser" is not assignment compatible to class User (i.e. it must be of class "User" or a subclass).<br>
+    </font></td></tr>
+</table>
+</body>
+</html>

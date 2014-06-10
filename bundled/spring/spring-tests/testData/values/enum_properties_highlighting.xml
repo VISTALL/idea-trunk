@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="e1" class="BeanWithEnumProperty">
+    <property name="enumClass" value="BBB"/>
+    <property name="map">
+      <map>
+        <entry key="BBB" value="false"/>
+      </map>
+    </property>
+    <property name="list">
+      <list>
+        <value>AAA</value>
+        <value>CCC</value>
+        <value>BBB</value>
+      </list>
+    </property>
+  </bean>
+  <bean id="e2" class="BeanWithEnumProperty">
+    <property name="enumClass" value="<error>unknown_1</error>"/>
+    <property name="map">
+      <map>
+        <entry key="<error>UNKNOWN</error>" value="false"/>
+      </map>
+    </property>
+    <property name="list">
+      <list>
+        <value>
+          <error>UNKNOWN</error>
+        </value>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="e3" class="BeanWithEnumProperty">
+    <property name="enumClassFields" value="YES"/>
+  </bean>
+  <bean id="e4" class="BeanWithEnumProperty">
+    <property name="enumClassFields" value="UNKNOWN"/>
+  </bean>
+  <bean id="e5" class="BeanWithEnumProperty">
+    <property name="enumClassFields" value="ENUM_CLASS_4"/>
+  </bean>
+
+</beans>

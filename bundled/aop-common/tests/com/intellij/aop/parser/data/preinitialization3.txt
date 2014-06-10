@@ -1,0 +1,9 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiInitializationPointcutExpression
+    PsiElement(AOP_PREINITIALIZATION)('preinitialization')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopConstructorReferenceExpression
+      PsiErrorElement:Constructor pattern expected
+        <empty list>

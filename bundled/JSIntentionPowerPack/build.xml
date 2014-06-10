@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<project name="JSIntentionPowerPack"
+         default="deploy"
+         basedir=".">
+    <property name="src.dir"         value="src" />
+    <property name="classes.dir"     value="classes" />
+    <property name="description.dir" value="intentionDescriptions" />
+    <property name="meta-inf.dir"    value="META-INF" />
+    <property name="jar.dir"         value="${idea.system.path}/lib" />
+    <property name="deploy.dir"      value="${idea.system.path}/plugin-sandbox/plugins" />
+
+    <!-- Removes all the compiled Java classes -->
+    <target name="clean"
+            description="Empties the classes directory">
+        <delete dir="${classes.dir}" />
+        <delete>
+            <fileset dir=".">
+                <include name="${ant.project.name}.jar"/>
+                <include name="resources*.jar"/>
+                <include name="${ant.project.name}_src.zip" />
+                <include name="${ant.project.name}_plugin.zip" />
+            </fileset>
+        </delete>
+    </target>
+
+    <!-- Class directory building -->
+    <target name="init"
+            description="Creates building directory">
+        <mkdir dir="${classes.dir}" />
+    </target>
+
+    <!-- Compile plug-in classes -->
+    <target name="compile"
+            description="Compiles the classes"
+            depends="init">
+        <javac destdir="${classes.dir}"
+               deprecation="on"
+               debug="on">
+            <src path="${src.dir}"/>
+            <include name="org/**"/>
+            <classpath>
+                <fileset dir="${jar.dir}">
+                    <include name="*.jar" />
+                </fileset>
+                <fileset dir="${jar.dir}\..\plugins\JavascriptLanguage\lib">
+                    <include name="*.jar" />
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Creates the Jar file -->
+    <target name="jar"
+            description="Builds the plug-in JAR file"
+            depends="compile">
+        <jar destfile="${ant.project.name}.jar">
+            <fileset dir="classes">
+                <include name="**/*"/>
+                <exclude name="${description.dir}/**/*.html"/>
+                <exclude name="**/*.properties"/>
+            </fileset>
+            <fileset dir="${src.dir}">
+                <include name="${meta-inf.dir}/*.*" />
+            </fileset>
+        </jar>
+        <jar destfile="resources.jar">
+            <fileset dir="${src.dir}">
+                <include name="${description.dir}/**/*" />
+                <include name="**/*Bundle.properties" />
+                <include name="${meta-inf.dir}/*.MF" />
+            </fileset>
+        </jar>
+        <jar destfile="resources_fr.jar">
+            <fileset dir="${src.dir}">
+                <include name="**/*Bundle_fr.properties" />
+                <include name="${meta-inf.dir}/*.MF" />
+            </fileset>
+        </jar>
+    </target>
+
+    <!-- Zips the plug-in source -->
+    <target name="zip-src"
+            description="Zips the IDEA plug-in sources">
+        <zip destfile="${ant.project.name}_src.zip">
+            <fileset dir=".">
+                <include name="build.xml"/>
+                <include name="${ant.project.name}.iml"/>
+                <include name="${ant.project.name}.ipr"/>
+                <include name="${src.dir}/**/*"/>
+            </fileset>
+        </zip>
+    </target>
+
+    <!-- Packages the whole plug-in (libraries and sources) and
+         deploys the Jar files to the plug-in test sandbox of IDEA -->
+    <target name="deploy"
+            description="Builds, packages and deploys the IDEA plugin"
+            depends="jar, zip-src">
+        <copy todir="${deploy.dir}/${ant.project.name}/lib">
+            <fileset dir=".">
+                <include name="${ant.project.name}.jar"/>
+                <include name="resources*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy.dir}/${ant.project.name}/src" file="${ant.project.name}_src.zip"/>
+        <zip destfile="${ant.project.name}_plugin.zip">
+            <fileset dir="${deploy.dir}">
+                <include name="${ant.project.name}/**/*"/>
+            </fileset>
+        </zip>
+    </target>
+
+    <target name="clean-and-deploy"
+            description="Cleans, rebuilds and deploys the IDEA plugin"
+            depends="clean, deploy"/>
+</project>

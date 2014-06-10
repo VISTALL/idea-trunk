@@ -1,0 +1,77 @@
+case class Some(x: Int){}
+object main{
+  val Some(x): Int
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      PsiElement(case)('case')
+    PsiWhiteSpace(' ')
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('Some')
+    PrimaryConstructor
+      AnnotationsList
+        <empty list>
+      Parameters
+        ParametersClause
+          PsiElement(()('(')
+          ClassParameter
+            AnnotationsList
+              <empty list>
+            Modifiers
+              <empty list>
+            PsiElement(identifier)('x')
+            PsiElement(:)(':')
+            PsiWhiteSpace(' ')
+            ParameterType
+              SimpleTypeElement
+                CodeReferenceElement
+                  PsiElement(identifier)('Int')
+          PsiElement())(')')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiElement(})('}')
+  PsiElement(newline)('\n')
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('main')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScValueDeclaration
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(val)('val')
+          PsiWhiteSpace(' ')
+          ListOfIdentifiers
+            Field identifier
+              PsiElement(identifier)('Some')
+          PsiErrorElement:Wrong value declaration
+            <empty list>
+        PsiElement(()('(')
+        ReferenceExpression
+          PsiElement(identifier)('x')
+        PsiErrorElement:';' or newline expected
+          <empty list>
+        PsiElement())(')')
+        PsiErrorElement:Definition or declaration expected
+          <empty list>
+        PsiElement(:)(':')
+        PsiWhiteSpace(' ')
+        ReferenceExpression
+          PsiElement(identifier)('Int')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

@@ -1,0 +1,3 @@
+Product.findByDateEq<caret>
+-----
+findByDateEqual

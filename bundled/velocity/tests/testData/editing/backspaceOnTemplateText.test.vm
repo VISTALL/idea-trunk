@@ -1,0 +1,3 @@
+#if($obj)
+${<caret>}
+#end

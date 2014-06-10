@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="foo" class="BeanWithOneProperty">
+     <property name="prop" ref="unknown_StringBean" />
+  </bean>
+
+  <bean id="foo2" class="ListBean">
+     <property name="list" ref="unknown_ListBean"  />
+  </bean>
+
+  <bean id="<caret>" class="java.lang.String"/>
+</beans>

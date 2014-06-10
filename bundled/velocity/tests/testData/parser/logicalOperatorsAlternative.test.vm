@@ -1,0 +1,1 @@
+#set($test1 = ((2 eq 2 or 2 ne 2) and (2 le 2) and 2 ge 2) or 2 gt 2 or (2 lt 2 and not 2))

@@ -1,0 +1,46 @@
+
+Configuration:
+    Like inspections, metrics runs are configured by specifying a scope,
+specifiying the files to run metrics on, and a profile, specifying which metrics should be
+calculated and how.  For 0.8, MetricsReloaded was rewritten to use Demetra-standard
+analysis scopes, and the process of running metrics repackaged as a BaseAnalysisAction,
+providing easy access to all of the same scope specification functionality as the batch
+inspection process does.   Metrics profile specifications are stored in files in the
+IDEA configuration dir, and are accessible via ExportableApplicationComponent, which should
+make it fairly easy to transfer profile configurations to the build server in a reasonably
+generic way, via export/import.
+
+I'm assuming there needs to be support, either on the web or in idea, for selecting profiles
+and scopes for build server runs.  If this code already exists for inspections, I'll certainly
+follow your design choices.
+
+Configuration for class cycle analysis and package cycle analysis is just a boolean
+or two, so there's been a lot less need to build the sort of infrastructure that we have
+for inspections or metrics.
+
+Execution:
+   Both metrics and cycle analysis are available as command-line IDEA ApplicationStarter,
+outputting their results as XML files. I'm assuming this mechanism will be used for
+execution on the build server, in a cut-down "headless" version of IDEA. If you're looking at
+some other way of executing, just give me an interface and I'll happily hook into it.
+
+Results fetch:
+   Since you're running the build server under Tomcat, the easiest way to get build server
+metrics and cycle results to IDEA is just via HTTP.  Set up a standard directory on the
+build server where metrics and cycle results will be stored, and some standard keying mechanism
+(build number?  something else for private builds?), and API for me to fetch the build server
+location, and I can get the results from the build server to IDEA.   What UI are you thinking of for
+requesting results from the build server?  I'll follow whatever you're planning for inspections.
+
+Results display:
+   Code already exists for viewing offline metrics results, and will soon exist for viewing
+offline cycle analysis results.  It should be no trouble adapting this to view results from the
+build-server.
+
+HTML Output rendering:
+   The top-level outputs of metrics and cycle analysis are just tables, so it should be
+pretty easy to come up with simple HTML results displays, possibly even with just a style
+ sheet.  I'll need to see your graphics people's visions if I'm to give the output displays a consistent look-and-feel with inspections/
+coverage/duplicates output.  Secondary displays (pie charts, histograms, cycle graphs)
+in HTML are going to have to be deferred until past the Demetra release, although I'd certainly love to
+see them done going forward.

@@ -1,0 +1,24 @@
+<root>
+  <libraries>
+     <lib framework-id="hibernate" jar-name="hibernate.jar" version="3.0." download-url="http://repo1.maven.org/maven2/org/hibernate/hibernate/3.0/hibernate-3.0.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.hibernate.SessionFactory"/>
+
+    <lib framework-id="webflow" jar-name="spring-webflow.jar" version="2.0." download-url="http://download.jetbrains.com/idea/j2ee_libs/spring/webflow/spring-webflow.jar" presentation-url="http://download.jetbrains.com" required-classes="org.springframework.webflow.definition.registry.FlowDefinitionRegistry"/>
+    <lib framework-id="webflow" jar-name="spring-webflow-faces.jar" version="2.0." download-url="http://download.jetbrains.com/idea/j2ee_libs/spring/webflow/spring-webflow-faces.jar" presentation-url="http://download.jetbrains.com" required-classes="org.springframework.faces.webflow.FlowFacesContext"/>
+    <lib framework-id="webflow" jar-name="spring-webflow-js.jar" version="2.0." download-url="http://download.jetbrains.com/idea/j2ee_libs/spring/webflow/spring-webflow-js.jar" presentation-url="http://download.jetbrains.com" required-classes="org.springframework.js.resource.ResourceServlet"/>
+    <lib framework-id="webflow" jar-name="spring-webflow-binding.jar" version="2.0." download-url="http://download.jetbrains.com/idea/j2ee_libs/spring/webflow/spring-webflow-binding.jar" presentation-url="http://download.jetbrains.com" required-classes="org.springframework.binding.expression.ParserContext"/>
+
+    <lib framework-id="jpa" jar-name="persistence.jar" version="1.0." download-url="http://repo2.maven.org/maven2/javax/persistence/persistence-api/1.0/persistence-api-1.0.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="javax.persistence.EntityManager"/>
+    <lib framework-id="jpa" jar-name="spring-jpa.jar" version="2.0.5." download-url="http://repo1.maven.org/maven2/org/springframework/spring-jpa/2.0.5/spring-jpa-2.0.5.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.springframework.orm.jpa.LocalEntityManagerFactoryBean"/>
+
+    <lib framework-id="jdo" jar-name="jpox.jar" version="1.1.7." download-url="http://www.jpox.org/downloads/maven/jpox/jars/jpox-1.1.7.jar" presentation-url="maven" required-classes="org.jpox.PersistenceManagerFactoryImpl"/>
+    <lib framework-id="jdo" jar-name="spring-jdo.jar" version="2.0.5." download-url="http://repo1.maven.org/maven2/org/springframework/spring-jdo/2.0.5/spring-jdo-2.0.5.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean"/>
+    <lib framework-id="jdo" jar-name="jdo-api.jar" version="2.0." download-url="http://repo1.maven.org/maven2/javax/jdo/jdo2-api/2.0/jdo2-api-2.0.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="javax.jdo.PersistenceManagerFactory"/>
+
+    <lib framework-id="toplink" jar-name="spring-toplink.jar" version="2.0.5." download-url="http://repo1.maven.org/maven2/org/springframework/spring-toplink/2.0.5/spring-toplink-2.0.5.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.springframework.orm.toplink.LocalSessionFactoryBean"/>
+
+    <lib framework-id="ibatis" jar-name="spring-ibatis.jar" version="2.0.5." download-url="http://repo1.maven.org/maven2/org/springframework/spring-ibatis/2.0.5/spring-ibatis-2.0.5.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.springframework.orm.ibatis.SqlMapClientFactoryBean"/>
+
+    <lib framework-id="quartz" jar-name="spring-support.jar" version="2.0.5." download-url="http://repo1.maven.org/maven2/org/springframework/spring-support/2.0.5/spring-support-2.0.5.jar" presentation-url="http://repo1.maven.org/maven2" required-classes="org.springframework.scheduling.quartz.JobDetailBean"/>
+    <lib framework-id="quartz" jar-name="quartz.jar" version="1.6.0." required-classes="org.quartz.JobDetail"/>
+  </libraries>
+</root>

@@ -1,0 +1,3 @@
+<cfscript>
+  var a;
+</cfscript>

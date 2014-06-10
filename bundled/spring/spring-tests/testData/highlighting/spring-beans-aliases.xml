@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="test_bean_id" />
+
+  <bean name="test_alias" />
+  <bean name="test1,test2,test3"/>
+
+  <alias name="test_alias" alias="aliasName_1" />
+  <alias name="test2" alias="aliasName_2" />
+  <alias name="aliasName_1" alias="aliasName_3" />
+  <alias name="aliasName_3" alias="aliasName_222" />
+
+  <alias name="<error>unknown</error>" alias="aliasName_4" />
+
+</beans>

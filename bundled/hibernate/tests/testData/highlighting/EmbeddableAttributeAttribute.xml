@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="bar.User">
+    <query name="someName">
+      from User order by embeddable.date<!--, embedded.date, smth.date-->
+    </query>
+  </class>
+</hibernate-mapping>

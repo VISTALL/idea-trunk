@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <bean name="xxx" class="BeanWithMap">
+        <property name="map">
+            <map >
+                <entry key="0" value="false"/>
+                <entry key="<error>not int</error>" value="<error>not boolean</error>"/>
+                <entry key-ref="<error>not bean</error>" value-ref="<error>not bean</error>"/>
+                <entry key-ref="integer" value-ref="bool"/>
+              <entry value="false">
+                <key>
+                  <warning><value>0</value></warning>
+                </key>
+              </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean name="yyy" class="BeanWithMap">
+        <property name="objectMap">
+            <map key-type="java.lang.Integer" value-type="java.lang.Boolean">
+              <entry key="0" value="false"/>
+              <entry key="<error>not int</error>" value="<error>not boolean</error>"/>
+              <entry key-ref="<error>not bean</error>" value-ref="<error>not bean</error>"/>
+              <entry key-ref="integer" value-ref="bool"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="integer" class="java.lang.Integer">
+        <constructor-arg value=""/>
+    </bean>
+
+    <bean id="bool" class="java.lang.Boolean">
+        <constructor-arg value="false"/>
+    </bean>
+
+</beans>

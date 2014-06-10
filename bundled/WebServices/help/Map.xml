@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_2_0.dtd">
+
+<map version="1.0">
+    <mapID target="webservices" url="docs/Intro.html"/>
+    <mapID target="webservices.WorkingWithJAXB" url="docs/WorkingWithJAXB.html"/>
+    <mapID target="webservices.WorkingWithXmlBeans" url="docs/WorkingWithXmlBeans.html"/>
+    <mapID target="webservices.FAQ" url="docs/FAQ.html"/>
+
+    <mapID target="webservices.GenerateInstanceDocumentFromSchema" url="docs/GenerateInstanceDocumentFromSchema.html"/>
+    <mapID target="webservices.GenerateSchemaFromInstanceDocument" url="docs/GenerateSchemaFromInstanceDocument.html"/>
+    <mapID target="webservices.GenerateJAXBSchemasFromJava" url="docs/GenerateJAXBSchemasFromJava.html"/>
+    <mapID target="webservices.GenerateJavaFromXmlBeansSchemas" url="docs/GenerateJavaFromXmlBeansSchemas.html"/>
+    <mapID target="webservices.GenerateJavaFromJAXBSchemas" url="docs/GenerateJavaFromJAXBSchemas.html"/>
+
+    <mapID target="webservices.GenerateJavaFromWSDL" url="docs/GenerateJavaFromWSDL.html"/>
+    <mapID target="webservices.EnableWebServicesSupport" url="docs/EnableWebServicesSupport.html"/>
+    <mapID target="webservices.ShowDeployedWebServices" url="docs/ShowDeployedWebServices.html"/>
+    <mapID target="webservices.GenerateWsdlFromJava" url="docs/GenerateWsdlFromJava.html"/>
+    <mapID target="webservices.MonitorSoapMessages" url="docs/MonitorSoapMessages.html"/>
+    <mapID target="webservices.DeployWebServices" url="docs/DeployWebServices.html"/>
+    <mapID target="webservices.UndeployWebServices" url="docs/UndeployWebServices.html"/>
+    <mapID target="doc" url="images/secondary/list_shadow.gif"/>
+    <mapID target="folder" url="images/secondary/bookClosedGreen.gif"/>
+</map>

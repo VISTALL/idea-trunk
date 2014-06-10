@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>'for' loop may be replaced by 'while' loop</problem_class>
+    <description>'for' loop may be replaced by 'while' loop</description>
+  </problem>
+</problems>

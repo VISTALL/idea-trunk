@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource DataSourceSourceName="LOCAL">
+  <option name="DRIVER_CLASS" value="com.mysql.jdbc.Driver"/>
+  <option name="DATABASE_URL" value="jdbc:mysql:///testdb"/>
+  <option name="DRIVER_PATH"/>
+  <option name="DATBASE_USERNAME" value="ejb"/>
+  <option name="ENCODED_DATABASE_PASSWORD" value="dfcfdfc0dfc8"/>
+  <option name="DEFAULT_SCHEMA_NAME" value=""/>
+  <option name="TABLE_PATTERN"/>
+  <option name="NAME" value="MyDataSource"/>
+  <TABLE_DATA>
+    <option name="NAME" value="bid"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="ID"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="true"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="AMOUNT"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Double"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="12"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="DATE"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.util.Date"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="10"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="user_id"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="item_id"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="user"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="USER_ID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="user"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="USER_ID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="user"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="USER_ID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="item"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="ITEM_ID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+  </TABLE_DATA>
+  <TABLE_DATA>
+    <option name="NAME" value="item"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="ID"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="true"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="DESCRIPTION"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="cond"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="11"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="successful_bid"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="seller_id"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="bid"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="SUCCESSFUL_BID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+    <RELATIONSHIP_ELEMENT>
+      <option name="RELATION_NAME"/>
+      <option name="TARGET_TABLE" value="user"/>
+      <option name="TARGET_SCHEMA"/>
+      <option name="TARGET_CATALOG" value="testdb"/>
+      <option name="TARGET_COLUMN" value="ID"/>
+      <option name="SOURCE_COLUMN" value="SELLER_ID"/>
+      <option name="CASCADE_REMOVE" value="false"/>
+      <option name="CASCADE_UPDATE" value="false"/>
+    </RELATIONSHIP_ELEMENT>
+  </TABLE_DATA>
+  <TABLE_DATA>
+    <option name="NAME" value="protest"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="noid"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="true"/>
+      <option name="LENGTH" value="11"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="noname"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+  </TABLE_DATA>
+  <TABLE_DATA>
+    <option name="NAME" value="test"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="id"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="true"/>
+      <option name="LENGTH" value="11"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="name"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+  </TABLE_DATA>
+  <TABLE_DATA>
+    <option name="NAME" value="user"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="ID"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="true"/>
+      <option name="LENGTH" value="20"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="NAME"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="PASSWORD"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+  </TABLE_DATA>
+  <TABLE_DATA>
+    <option name="NAME" value="view"/>
+    <option name="SCHEMA" value="test"/>
+    <option name="CATALOG" value="testdb"/>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="id"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.Integer"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="11"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="false"/>
+    </FIELD_ELEMENT>
+    <FIELD_ELEMENT>
+      <option name="NAME" value="name"/>
+      <option name="JDBC_TYPE" value="1111"/>
+      <option name="TYPE" value="java.lang.String"/>
+      <option name="PRIMARY" value="false"/>
+      <option name="LENGTH" value="255"/>
+      <option name="PRECISION" value="0"/>
+      <option name="NULLABLE" value="true"/>
+    </FIELD_ELEMENT>
+  </TABLE_DATA>
+  <libraries>
+    <library>
+      <url>jar://C:/Program Files/MySQL/mysql-connector-java-5.0.0-beta/mysql-connector-java-5.0.0-beta-bin.jar!/</url>
+    </library>
+  </libraries>
+</DataSource>

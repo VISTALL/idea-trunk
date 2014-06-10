@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Nested function</problem_class>
+    <description>Nested function 'bar'</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>9</line>
+    <problem_class>Nested function</problem_class>
+    <description>Nested function</description>
+  </problem>
+</problems>

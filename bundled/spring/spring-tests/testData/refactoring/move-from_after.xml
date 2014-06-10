@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean name="x">
+    <property name="a">
+      <ref bean="s"/>
+    </property>
+    <property name="a">
+      <ref bean="s"/>
+    </property>
+    <property name="a">
+      <idref bean="s"/>
+    </property>
+    <property name="a">
+      <idref bean="s"/>
+    </property>
+  </bean>
+</beans>

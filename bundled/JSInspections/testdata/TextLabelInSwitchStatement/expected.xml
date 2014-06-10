@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Text label in 'switch' statement</problem_class>
+    <description>Text label 'case4:' in 'switch' statement #loc</description>
+  </problem>
+</problems>

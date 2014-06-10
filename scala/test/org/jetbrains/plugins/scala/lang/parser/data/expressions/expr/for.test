@@ -1,0 +1,90 @@
+class a{
+  for { i <- 1 until n
+        j <- 1 until i
+        if isPrime(i+j)
+  } yield (i, j)
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ForStatement
+          PsiElement(for)('for')
+          PsiWhiteSpace(' ')
+          PsiElement({)('{')
+          PsiWhiteSpace(' ')
+          Enumerators
+            Generator
+              ReferencePattern
+                PsiElement(identifier)('i')
+              PsiWhiteSpace(' ')
+              PsiElement(<-)('<-')
+              PsiWhiteSpace(' ')
+              InfixExpression
+                Literal
+                  PsiElement(integer)('1')
+                PsiWhiteSpace(' ')
+                ReferenceExpression
+                  PsiElement(identifier)('until')
+                PsiWhiteSpace(' ')
+                ReferenceExpression
+                  PsiElement(identifier)('n')
+            PsiElement(newline)('\n        ')
+            Generator
+              ReferencePattern
+                PsiElement(identifier)('j')
+              PsiWhiteSpace(' ')
+              PsiElement(<-)('<-')
+              PsiWhiteSpace(' ')
+              InfixExpression
+                Literal
+                  PsiElement(integer)('1')
+                PsiWhiteSpace(' ')
+                ReferenceExpression
+                  PsiElement(identifier)('until')
+                PsiWhiteSpace(' ')
+                ReferenceExpression
+                  PsiElement(identifier)('i')
+            PsiElement(newline)('\n        ')
+            Guard
+              PsiElement(if)('if')
+              PsiWhiteSpace(' ')
+              MethodCall
+                ReferenceExpression
+                  PsiElement(identifier)('isPrime')
+                ArgumentList
+                  PsiElement(()('(')
+                  InfixExpression
+                    ReferenceExpression
+                      PsiElement(identifier)('i')
+                    ReferenceExpression
+                      PsiElement(identifier)('+')
+                    ReferenceExpression
+                      PsiElement(identifier)('j')
+                  PsiElement())(')')
+          PsiWhiteSpace('\n  ')
+          PsiElement(})('}')
+          PsiWhiteSpace(' ')
+          PsiElement(yield)('yield')
+          PsiWhiteSpace(' ')
+          Tuple
+            PsiElement(()('(')
+            ReferenceExpression
+              PsiElement(identifier)('i')
+            PsiElement(,)(',')
+            PsiWhiteSpace(' ')
+            ReferenceExpression
+              PsiElement(identifier)('j')
+            PsiElement())(')')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

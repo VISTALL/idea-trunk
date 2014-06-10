@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <import resource="classpath:import.xml"/>
+  <import resource="classpath:foo/fooImport.xml"/>
+  <import resource="classpath:/import.xml"/>
+  <import resource="classpath:/foo/fooImport.xml"/>
+  <import resource="classpath:import2.xml"/>
+  <import resource="classpath:foo/fooImport2.xml"/>
+  <import resource="classpath:/import2.xml"/>
+  <import resource="classpath:/foo/fooImport2.xml"/>
+</beans>

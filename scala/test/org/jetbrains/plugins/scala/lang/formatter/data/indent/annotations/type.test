@@ -1,0 +1,7 @@
+class a {
+  var x : T @ annot   = 3
+}
+-----
+class a {
+  var x: T@annot = 3
+}

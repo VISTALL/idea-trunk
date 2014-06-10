@@ -1,0 +1,4 @@
+
+document.write();
+document.wr2ite();
+document4.write();

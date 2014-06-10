@@ -1,0 +1,90 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+    <name>CFMLSupportPlugin</name>
+    <description>
+        Cold fusion plugin provides lexical highlighting for cold fusion markup language (CFML).
+        Paired braces matching.
+        Tags, attributes variables and function names completion and quick documentation providing.
+        Closing tags insertion.
+        Structure view.
+        Functions and variables resolving within a file.
+        Syntax errors highlighting.
+        Outer html highlighting.
+        Simple preview available.
+        More documentation and information on developing progress you may find here: http://coldfusion-in-idea.blogspot.com/.
+        Features requests and bugs reports you may place here: http://www.jetbrains.net/jira/browse/CFML.
+    </description>
+    <change-notes>
+        Some exception fixed. The old version of plugin does not installautomatically on new (9) version of IDEA.
+    </change-notes>
+    <version>1.32</version>
+    <vendor email="itsmyway.leranik@gmail.com">JetBrains</vendor>
+    <resource-bundle>messages.CfmlBundle</resource-bundle>
+    <idea-version since-build="9852" until-build="9904"/>
+
+    <project-components>
+        <component>
+            <interface-class>com.intellij.coldFusion.UI.components.CfmlProjectComponent</interface-class>
+            <implementation-class>com.intellij.coldFusion.UI.components.CfmlProjectComponent</implementation-class>
+            <skipForDefaultProject/>
+            <skipForDummyProject/>
+        </component>
+    </project-components>
+
+    <application-components>
+        <component>
+            <implementation-class>com.intellij.coldFusion.UI.components.CfmlApplicationComponent</implementation-class>
+        </component>
+    </application-components>
+
+    <depends>com.intellij.sql</depends>
+    <!--<depends>com.intellij.javaee</depends>-->
+    <!--<depends>com.intellij.persistence</depends>-->
+    <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor implementation="com.intellij.coldFusion.UI.editorActions.completionProviders.CfmlReferenceContributor"/>
+        <compiler implementation="com.intellij.coldFusion.UI.compiler.CfmlCompiler"/>
+        <programRunner implementation="com.intellij.coldFusion.UI.runner.CfmlRunner"/>
+        <configurationType implementation="com.intellij.coldFusion.UI.runner.CfmlRunConfigurationType"/>
+        <!--<applicationConfigurable implementation="com.intellij.coldFusion.UI.runner.CfmlConfigurable"/>-->
+        <inspectionToolProvider implementation="com.intellij.coldFusion.UI.inspections.CfmlInspectionToolProvider"/>
+        <lang.psiStructureViewFactory language="CFML"
+                                      implementationClass="com.intellij.coldFusion.UI.editorActions.structureView.CfmlStructureViewProvider"/>
+        <lang.psiStructureViewFactory language="CFML"
+                                      implementationClass="com.intellij.coldFusion.UI.editorActions.structureView.CfmlStructureViewProvider"/>
+        <facetType implementation="com.intellij.coldFusion.UI.facet.CfmlFacetType"/>
+        <!--<fileBasedIndex implementation="com.intellij.coldFusion.model.files.CfmlFileIndex"/>-->
+        <typedHandler implementation="com.intellij.coldFusion.UI.editorActions.typedHandlers.CfmlTypedHandler"/>
+        <backspaceHandlerDelegate
+                implementation="com.intellij.coldFusion.UI.editorActions.typedHandlers.CfmlBackspaceHandler"/>
+        <lang.braceMatcher language="CFML"
+                           implementationClass="com.intellij.coldFusion.UI.editorActions.matchers.CfmlPairedBraceMatcher"/>
+        <quoteHandler fileType="CFSCRIPT"
+                      className="com.intellij.coldFusion.UI.editorActions.matchers.CfmlQuoteHandler"/>
+        <quoteHandler fileType="CFML" className="com.intellij.coldFusion.UI.editorActions.matchers.CfmlQuoteHandler"/>
+        <braceMatcher filetype="CFML"
+                      implementationClass="com.intellij.coldFusion.UI.editorActions.matchers.CfmlBraceMatcher"/>
+
+        <lang.commenter language="CFML"
+                        implementationClass="com.intellij.coldFusion.UI.editorActions.typedHandlers.CfmlCommenter"/>
+
+        <colorSettingsPage implementation="com.intellij.coldFusion.UI.highlighting.CfmlColorSettingPage"/>
+        <lang.fileViewProviderFactory language="CFML"
+                                      implementationClass="com.intellij.coldFusion.model.files.CfmlFileViewProviderFactory"/>
+        <completion.contributor language="CFML"
+                implementationClass="com.intellij.coldFusion.UI.editorActions.completionProviders.CfmlCompletionContributor"/>
+        <lang.parserDefinition language="CFML"
+                               implementationClass="com.intellij.coldFusion.model.parsers.CfmlParserDefinition"/>
+        <lang.documentationProvider language="CFML"
+                                    implementationClass="com.intellij.coldFusion.UI.editorActions.CfmlDocumentProvider"/>
+        <!--<fileTypeIndentOptionsProvider implementation="com.intellij.coldFusion.UI.editorActions.CfmlIndentOptionsProvider"/>-->
+        <fileTypeFactory implementation="com.intellij.coldFusion.model.files.CfmlFileTypeFactory"/>
+        <enterHandlerDelegate implementation="com.intellij.coldFusion.UI.editorActions.typedHandlers.CfmlEnterHandler"/>
+        <breadcrumbsInfoProvider implementation="com.intellij.coldFusion.UI.CfmlBreadcrumbsInfoProvider"/>
+        <lang.findUsagesProvider language="CFML"
+                                 implementationClass="com.intellij.coldFusion.UI.editorActions.CfmllFindUsagesProvider"/>
+        <!--
+        <definitionsSearch implementation="com.intellij.coldFusion.UI.editorActions.CfmlDefinitionsSearchExecutor"/>
+        <referencesSearch implementation="com.intellij.coldFusion.UI.editorActions.CfmlReferencesSearchExecutor"/>-->
+
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,21 @@
+@Nullable
+class a
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      Annotation
+        PsiElement(@)('@')
+        AnnotationExpression
+          Constructor
+            SimpleTypeElement
+              CodeReferenceElement
+                PsiElement(identifier)('Nullable')
+        PsiElement(newline)('\n')
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    ExtendsBlock
+      <empty list>

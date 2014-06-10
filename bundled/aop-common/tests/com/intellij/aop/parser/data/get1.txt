@@ -1,0 +1,21 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  FieldPatternPointcut
+    PsiElement(AOP_GET)('get')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      AopNotExpression
+        PsiElement(AOP_NOT)('!')
+        PsiElement(AOP_MODIFIER)('static')
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            PsiElement(AOP_IDENTIFIER)('com')
+          PsiElement(AOP_DOT_DOT)('..')
+          PsiElement(AOP_ASTERISK)('*')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('foo')
+    PsiElement(AOP_RIGHT_PAR)(')')

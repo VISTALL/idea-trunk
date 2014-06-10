@@ -1,0 +1,61 @@
+object Main{
+  var x,y : Int
+  var x : Int = _
+}
+-----
+ScalaFile
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('Main')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScVariableDeclaration
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(var)('var')
+          PsiWhiteSpace(' ')
+          ListOfIdentifiers
+            Field identifier
+              PsiElement(identifier)('x')
+            PsiElement(,)(',')
+            Field identifier
+              PsiElement(identifier)('y')
+          PsiWhiteSpace(' ')
+          PsiElement(:)(':')
+          PsiWhiteSpace(' ')
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('Int')
+        PsiElement(newline)('\n  ')
+        ScVariableDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(var)('var')
+          PsiWhiteSpace(' ')
+          ListOfPatterns
+            ReferencePattern
+              PsiElement(identifier)('x')
+          PsiWhiteSpace(' ')
+          PsiElement(:)(':')
+          PsiWhiteSpace(' ')
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('Int')
+          PsiWhiteSpace(' ')
+          PsiElement(=)('=')
+          PsiWhiteSpace(' ')
+          UnderscoreSection
+            PsiElement(_)('_')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

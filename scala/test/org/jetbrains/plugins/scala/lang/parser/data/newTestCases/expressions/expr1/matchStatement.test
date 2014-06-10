@@ -1,0 +1,69 @@
+class a {
+  a match {
+    case 1 => 2
+    case 2 => 3
+    case _ => 4
+  }
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        MatchStatement
+          ReferenceExpression
+            PsiElement(identifier)('a')
+          PsiWhiteSpace(' ')
+          PsiElement(match)('match')
+          PsiWhiteSpace(' ')
+          PsiElement({)('{')
+          PsiWhiteSpace('\n    ')
+          CaseClauses
+            CaseClause
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              LiteralPattern
+                Literal
+                  PsiElement(integer)('1')
+              PsiWhiteSpace(' ')
+              PsiElement(=>)('=>')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(integer)('2')
+            PsiWhiteSpace('\n    ')
+            CaseClause
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              LiteralPattern
+                Literal
+                  PsiElement(integer)('2')
+              PsiWhiteSpace(' ')
+              PsiElement(=>)('=>')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(integer)('3')
+            PsiWhiteSpace('\n    ')
+            CaseClause
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              WildcardPattern
+                PsiElement(_)('_')
+              PsiWhiteSpace(' ')
+              PsiElement(=>)('=>')
+              PsiWhiteSpace(' ')
+              Literal
+                PsiElement(integer)('4')
+          PsiWhiteSpace('\n  ')
+          PsiElement(})('}')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

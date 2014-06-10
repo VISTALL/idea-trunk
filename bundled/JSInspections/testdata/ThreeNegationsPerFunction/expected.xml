@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Function with more than three negations</problem_class>
+    <description>function 'foo' contains 4 negations #loc</description>
+  </problem>
+</problems>

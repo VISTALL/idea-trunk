@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="EclipseImport" default="all">
+
+  <property file="eclipse.properties"/>
+  <property name="plugins.dir" value="${eclipse.dir}"/>
+  <property name="manifest.file" value="META-INF/MANIFEST.MF"/>
+
+  <property name="version" value="1.0.0"/>
+
+  <property name="build.dir" value="build"/>
+  <property name="classes.dir" value="${build.dir}/classes"/>
+  <property name="jar.dir" value="${build.dir}/jar"/>
+  <property name="src.dir" value="src"/>
+  <property name="ico.dir" value="icons"/>
+  <property name="jar.file.name" value="ExporterToIdea.jar"/>
+  <property name="jar.file.dir"
+            value="${jar.dir}/eclipse/plugins/com.intellij.eclipse.export_${version}"/>
+  <property name="jar.file" value="${jar.file.dir}/${jar.file.name}"/>
+  <property name="dist.file.name" value="com.intellij.eclipse.export.zip"/>
+  <property name="dist.file" value="${jar.dir}/${dist.file.name}"/>
+
+  <property name="java.import.dir" value="../JavaImport"/>
+  <property name="myeclipse.import.dir" value="../MyEclipseImport"/>
+
+  <path id="eclipse.classpath">
+    <fileset dir="${plugins.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <path id="jdom.classpath">
+    <fileset dir="lib">
+      <include name="jdom.jar"/>
+    </fileset>
+  </path>
+
+  <target name="compile">
+    <delete dir="${classes.dir}"/>
+    <mkdir dir="${classes.dir}"/>
+
+    <javac srcdir="${src.dir}" destdir="${classes.dir}" fork="false" source="1.4" target="1.4">
+      <classpath refid="jdom.classpath"/>
+      <classpath refid="eclipse.classpath"/>
+    </javac>
+
+  </target>
+
+  <target name="make-jar">
+    <delete dir="${jar.dir}"/>
+    <mkdir dir="${jar.file.dir}"/>
+    <jar destfile="${jar.file}" basedir="${classes.dir}" manifest="${manifest.file}">
+    </jar>
+    <copy todir="${jar.file.dir}">
+      <fileset dir="." includes="plugin.*"/>
+      <fileset dir="." includes="icons/**/*.*"/>
+      <fileset dir="." includes="META-INF/*.*"/>
+      <fileset dir="." includes="lib/*.*"/>
+    </copy>
+  </target>
+
+  <target name="make-dist">
+    <copy todir="${jar.dir}">
+      <fileset dir="${java.import.dir}/build/jar" includes="eclipse/**/*.*"/>
+      <fileset dir="${myeclipse.import.dir}/build/jar" includes="eclipse/**/*.*"/>
+    </copy>
+
+    <zip destfile="${dist.file}">
+      <fileset dir="${jar.dir}">
+        <include name="eclipse/**/*.*"/>
+      </fileset>
+    </zip>
+  </target>
+
+  <target name="make-other-plugins">
+    <ant antfile="build.xml" dir="${java.import.dir}" inheritall="false"/>
+    <ant antfile="build.xml" dir="${myeclipse.import.dir}" inheritall="false"/>
+  </target>
+
+
+  <target name="all" depends="compile, make-jar, make-other-plugins, make-dist"/>
+</project>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.spring.security</id>
+  <name>Spring Security</name>
+
+  <description>Spring Security</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+  <depends>com.intellij.spring</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.spring.security.model.SpringSecurityApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+
+  <project-components>
+    <component>
+      <implementation-class>com.intellij.spring.security.model.SpringSecurityProjectComponent</implementation-class>
+    </component>
+  </project-components>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+    <moduleService serviceInterface="com.intellij.spring.security.model.xml.converters.roles.SpringSecurityRolesFactory"
+                   serviceImplementation="com.intellij.spring.security.model.xml.converters.roles.SpringSecurityRolesFactory" />
+
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.Beans"
+                  extenderClass="com.intellij.spring.security.model.extenders.SpringSecurityBeansDomExtender"/>
+
+    <dom.extender domClass="com.intellij.spring.model.xml.beans.SpringBean"
+                  extenderClass="com.intellij.spring.security.model.extenders.SpringSecurityBeanDomExtender"/>
+
+    <standardResourceProvider implementation="com.intellij.spring.security.model.SpringSecurityResourceProvider"/>
+    <psi.referenceContributor implementation="com.intellij.spring.security.references.SpringSecurityReferenceContributor"/>
+  </extensions>
+
+  <actions>
+    <action id="Spring.Security.Create.Context.File" class="com.intellij.spring.security.actions.CreateSpringSecurityConfigAction"
+            text="Spring Security">
+      <add-to-group anchor="last" group-id="Spring.Create.Context.Group"/>
+    </action>
+  </actions>
+</idea-plugin>

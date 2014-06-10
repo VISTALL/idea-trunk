@@ -1,0 +1,18 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiAtArgsExpression
+    PsiElement(AOP_AT_ARGS)('@args')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      AopReferenceHolder
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              AopReferenceExpression
+                PsiElement(AOP_IDENTIFIER)('com')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('xyz')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('security')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_IDENTIFIER)('Classified')
+    PsiElement(AOP_RIGHT_PAR)(')')

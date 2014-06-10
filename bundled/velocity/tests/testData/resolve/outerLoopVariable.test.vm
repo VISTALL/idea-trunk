@@ -1,0 +1,5 @@
+#foreach($loopVar in [1,6])
+#foreach($loopVar in [1,6])
+#end
+$lo<caret>opVar
+#end

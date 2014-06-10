@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Result of object allocation ignored</problem_class>
+    <description>Result of 'new String()' is ignored #loc</description>
+  </problem>
+</problems>

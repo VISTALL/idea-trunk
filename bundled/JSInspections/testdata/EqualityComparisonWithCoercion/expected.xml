@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Equality comparison which may cause unexpected coercion</problem_class>
+    <description>Comparison x == 0.0 may cause unexpected type coercion #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Equality comparison which may cause unexpected coercion</problem_class>
+    <description>Comparison null == x may cause unexpected type coercion #loc</description>
+  </problem>
+</problems>

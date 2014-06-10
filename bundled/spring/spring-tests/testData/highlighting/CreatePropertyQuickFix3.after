@@ -1,0 +1,6 @@
+public class CreatePropertyQuickFix {
+
+    public void setFoo(String foo) {
+        //To change body of created methods use File | Settings | File Templates.
+    }
+}

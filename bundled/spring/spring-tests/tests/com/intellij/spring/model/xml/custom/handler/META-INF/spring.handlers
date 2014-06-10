@@ -1,0 +1,2 @@
+foo=com.intellij.spring.model.xml.custom.handler.TestNamespaceHandler
+util=org.springframework.beans.factory.xml.UtilNamespaceHandler

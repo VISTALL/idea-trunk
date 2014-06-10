@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension-point id="ideaProjectHandler" name="Idea Project Handler for Export Wizard"
+                   schema="schema/ideaProjectHandler.exsd"/>
+  <extension
+    id="IdeaExportWizard"
+    name="IdeaExportWizard"
+    point="org.eclipse.ui.exportWizards">
+    
+    <wizard
+      icon="icons/small.gif"
+      class="com.intellij.eclipse.export.wizard.ExportToIdeaWizard"
+      name="IntelliJ IDEA Project"
+      id="com.intellij.eclipse.export">
+      	<description>Export Eclipse Workspace to IntelliJ IDEA Project</description>
+    </wizard>
+  </extension>
+
+</plugin>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="test"  parent="test2"/>
+  <bean id="test2" parent="test3"/>
+  <bean id="test3" parent="<error>unknown</error>"/>
+
+  <bean name="aa, bb, cc" parent="<error>unknown</error>"/>
+  <bean name="dd" parent="bb"/>
+
+  <alias name="cc" alias="cc_2"/>
+  <bean name="dd1" parent="cc_2"/>
+
+  <bean id="parent" class="ParentBean"/>
+  <bean id="child" parent="parent" class="ChildBean"/>
+</beans>

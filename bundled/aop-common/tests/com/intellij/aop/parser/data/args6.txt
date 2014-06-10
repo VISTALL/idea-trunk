@@ -1,0 +1,8 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiArgsExpression
+    PsiElement(AOP_ARGS)('args')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      AopReferenceHolder
+        PsiErrorElement:Method args pattern expected
+          <empty list>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="my" class="MyBean">
+        <constructor-arg>
+            <bean class="java.lang.String"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="java.lang.String"/>
+        </constructor-arg>
+        <constructor-arg>
+            <bean class="java.lang.String"/>
+        </constructor-arg>
+        <property name="s">
+            <bean class="java.lang.String"/>
+        </property>
+        <property name="s">
+            <bean class="java.lang.String"/>
+        </property>
+        <property name="s">
+            <bean class="java.lang.String"/>
+        </property>
+        <property name="s">
+            <bean class="java.lang.String"/>
+        </property>
+        <property name="set">
+            <set>
+                <bean class="java.lang.String"/>
+                <bean class="java.lang.String"/>
+                <bean class="java.lang.String"/>
+                <bean class="java.lang.String"/>
+            </set>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,5 @@
+<TEST>
+    <FOO bar="foo"><BAR/></FOO>
+    <FOO bar="<foo>"><BAR/></FOO>
+    <FOO/>
+</TEST>

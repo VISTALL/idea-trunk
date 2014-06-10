@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+  <aop:aspectj-autoproxy/>
+
+  <context:component-scan base-package="foo"/>
+
+  <!-- used aspect is explicitely defined bean: intercepted methods are found -->
+  <aop:config>
+    <aop:aspect id="a1" ref="aspect_explicit">
+      <aop:before method="b2" pointcut="within(foo..*)"/>
+    </aop:aspect>
+  </aop:config>
+  <!-- same aspect class is used, but referenced as autodetected component - navigation from advice doesn't work -->
+  <aop:config>
+    <aop:aspect id="a2" ref="aspect1">
+      <aop:after method="b2" pointcut="within(foo..*)"/>
+    </aop:aspect>
+  </aop:config>
+  <bean id="aspect_explicit" class="mycomponents.aspects.Aspect1"/>
+
+
+</beans>
+

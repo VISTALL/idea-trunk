@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="foo" class="FooBean10">
+     <property name="byte" value="<error>xxx</error>"/>
+     <property name="short" value="<error>xxx</error>"/>
+     <property name="integer" value="<error>xxx</error>"/>
+     <property name="long" value="<error>xxx</error>"/>
+     <property name="float" value="<error>xxx</error>"/>
+     <property name="double" value="<error>xxx</error>"/>
+
+     <property name="byteClass" value="<error>xxx</error>"/>
+     <property name="integerClass" value="<error>xxx</error>"/>
+     <property name="longClass" value="<error>xxx</error>"/>
+     <property name="floatClass" value="<error>xxx</error>"/>
+     <property name="doubleClass" value="<error>xxx</error>"/>
+
+    <property name="char" value="x"/>
+    <property name="char2" value="\u7654"/>
+    <property name="char3" value="<error>xx</error>"/>
+    <property name="char4" value="<error>\u123</error>"/>
+    <property name="char5" value="<error>\u12345</error>"/>
+
+    <property name="characterClass" value="x"/>
+  </bean>
+
+  <bean id="foo_2" class="FooBean10">
+     <property name="byte" value="<error>-129</error>"/>
+     <property name="integer" value="<error>-2147483649</error>"/>
+     <property name="long" value="<error>-9223372036854775809</error>"/>
+
+     <property name="byteClass" value="<error>129</error>"/>
+     <property name="integerClass" value="<error>2147483648</error>"/>
+     <property name="longClass" value="<error>9223372036854775808</error>"/>
+  </bean>
+</beans>

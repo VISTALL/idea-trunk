@@ -1,0 +1,16 @@
+TEMPLATE_TEXT ('<table>
+    ')
+#MACRO_CALL ('#')
+identifier ('tablerows')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('color')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('greatlakes')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+</table>
+')

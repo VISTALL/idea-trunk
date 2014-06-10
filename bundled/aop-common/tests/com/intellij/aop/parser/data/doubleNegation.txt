@@ -1,0 +1,15 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  AopNotExpression
+    PsiElement(AOP_NOT)('!')
+    AopNotExpression
+      PsiElement(AOP_NOT)('!')
+      PsiAtAnnotationExpression
+        PsiElement(AOP_AT_ANNOTATION)('@annotation')
+        PsiElement(AOP_LEFT_PAR)('(')
+        AopReferenceHolder
+          AopReferenceExpression
+            AopReferenceExpression
+              PsiElement(AOP_IDENTIFIER)('utils')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('MyAnno1')
+        PsiElement(AOP_RIGHT_PAR)(')')

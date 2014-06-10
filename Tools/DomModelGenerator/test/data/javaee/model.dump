@@ -1,0 +1,6973 @@
+-- nsdMap ---
+namespace key: http://www.w3.org/XML/1998/namespace
+  name     http://www.w3.org/XML/1998/namespace
+  prefix   
+  pkgName  
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/jee
+  name     http://www.springframework.org/schema/jee
+  prefix   
+  pkgName  com.intellij.spring.model.xml.jee
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: spring-beans-2.0.dtd
+  name     spring-beans-2.0.dtd
+  prefix   
+  pkgName  com.intellij.spring.model.xml
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/util
+  name     http://www.springframework.org/schema/util
+  prefix   
+  pkgName  com.intellij.spring.model.xml.util
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.w3.org/2001/XMLSchema
+namespace key: http://www.springframework.org/schema/beans
+  name     http://www.springframework.org/schema/beans
+  prefix   
+  pkgName  com.intellij.spring.model.xml.beans
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/aop
+  name     http://www.springframework.org/schema/aop
+  prefix   
+  pkgName  com.intellij.spring.model.xml.aop
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://java.sun.com/xml/ns/persistence
+  name     http://java.sun.com/xml/ns/persistence
+  prefix   
+  pkgName  com.intellij.javaee.model.xml.persistence
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: spring-beans_1.2.8.dtd
+  name     spring-beans_1.2.8.dtd
+  prefix   
+  pkgName  com.intellij.spring.model.xml
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/lang
+  name     http://www.springframework.org/schema/lang
+  prefix   
+  pkgName  com.intellij.spring.model.xml.lang
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/tool
+  name     http://www.springframework.org/schema/tool
+  prefix   
+  pkgName  com.intellij.spring.model.xml.tool
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.w3.org/2001/XMLSchema-instance
+namespace key: http://www.bea.com/ns/weblogic/90
+  name     http://www.bea.com/ns/weblogic/90
+  prefix   
+  pkgName  com.intellij.javaee.weblogic.model
+  pkgNames [weblogic-rdbms20-persistence-90.xsd, com.intellij.javaee.weblogic.model.persistence]
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: http://java.sun.com/xml/ns/persistence/orm
+  name     http://java.sun.com/xml/ns/persistence/orm
+  prefix   
+  pkgName  com.intellij.javaee.model.xml.persistence.mapping
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: hibernate-mapping-3.0.dtd
+  name     hibernate-mapping-3.0.dtd
+  prefix   
+  pkgName  com.intellij.hibernate.model.xml.mapping
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/tx
+  name     http://www.springframework.org/schema/tx
+  prefix   
+  pkgName  com.intellij.spring.model.xml.tx
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: hibernate-configuration-3.0.dtd
+  name     hibernate-configuration-3.0.dtd
+  prefix   
+  pkgName  com.intellij.hibernate.model.xml.config
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://java.sun.com/xml/ns/javaee
+  name     http://java.sun.com/xml/ns/javaee
+  prefix   
+  pkgName  com.intellij.javaee.model.xml
+  pkgNames [javaee_5.xsd, com.intellij.javaee.model.xml, ejb-jar_3_0.xsd, com.intellij.javaee.model.xml.ejb, web-app_2_5.xsd, com.intellij.javaee.model.xml.web, application_5.xsd, com.intellij.javaee.model.xml.application, application-client_5.xsd, com.intellij.javaee.model.xml.client]
+  enumPkg  com.intellij.javaee.model.enums
+  super    JavaeeDomModelElement
+namespace key: 
+  name     
+  prefix   
+  pkgName  
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+-- jtMap ---
+type key: com.intellij.javaee.model.enums.CmpVersion
+  name      CmpVersion
+  type      ENUM
+  xsName    cmp-versionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       296
+  field key: 1.x
+    name      CmpVersion_1_X
+  field key: 2.x
+    name      CmpVersion_2_X
+type key: com.intellij.javaee.model.enums.CmrFieldType
+  name      CmrFieldType
+  type      ENUM
+  xsName    cmr-field-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       330
+  field key: java.util.Collection
+    name      JAVA_UTIL_COLLECTION
+  field key: java.util.Set
+    name      JAVA_UTIL_SET
+type key: com.intellij.javaee.model.enums.Dispatcher
+  name      Dispatcher
+  type      ENUM
+  xsName    dispatcherType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       712
+  field key: ERROR
+    name      ERROR
+  field key: FORWARD
+    name      FORWARD
+  field key: INCLUDE
+    name      INCLUDE
+  field key: REQUEST
+    name      REQUEST
+type key: com.intellij.javaee.model.enums.EjbRefType
+  name      EjbRefType
+  type      ENUM
+  xsName    ejb-ref-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       282
+  field key: Entity
+    name      ENTITY
+  field key: Session
+    name      SESSION
+type key: com.intellij.javaee.model.enums.EnvEntryTypeValues
+  name      EnvEntryTypeValues
+  type      ENUM
+  xsName    env-entry-type-valuesType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       600
+  field key: java.lang.Boolean
+    name      JAVA_LANG_BOOLEAN
+  field key: java.lang.Byte
+    name      JAVA_LANG_BYTE
+  field key: java.lang.Character
+    name      JAVA_LANG_CHARACTER
+  field key: java.lang.Double
+    name      JAVA_LANG_DOUBLE
+  field key: java.lang.Float
+    name      JAVA_LANG_FLOAT
+  field key: java.lang.Integer
+    name      JAVA_LANG_INTEGER
+  field key: java.lang.Long
+    name      JAVA_LANG_LONG
+  field key: java.lang.Short
+    name      JAVA_LANG_SHORT
+  field key: java.lang.String
+    name      JAVA_LANG_STRING
+type key: com.intellij.javaee.model.enums.GenericBoolean
+  name      GenericBoolean
+  type      ENUM
+  xsName    generic-booleanType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       251
+  field key: false
+    name      FALSE
+  field key: no
+    name      NO
+  field key: true
+    name      TRUE
+  field key: yes
+    name      YES
+type key: com.intellij.javaee.model.enums.MessageDestinationUsage
+  name      MessageDestinationUsage
+  type      ENUM
+  xsName    message-destination-usageType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       580
+  field key: Consumes
+    name      CONSUMES
+  field key: ConsumesProduces
+    name      CONSUMES_PRODUCES
+  field key: Produces
+    name      PRODUCES
+type key: com.intellij.javaee.model.enums.MethodIntf
+  name      MethodIntf
+  type      ENUM
+  xsName    method-intfType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       808
+  field key: Home
+    name      HOME
+  field key: Local
+    name      LOCAL
+  field key: LocalHome
+    name      LOCAL_HOME
+  field key: Remote
+    name      REMOTE
+  field key: ServiceEndpoint
+    name      SERVICE_ENDPOINT
+type key: com.intellij.javaee.model.enums.Multiplicity
+  name      Multiplicity
+  type      ENUM
+  xsName    multiplicityType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       258
+  field key: Many
+    name      MANY
+  field key: One
+    name      ONE
+type key: com.intellij.javaee.model.enums.NullChar
+  name      NullChar
+  type      ENUM
+  xsName    null-charType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       null
+  field key: 
+    name      NullChar_
+type key: com.intellij.javaee.model.enums.PersistenceContextType
+  name      PersistenceContextType
+  type      ENUM
+  xsName    persistence-context-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       338
+  field key: Extended
+    name      EXTENDED
+  field key: Transactional
+    name      TRANSACTIONAL
+type key: com.intellij.javaee.model.enums.PersistenceType
+  name      PersistenceType
+  type      ENUM
+  xsName    persistence-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       275
+  field key: Bean
+    name      BEAN
+  field key: Container
+    name      CONTAINER
+type key: com.intellij.javaee.model.enums.ResAuth
+  name      ResAuth
+  type      ENUM
+  xsName    res-authType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       480
+  field key: Application
+    name      APPLICATION
+  field key: Container
+    name      CONTAINER
+type key: com.intellij.javaee.model.enums.ResSharingScope
+  name      ResSharingScope
+  type      ENUM
+  xsName    res-sharing-scopeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       377
+  field key: Shareable
+    name      SHAREABLE
+  field key: Unshareable
+    name      UNSHAREABLE
+type key: com.intellij.javaee.model.enums.ResultTypeMapping
+  name      ResultTypeMapping
+  type      ENUM
+  xsName    result-type-mappingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       370
+  field key: Local
+    name      LOCAL
+  field key: Remote
+    name      REMOTE
+type key: com.intellij.javaee.model.enums.SessionType
+  name      SessionType
+  type      ENUM
+  xsName    session-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       313
+  field key: Stateful
+    name      STATEFUL
+  field key: Stateless
+    name      STATELESS
+type key: com.intellij.javaee.model.enums.TransAttribute
+  name      TransAttribute
+  type      ENUM
+  xsName    trans-attributeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       403
+  field key: Mandatory
+    name      MANDATORY
+  field key: Never
+    name      NEVER
+  field key: NotSupported
+    name      NOT_SUPPORTED
+  field key: Required
+    name      REQUIRED
+  field key: RequiresNew
+    name      REQUIRES_NEW
+  field key: Supports
+    name      SUPPORTS
+type key: com.intellij.javaee.model.enums.TransactionType
+  name      TransactionType
+  type      ENUM
+  xsName    transaction-typeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       271
+  field key: Bean
+    name      BEAN
+  field key: Container
+    name      CONTAINER
+type key: com.intellij.javaee.model.enums.TransportGuarantee
+  name      TransportGuarantee
+  type      ENUM
+  xsName    transport-guaranteeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       798
+  field key: CONFIDENTIAL
+    name      CONFIDENTIAL
+  field key: INTEGRAL
+    name      INTEGRAL
+  field key: NONE
+    name      NONE
+type key: com.intellij.javaee.model.enums.WebAppVersion
+  name      WebAppVersion
+  type      ENUM
+  xsName    web-app-versionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    null
+  doc       236
+  field key: 2.5
+    name      WebAppVersion_2_5
+type key: com.intellij.javaee.model.xml.Description
+  name      Description
+  type      CLASS
+  xsName    descriptionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       702
+  field key: lang
+    name      lang
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: value
+    name      value
+    clType    6
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.DescriptionGroup
+  name      DescriptionGroup
+  type      GROUP_INTERFACE
+  xsName    descriptionGroup
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       322
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.DisplayName
+  name      DisplayName
+  type      CLASS
+  xsName    display-nameType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       447
+  field key: lang
+    name      lang
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: value
+    name      value
+    clType    6
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.EjbLocalRef
+  name      EjbLocalRef
+  type      CLASS
+  xsName    ejb-local-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1130
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbLink
+    name      ejbLink
+    clType    1
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1020
+  field key: ejbRefName
+    name      ejbRefName
+    clType    1
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       468
+  field key: ejbRefType
+    name      ejbRefType
+    clType    3
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.EjbRefType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     4/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: local
+    name      local
+    clType    1
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       173
+  field key: localHome
+    name      localHome
+    clType    1
+    required  false
+    index     6/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     7/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+type key: com.intellij.javaee.model.xml.EjbRef
+  name      EjbRef
+  type      CLASS
+  xsName    ejb-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1102
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbLink
+    name      ejbLink
+    clType    1
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1020
+  field key: ejbRefName
+    name      ejbRefName
+    clType    1
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       468
+  field key: ejbRefType
+    name      ejbRefType
+    clType    3
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.EjbRefType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: home
+    name      home
+    clType    1
+    required  false
+    index     4/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       249
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     5/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     6/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: remote
+    name      remote
+    clType    1
+    required  false
+    index     7/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       264
+type key: com.intellij.javaee.model.xml.EnvEntry
+  name      EnvEntry
+  type      CLASS
+  xsName    env-entryType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       880
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntryName
+    name      envEntryName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       791
+  field key: envEntryType
+    name      envEntryType
+    clType    3
+    required  false
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.EnvEntryTypeValues
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       503
+  field key: envEntryValue
+    name      envEntryValue
+    clType    1
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       607
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     4/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+type key: com.intellij.javaee.model.xml.Icon
+  name      Icon
+  type      CLASS
+  xsName    iconType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       404
+  field key: lang
+    name      lang
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: largeIcon
+    name      largeIcon
+    clType    1
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1157
+  field key: smallIcon
+    name      smallIcon
+    clType    1
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1150
+type key: com.intellij.javaee.model.xml.InjectionTarget
+  name      InjectionTarget
+  type      CLASS
+  xsName    injection-targetType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       790
+  field key: injectionTargetClass
+    name      injectionTargetClass
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       433
+  field key: injectionTargetName
+    name      injectionTargetName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       250
+type key: com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup
+  name      JndiEnvironmentRefsGroup
+  type      GROUP_INTERFACE
+  xsName    jndiEnvironmentRefsGroup
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       230
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     3/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     4/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     5/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     6/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     7/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     8/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     9/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     10/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.LifecycleCallback
+  name      LifecycleCallback
+  type      CLASS
+  xsName    lifecycle-callbackType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       578
+  field key: lifecycleCallbackClass
+    name      lifecycleCallbackClass
+    clType    1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       433
+  field key: lifecycleCallbackMethod
+    name      lifecycleCallbackMethod
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       250
+type key: com.intellij.javaee.model.xml.Listener
+  name      Listener
+  type      CLASS
+  xsName    listenerType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       178
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: listenerClass
+    name      listenerClass
+    clType    1
+    required  true
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       725
+type key: com.intellij.javaee.model.xml.MessageDestination
+  name      MessageDestination
+  type      CLASS
+  xsName    message-destinationType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       713
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     2/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1120
+  field key: messageDestinationName
+    name      messageDestinationName
+    clType    1
+    required  true
+    index     4/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       617
+type key: com.intellij.javaee.model.xml.MessageDestinationRef
+  name      MessageDestinationRef
+  type      CLASS
+  xsName    message-destination-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1335
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: messageDestinationLink
+    name      messageDestinationLink
+    clType    1
+    required  false
+    index     3/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       981
+  field key: messageDestinationRefName
+    name      messageDestinationRefName
+    clType    1
+    required  true
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       752
+  field key: messageDestinationType
+    name      messageDestinationType
+    clType    1
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       376
+  field key: messageDestinationUsage
+    name      messageDestinationUsage
+    clType    3
+    required  false
+    index     6/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.MessageDestinationUsage
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ParamValue
+  name      ParamValue
+  type      CLASS
+  xsName    param-valueType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       170
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: paramName
+    name      paramName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       475
+  field key: paramValue
+    name      paramValue
+    clType    1
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       290
+type key: com.intellij.javaee.model.xml.PersistenceContextRef
+  name      PersistenceContextRef
+  type      CLASS
+  xsName    persistence-context-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1329
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: persistenceContextRefName
+    name      persistenceContextRefName
+    clType    1
+    required  true
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       648
+  field key: persistenceContextType
+    name      persistenceContextType
+    clType    3
+    required  false
+    index     4/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.PersistenceContextType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: persistenceProperties
+    name      persistenceProperties
+    clType    -3
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Property
+    dupIdx    -1
+    elName    persistenceProperty
+    elType    Property
+    def       new ArrayList(0)
+    doc       579
+  field key: persistenceUnitName
+    name      persistenceUnitName
+    clType    1
+    required  false
+    index     6/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1169
+type key: com.intellij.javaee.model.xml.PersistenceUnitRef
+  name      PersistenceUnitRef
+  type      CLASS
+  xsName    persistence-unit-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       990
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: persistenceUnitName
+    name      persistenceUnitName
+    clType    1
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1169
+  field key: persistenceUnitRefName
+    name      persistenceUnitRefName
+    clType    1
+    required  true
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       639
+type key: com.intellij.javaee.model.xml.PortComponentRef
+  name      PortComponentRef
+  type      CLASS
+  xsName    port-component-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       404
+  field key: enableMtom
+    name      enableMtom
+    clType    1
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       507
+  field key: portComponentLink
+    name      portComponentLink
+    clType    1
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       853
+  field key: serviceEndpointInterface
+    name      serviceEndpointInterface
+    clType    1
+    required  true
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       687
+type key: com.intellij.javaee.model.xml.Property
+  name      Property
+  type      CLASS
+  xsName    propertyType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       116
+  field key: name
+    name      name
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+  field key: value
+    name      value
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+type key: com.intellij.javaee.model.xml.ResourceEnvRef
+  name      ResourceEnvRef
+  type      CLASS
+  xsName    resource-env-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1140
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: resourceEnvRefName
+    name      resourceEnvRefName
+    clType    1
+    required  true
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       693
+  field key: resourceEnvRefType
+    name      resourceEnvRefType
+    clType    1
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       709
+type key: com.intellij.javaee.model.xml.ResourceGroup
+  name      ResourceGroup
+  type      GROUP_INTERFACE
+  xsName    resourceGroup
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       169
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+type key: com.intellij.javaee.model.xml.ResourceRef
+  name      ResourceRef
+  type      CLASS
+  xsName    resource-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.ResourceGroup]
+  doc       1245
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: resAuth
+    name      resAuth
+    clType    3
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.ResAuth
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: resRefName
+    name      resRefName
+    clType    1
+    required  true
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       606
+  field key: resSharingScope
+    name      resSharingScope
+    clType    3
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.ResSharingScope
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: resType
+    name      resType
+    clType    1
+    required  false
+    index     6/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       720
+type key: com.intellij.javaee.model.xml.RunAs
+  name      RunAs
+  type      CLASS
+  xsName    run-asType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       247
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: roleName
+    name      roleName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       204
+type key: com.intellij.javaee.model.xml.SecurityRole
+  name      SecurityRole
+  type      CLASS
+  xsName    security-roleType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       522
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: roleName
+    name      roleName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       204
+type key: com.intellij.javaee.model.xml.SecurityRoleRef
+  name      SecurityRoleRef
+  type      CLASS
+  xsName    security-role-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       462
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: roleLink
+    name      roleLink
+    clType    1
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       484
+  field key: roleName
+    name      roleName
+    clType    1
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       500
+type key: com.intellij.javaee.model.xml.ServiceRef
+  name      ServiceRef
+  type      CLASS
+  xsName    service-refType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.ResourceGroup]
+  doc       510
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: handlerChains
+    name      handlerChains
+    clType    3
+    required  false
+    index     2/11
+    choiceOpt true
+    choice    2
+    content   com.intellij.javaee.model.xml.ServiceRef_handlerChains
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: handlers
+    name      handlers
+    clType    -3
+    required  false
+    index     3/10
+    choiceOpt true
+    choice    2
+    content   com.intellij.javaee.model.xml.ServiceRef_handler
+    dupIdx    -1
+    elName    handler
+    elType    ServiceRef_handler
+    def       new ArrayList(0)
+    doc       370
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     4/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: injectionTargets
+    name      injectionTargets
+    clType    -3
+    required  false
+    index     5/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.InjectionTarget
+    dupIdx    -1
+    elName    injectionTarget
+    elType    InjectionTarget
+    def       new ArrayList(0)
+    doc       null
+  field key: jaxrpcMappingFile
+    name      jaxrpcMappingFile
+    clType    1
+    required  false
+    index     6/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1091
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     7/12
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1045
+  field key: portComponentRefs
+    name      portComponentRefs
+    clType    -3
+    required  false
+    index     8/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PortComponentRef
+    dupIdx    -1
+    elName    portComponentRef
+    elType    PortComponentRef
+    def       new ArrayList(0)
+    doc       419
+  field key: serviceInterface
+    name      serviceInterface
+    clType    1
+    required  true
+    index     9/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       793
+  field key: serviceQname
+    name      serviceQname
+    clType    1
+    required  false
+    index     10/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       381
+  field key: serviceRefName
+    name      serviceRefName
+    clType    1
+    required  true
+    index     11/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       587
+  field key: serviceRefType
+    name      serviceRefType
+    clType    1
+    required  false
+    index     12/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1122
+  field key: wsdlFile
+    name      wsdlFile
+    clType    1
+    required  false
+    index     13/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       345
+type key: com.intellij.javaee.model.xml.ServiceRefGroup
+  name      ServiceRefGroup
+  type      GROUP_INTERFACE
+  xsName    service-refGroup
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ServiceRef_handler
+  name      ServiceRef_handler
+  type      CLASS
+  xsName    service-ref_handlerType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       354
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: handlerClass
+    name      handlerClass
+    clType    1
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       599
+  field key: handlerName
+    name      handlerName
+    clType    1
+    required  true
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       496
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     4/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: initParams
+    name      initParams
+    clType    -3
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ParamValue
+    dupIdx    -1
+    elName    initParam
+    elType    ParamValue
+    def       new ArrayList(0)
+    doc       null
+  field key: portNames
+    name      portNames
+    clType    -1
+    required  false
+    index     6/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    portName
+    elType    String
+    def       new ArrayList(0)
+    doc       508
+  field key: soapHeaders
+    name      soapHeaders
+    clType    -1
+    required  false
+    index     7/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    soapHeader
+    elType    String
+    def       new ArrayList(0)
+    doc       303
+  field key: soapRoles
+    name      soapRoles
+    clType    -1
+    required  false
+    index     8/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    soapRole
+    elType    String
+    def       new ArrayList(0)
+    doc       510
+type key: com.intellij.javaee.model.xml.ServiceRef_handlerChain
+  name      ServiceRef_handlerChain
+  type      CLASS
+  xsName    service-ref_handler-chainType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       705
+  field key: handlers
+    name      handlers
+    clType    -3
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef_handler
+    dupIdx    -1
+    elName    handler
+    elType    ServiceRef_handler
+    def       new ArrayList(0)
+    doc       null
+  field key: portNamePattern
+    name      portNamePattern
+    clType    1
+    required  true
+    index     1/2
+    choiceOpt false
+    choice    3
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: protocolBindings
+    name      protocolBindings
+    clType    1
+    required  true
+    index     2/3
+    choiceOpt false
+    choice    3
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: serviceNamePattern
+    name      serviceNamePattern
+    clType    1
+    required  true
+    index     3/1
+    choiceOpt false
+    choice    3
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ServiceRef_handlerChains
+  name      ServiceRef_handlerChains
+  type      CLASS
+  xsName    service-ref_handler-chainsType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       214
+  field key: handlerChains
+    name      handlerChains
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef_handlerChain
+    dupIdx    -1
+    elName    handlerChain
+    elType    ServiceRef_handlerChain
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.application.Application
+  name      Application
+  type      CLASS
+  xsName    applicationType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       153
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     2/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: libraryDirectory
+    name      libraryDirectory
+    clType    1
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1219
+  field key: modules
+    name      modules
+    clType    -3
+    required  true
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.application.Module
+    dupIdx    -1
+    elName    module
+    elType    Module
+    def       new ArrayList(0)
+    doc       272
+  field key: securityRoles
+    name      securityRoles
+    clType    -3
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRole
+    dupIdx    -1
+    elName    securityRole
+    elType    SecurityRole
+    def       new ArrayList(0)
+    doc       null
+  field key: version
+    name      version
+    clType    4
+    required  true
+    index     6/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       99
+type key: com.intellij.javaee.model.xml.application.Module
+  name      Module
+  type      CLASS
+  xsName    moduleType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       384
+  field key: altDd
+    name      altDd
+    clType    1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1224
+  field key: connector
+    name      connector
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    4
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       901
+  field key: ejb
+    name      ejb
+    clType    1
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    4
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       868
+  field key: java
+    name      java
+    clType    1
+    required  true
+    index     3/3
+    choiceOpt false
+    choice    4
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       892
+  field key: web
+    name      web
+    clType    3
+    required  true
+    index     4/4
+    choiceOpt false
+    choice    4
+    content   com.intellij.javaee.model.xml.application.Web
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.application.Web
+  name      Web
+  type      CLASS
+  xsName    webType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       161
+  field key: contextRoot
+    name      contextRoot
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       494
+  field key: webUri
+    name      webUri
+    clType    1
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       884
+type key: com.intellij.javaee.model.xml.client.ApplicationClient
+  name      ApplicationClient
+  type      CLASS
+  xsName    application-clientType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       null
+  field key: callbackHandler
+    name      callbackHandler
+    clType    1
+    required  false
+    index     0/10
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       899
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     2/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     5/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     6/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinations
+    name      messageDestinations
+    clType    -3
+    required  false
+    index     7/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestination
+    dupIdx    -1
+    elName    messageDestination
+    elType    MessageDestination
+    def       new ArrayList(0)
+    doc       null
+  field key: metadataComplete
+    name      metadataComplete
+    clType    4
+    required  false
+    index     8/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       816
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     9/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     10/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     11/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     12/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     13/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     14/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: version
+    name      version
+    clType    4
+    required  true
+    index     15/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       99
+type key: com.intellij.javaee.model.xml.ejb.ActivationConfig
+  name      ActivationConfig
+  type      CLASS
+  xsName    activation-configType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       567
+  field key: activationConfigProperties
+    name      activationConfigProperties
+    clType    -3
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.ActivationConfigProperty
+    dupIdx    -1
+    elName    activationConfigProperty
+    elType    ActivationConfigProperty
+    def       new ArrayList(0)
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.ActivationConfigProperty
+  name      ActivationConfigProperty
+  type      CLASS
+  xsName    activation-config-propertyType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       331
+  field key: activationConfigPropertyName
+    name      activationConfigPropertyName
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       550
+  field key: activationConfigPropertyValue
+    name      activationConfigPropertyValue
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       388
+type key: com.intellij.javaee.model.xml.ejb.ApplicationException
+  name      ApplicationException
+  type      CLASS
+  xsName    application-exceptionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       710
+  field key: exceptionClass
+    name      exceptionClass
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       433
+  field key: rollback
+    name      rollback
+    clType    1
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       179
+type key: com.intellij.javaee.model.xml.ejb.AroundInvoke
+  name      AroundInvoke
+  type      CLASS
+  xsName    around-invokeType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       615
+  field key: class
+    name      class
+    clType    1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       433
+  field key: methodName
+    name      methodName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       250
+type key: com.intellij.javaee.model.xml.ejb.AssemblyDescriptor
+  name      AssemblyDescriptor
+  type      CLASS
+  xsName    assembly-descriptorType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       834
+  field key: applicationExceptions
+    name      applicationExceptions
+    clType    -3
+    required  false
+    index     0/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.ApplicationException
+    dupIdx    -1
+    elName    applicationException
+    elType    ApplicationException
+    def       new ArrayList(0)
+    doc       null
+  field key: containerTransactions
+    name      containerTransactions
+    clType    -3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.ContainerTransaction
+    dupIdx    -1
+    elName    containerTransaction
+    elType    ContainerTransaction
+    def       new ArrayList(0)
+    doc       null
+  field key: excludeList
+    name      excludeList
+    clType    3
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.ExcludeList
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: interceptorBindings
+    name      interceptorBindings
+    clType    -3
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.InterceptorBinding
+    dupIdx    -1
+    elName    interceptorBinding
+    elType    InterceptorBinding
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinations
+    name      messageDestinations
+    clType    -3
+    required  false
+    index     4/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestination
+    dupIdx    -1
+    elName    messageDestination
+    elType    MessageDestination
+    def       new ArrayList(0)
+    doc       null
+  field key: methodPermissions
+    name      methodPermissions
+    clType    -3
+    required  false
+    index     5/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.MethodPermission
+    dupIdx    -1
+    elName    methodPermission
+    elType    MethodPermission
+    def       new ArrayList(0)
+    doc       null
+  field key: securityRoles
+    name      securityRoles
+    clType    -3
+    required  false
+    index     6/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRole
+    dupIdx    -1
+    elName    securityRole
+    elType    SecurityRole
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.CmpField
+  name      CmpField
+  type      CLASS
+  xsName    cmp-fieldType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       237
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: fieldName
+    name      fieldName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       886
+type key: com.intellij.javaee.model.xml.ejb.CmrField
+  name      CmrField
+  type      CLASS
+  xsName    cmr-fieldType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       536
+  field key: cmrFieldName
+    name      cmrFieldName
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       789
+  field key: cmrFieldType
+    name      cmrFieldType
+    clType    3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.CmrFieldType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.ContainerTransaction
+  name      ContainerTransaction
+  type      CLASS
+  xsName    container-transactionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       405
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: methods
+    name      methods
+    clType    -3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Method
+    dupIdx    -1
+    elName    method
+    elType    Method
+    def       new ArrayList(0)
+    doc       null
+  field key: transAttribute
+    name      transAttribute
+    clType    3
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.TransAttribute
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.EjbJar
+  name      EjbJar
+  type      CLASS
+  xsName    ejb-jarType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       727
+  field key: assemblyDescriptor
+    name      assemblyDescriptor
+    clType    3
+    required  false
+    index     0/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.AssemblyDescriptor
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       212
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     2/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbClientJar
+    name      ejbClientJar
+    clType    1
+    required  false
+    index     3/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1059
+  field key: enterpriseBeans
+    name      enterpriseBeans
+    clType    3
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.EnterpriseBeans
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     5/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: interceptors
+    name      interceptors
+    clType    3
+    required  false
+    index     6/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Interceptors
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: metadataComplete
+    name      metadataComplete
+    clType    4
+    required  false
+    index     7/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       816
+  field key: relationships
+    name      relationships
+    clType    3
+    required  false
+    index     8/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Relationships
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: version
+    name      version
+    clType    4
+    required  true
+    index     9/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       324
+type key: com.intellij.javaee.model.xml.ejb.EjbRelation
+  name      EjbRelation
+  type      CLASS
+  xsName    ejb-relationType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      true
+  supers    []
+  doc       483
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRelationName
+    name      ejbRelationName
+    clType    1
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       522
+  field key: ejbRelationshipRole1
+    name      ejbRelationshipRole1
+    clType    3
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.EjbRelationshipRole
+    dupIdx    1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: ejbRelationshipRole2
+    name      ejbRelationshipRole2
+    clType    3
+    required  true
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.EjbRelationshipRole
+    dupIdx    2
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.EjbRelationshipRole
+  name      EjbRelationshipRole
+  type      CLASS
+  xsName    ejb-relationship-roleType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       1634
+  field key: cascadeDelete
+    name      cascadeDelete
+    clType    2
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       false
+    doc       650
+  field key: cmrField
+    name      cmrField
+    clType    3
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.CmrField
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRelationshipRoleName
+    name      ejbRelationshipRoleName
+    clType    1
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       606
+  field key: multiplicity
+    name      multiplicity
+    clType    3
+    required  true
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.Multiplicity
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: relationshipRoleSource
+    name      relationshipRoleSource
+    clType    3
+    required  true
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.RelationshipRoleSource
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.EnterpriseBeans
+  name      EnterpriseBeans
+  type      CLASS
+  xsName    enterprise-beansType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       220
+  field key: entities
+    name      entities
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.EntityBean
+    dupIdx    -1
+    elName    entity
+    elType    EntityBean
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDrivens
+    name      messageDrivens
+    clType    -3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.MessageDrivenBean
+    dupIdx    -1
+    elName    messageDriven
+    elType    MessageDrivenBean
+    def       new ArrayList(0)
+    doc       null
+  field key: sessions
+    name      sessions
+    clType    -3
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.SessionBean
+    dupIdx    -1
+    elName    session
+    elType    SessionBean
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.EntityBean
+  name      EntityBean
+  type      CLASS
+  xsName    entity-beanType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       3833
+  field key: abstractSchemaName
+    name      abstractSchemaName
+    clType    1
+    required  false
+    index     0/11
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       647
+  field key: cmpFields
+    name      cmpFields
+    clType    -3
+    required  false
+    index     1/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.CmpField
+    dupIdx    -1
+    elName    cmpField
+    elType    CmpField
+    def       new ArrayList(0)
+    doc       null
+  field key: cmpVersion
+    name      cmpVersion
+    clType    3
+    required  false
+    index     2/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.CmpVersion
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     3/17
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     4/18
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbClass
+    name      ejbClass
+    clType    1
+    required  true
+    index     5/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       299
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     6/22
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     7/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       733
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     8/21
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     9/20
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: home
+    name      home
+    clType    1
+    required  false
+    index     10/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       249
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     11/19
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: local
+    name      local
+    clType    1
+    required  false
+    index     12/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       173
+  field key: localHome
+    name      localHome
+    clType    1
+    required  false
+    index     13/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     14/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     15/25
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     16/26
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceType
+    name      persistenceType
+    clType    3
+    required  true
+    index     17/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.PersistenceType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     18/27
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     19/28
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     20/29
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: primKeyClass
+    name      primKeyClass
+    clType    1
+    required  true
+    index     21/8
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       787
+  field key: primkeyField
+    name      primkeyField
+    clType    1
+    required  false
+    index     22/13
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1047
+  field key: queries
+    name      queries
+    clType    -3
+    required  false
+    index     23/16
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Query
+    dupIdx    -1
+    elName    query
+    elType    Query
+    def       new ArrayList(0)
+    doc       null
+  field key: reentrant
+    name      reentrant
+    clType    1
+    required  true
+    index     24/9
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       429
+  field key: remote
+    name      remote
+    clType    1
+    required  false
+    index     25/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       264
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     26/24
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     27/23
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: securityIdentity
+    name      securityIdentity
+    clType    3
+    required  false
+    index     28/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.SecurityIdentity
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: securityRoleRefs
+    name      securityRoleRefs
+    clType    -3
+    required  false
+    index     29/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRoleRef
+    dupIdx    -1
+    elName    securityRoleRef
+    elType    SecurityRoleRef
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     30/30
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.ExcludeList
+  name      ExcludeList
+  type      CLASS
+  xsName    exclude-listType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       333
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: methods
+    name      methods
+    clType    -3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Method
+    dupIdx    -1
+    elName    method
+    elType    Method
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.InitMethod
+  name      InitMethod
+  type      CLASS
+  xsName    init-methodType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       null
+  field key: beanMethod
+    name      beanMethod
+    clType    3
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: createMethod
+    name      createMethod
+    clType    3
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.Interceptor
+  name      Interceptor
+  type      CLASS
+  xsName    interceptorType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       816
+  field key: aroundInvokes
+    name      aroundInvokes
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.AroundInvoke
+    dupIdx    -1
+    elName    aroundInvoke
+    elType    AroundInvoke
+    def       new ArrayList(0)
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     2/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     3/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     4/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: interceptorClass
+    name      interceptorClass
+    clType    1
+    required  true
+    index     5/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       433
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     6/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     7/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     8/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postActivates
+    name      postActivates
+    clType    -3
+    required  false
+    index     9/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postActivate
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     10/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     11/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: prePassivates
+    name      prePassivates
+    clType    -3
+    required  false
+    index     12/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    prePassivate
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     13/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     14/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     15/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.InterceptorBinding
+  name      InterceptorBinding
+  type      CLASS
+  xsName    interceptor-bindingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       4387
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       324
+  field key: excludeClassInterceptors
+    name      excludeClassInterceptors
+    clType    1
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       179
+  field key: excludeDefaultInterceptors
+    name      excludeDefaultInterceptors
+    clType    1
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       179
+  field key: interceptorClasses
+    name      interceptorClasses
+    clType    -1
+    required  false
+    index     4/5
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    interceptorClass
+    elType    String
+    def       new ArrayList(0)
+    doc       433
+  field key: interceptorOrder
+    name      interceptorOrder
+    clType    3
+    required  true
+    index     5/6
+    choiceOpt false
+    choice    2
+    content   com.intellij.javaee.model.xml.ejb.InterceptorOrder
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: method
+    name      method
+    clType    3
+    required  false
+    index     6/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.InterceptorOrder
+  name      InterceptorOrder
+  type      CLASS
+  xsName    interceptor-orderType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       189
+  field key: interceptorClasses
+    name      interceptorClasses
+    clType    -1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    interceptorClass
+    elType    String
+    def       new ArrayList(0)
+    doc       433
+type key: com.intellij.javaee.model.xml.ejb.Interceptors
+  name      Interceptors
+  type      CLASS
+  xsName    interceptorsType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       336
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: interceptors
+    name      interceptors
+    clType    -3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Interceptor
+    dupIdx    -1
+    elName    interceptor
+    elType    Interceptor
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.MessageDrivenBean
+  name      MessageDrivenBean
+  type      CLASS
+  xsName    message-driven-beanType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       2178
+  field key: activationConfig
+    name      activationConfig
+    clType    3
+    required  false
+    index     0/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.ActivationConfig
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: aroundInvokes
+    name      aroundInvokes
+    clType    -3
+    required  false
+    index     1/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.AroundInvoke
+    dupIdx    -1
+    elName    aroundInvoke
+    elType    AroundInvoke
+    def       new ArrayList(0)
+    doc       null
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     2/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     3/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbClass
+    name      ejbClass
+    clType    1
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       602
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     5/16
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     6/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       733
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     7/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     8/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     9/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     10/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+  field key: messageDestinationLink
+    name      messageDestinationLink
+    clType    1
+    required  false
+    index     11/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       981
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     12/19
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinationType
+    name      messageDestinationType
+    clType    1
+    required  false
+    index     13/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       376
+  field key: messagingType
+    name      messagingType
+    clType    1
+    required  false
+    index     14/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       627
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     15/20
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     16/21
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     17/22
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     18/23
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     19/18
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     20/17
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: securityIdentity
+    name      securityIdentity
+    clType    3
+    required  false
+    index     21/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.SecurityIdentity
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     22/24
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: timeoutMethod
+    name      timeoutMethod
+    clType    3
+    required  false
+    index     23/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: transactionType
+    name      transactionType
+    clType    3
+    required  false
+    index     24/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.TransactionType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.Method
+  name      Method
+  type      CLASS
+  xsName    methodType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       6384
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       733
+  field key: methodIntf
+    name      methodIntf
+    clType    3
+    required  false
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.MethodIntf
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: methodName
+    name      methodName
+    clType    1
+    required  true
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       299
+  field key: methodParams
+    name      methodParams
+    clType    3
+    required  false
+    index     4/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.MethodParams
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.MethodParams
+  name      MethodParams
+  type      CLASS
+  xsName    method-paramsType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       195
+  field key: methodParams
+    name      methodParams
+    clType    -1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    methodParam
+    elType    String
+    def       new ArrayList(0)
+    doc       436
+type key: com.intellij.javaee.model.xml.ejb.MethodPermission
+  name      MethodPermission
+  type      CLASS
+  xsName    method-permissionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       698
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: methods
+    name      methods
+    clType    -3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.Method
+    dupIdx    -1
+    elName    method
+    elType    Method
+    def       new ArrayList(0)
+    doc       null
+  field key: roleNames
+    name      roleNames
+    clType    -1
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    roleName
+    elType    String
+    def       new ArrayList(0)
+    doc       204
+  field key: unchecked
+    name      unchecked
+    clType    2
+    required  true
+    index     3/3
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       false
+    doc       377
+type key: com.intellij.javaee.model.xml.ejb.NamedMethod
+  name      NamedMethod
+  type      CLASS
+  xsName    named-methodType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       null
+  field key: methodName
+    name      methodName
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       324
+  field key: methodParams
+    name      methodParams
+    clType    3
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.MethodParams
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.Query
+  name      Query
+  type      CLASS
+  xsName    queryType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       925
+  field key: description
+    name      description
+    clType    3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: ejbQl
+    name      ejbQl
+    clType    1
+    required  true
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+  field key: queryMethod
+    name      queryMethod
+    clType    3
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.QueryMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: resultTypeMapping
+    name      resultTypeMapping
+    clType    3
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.ResultTypeMapping
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.QueryMethod
+  name      QueryMethod
+  type      CLASS
+  xsName    query-methodType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       750
+  field key: methodName
+    name      methodName
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       299
+  field key: methodParams
+    name      methodParams
+    clType    3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.MethodParams
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.RelationshipRoleSource
+  name      RelationshipRoleSource
+  type      CLASS
+  xsName    relationship-role-sourceType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       322
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       733
+type key: com.intellij.javaee.model.xml.ejb.Relationships
+  name      Relationships
+  type      CLASS
+  xsName    relationshipsType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       360
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRelations
+    name      ejbRelations
+    clType    -3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.EjbRelation
+    dupIdx    -1
+    elName    ejbRelation
+    elType    EjbRelation
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.ejb.RemoveMethod
+  name      RemoveMethod
+  type      CLASS
+  xsName    remove-methodType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       null
+  field key: beanMethod
+    name      beanMethod
+    clType    3
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: retainIfException
+    name      retainIfException
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       179
+type key: com.intellij.javaee.model.xml.ejb.SecurityIdentity
+  name      SecurityIdentity
+  type      CLASS
+  xsName    security-identityType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       391
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: runAs
+    name      runAs
+    clType    3
+    required  true
+    index     1/2
+    choiceOpt false
+    choice    2
+    content   com.intellij.javaee.model.xml.RunAs
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: useCallerIdentity
+    name      useCallerIdentity
+    clType    2
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       false
+    doc       426
+type key: com.intellij.javaee.model.xml.ejb.SessionBean
+  name      SessionBean
+  type      CLASS
+  xsName    session-beanType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       2622
+  field key: aroundInvokes
+    name      aroundInvokes
+    clType    -3
+    required  false
+    index     0/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.AroundInvoke
+    dupIdx    -1
+    elName    aroundInvoke
+    elType    AroundInvoke
+    def       new ArrayList(0)
+    doc       null
+  field key: businessLocals
+    name      businessLocals
+    clType    -1
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    businessLocal
+    elType    String
+    def       new ArrayList(0)
+    doc       433
+  field key: businessRemotes
+    name      businessRemotes
+    clType    -1
+    required  false
+    index     2/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    businessRemote
+    elType    String
+    def       new ArrayList(0)
+    doc       433
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     3/20
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     4/21
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbClass
+    name      ejbClass
+    clType    1
+    required  false
+    index     5/9
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       602
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     6/25
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbName
+    name      ejbName
+    clType    1
+    required  true
+    index     7/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       733
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     8/24
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     9/23
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: home
+    name      home
+    clType    1
+    required  false
+    index     10/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       249
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     11/22
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: initMethods
+    name      initMethods
+    clType    -3
+    required  false
+    index     12/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.InitMethod
+    dupIdx    -1
+    elName    initMethod
+    elType    InitMethod
+    def       new ArrayList(0)
+    doc       275
+  field key: local
+    name      local
+    clType    1
+    required  false
+    index     13/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       173
+  field key: localHome
+    name      localHome
+    clType    1
+    required  false
+    index     14/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+  field key: mappedName
+    name      mappedName
+    clType    1
+    required  false
+    index     15/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       136
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     16/28
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     17/29
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     18/30
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postActivates
+    name      postActivates
+    clType    -3
+    required  false
+    index     19/16
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postActivate
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     20/31
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     21/32
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: prePassivates
+    name      prePassivates
+    clType    -3
+    required  false
+    index     22/17
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    prePassivate
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: remote
+    name      remote
+    clType    1
+    required  false
+    index     23/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       264
+  field key: removeMethods
+    name      removeMethods
+    clType    -3
+    required  false
+    index     24/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.RemoveMethod
+    dupIdx    -1
+    elName    removeMethod
+    elType    RemoveMethod
+    def       new ArrayList(0)
+    doc       279
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     25/27
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     26/26
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: securityIdentity
+    name      securityIdentity
+    clType    3
+    required  false
+    index     27/19
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.SecurityIdentity
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: securityRoleRefs
+    name      securityRoleRefs
+    clType    -3
+    required  false
+    index     28/18
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRoleRef
+    dupIdx    -1
+    elName    securityRoleRef
+    elType    SecurityRoleRef
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceEndpoint
+    name      serviceEndpoint
+    clType    1
+    required  false
+    index     29/8
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       830
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     30/33
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: sessionType
+    name      sessionType
+    clType    3
+    required  false
+    index     31/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.SessionType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: timeoutMethod
+    name      timeoutMethod
+    clType    3
+    required  false
+    index     32/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ejb.NamedMethod
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: transactionType
+    name      transactionType
+    clType    3
+    required  false
+    index     33/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.TransactionType
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.web.AuthConstraint
+  name      AuthConstraint
+  type      CLASS
+  xsName    auth-constraintType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       760
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: roleNames
+    name      roleNames
+    clType    -1
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    roleName
+    elType    String
+    def       new ArrayList(0)
+    doc       204
+type key: com.intellij.javaee.model.xml.web.ErrorPage
+  name      ErrorPage
+  type      CLASS
+  xsName    error-pageType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       238
+  field key: errorCode
+    name      errorCode
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       "0.0"
+    doc       163
+  field key: exceptionType
+    name      exceptionType
+    clType    1
+    required  true
+    index     1/2
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       616
+  field key: location
+    name      location
+    clType    1
+    required  true
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       490
+type key: com.intellij.javaee.model.xml.web.Filter
+  name      Filter
+  type      CLASS
+  xsName    filterType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       437
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: filterClass
+    name      filterClass
+    clType    1
+    required  true
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       569
+  field key: filterName
+    name      filterName
+    clType    1
+    required  true
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       288
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     4/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: initParams
+    name      initParams
+    clType    -3
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ParamValue
+    dupIdx    -1
+    elName    initParam
+    elType    ParamValue
+    def       new ArrayList(0)
+    doc       190
+type key: com.intellij.javaee.model.xml.web.FilterMapping
+  name      FilterMapping
+  type      CLASS
+  xsName    filter-mappingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       884
+  field key: dispatchers
+    name      dispatchers
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.Dispatcher
+    dupIdx    -1
+    elName    dispatcher
+    elType    Dispatcher
+    def       new ArrayList(0)
+    doc       null
+  field key: filterName
+    name      filterName
+    clType    1
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       288
+  field key: servletNames
+    name      servletNames
+    clType    -1
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    servletName
+    elType    String
+    def       new ArrayList(0)
+    doc       218
+  field key: urlPatterns
+    name      urlPatterns
+    clType    -1
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    urlPattern
+    elType    String
+    def       new ArrayList(0)
+    doc       506
+type key: com.intellij.javaee.model.xml.web.FormLoginConfig
+  name      FormLoginConfig
+  type      CLASS
+  xsName    form-login-configType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       295
+  field key: formErrorPage
+    name      formErrorPage
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       555
+  field key: formLoginPage
+    name      formLoginPage
+    clType    1
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       525
+type key: com.intellij.javaee.model.xml.web.JspConfig
+  name      JspConfig
+  type      CLASS
+  xsName    jsp-configType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       257
+  field key: jspPropertyGroups
+    name      jspPropertyGroups
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.JspPropertyGroup
+    dupIdx    -1
+    elName    jspPropertyGroup
+    elType    JspPropertyGroup
+    def       new ArrayList(0)
+    doc       null
+  field key: taglibs
+    name      taglibs
+    clType    -3
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.Taglib
+    dupIdx    -1
+    elName    taglib
+    elType    Taglib
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.web.JspPropertyGroup
+  name      JspPropertyGroup
+  type      CLASS
+  xsName    jsp-property-groupType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       795
+  field key: deferredSyntaxAllowedAsLiteral
+    name      deferredSyntaxAllowedAsLiteral
+    clType    1
+    required  false
+    index     0/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       569
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     2/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: elIgnored
+    name      elIgnored
+    clType    1
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       491
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     4/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: includeCodas
+    name      includeCodas
+    clType    -1
+    required  false
+    index     5/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    includeCoda
+    elType    String
+    def       new ArrayList(0)
+    doc       1057
+  field key: includePreludes
+    name      includePreludes
+    clType    -1
+    required  false
+    index     6/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    includePrelude
+    elType    String
+    def       new ArrayList(0)
+    doc       1069
+  field key: isXml
+    name      isXml
+    clType    1
+    required  false
+    index     7/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       553
+  field key: pageEncoding
+    name      pageEncoding
+    clType    1
+    required  false
+    index     8/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       978
+  field key: scriptingInvalid
+    name      scriptingInvalid
+    clType    1
+    required  false
+    index     9/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       385
+  field key: trimDirectiveWhitespaces
+    name      trimDirectiveWhitespaces
+    clType    1
+    required  false
+    index     10/8
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       499
+  field key: urlPatterns
+    name      urlPatterns
+    clType    -1
+    required  true
+    index     11/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    urlPattern
+    elType    String
+    def       new ArrayList(0)
+    doc       506
+type key: com.intellij.javaee.model.xml.web.LocaleEncodingMapping
+  name      LocaleEncodingMapping
+  type      CLASS
+  xsName    locale-encoding-mappingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       344
+  field key: encoding
+    name      encoding
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: locale
+    name      locale
+    clType    1
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.web.LocaleEncodingMappingList
+  name      LocaleEncodingMappingList
+  type      CLASS
+  xsName    locale-encoding-mapping-listType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       190
+  field key: localeEncodingMappings
+    name      localeEncodingMappings
+    clType    -3
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.LocaleEncodingMapping
+    dupIdx    -1
+    elName    localeEncodingMapping
+    elType    LocaleEncodingMapping
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.web.LoginConfig
+  name      LoginConfig
+  type      CLASS
+  xsName    login-configType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       323
+  field key: authMethod
+    name      authMethod
+    clType    1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       490
+  field key: formLoginConfig
+    name      formLoginConfig
+    clType    3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.FormLoginConfig
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: realmName
+    name      realmName
+    clType    1
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       502
+type key: com.intellij.javaee.model.xml.web.MimeMapping
+  name      MimeMapping
+  type      CLASS
+  xsName    mime-mappingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       188
+  field key: extension
+    name      extension
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       324
+  field key: mimeType
+    name      mimeType
+    clType    1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       196
+type key: com.intellij.javaee.model.xml.web.SecurityConstraint
+  name      SecurityConstraint
+  type      CLASS
+  xsName    security-constraintType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       231
+  field key: authConstraint
+    name      authConstraint
+    clType    3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.AuthConstraint
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: userDataConstraint
+    name      userDataConstraint
+    clType    3
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.UserDataConstraint
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: webResourceCollections
+    name      webResourceCollections
+    clType    -3
+    required  true
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.WebResourceCollection
+    dupIdx    -1
+    elName    webResourceCollection
+    elType    WebResourceCollection
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.web.Servlet
+  name      Servlet
+  type      CLASS
+  xsName    servletType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup]
+  doc       320
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     2/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: initParams
+    name      initParams
+    clType    -3
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ParamValue
+    dupIdx    -1
+    elName    initParam
+    elType    ParamValue
+    def       new ArrayList(0)
+    doc       null
+  field key: jspFile
+    name      jspFile
+    clType    1
+    required  true
+    index     4/9
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       195
+  field key: loadOnStartup
+    name      loadOnStartup
+    clType    1
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       916
+  field key: runAs
+    name      runAs
+    clType    3
+    required  false
+    index     6/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.RunAs
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: securityRoleRefs
+    name      securityRoleRefs
+    clType    -3
+    required  false
+    index     7/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRoleRef
+    dupIdx    -1
+    elName    securityRoleRef
+    elType    SecurityRoleRef
+    def       new ArrayList(0)
+    doc       null
+  field key: servletClass
+    name      servletClass
+    clType    1
+    required  true
+    index     8/8
+    choiceOpt false
+    choice    2
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       614
+  field key: servletName
+    name      servletName
+    clType    1
+    required  true
+    index     9/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       218
+type key: com.intellij.javaee.model.xml.web.ServletMapping
+  name      ServletMapping
+  type      CLASS
+  xsName    servlet-mappingType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       193
+  field key: servletName
+    name      servletName
+    clType    1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       218
+  field key: urlPatterns
+    name      urlPatterns
+    clType    -1
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    urlPattern
+    elType    String
+    def       new ArrayList(0)
+    doc       506
+type key: com.intellij.javaee.model.xml.web.SessionConfig
+  name      SessionConfig
+  type      CLASS
+  xsName    session-configType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       193
+  field key: sessionTimeout
+    name      sessionTimeout
+    clType    1
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       "0.0"
+    doc       652
+type key: com.intellij.javaee.model.xml.web.Taglib
+  name      Taglib
+  type      CLASS
+  xsName    taglibType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       308
+  field key: taglibLocation
+    name      taglibLocation
+    clType    1
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       956
+  field key: taglibUri
+    name      taglibUri
+    clType    1
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       700
+type key: com.intellij.javaee.model.xml.web.UserDataConstraint
+  name      UserDataConstraint
+  type      CLASS
+  xsName    user-data-constraintType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       257
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: transportGuarantee
+    name      transportGuarantee
+    clType    3
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.TransportGuarantee
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.javaee.model.xml.web.WebApp
+  name      WebApp
+  type      CLASS
+  xsName    web-appType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    [com.intellij.javaee.model.xml.DescriptionGroup, com.intellij.javaee.model.xml.JndiEnvironmentRefsGroup, com.intellij.javaee.model.xml.ServiceRefGroup]
+  doc       null
+  field key: contextParams
+    name      contextParams
+    clType    -3
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ParamValue
+    dupIdx    -1
+    elName    contextParam
+    elType    ParamValue
+    def       new ArrayList(0)
+    doc       218
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     1/19
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: displayNames
+    name      displayNames
+    clType    -3
+    required  false
+    index     2/20
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.DisplayName
+    dupIdx    -1
+    elName    displayName
+    elType    DisplayName
+    def       new ArrayList(0)
+    doc       null
+  field key: distributable
+    name      distributable
+    clType    2
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       false
+    doc       144
+  field key: ejbLocalRefs
+    name      ejbLocalRefs
+    clType    -3
+    required  false
+    index     4/24
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbLocalRef
+    dupIdx    -1
+    elName    ejbLocalRef
+    elType    EjbLocalRef
+    def       new ArrayList(0)
+    doc       null
+  field key: ejbRefs
+    name      ejbRefs
+    clType    -3
+    required  false
+    index     5/23
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EjbRef
+    dupIdx    -1
+    elName    ejbRef
+    elType    EjbRef
+    def       new ArrayList(0)
+    doc       null
+  field key: envEntries
+    name      envEntries
+    clType    -3
+    required  false
+    index     6/22
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.EnvEntry
+    dupIdx    -1
+    elName    envEntry
+    elType    EnvEntry
+    def       new ArrayList(0)
+    doc       null
+  field key: errorPages
+    name      errorPages
+    clType    -3
+    required  false
+    index     7/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.ErrorPage
+    dupIdx    -1
+    elName    errorPage
+    elType    ErrorPage
+    def       new ArrayList(0)
+    doc       null
+  field key: filterMappings
+    name      filterMappings
+    clType    -3
+    required  false
+    index     8/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.FilterMapping
+    dupIdx    -1
+    elName    filterMapping
+    elType    FilterMapping
+    def       new ArrayList(0)
+    doc       null
+  field key: filters
+    name      filters
+    clType    -3
+    required  false
+    index     9/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.Filter
+    dupIdx    -1
+    elName    filter
+    elType    Filter
+    def       new ArrayList(0)
+    doc       null
+  field key: icons
+    name      icons
+    clType    -3
+    required  false
+    index     10/21
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Icon
+    dupIdx    -1
+    elName    icon
+    elType    Icon
+    def       new ArrayList(0)
+    doc       null
+  field key: jspConfigs
+    name      jspConfigs
+    clType    -3
+    required  false
+    index     11/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.JspConfig
+    dupIdx    -1
+    elName    jspConfig
+    elType    JspConfig
+    def       new ArrayList(0)
+    doc       null
+  field key: listeners
+    name      listeners
+    clType    -3
+    required  false
+    index     12/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Listener
+    dupIdx    -1
+    elName    listener
+    elType    Listener
+    def       new ArrayList(0)
+    doc       null
+  field key: localeEncodingMappingLists
+    name      localeEncodingMappingLists
+    clType    -3
+    required  false
+    index     13/18
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.LocaleEncodingMappingList
+    dupIdx    -1
+    elName    localeEncodingMappingList
+    elType    LocaleEncodingMappingList
+    def       new ArrayList(0)
+    doc       null
+  field key: loginConfigs
+    name      loginConfigs
+    clType    -3
+    required  false
+    index     14/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.LoginConfig
+    dupIdx    -1
+    elName    loginConfig
+    elType    LoginConfig
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinationRefs
+    name      messageDestinationRefs
+    clType    -3
+    required  false
+    index     15/27
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestinationRef
+    dupIdx    -1
+    elName    messageDestinationRef
+    elType    MessageDestinationRef
+    def       new ArrayList(0)
+    doc       null
+  field key: messageDestinations
+    name      messageDestinations
+    clType    -3
+    required  false
+    index     16/17
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.MessageDestination
+    dupIdx    -1
+    elName    messageDestination
+    elType    MessageDestination
+    def       new ArrayList(0)
+    doc       null
+  field key: metadataComplete
+    name      metadataComplete
+    clType    4
+    required  false
+    index     17/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       816
+  field key: mimeMappings
+    name      mimeMappings
+    clType    -3
+    required  false
+    index     18/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.MimeMapping
+    dupIdx    -1
+    elName    mimeMapping
+    elType    MimeMapping
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceContextRefs
+    name      persistenceContextRefs
+    clType    -3
+    required  false
+    index     19/28
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceContextRef
+    dupIdx    -1
+    elName    persistenceContextRef
+    elType    PersistenceContextRef
+    def       new ArrayList(0)
+    doc       null
+  field key: persistenceUnitRefs
+    name      persistenceUnitRefs
+    clType    -3
+    required  false
+    index     20/29
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.PersistenceUnitRef
+    dupIdx    -1
+    elName    persistenceUnitRef
+    elType    PersistenceUnitRef
+    def       new ArrayList(0)
+    doc       null
+  field key: postConstructs
+    name      postConstructs
+    clType    -3
+    required  false
+    index     21/30
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    postConstruct
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: preDestroys
+    name      preDestroys
+    clType    -3
+    required  false
+    index     22/31
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.LifecycleCallback
+    dupIdx    -1
+    elName    preDestroy
+    elType    LifecycleCallback
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceEnvRefs
+    name      resourceEnvRefs
+    clType    -3
+    required  false
+    index     23/26
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceEnvRef
+    dupIdx    -1
+    elName    resourceEnvRef
+    elType    ResourceEnvRef
+    def       new ArrayList(0)
+    doc       null
+  field key: resourceRefs
+    name      resourceRefs
+    clType    -3
+    required  false
+    index     24/25
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ResourceRef
+    dupIdx    -1
+    elName    resourceRef
+    elType    ResourceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: securityConstraints
+    name      securityConstraints
+    clType    -3
+    required  false
+    index     25/14
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.SecurityConstraint
+    dupIdx    -1
+    elName    securityConstraint
+    elType    SecurityConstraint
+    def       new ArrayList(0)
+    doc       null
+  field key: securityRoles
+    name      securityRoles
+    clType    -3
+    required  false
+    index     26/16
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.SecurityRole
+    dupIdx    -1
+    elName    securityRole
+    elType    SecurityRole
+    def       new ArrayList(0)
+    doc       null
+  field key: serviceRefs
+    name      serviceRefs
+    clType    -3
+    required  false
+    index     27/32
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.ServiceRef
+    dupIdx    -1
+    elName    serviceRef
+    elType    ServiceRef
+    def       new ArrayList(0)
+    doc       null
+  field key: servletMappings
+    name      servletMappings
+    clType    -3
+    required  false
+    index     28/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.ServletMapping
+    dupIdx    -1
+    elName    servletMapping
+    elType    ServletMapping
+    def       new ArrayList(0)
+    doc       null
+  field key: servlets
+    name      servlets
+    clType    -3
+    required  false
+    index     29/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.Servlet
+    dupIdx    -1
+    elName    servlet
+    elType    Servlet
+    def       new ArrayList(0)
+    doc       null
+  field key: sessionConfigs
+    name      sessionConfigs
+    clType    -3
+    required  false
+    index     30/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.SessionConfig
+    dupIdx    -1
+    elName    sessionConfig
+    elType    SessionConfig
+    def       new ArrayList(0)
+    doc       null
+  field key: version
+    name      version
+    clType    4
+    required  true
+    index     31/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.enums.WebAppVersion
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: welcomeFileLists
+    name      welcomeFileLists
+    clType    -3
+    required  false
+    index     32/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.web.WelcomeFileList
+    dupIdx    -1
+    elName    welcomeFileList
+    elType    WelcomeFileList
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.javaee.model.xml.web.WebResourceCollection
+  name      WebResourceCollection
+  type      CLASS
+  xsName    web-resource-collectionType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       408
+  field key: descriptions
+    name      descriptions
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.javaee.model.xml.Description
+    dupIdx    -1
+    elName    description
+    elType    Description
+    def       new ArrayList(0)
+    doc       null
+  field key: httpMethods
+    name      httpMethods
+    clType    -1
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    httpMethod
+    elType    String
+    def       new ArrayList(0)
+    doc       null
+  field key: urlPatterns
+    name      urlPatterns
+    clType    -1
+    required  true
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    urlPattern
+    elType    String
+    def       new ArrayList(0)
+    doc       506
+  field key: webResourceName
+    name      webResourceName
+    clType    1
+    required  true
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       498
+type key: com.intellij.javaee.model.xml.web.WelcomeFileList
+  name      WelcomeFileList
+  type      CLASS
+  xsName    welcome-file-listType
+  xsNS      http://java.sun.com/xml/ns/javaee
+  dups      false
+  supers    []
+  doc       190
+  field key: welcomeFiles
+    name      welcomeFiles
+    clType    -1
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    welcomeFile
+    elType    String
+    def       new ArrayList(0)
+    doc       192

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.advancedtools.webservices.jaxb.GenerateJavaFromJAXBSchemasDialog">
+  <grid id="fece0" binding="panel" layout-manager="GridLayoutManager" row-count="10" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="1" left="1" bottom="1" right="1"/>
+    <constraints>
+      <xy x="188" y="178" width="377" height="265"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="a36f3" class="com.intellij.openapi.ui.ComboBox" binding="packagePrefix">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="true"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.packageprefix.tooltip"/>
+        </properties>
+      </component>
+      <component id="fbc1d" class="javax.swing.JLabel" binding="packagePrefixText">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Package prefix:"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.packageprefix.tooltip"/>
+        </properties>
+      </component>
+      <component id="89ee2" class="javax.swing.JCheckBox" binding="addLibs">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <label value="Add necessary libraries in order for generated code to compile and work"/>
+          <margin top="2" left="3" bottom="2" right="3"/>
+          <selected value="true"/>
+          <text resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.addrequiredlibs.tooltip"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.addrequiredlibs.tooltip"/>
+        </properties>
+      </component>
+      <component id="fc23b" class="javax.swing.JLabel" binding="generateFromUrlText">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Schema/wsdl/dtd path:"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.url.tooltip"/>
+        </properties>
+      </component>
+      <component id="97b7e" class="javax.swing.JLabel" binding="outputPathesText">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Output path:"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.outputpath.tooltip"/>
+        </properties>
+      </component>
+      <component id="bcbbc" class="com.intellij.openapi.ui.ComboBox" binding="outputPathes">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.outputpath.tooltip"/>
+        </properties>
+      </component>
+      <component id="bef0c" class="javax.swing.JLabel" binding="statusText">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Status"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="6432a" class="javax.swing.JLabel" binding="status">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="webservice.status.tooltip"/>
+        </properties>
+      </component>
+      <component id="b2571" class="com.intellij.ui.ComboboxWithBrowseButton" binding="generateFromUrl">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.url.tooltip"/>
+        </properties>
+      </component>
+      <component id="fc272" class="javax.swing.JCheckBox" binding="markGeneratedCode">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Mark generated code with 'generated' annotation"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.generate.mark.generated"/>
+        </properties>
+      </component>
+      <component id="38754" class="javax.swing.JCheckBox" binding="generatePackageLevelAnnotations">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Generate package level annotations"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.generate.package.level.annotations"/>
+        </properties>
+      </component>
+      <component id="19d49" class="javax.swing.JCheckBox" binding="enableSourceLocationSupport">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Enable source location support"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.generate.source.location.support"/>
+        </properties>
+      </component>
+      <component id="fef4a" class="javax.swing.JCheckBox" binding="generateSynchronizedAccessors">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Generate synchronized accessors"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.generate.sync.methods"/>
+        </properties>
+      </component>
+      <component id="61db" class="javax.swing.JCheckBox" binding="makeFilesReadOnly">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Make generated files readonly"/>
+          <toolTipText resource-bundle="com/advancedtools/webservices/WSBundle" key="jaxb.make.files.readonly.tooltip"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="JaxRPCWsWithWsdl" targetNamespace="http://localhost/services/JaxRPCWsWithWsdl" xmlns:tns="http://localhost/services/JaxRPCWsWithWsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types>
+    <schema targetNamespace="http://localhost/services/JaxRPCWsWithWsdl" xmlns:tns="http://localhost/services/JaxRPCWsWithWsdl" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="doIt">
+        <sequence>
+          <element name="Param_1" type="tns:Param" nillable="true"/></sequence></complexType>
+      <complexType name="Param">
+        <sequence>
+          <element name="param" type="string" nillable="true"/></sequence></complexType>
+      <complexType name="doItResponse">
+        <sequence/></complexType>
+      <element name="doIt" type="tns:doIt"/>
+      <element name="doItResponse" type="tns:doItResponse"/></schema></types>
+  <message name="IJaxRPCWsWithWsdl_doIt">
+    <part name="parameters" element="tns:doIt"/></message>
+  <message name="IJaxRPCWsWithWsdl_doItResponse">
+    <part name="result" element="tns:doItResponse"/></message>
+  <portType name="IJaxRPCWsWithWsdl">
+    <operation name="doIt">
+      <input message="tns:IJaxRPCWsWithWsdl_doIt"/>
+      <output message="tns:IJaxRPCWsWithWsdl_doItResponse"/></operation></portType>
+  <binding name="IJaxRPCWsWithWsdlBinding" type="tns:IJaxRPCWsWithWsdl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="doIt">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation></binding>
+  <service name="JaxRPCWsWithWsdl">
+    <port name="IJaxRPCWsWithWsdlPort" binding="tns:IJaxRPCWsWithWsdlBinding">
+      <soap:address location="REPLACE_WITH_ACTUAL_URL"/></port></service></definitions>

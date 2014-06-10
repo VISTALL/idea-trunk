@@ -1,0 +1,145 @@
+#IF ('#if')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('foo')
+WHITE_SPACE (' ')
+LT ('<')
+WHITE_SPACE (' ')
+number ('10')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+    <strong>Go North</strong>
+')
+#ELSEIF ('#elseif')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('foo')
+WHITE_SPACE (' ')
+EQ ('==')
+WHITE_SPACE (' ')
+number ('10')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+    <strong>Go East</strong>
+')
+#ELSE ('#else')
+TEMPLATE_TEXT ('()
+    <strong>Go West</strong>
+')
+#END ('#end')
+TEMPLATE_TEXT ('()
+
+')
+#IF ('#if')
+WHITE_SPACE (' ')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('foo')
+WHITE_SPACE (' ')
+LT ('<')
+WHITE_SPACE (' ')
+number ('10')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+    <strong>Go North</strong>
+')
+#ELSEIF ('#elseif')
+WHITE_SPACE (' ')
+( ('(')
+WHITE_SPACE (' ')
+$ ('$')
+identifier ('foo')
+WHITE_SPACE (' ')
+EQ ('==')
+WHITE_SPACE (' ')
+number ('10')
+WHITE_SPACE (' ')
+) (')')
+TEMPLATE_TEXT ('
+    <strong>Go West</strong>
+')
+#ELSE ('#else')
+TEMPLATE_TEXT (' ()
+    <strong>Go West</strong>
+')
+#END ('#end')
+TEMPLATE_TEXT (' ()
+
+')
+#IF ('#if')
+TEMPLATE_TEXT ('
+')
+#ELSEIF ('#elseif')
+TEMPLATE_TEXT ('
+')
+#ELSE ('#else')
+TEMPLATE_TEXT ('
+')
+#END ('#end')
+TEMPLATE_TEXT ('
+
+#ifa
+#elseifa
+#elsea
+#enda
+
+')
+#MACRO_CALL ('#')
+identifier ('ifa')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('elseifa')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('elsea')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('enda')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+
+')
+#MACRO_CALL ('#')
+identifier ('ifa')
+WHITE_SPACE (' ')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('elseifa')
+WHITE_SPACE (' ')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('elsea')
+WHITE_SPACE (' ')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')
+#MACRO_CALL ('#')
+identifier ('enda')
+WHITE_SPACE (' ')
+( ('(')
+) (')')
+TEMPLATE_TEXT ('
+')

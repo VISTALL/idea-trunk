@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Pointless boolean expression</problem_class>
+    <description>y &amp;&amp; true can be simplified to y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Pointless boolean expression</problem_class>
+    <description>false || y can be simplified to y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Pointless boolean expression</problem_class>
+    <description>true ^ y can be simplified to !y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>Pointless boolean expression</problem_class>
+    <description>!true can be simplified to false #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>14</line>
+    <problem_class>Pointless boolean expression</problem_class>
+    <description>var_name == true can be simplified to var_name #loc</description>
+  </problem>
+</problems>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+
+<idea-plugin version="2">
+  
+  <extensions xmlns="com.intellij">
+    <spring.modelProvider implementation="com.intellij.spring.web.SpringWebModelProvider"/>
+    <spring.configurator implementation="com.intellij.spring.web.SpringWebConfigurator"/>
+    <psi.referenceContributor implementation="com.intellij.spring.web.SpringWebReferenceContributor"/>
+    <semContributor implementation="com.intellij.spring.web.mvc.jam.SpringMvcJamContributor"/>
+    <javaee.web.customServletReferenceProvider implementation="com.intellij.spring.web.mvc.SpringMVCReferenceProvider"/>
+
+    <moduleService serviceInterface="com.intellij.spring.web.mvc.jam.SpringMVCJamModel"
+                   serviceImplementation="com.intellij.spring.web.mvc.jam.SpringMVCJamModel"/>
+    <metaDataContributor implementation="com.intellij.spring.web.mvc.jam.SpringMVCMetaData"/>
+    <psi.referenceContributor implementation="com.intellij.spring.web.mvc.jam.SpringMVCJamReferenceContributor" />
+    <javaee.jsp.elImplicitVariablesProvider implementation="com.intellij.spring.web.mvc.SpringMVCVariablesProvider"/>
+    <multiHostInjector implementation="com.intellij.spring.el.SpringElInjector"/>
+
+  </extensions>
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.spring.web.SpringJavaeeApplicationComponent</implementation-class>
+    </component>    
+  </application-components>
+</idea-plugin>

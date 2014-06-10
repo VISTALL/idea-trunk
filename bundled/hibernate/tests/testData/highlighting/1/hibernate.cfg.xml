@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory name="MyUnit">
+            <!-- Database connection settings -->
+    <property name="default_schema">test</property>
+    <property name="connection.driver_class"><error>abc</error>.<error>jdbc</error>.<error>MegaDriver</error></property>
+    <property name="c3p0.max_size">23</property>
+    <property name="use_sql_comments">false</property>
+    <property name="dialect">org.hibernate.dialect.DataDirectOracle9Dialect</property>
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    <property name="current_session_context_class">jta</property>
+
+    <mapping resource="pkg/mapping.hbm.xml"/>
+    <mapping resource="pkg/<error>err-mapping.hbm.xml</error>"/>
+    <mapping package="pkg"/>
+    <mapping package="pkg.<error>bad-pgk</error>"/>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,11 @@
+TEMPLATE_TEXT ('ext ')
+${ ('${')
+identifier ('myobj')
+} ('}')
+TEMPLATE_TEXT ('
+t text text ')
+${ ('${')
+identifier ('myobj')
+JAVA_DOT ('.')
+identifier ('ddd')
+} ('}')

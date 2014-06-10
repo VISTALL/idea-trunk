@@ -1,0 +1,11 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopReferenceHolder
+      PsiErrorElement:Method return type expected
+        <empty list>
+    AopMemberReferenceExpression
+      <empty list>

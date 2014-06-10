@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop">
+  <bean id="simpleAspectBean" class="foo.AspectClass"/>
+  <bean id="target1" class="foo.TargetClassWithInterface"/>
+  <bean id="target2" class="foo.TargetClassNoInterface"/>
+  <aop:config>
+    <aop:aspect ref="simpleAspectBean">
+      <aop:around method="before" pointcut="execution(* *(..))"/>
+    </aop:aspect>
+  </aop:config>
+</beans>

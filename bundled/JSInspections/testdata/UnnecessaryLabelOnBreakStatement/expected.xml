@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Unnecessary label on 'break' statement</problem_class>
+    <description>break statement with unnecessary label</description>
+  </problem>
+</problems>

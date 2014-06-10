@@ -1,0 +1,6 @@
+  <html>
+  ${act<caret>}
+</html>
+-----
+actionSubmit
+actionSubmitImage

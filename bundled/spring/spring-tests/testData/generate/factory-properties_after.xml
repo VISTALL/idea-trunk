@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"/>
+  <bean id="transactionManager"  class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+      <property name="sessionFactory" ref=""/>
+      <property name="dataSource" ref=""/>
+      <property name="autodetectDataSource" value=""/>
+      <property name="prepareConnection" value=""/>
+      <property name="entityInterceptorBeanName" value=""/>
+      <property name="entityInterceptor" ref=""/>
+      <property name="jdbcExceptionTranslator" ref=""/>
+      <property name="beanFactory" ref=""/>
+      <property name="transactionSynchronizationName" value=""/>
+      <property name="transactionSynchronization" value=""/>
+      <property name="defaultTimeout" value=""/>
+      <property name="nestedTransactionAllowed" value=""/>
+      <property name="globalRollbackOnParticipationFailure" value=""/>
+      <property name="failEarlyOnGlobalRollbackOnly" value=""/>
+      <property name="rollbackOnCommitFailure" value=""/>
+  </bean>
+</beans>

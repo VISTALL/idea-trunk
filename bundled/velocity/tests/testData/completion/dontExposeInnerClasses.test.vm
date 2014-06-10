@@ -1,0 +1,2 @@
+#* @vtlvariable name="foo" type="my.pack.Class2" *#
+$foo.<caret>

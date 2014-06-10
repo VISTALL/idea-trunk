@@ -1,0 +1,6 @@
+
+
+#if( !$foo && $bar || $bazz && 2 == 2 || 2 != 2 && 2 <= 2 && 2 >= 2 || 2 > 2 || 2 < 2 && !2)
+  <strong>NOT AND OR</strong>
+#end
+

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-Name: Exporter to Idea Project Plug-in
+Bundle-SymbolicName: com.intellij.eclipse.export;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: ExporterToIdea.jar,
+ lib/jdom.jar
+Bundle-Vendor: IntelliJ Labs
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jdt.ui,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.launching
+Eclipse-LazyStart: true
+Provide-Package: com.intellij.eclipse.export,
+ com.intellij.eclipse.export.model,
+ com.intellij.eclipse.export.model.util,
+ com.intellij.eclipse.export.model.codestyle

@@ -1,0 +1,6 @@
+#macro(mmm $pp)
+#foreach($pp in [3,2])
+$pp
+#end
+$p<caret>p
+#end

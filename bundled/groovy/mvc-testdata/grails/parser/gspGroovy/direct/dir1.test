@@ -1,0 +1,17 @@
+<abc>
+<%@ import file = "A" %>
+<% 3 %>
+</abc>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<abc>\n<%@ import file = "A" %>\n')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        Literal
+          PsiElement(Integer)('3')
+        PsiWhiteSpace(' ')
+        PsiElement(java scriptlet end)('%>')
+        Outer: GSP TEMPLATE STATEMENTS('\n</abc>')

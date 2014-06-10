@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, no-cache, must-revalidate">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" lang="en">
+    <meta name="robots" content="none">
+    <meta name="copyright" content="JetBrains, Inc., http://www.jetbrains.com">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" media="all" href="../DefaultCSS/s.css">
+    <title>Using Web Services</title>
+</head>
+<body id="IJ_help" class="template">
+<div id="container">
+
+    <div id="header" style="background:url(../../DefaultCSS/img/bg_idea_big.jpg)">
+        <h1>Using Web Services</h1>
+    </div>
+          <div class="introduction">
+          This topic describes the step-by step instructions on how to use <b>Web Services</b> with <b>IntelliJ IDEA</b>.
+          </div>
+    <div id="content">
+
+
+        <div class="section">
+
+            <ul style="list-style-image:url(../../DefaultCSS/img/blue_romb_blt.png)" >
+                <li>Run <a href="GenerateJavaFromWSDL.html">Generate Java from WSDL</a> (<span class="ijMenu">Tools | WebServices | Generate
+                    Java Code From Wsdl</span>) to
+                    generate client stubs for typed web service invocation.
+                </li>
+                <li>It is possible to generate web service invocation code by invoking <span class="ijMenu">Code | Generate action</span>. The
+                    alternative
+                    way of such generation is to invoke live template, e.g. for Axis client code one can type
+                    <b>itws</b>
+                    (invoke typed web service in Axis) in java / jsp and press <span class="shortcut">Tab</span>,
+                    live template will insert web service invocation code, like following:
+        <pre class="codeExpre">
+
+            &lt;WebServiceName&gt;ServiceLocator locator = <span class="keyword">new</span> &lt;WebServiceName&gt;ServiceLocator();
+            &lt;WebServiceName&gt; service = locator.get&lt;WebServiceNameURI&gt;();
+
+            <span class="comments">//If authorization is required</span>
+            ((&lt;WebServiceNameURI&gt;Soap_BindingStub)service).setUsername(<span class="string">"user3"</span>);
+            ((&lt;WebServiceNameURI&gt;Soap_BindingStub)service).setPassword(<span class="string">"pass3"</span>);
+
+            <span class="comments">// business methods</span>
+            System.out.println(service.getIndex(1));
+
+      </pre>
+                </li>
+                <li>
+                    It is possible to invoke web service <b>without generating client code</b>, one should
+                    activate <b>Enable Web Service Support</b> action (<span class="ijMenu">Tools | WebServices | Enable Web Services Support</span>) for
+                    needed
+                    module with <b>Client</b> setting. After that it is possible to generate web service invocation code by
+                    invoking <span class="ijMenu">Code | Generate</span> action or,
+                    alternatively, type live template name (e.g. <b>iuws</b>) in <b>Editor</b> and press <span class="shortcut">Tab</span> (expand live
+                    template), live template will insert web
+                    service invocation code.
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+<div id="footer">
+    <p>
+
+        Comments, questions, suggestions? See the <a href="../../feedback.html">Feedback</a> page to contact
+        <b>JetBrains</b><br><br>
+
+        <b>Copyright &copy; 2000-2007 JetBrains s.r.o. All rights reserved</b>
+
+    </p>
+</div>
+</body>
+</html>

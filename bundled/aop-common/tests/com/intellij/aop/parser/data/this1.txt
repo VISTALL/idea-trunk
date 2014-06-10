@@ -1,0 +1,19 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiThisExpression
+    PsiElement(AOP_THIS)('this')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopArrayExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              AopReferenceExpression
+                PsiElement(AOP_IDENTIFIER)('com')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('xyz')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('service')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_IDENTIFIER)('AccountService')
+        PsiElement(AOP_BRACES)('[]')
+    PsiElement(AOP_RIGHT_PAR)(')')

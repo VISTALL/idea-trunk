@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+  <bean name="test1" class="FooBean" scope="request"/>
+  <bean name="test2" class="FooBean" scope="globalSession"/>
+  <bean name="test3" class="FooBean" scope="prototype"/>
+  <bean name="test4" class="FooBean" scope="session"/>
+  <bean name="test5" class="FooBean" scope="singleton"/>
+  <bean name="test6" class="FooBean" scope="<error>unknown</error>"/>
+
+  <!-- test custom scopes-->
+  <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
+    <property name="scopes">
+      <map>
+        <entry key="custom_scope1" value=""/>
+        <entry value="">
+          <key>
+            <warning><value>custom_scope2</value></warning>
+          </key>
+        </entry>
+      </map>
+    </property>
+  </bean>
+
+  <bean name="test7" class="FooBean" scope="custom_scope1"/>
+  <bean name="test8" class="FooBean" scope="custom_scope2"/>
+
+</beans>

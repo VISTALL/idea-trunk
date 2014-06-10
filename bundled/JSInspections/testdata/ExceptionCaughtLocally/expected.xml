@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Exception used for local control-flow</problem_class>
+    <description>'throw' of exception caught locally</description>
+  </problem>
+</problems>

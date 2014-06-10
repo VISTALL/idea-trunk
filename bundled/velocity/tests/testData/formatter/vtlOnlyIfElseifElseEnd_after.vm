@@ -1,0 +1,24 @@
+## comment
+#if(true)
+    #if(true)
+        #set($r=5)
+    #end
+#elseif(4)
+    #if(true)
+    #end
+#else
+    #if(true)
+    #elseif(4)
+        #if(true)
+        #else
+        #end
+
+    #end
+#end
+
+#if(true)  #else  #end
+
+#if(true)
+#else  #end
+
+## comment

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2006 by Fuhrer Engineering AG, CH-2504 Biel/Bienne, Switzerland -->
+<project default="deploy">
+    <target name="deploy" depends="geronimo,glassfish,jboss"/>
+    <target name="geronimo">
+        <delete file="geronimoIntegration.jar"/>
+        <jar jarfile="geronimoIntegration.jar">
+            <metainf dir="geronimo/META-INF" includes="plugin.xml"/>
+            <fileset dir="classes/production/common"/>
+            <fileset dir="classes/production/geronimo-base"/>
+            <fileset dir="classes/production/geronimo-srv10"/>
+            <fileset dir="classes/production/geronimo-srv11"/>
+        </jar>
+    </target>
+    <target name="glassfish">
+        <delete file="glassfishIntegration.jar"/>
+        <jar jarfile="glassfishIntegration.jar">
+            <metainf dir="glassfish/META-INF" includes="plugin.xml"/>
+            <fileset dir="classes/production/common"/>
+            <fileset dir="classes/production/glassfish-base"/>
+            <fileset dir="classes/production/glassfish-srv"/>
+        </jar>
+    </target>
+    <target name="jboss">
+        <delete file="jbossIntegration.jar"/>
+        <jar jarfile="jbossIntegration.jar">
+            <metainf dir="jboss/META-INF" includes="plugin.xml"/>
+            <fileset dir="classes/production/common"/>
+            <fileset dir="classes/production/jboss-base"/>
+            <fileset dir="classes/production/jboss-srv"/>
+        </jar>
+    </target>
+</project>

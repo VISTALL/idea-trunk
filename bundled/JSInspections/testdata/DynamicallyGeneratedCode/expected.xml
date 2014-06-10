@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Execution of dynamically generated JavaScript</problem_class>
+    <description>Function 'setTimeout' indicative of dynamically generated code</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Execution of dynamically generated JavaScript</problem_class>
+    <description>Function 'setInterval' indicative of dynamically generated code</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>Execution of dynamically generated JavaScript</problem_class>
+    <description>Function 'Function' indicative of dynamically generated code</description>
+  </problem>
+</problems>

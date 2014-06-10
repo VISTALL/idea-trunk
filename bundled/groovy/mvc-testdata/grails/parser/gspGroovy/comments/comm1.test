@@ -1,0 +1,39 @@
+<abc>
+<% 1
+%{-- %><% --}%
+2 %>
+</abc>
+-----
+GspGroovyDummyHolder
+  GspClass
+    GspRunMethod
+      GspRunBlock
+        Outer: GSP TEMPLATE STATEMENTS('<abc>\n')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        Literal
+          PsiElement(Integer)('1')
+        PsiElement(new line)('\n')
+        PsiErrorElement:';', '}' or new line expected
+          PsiElement(%)('%')
+          PsiElement({)('{')
+          PsiElement(--)('--')
+        PsiWhiteSpace(' ')
+        PsiElement(java scriptlet end)('%>')
+        PsiElement(java scriptlet begin)('<%')
+        PsiWhiteSpace(' ')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(--)('--')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(})('}')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(%)('%')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(new line)('\n')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(Integer)('2')
+        PsiWhiteSpace(' ')
+        PsiErrorElement:Wrong Groovy code
+          PsiElement(java scriptlet end)('%>')
+        PsiErrorElement:Wrong Groovy code
+          Outer: GSP TEMPLATE STATEMENTS('\n</abc>')

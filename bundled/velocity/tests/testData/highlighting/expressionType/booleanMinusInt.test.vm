@@ -1,0 +1,1 @@
+#set($v = <weak_warning descr="Invalid types of the operands: 'boolean' and 'int'">true - 5</weak_warning>)

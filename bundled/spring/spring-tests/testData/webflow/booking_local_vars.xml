@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+  <var name="booking" class="beans.Booking"/>
+
+  <view-state id="state1">
+    <var name="bookingState1" class="beans.Booking"/>
+
+    <transition on="on">
+      <evaluate expression="booking.id"/>
+      <evaluate expression="bookingState1.id"/>
+      <evaluate expression="<warning>bookingState2</warning>.id"/>
+    </transition>
+  </view-state>
+
+  <view-state id="state2">
+    <var name="bookingState2" class="beans.Booking"/>
+
+    <transition on="on">
+      <evaluate expression="booking.id"/>
+      <evaluate expression="<warning>bookingState1</warning>.id"/>
+      <evaluate expression="bookingState2.id"/>
+    </transition>
+  </view-state>
+
+</flow>

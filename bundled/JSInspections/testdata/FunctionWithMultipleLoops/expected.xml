@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Function with multiple loops</problem_class>
+    <description>function 'foo' contains 2 loops #loc</description>
+  </problem>
+</problems>

@@ -1,0 +1,14 @@
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+  <service>
+    <serviceClass><error>xfire</error>.<error>XFireWs</error></serviceClass>
+    <implementationClass><error>xfire</error>.<error>XFireWs</error></implementationClass>
+    <serviceFactory><error>org2</error>.<error>XmlBeansServiceFactory</error></serviceFactory>
+    <wsdlURL> <error>bad url</error> </wsdlURL>
+  </service>
+
+  <service>
+    <serviceClass>XFireWs</serviceClass>
+    <implementationClass>XFireWs</implementationClass>
+    <wsdlURL> file://bad_services.xml </wsdlURL>
+  </service>
+</beans>

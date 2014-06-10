@@ -1,0 +1,100 @@
+<html>
+            <g:form controller="${propertyName}" method="post" <%= multiPart ? ' enctype="multipart/form-data"' : '' %>>
+                <div/>
+                <div class="buttons">
+                    <span class="button"><g:actionSubmit class="save" value="Update" /></span>
+                </div>
+            </g:form>
+     </html>
+-----
+Groovy Server Pages file
+  PsiElement(XML_DOCUMENT)
+    PsiElement(XML_PROLOG)
+      <empty list>
+    Gsp root tag
+      Outer: GSP TEMPLATE STATEMENTS('<html>\n            ')
+      Grails tag
+        XmlToken:XML_START_TAG_START('<')
+        XmlToken:XML_TAG_NAME('g:form')
+        PsiWhiteSpace(' ')
+        GSP attribute
+          XmlToken:XML_NAME('controller')
+          XmlToken:XML_EQ('=')
+          XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+          GSP attribute value
+            PsiElement(groovy expression begin)('${')
+            Outer: GSP_GROOVY_CODE('propertyName')
+            PsiElement(groovy expression end)('}')
+          XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+        PsiWhiteSpace(' ')
+        GSP attribute
+          XmlToken:XML_NAME('method')
+          XmlToken:XML_EQ('=')
+          XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+          GSP attribute value
+            XmlToken:XML_ATTRIBUTE_VALUE_TOKEN('post')
+          XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+        PsiErrorElement:Wrong grails tag attributes
+          <empty list>
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER('<%=')
+        PsiWhiteSpace(' ')
+        GSP attribute
+          XmlToken:XML_NAME('multiPart')
+          PsiErrorElement:'=' expected
+            <empty list>
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER('?')
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER(''')
+        PsiWhiteSpace(' ')
+        GSP attribute
+          XmlToken:XML_NAME('enctype')
+          XmlToken:XML_EQ('=')
+          XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+          GSP attribute value
+            XmlToken:XML_ATTRIBUTE_VALUE_TOKEN('multipart/form-data')
+          XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+        PsiErrorElement:Wrong grails tag attributes
+          <empty list>
+        XmlToken:XML_BAD_CHARACTER(''')
+        PsiErrorElement:Wrong grails tag attributes
+          <empty list>
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER(':')
+        PsiErrorElement:Wrong grails tag attributes
+          <empty list>
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER('''')
+        PsiErrorElement:Wrong grails tag attributes
+          <empty list>
+        PsiWhiteSpace(' ')
+        XmlToken:XML_BAD_CHARACTER('%')
+        XmlToken:XML_TAG_END('>')
+        Outer: GSP TEMPLATE STATEMENTS('>\n                <div/>\n                <div class="buttons">\n                    <span class="button">')
+        Grails tag
+          XmlToken:XML_START_TAG_START('<')
+          XmlToken:XML_TAG_NAME('g:actionSubmit')
+          PsiWhiteSpace(' ')
+          GSP attribute
+            XmlToken:XML_NAME('class')
+            XmlToken:XML_EQ('=')
+            XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+            GSP attribute value
+              XmlToken:XML_ATTRIBUTE_VALUE_TOKEN('save')
+            XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+          PsiWhiteSpace(' ')
+          GSP attribute
+            XmlToken:XML_NAME('value')
+            XmlToken:XML_EQ('=')
+            XmlToken:XML_ATTRIBUTE_VALUE_START_DELIMITER('"')
+            GSP attribute value
+              XmlToken:XML_ATTRIBUTE_VALUE_TOKEN('Update')
+            XmlToken:XML_ATTRIBUTE_VALUE_END_DELIMITER('"')
+          PsiWhiteSpace(' ')
+          XmlToken:XML_EMPTY_ELEMENT_END('/>')
+        Outer: GSP TEMPLATE STATEMENTS('</span>\n                </div>\n            ')
+        XmlToken:XML_END_TAG_START('</')
+        XmlToken:XML_TAG_NAME('g:form')
+        XmlToken:XML_TAG_END('>')
+      Outer: GSP TEMPLATE STATEMENTS('\n     </html>')

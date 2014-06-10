@@ -1,0 +1,5 @@
+parsing WSDL...
+
+
+[ERROR] rpc/encoded wsdls are not supported in JAXWS 2.0.
+  line 82 of http://viewcvs.globus.org/viewcvs.cgi/*checkout*/axis/java/samples/addr/AddressBook.wsdl?revision=1.1

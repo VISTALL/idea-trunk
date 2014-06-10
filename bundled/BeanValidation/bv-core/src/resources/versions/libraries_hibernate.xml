@@ -1,0 +1,9 @@
+<libraries default-ri="Hibernate"
+           default-download-url="http://download.jetbrains.com/idea/j2ee_libs/bean_validation/$RI$/$VERSION$/"
+           default-presentation-url="http://download.jetbrains.com"
+           default-presentation-name="Hibernate Validator">
+  <lib version="4.0.0.Beta2" jar-name="validation-api-1.0.CR3.jar" required-classes="javax.validation.Constraint"/>
+  <lib version="4.0.0.Beta2" jar-name="hibernate-validator-4.0.0.Beta2.jar" required-classes="org.hibernate.validation.constraints.Length"/>
+  <lib version="4.0.0.Beta2" jar-name="slf4j-api-1.5.6.jar" required-classes="org.slf4j.Logger"/>
+  <lib version="4.0.0.Beta2" jar-name="slf4j-log4j12-1.5.6.jar" required-classes="org.slf4j.impl.Log4jLoggerAdapter"/>
+</libraries>

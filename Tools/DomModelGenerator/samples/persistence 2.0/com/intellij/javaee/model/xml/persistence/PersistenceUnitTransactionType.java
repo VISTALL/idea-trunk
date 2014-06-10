@@ -1,0 +1,16 @@
+// Generated on Tue Apr 28 15:52:23 MSD 2009
+// DTD/Schema  :    http://java.sun.com/xml/ns/persistence
+
+package com.intellij.javaee.model.xml.persistence;
+
+/**
+ * http://java.sun.com/xml/ns/persistence:persistence-unit-transaction-type enumeration.
+ * <pre>
+ * <h3>Enumeration http://java.sun.com/xml/ns/persistence:persistence-unit-transaction-type documentation</h3>
+ * public enum TransactionType { JTA, RESOURCE_LOCAL };
+ * </pre>
+ */
+public enum PersistenceUnitTransactionType {
+	JTA,
+	RESOURCE_LOCAL
+}

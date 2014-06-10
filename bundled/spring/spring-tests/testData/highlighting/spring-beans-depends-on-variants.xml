@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean name="test,alias" class="" />
+    <bean id="test2" class="" />
+    <bean id="test3" class="" />
+    <bean name="test4, alias4" class="" />
+    <bean id="test5" class="" depends-on="test; test2"/>
+    <alias name="alias" alias="alias3"/>
+</beans>

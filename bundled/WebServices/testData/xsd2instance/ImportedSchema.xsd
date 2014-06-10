@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<xs:schema targetNamespace="http://simple" xmlns="http://simple"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+
+    <xs:element name="innerImported" type="xs:string"/>
+</xs:schema>
+

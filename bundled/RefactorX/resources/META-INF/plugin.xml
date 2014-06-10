@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+    <name>Refactor-X</name>
+    <description>New automated XML refactorings for IntelliJ IDEA</description>
+    <version>2.01</version>
+    <vendor url="http://www.sixthandredriver.com"
+            email="info@sixthandredriver.com">Sixth and Red River Software</vendor>
+    <idea-version since-build="5000"/>
+    <depends>com.intellij.modules.xml</depends>
+
+    <project-components>
+        <component>
+            <implementation-class>com.sixrr.xrp.RefactorXIntentions</implementation-class>
+        </component>
+    </project-components>
+    <actions>
+        <group id="XMLRefactoringMenu" class="com.sixrr.xrp.RefactorXMenuGroup" text="_XML Refactorings"
+               popup="true">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="RefactoringMenu"/>
+            <add-to-group group-id="StructureViewPopupMenu" anchor="after" relative-to-action="RefactoringMenu"/>
+            <action id="RenameTagAction" class="com.sixrr.xrp.renametag.RenameTagAction" text="Re_name Tag..."
+                    description="Rename all instances of the selected tag"/>
+
+            <action id="RenameAttributeAction" class="com.sixrr.xrp.renameattribute.RenameAttributeAction"
+                    text="Rename Attri_bute..." description="Remove all instances of the selected attribute"/>
+            <action id="DeleteTagAction" class="com.sixrr.xrp.deletetag.DeleteTagAction" text="Delete _Tag..."
+                    description="Remove all instances of the selected tag"/>
+
+            <action id="DeleteAttributeAction" class="com.sixrr.xrp.deleteattribute.DeleteAttributeAction"
+                    text="_Delete Attribute..." description="Remove all instances of the selected attribute"/>
+            <action id="AddAttributeAction" class="com.sixrr.xrp.addattribute.AddAttributeAction"
+                    text="Add _Attribute..." description="Add an attribute to all instances of the selected tag"/>
+            <action id="AddSubtagAction" class="com.sixrr.xrp.addsubtag.AddSubtagAction" text="Add _Subtag..."
+                    description="Add a subtag to all instances of the selected tag"/>
+            <action id="ChangeAttributeValueAction"
+                    class="com.sixrr.xrp.changeattributevalue.ChangeAttributeValueAction"
+                    text="C_hange Attribute Value.."
+                    description="Change the value of all instances of the selected attribute from the current value to a new value"/>
+            <action id="UnwrapTagAction" class="com.sixrr.xrp.unwraptag.UnwrapTagAction" text="_Unwrap Tag..."
+                    description="Replace all instances of the selected tag with their contents"/>
+            <action id="WrapTagAction" class="com.sixrr.xrp.wraptag.WrapTagAction" text="_Wrap Tag..."
+                    description="Wrap all instances of the selected tag with another tag"/>
+            <action id="WrapTagContentsAction" class="com.sixrr.xrp.wraptagcontents.WrapTagContentsAction"
+                    text="Wrap Tag _Contents..."
+                    description="Wrap the contents all instances of the selected tag with another tag"/>
+            <action id="ConvertContentsToAttributeAction"
+                    class="com.sixrr.xrp.convertcontentstoattribute.ConvertContentsToAttributeAction"
+                    text="C_onvert Tag Contents To Attribute..."
+                    description="Converts the contents all instances of the selected tag as an attribute"/>
+            <action id="ReplaceTagWithAttributeAction" class="com.sixrr.xrp.tagtoattribute.TagToAttributeAction"
+                    text="_Replace Tag with Attribute..."
+                    description="Replace all instances of the selected tag with a corresponding attribute"/>
+            <action id="ReplaceAttributeWithTagAction" class="com.sixrr.xrp.attributetotag.AttributeToTagAction"
+                    text="R_eplace Attribute with Tag..."
+                    description="Replace all instances of the selected attribute with a corresponding tag"/>
+            <action id="MoveAttributeInAction" class="com.sixrr.xrp.moveattributein.MoveAttributeInAction"
+                    text="_Move Attribute In..."
+                    description="Move all instances of the selected attribute to an appropriate subtag"/>
+            <action id="MoveAttributeOutAction" class="com.sixrr.xrp.moveattributeout.MoveAttributeOutAction"
+                    text="Mo_ve Attribute Out..."
+                    description="Move all instances of the selected attribute to the containing tag"/>
+        </group>
+    </actions>
+    <extensions defaultExtensionNs="com.intellij">
+      <intentionAction>
+        <className>com.sixrr.xrp.expandemptytag.ExpandEmptyTagIntention</className>
+        <category>XML</category>
+      </intentionAction>
+      <!-- http://jetbrains.net/jira/browse/IDEADEV-28679 This inspection is duplicates CheckTagEmptyBodyInspection -->
+      <!--<intentionAction>-->
+        <!--<className>com.sixrr.xrp.collapsetag.CollapseEmptyTagIntention</className>-->
+        <!--<category>XML</category>-->
+      <!--</intentionAction>-->
+
+      <intentionAction>
+        <className>com.sixrr.xrp.mergetags.MergeTagsIntention</className>
+        <category>XML</category>
+      </intentionAction>
+    </extensions>
+</idea-plugin>

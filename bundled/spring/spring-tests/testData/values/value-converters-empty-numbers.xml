@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="foo" class="FooBean10">
+     <property name="byte" value="<error> </error>"/>
+     <property name="short" value="<error> </error>"/>
+     <property name="integer" value="<error> </error>"/>
+     <property name="long" value="<error> </error>"/>
+     <property name="float" value="<error> </error>"/>
+     <property name="double" value="<error> </error>"/>
+     <property name="char" value="<error> </error>"/>
+
+     <property name="byteClass" value=""/>
+     <property name="shortClass" value=""/>
+     <property name="integerClass" value=""/>
+     <property name="longClass" value=""/>
+     <property name="floatClass" value=""/>
+     <property name="doubleClass" value=""/>
+     <property name="characterClass" value=""/>
+
+     <property name="bigDecimal" value=""/>
+     <property name="bigInteger" value=""/>
+  </bean>
+</beans>

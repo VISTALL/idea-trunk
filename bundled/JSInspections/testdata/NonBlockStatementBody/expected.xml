@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Non-block statement body</problem_class>
+    <description>'if' statement has non-block branch</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Non-block statement body</problem_class>
+    <description>'while' statement has non-block body</description>
+  </problem>
+</problems>

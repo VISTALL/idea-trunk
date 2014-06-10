@@ -1,0 +1,17 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiCallExpression
+    PsiElement(AOP_CALL)('call')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      <empty list>
+    PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_RIGHT_PAR)(')')

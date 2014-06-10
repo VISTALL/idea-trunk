@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="bean" class="BeanWithConstructor">
+      <constructor-arg index="0" ref=""/>
+      <constructor-arg index="1" value=""/>
+      <constructor-arg index="2">
+          <list>
+              <value></value>
+          </list>
+      </constructor-arg>
+  </bean>
+  <bean id="other" class="FooBean"/>
+</beans>

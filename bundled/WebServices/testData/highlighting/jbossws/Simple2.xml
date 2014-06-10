@@ -1,0 +1,9 @@
+<configuration xmlns="http://www.jboss.org/jbossws-tools">
+  <java-wsdl>
+    <service name="MySessionService" style="rpc" endpoint="Simple"/>
+
+    <namespaces target-namespace="http://test" type-namespace="http://test/types"/>
+    <mapping file="Simple2.xml"/>
+    <webservices ejb-link="MySessionEJB"/>
+  </java-wsdl>
+</configuration>

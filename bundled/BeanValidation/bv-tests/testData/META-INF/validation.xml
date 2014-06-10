@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validation-config
+    xmlns="http://jboss.org/xml/ns/javax/validation/configuration"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <default-provider><error>aaa</error>.<error>Provider</error></default-provider>
+  <message-interpolator><error>aaa</error>.<error>Interpolator</error></message-interpolator>
+  <traversable-resolver><error>aaa</error>.<error>Resolver</error></traversable-resolver>
+  <constraint-validator-factory><error>aaa</error>.<error>Facktory</error></constraint-validator-factory>  
+  <constraint-mapping>META-INF/ConstraintMappings.xml</constraint-mapping>
+  <constraint-mapping>META-INF/<error>foo.xml</error></constraint-mapping>
+</validation-config>

@@ -1,0 +1,24 @@
+#* @vtlvariable name="foo1" type="java.lang.String" *#
+#* @vtlvariable name="foo2" type="java.lang.Iterable" *#
+      
+#foreach($loopVar in <warning descr="Iillegal iterable expression type: 'String'">$foo1</warning>)
+$loopVar
+#end
+
+#foreach($loopVar in <warning descr="Iillegal iterable expression type: 'int'">$foo1.length()</warning>)
+$loopVar
+#end
+
+#foreach($loopVar in <warning descr="Iillegal iterable expression type: 'Iterable'">$foo2</warning>)
+$loopVar
+#end
+                     
+#foreach($loopVar in $foo3)
+$loopVar
+#end
+
+#macro(iterate $list)
+#foreach($element in $list)
+    ${element}
+#end
+#end

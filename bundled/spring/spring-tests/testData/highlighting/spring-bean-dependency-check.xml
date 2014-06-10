@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-dependency-check="simple" >
+  <<error>bean</error> id="foo" class="FooBean" />
+
+  <bean id="fooBean" class="FooBean" dependency-check="none"/>
+  <<error>bean</error> id="fooBean_1" class="FooBean" dependency-check="simple"  />
+  <bean id="fooBean_2" class="FooBean" dependency-check="objects" />
+  <<error>bean</error> id="fooBean_3" class="FooBean" dependency-check="all" />
+
+  <bean id="fooBean2_1" class="FooBean3" dependency-check="none"/>
+  <bean id="fooBean2_2" class="FooBean3" dependency-check="simple"/>
+  <<error>bean</error> id="fooBean2_3" class="FooBean3" dependency-check="objects" />
+  <<error>bean</error> id="fooBean2_4" class="FooBean3" dependency-check="all" />
+  <bean id="fooBean2_5" class="FooBean3" dependency-check="objects" >
+      <property name="fooBean" ref="fooBean" />
+  </bean>
+
+  <bean id="parentBean"  class ="FooParentBean" abstract="true">
+    <property name="fooBean" ref="fooBean"/>
+  </bean>
+
+  <bean id="childBean"  class ="FooChildBean" parent="parentBean" dependency-check="objects"/>
+
+  <!-- dependencies and autowire -->
+  <bean id="fooBean5" class="FooBean5"/>
+  <<error>bean</error> id="fooBean_autowire_no" class="FooBean4" autowire="no" dependency-check="objects" />
+  <bean id="fooBean_autowire_1" class="FooBean4" autowire="byType" dependency-check="objects" />
+  <bean id="fooBean_autowire_2" class="FooBean4" autowire="autodetect" dependency-check="objects" />
+  <bean id="fooBean_autowire_3" class="FooBean4" autowire="byName" dependency-check="objects" />
+  <<error>bean</error> id="fooBean_autowire_4" class="FooBean4" autowire="constructor" dependency-check="objects" />
+
+  <bean id="childBeanAutowred2" class ="FooChildBean" parent="parentBean" dependency-check="objects"/>
+</beans>

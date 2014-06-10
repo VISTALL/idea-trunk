@@ -1,0 +1,8 @@
+<libraries default-ri="JBoss"
+           default-download-url="http://download.jetbrains.com/idea/j2ee_libs/webBeans/$RI$/$VERSION$/"
+           default-presentation-url="http://download.jetbrains.com">
+  <lib version="1.0.0.ALPHA2" jar-name="webbeans-api.jar" required-classes="javax.annotation.Named"/>
+  <lib version="1.0.0.ALPHA2" jar-name="webbeans-ri.jar" required-classes="org.jboss.webbeans.bean.AbstractBean"/>
+  <lib version="1.0.0.ALPHA2" jar-name="webbeans-ri-spi.jar" required-classes="org.jboss.webbeans.bootstrap.spi.WebBeanDiscovery"/>
+  <lib version="1.0.0.ALPHA2" jar-name="google-collections.jar" required-classes="com.google.common.collect.Collections2"/>
+</libraries>

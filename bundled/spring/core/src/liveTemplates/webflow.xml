@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="spring webflow">
+
+  <template id="flow-registry" name="webflowregistry" value="&lt;flow:flow-registry id=&quot;$ID$&quot; flow-builder-services=&quot;$SERVICES$&quot;&gt;&#10;   &lt;flow:flow-location-pattern value=&quot;$PATH$&quot; /&gt;&#10;&lt;/flow:flow-registry&gt;" description="" toReformat="false" toShortenFQNames="true">
+     <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true" />
+     <variable name="SERVICES" expression="complete()" defaultValue="" alwaysStopAt="true" />
+     <variable name="PATH" expression="complete()" defaultValue="" alwaysStopAt="true" />
+     <context>
+       <option name="JAVA_CODE" value="false" />
+       <option name="CSS" value="false" />
+       <option name="HTML" value="false" />
+       <option name="XML" value="false" />
+       <option name="JAVA_COMMENT" value="false" />
+       <option name="OTHER" value="false" />
+       <option name="JAVA_STRING" value="false" />
+       <option name="COMPLETION" value="false" />
+       <option name="JSP" value="false" />
+     </context>
+   </template>
+
+  <template id="flow-executor" name="webflowexecutor" value="&lt;flow:flow-executor id=&quot;$ID$&quot; flow-registry=&quot;$REGISTRY$&quot;&gt;&#10;   &lt;flow:flow-execution-listeners&gt;&#10;      &lt;flow:listener ref=&quot;$REF$&quot; criteria=&quot;*&quot;/&gt;&#10;   &lt;/flow:flow-execution-listeners&gt;&#10;&lt;/flow:flow-executor&gt;" description="" toReformat="false" toShortenFQNames="true">
+      <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true" />
+      <variable name="REGISTRY" expression="complete()" defaultValue="" alwaysStopAt="true" />
+      <variable name="REF" expression="complete()" defaultValue="" alwaysStopAt="true" />
+      <context>
+        <option name="JAVA_CODE" value="false" />
+        <option name="OTHER" value="false" />
+        <option name="CSS" value="false" />
+        <option name="HTML" value="false" />
+        <option name="XML" value="false" />
+        <option name="JAVA_COMMENT" value="false" />
+        <option name="JAVA_STRING" value="false" />
+        <option name="COMPLETION" value="false" />
+        <option name="JSP" value="false" />
+      </context>
+    </template>
+
+    <template id="flow-builder-serices" name="webflowbuildersevices" value="&lt;flow:flow-builder-services id=&quot;$ID$&quot; /&gt;&#10;" description="" toReformat="false" toShortenFQNames="true">
+      <variable name="ID" expression="complete()" defaultValue="" alwaysStopAt="true" />
+      <context>
+        <option name="JAVA_CODE" value="false" />
+        <option name="OTHER" value="false" />
+        <option name="CSS" value="false" />
+        <option name="HTML" value="false" />
+        <option name="XML" value="false" />
+        <option name="JAVA_COMMENT" value="false" />
+        <option name="JAVA_STRING" value="false" />
+        <option name="COMPLETION" value="false" />
+        <option name="JSP" value="false" />
+      </context>
+    </template>
+
+
+  <template id="conversation-service" name="conversationservice"
+            value="&lt;bean id=&quot;$BEAN_ID$&quot; class=&quot;$BEAN_CLASS$&quot;/&gt;" description="" toReformat="false"
+            toShortenFQNames="true">
+    <variable name="BEAN_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.binding.convert.ConversionService&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+    </context>
+  </template>
+
+  <template id="expression-parser" name="expressionparser"
+            value="&lt;bean id=&quot;$BEAN_ID$&quot; class=&quot;$BEAN_CLASS$&quot;/&gt;" description="" toReformat="false"
+            toShortenFQNames="true">
+    <variable name="BEAN_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.binding.expression.ExpressionParser&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+    </context>
+  </template>
+
+  <template id="factory-creator" name="factorycreator"
+            value="&lt;bean id=&quot;$BEAN_ID$&quot; class=&quot;$BEAN_CLASS$&quot;/&gt;" description="" toReformat="false"
+            toShortenFQNames="true">
+    <variable name="BEAN_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.webflow.engine.builder.ViewFactoryCreator&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+    </context>
+  </template>
+
+  <template id="formatter-registry" name="formatterregistry"
+            value="&lt;bean id=&quot;$BEAN_ID$&quot; class=&quot;$BEAN_CLASS$&quot;/&gt;" description="" toReformat="false"
+            toShortenFQNames="true">
+    <variable name="BEAN_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.binding.format.FormatterRegistry&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+    </context>
+  </template>
+
+  <template id="flow-execution-listener" name="webflowexelistener"
+            value="&lt;bean id=&quot;$BEAN_ID$&quot; class=&quot;$BEAN_CLASS$&quot;/&gt;" description="" toReformat="false"
+            toShortenFQNames="true">
+    <variable name="BEAN_CLASS"
+              expression="descendantClassesEnum(&quot;org.springframework.webflow.execution.FlowExecutionListener&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <variable name="BEAN_ID" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="CSS" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="OTHER" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+    </context>
+  </template>
+
+</templateSet>
+

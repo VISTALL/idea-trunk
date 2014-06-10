@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>16</line>
+    <problem_class>Fall-through in 'switch' statement</problem_class>
+    <description>Fall-through in 'switch' statement</description>
+  </problem>
+</problems>

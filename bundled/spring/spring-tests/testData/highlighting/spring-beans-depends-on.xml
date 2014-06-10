@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="test" />
+  <bean id="test2"/>
+  <bean id="test3"/>
+  <bean id="test4" depends-on="test3; test2; test"/>
+  <bean id="test5" depends-on="test3 test2 test"/>
+  <bean id="test6" depends-on="test, test2, test3"/>
+  <bean id="test7" depends-on="test3;<error>unknown</error>; test"/>
+  <bean id="test9" depends-on="test, test2,"/>
+  <bean id="test10" depends-on="test,   <error>unknown</error>   "/>
+  <bean id="test11" depends-on="test"/>
+  <bean id="test12" depends-on="<error>unknown</error>"/>
+
+  <bean name="aa, bb; cc dd"  depends-on="test, test2, test3"/>
+  <alias name="dd" alias="dd_2"/>
+
+  <bean id="test13"  depends-on="bb; test2 test3"/>
+  <bean id="test14" depends-on="dd_2"/>
+</beans>

@@ -1,0 +1,3 @@
+#macro( tablerows $color $somelist, $rr $tt )
+    <tr><td bgcolor=$color>$something</td></tr>
+#end

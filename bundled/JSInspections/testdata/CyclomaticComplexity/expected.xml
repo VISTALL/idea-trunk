@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Overly complex function</problem_class>
+    <description>function 'foo' is overly complex (cyclomatic complexity = 13) #loc</description>
+  </problem>
+</problems>

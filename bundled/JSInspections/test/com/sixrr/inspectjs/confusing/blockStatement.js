@@ -1,0 +1,10 @@
+function foo()
+{
+    if(true)
+    {
+
+    }
+    {
+
+    }
+}

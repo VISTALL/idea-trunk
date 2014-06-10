@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Function with multiple return points</problem_class>
+    <description>function 'foo' has 2 return points #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>13</line>
+    <problem_class>Function with multiple return points</problem_class>
+    <description>function 'bar' has 2 return points #loc</description>
+  </problem>
+</problems>

@@ -1,0 +1,14 @@
+<html>
+<body>
+<font face="verdana" size="-1">
+  When using "around" advice, it's a good idea to remember two things:
+calling "org.aspectj.lang.ProceedingJoinPoint#proceed" - otherwise call won't reach target
+returning the result value (typed java.lang.Object) of that call - otherwise return value will never reach original caller<p>
+
+However, the following two conditions almost always indicate a coding error:<p>
+
+<li>The signature for the "around" method does not have ProceedingJoinPoint as first argument: in such cases it's impossible for the call to reach the target
+<li>The signature for the "around" method does not have Object as return type: in such cases return value of target method is always lost.
+</font>
+</body>
+</html>

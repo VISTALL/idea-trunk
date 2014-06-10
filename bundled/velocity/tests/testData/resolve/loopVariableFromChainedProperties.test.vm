@@ -1,0 +1,5 @@
+#* @vtlvariable name="foo" type="java.util.Map<Date, Double>" *#
+#foreach($loopVar in $foo.entrySet().iterator())
+#set($fromProp = $loopVar.key)
+$fr<caret>omProp
+#end

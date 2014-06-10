@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>String literal which breaks HTML parsing</problem_class>
+    <description>String literal "&lt;/" may break HTML parsers </description>
+  </problem>
+</problems>

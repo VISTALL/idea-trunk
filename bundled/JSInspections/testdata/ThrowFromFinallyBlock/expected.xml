@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>9</line>
+    <problem_class>'throw' inside 'finally' block</problem_class>
+    <description>'throw' inside 'finally' block</description>
+  </problem>
+</problems>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:lang="http://www.springframework.org/schema/lang"
+
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/lang
+http://www.springframework.org/schema/lang/spring-lang-2.0.xsd"
+>
+
+  <bean id="foo" class="java.lang.String" depends-on="bsn,groovy,ruby,<error>unknown</error>"/>
+  <bean class="Customizer" id="customizer"/>
+
+  <lang:bsh script-interfaces="java.lang.Object,<error>unknown</error>" scope="<error>unknown</error>" id="bsn" script-source="<error>unknown</error>"/>
+  <lang:bsh script-interfaces="java.lang.Object" scope="prototype" id="bsn1" script-source="lang-schema.xml"/>
+
+  <lang:groovy script-source="<error>unknown</error>" id="groovy" customizer-ref="<error>foo</error>"/>
+  <lang:groovy script-source="lang-schema.xml" id="groovy2" customizer-ref="customizer"/>
+  
+  <lang:jruby script-interfaces="java.lang.Object,<error>unknown</error>" id="ruby" script-source="<error>unknown</error>"/>
+</beans>

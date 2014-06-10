@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop">
+    <aop:config>
+      <aop:aspect>
+        <aop:declare-parents types-matching="xxx" implement-interface="foo.In<caret>tf" default-impl=""/>
+      </aop:aspect>
+    </aop:config>
+</beans>

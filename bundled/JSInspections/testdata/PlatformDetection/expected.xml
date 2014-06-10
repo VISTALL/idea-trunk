@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Platform detection</problem_class>
+    <description>'document.all' probably used for platform detection</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Platform detection</problem_class>
+    <description>'document.layers' probably used for platform detection</description>
+  </problem>
+</problems>

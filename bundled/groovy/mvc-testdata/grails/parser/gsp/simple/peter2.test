@@ -1,0 +1,14 @@
+<br/>
+<a onclick="action = '${3}';"><span></span></a>
+-----
+Groovy Server Pages file
+  PsiElement(XML_DOCUMENT)
+    PsiElement(XML_PROLOG)
+      <empty list>
+    Gsp root tag
+      Outer: GSP TEMPLATE STATEMENTS('<br/>\n<a onclick="action = '')
+      GSP expression gtag
+        PsiElement(groovy expression begin)('${')
+        Outer: GSP_GROOVY_CODE('3')
+        PsiElement(groovy expression end)('}')
+      Outer: GSP TEMPLATE STATEMENTS('';"><span></span></a>')

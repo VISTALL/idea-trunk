@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p4api", "p4api.vcproj", "{8BCB3F97-AC85-4E36-BAED-13A66AC939AE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SolutionUniqueID = {870879E8-75CB-4437-A30C-DDD7F73679A9}
+		SccProjectUniqueName1 = p4api.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8BCB3F97-AC85-4E36-BAED-13A66AC939AE}.Debug.ActiveCfg = Debug|Win32
+		{8BCB3F97-AC85-4E36-BAED-13A66AC939AE}.Debug.Build.0 = Debug|Win32
+		{8BCB3F97-AC85-4E36-BAED-13A66AC939AE}.Release.ActiveCfg = Release|Win32
+		{8BCB3F97-AC85-4E36-BAED-13A66AC939AE}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="fooBeanFactory" class="FooBeanFactory"/>
+
+  <bean id="foo" class="FooBeanWithConstructors2">
+    <constructor-arg ref="fooBeanFactory"/>
+  </bean>
+
+  <bean id="foo_2" class="FooBean7">
+    <constructor-arg ref="fooBeanFactory"/>
+  </bean>
+
+  <bean id="foo_3" class="FooBean7">
+    <property name="fooBean" ref="fooBeanFactory"/>
+  </bean>
+
+  <bean id="foo_4" class="FooBean7">
+    <property name="fooBean2" ref="fooBeanFactory"/>
+  </bean>
+
+  <bean id="foo_5" class="FooBean7">
+    <property name="fooBean3" ref="<error>fooBeanFactory</error>"/>
+  </bean>
+
+  <bean id="foo_6" class="FooBean7">
+    <property name="unknownClass" ref="<error>fooBeanFactory</error>"/>
+  </bean>
+
+  <bean id="notRegisterdBeanFactory" class="NotRegisterdBeanFactory"/>
+
+  <bean id="foo_7" class="FooBean7">
+    <property name="fooBean" ref="notRegisterdBeanFactory"/>
+  </bean>
+
+</beans>

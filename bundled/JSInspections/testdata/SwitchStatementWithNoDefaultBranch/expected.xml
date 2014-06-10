@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>'switch' statement with no default branch</problem_class>
+    <description>'switch' statement with no default branch</description>
+  </problem>
+</problems>

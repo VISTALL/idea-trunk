@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, no-cache, must-revalidate">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" lang="en">
+    <meta name="robots" content="none">
+    <meta name="copyright" content="JetBrains, Inc., http://www.jetbrains.com">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" media="all" href="../DefaultCSS/s.css">
+    <title>Developing Web Services</title>
+</head>
+<body id="IJ_help" class="template">
+<div id="container">
+
+    <div id="header" style="background:url(../../DefaultCSS/img/bg_idea_big.jpg)">
+        <h1>Developing Web Services</h1>
+    </div>
+          <div class="introduction">
+          This topic describes how to develop <b>Web Services</b> with <b>IntelliJ IDEA</b>.
+          </div>
+    <div id="content">
+
+
+        <div class="section">
+            <ul style="list-style-image:url(../../DefaultCSS/img/blue_romb_blt.png)">
+              <li>Add a <b>Web Facet</b> to an existing <b>Java</b> module. Then configure it to contain the code.
+                  <div class="ijNote"><img src="../../DefaultCSS/img/note.gif" alt="Note">&nbsp;&nbsp;If you plan to deploy to JAX-WS2 in Java EE5 compatible implementation, the web application deployment descriptor version should be 2.5 or higher.</div>
+              </li>
+              <li>Add the <b>Web Services Facet</b> to the same <b>Java</b> module.</li>
+              <li>Run Enable Web Services Support <a href="EnableWebServicesSupport.html">action</a>, select <b>server</b> type and specify web services engine to use, the action will
+              update the web module with necessary libraries and servlet references</li>
+              <li>For web services enigne that does not support dynamic deployment (any other than Axis,e.g. JWSDP/Axis2/XFire etc) one needs to invoke <b>Expose Class as Web Service</b> action for existing class. The
+              action will update web service descriptors and generate additional deployment code if needed, this action should be run once any web service method signature is changed, new method is added/removed, etc</li>
+              <li>Run / debug the web module with local Tomcat, having specified selected web services module to be deployed (in the Deployment tab of the run configuration)</li>
+              <li>For Axis one should <a href="DeployWebServices.html">deploy / undeploy</a> the particular class to be web service dynamically. You can also see <a href="ShowDeployedWebServices.html">list</a> of deployed
+              web services.</li>
+              <li>It is possible to <a href="GenerateWsdlFromJava.html">generate</a> wsdl from existing java code.</li>
+              <li>One can <a href="MonitorSoapMessages.html">monitor</a> SOAP messages flow when developing with Axis (if appropriate option is specified during deployment).</li>
+              <li><a href="UsingWebServices.html">Use</a> your web service</li>
+
+              <li>Navigate from java code (web services client/service code class,method,field) to corresponding wsdl/wsdd elements.</li>
+              <li>
+              Navigate within wsdl file, from <b>binding</b> attribute in <b>port</b> tag or from <b>message</b> attribute in
+              <b>input</b> or <b>output</b> tags.<br>
+              Navigate from wsdl to java code, from <b>name</b> attribute of <b>complexType</b>,<b>element</b>, <b>portType</b>,
+              <b>operation</b> inside <b>port_type</b> and <b>binding</b>, or from <b>type</b> attribute of
+              <b>binding</b> or <b>type</b> to class or method implementing the service (interface for client) or stub class.
+              Navigation from wsdl/java code created via other WebService toolkits (not Axis) may not work.
+              </li>
+              <li>
+              Navigate from wsdd to java code, from <b>value</b> attribute of <b>parameter</b> with <b>allowedMethods</b> name
+              to method of the service class.
+            </li>
+
+              <li>Use <a href="axis1_4/ant/ant.html">Ant</a> tasks for automation of the web services related functionality. Necessary libs
+            are in &lt;webservices-plugin-dir&gt;/lib. Here is Axis <a href="axis1_4/user-guide.html">userguide</a>, one also may need more info on
+            Axis descriptors and runtime configuration, it is available here <a href="axis1_4/reference.html#descriptors">here</a>.
+            Documentation on using Axis with JMS is also <a href="axis1_4/AxisJMSSample.pdf">available</a></li>
+            </ul>
+
+
+
+              <div class="ijTip"><img src="../../DefaultCSS/img/tip.gif" alt="Tip">&nbsp;&nbsp;Web container JDK version should match JDK used for developing web services (otherwise Web Services code
+                fails to load in server VM and one would get UnsupportedClassVersionError)</div>
+              <div class="ijTip"><img src="../../DefaultCSS/img/tip.gif" alt="Note">&nbsp;&nbsp;
+                If running web container produces unexpected <b>Address already in use</b> messages then one needs to shutdown
+                orphaned web container instance outside of <b>IntelliJ IDEA</b> (e.g. running shutdown.bat for Tomcat)
+              </div>
+              <div class="ijTip"><img src="../../DefaultCSS/img/tip.gif" alt="Note">&nbsp;&nbsp;
+                Certain web service engines experience difficulties when attempting to deploy Java classes in default package as web services.
+              </div>
+
+
+
+       </div>
+    </div>
+</div>
+<div id="footer">
+    <p>
+
+        Comments, questions, suggestions? See the <a href="../../feedback.html">Feedback</a> page to contact
+        <b>JetBrains</b><br><br>
+
+        <b>Copyright &copy; 2000-2007 JetBrains s.r.o. All rights reserved</b>
+
+    </p>
+</div>
+</body>
+</html>

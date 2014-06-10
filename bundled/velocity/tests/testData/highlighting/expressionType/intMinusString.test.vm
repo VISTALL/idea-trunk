@@ -1,0 +1,2 @@
+#if(<weak_warning descr="Invalid types of the operands: 'int' and 'String'">6 - "1"</weak_warning>)
+#end

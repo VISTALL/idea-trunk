@@ -1,0 +1,10 @@
+#macro(<error descr="Macro 'mymacro' is already defined in 'duplicatedMacro.test.vm'">mymacro</error> $p1)
+#end
+
+#macro(mymacro2 $p1)
+#end
+
+#macro(<error descr="Macro 'mymacro' is already defined in 'duplicatedMacro.test.vm'">mymacro</error> $p1)
+#end
+
+

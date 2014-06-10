@@ -1,0 +1,8 @@
+Product.findByDatea<caret>
+-----
+findByDateAndId
+findByDateAndName
+findByDateAndQuality
+findByDateAndSize
+findByDateAndVersion
+findByDateAndWeight

@@ -1,0 +1,100 @@
+VtlFile:nofile.vm
+  Interpolation
+    PsiElement(${)('${')
+    ReferenceExpression
+      PsiElement(identifier)('myobj')
+    PsiElement(})('}')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    ReferenceExpression
+      ReferenceExpression
+        PsiElement(identifier)('myobj')
+      PsiElement(JAVA_DOT)('.')
+      PsiElement(identifier)('ddd')
+    PsiElement(})('}')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          PsiElement(identifier)('myobj')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('ddd')
+      PsiElement(()('(')
+      ArgumentList
+        <empty list>
+      PsiElement())(')')
+    PsiElement(})('}')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('myobj')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('ddd')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('ddd')
+      PsiElement(()('(')
+      ArgumentList
+        <empty list>
+      PsiElement())(')')
+    PsiElement(})('}')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    ReferenceExpression
+      MethodCallExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('myobj')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('ddd')
+        PsiElement(()('(')
+        ArgumentList
+          <empty list>
+        PsiElement())(')')
+      PsiElement(JAVA_DOT)('.')
+      PsiElement(identifier)('ddd')
+    PsiElement(})('}')
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    MethodCallExpression
+      ReferenceExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('myobj')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('ddd')
+        PsiElement(JAVA_DOT)('.')
+        PsiElement(identifier)('ddd')
+      PsiElement(()('(')
+      ArgumentList
+        <empty list>
+      PsiElement())(')')
+    PsiErrorElement:'}' expected
+      <empty list>
+  PsiElement(TEMPLATE_TEXT)('\r\n')
+  Interpolation
+    PsiElement(${)('${')
+    ReferenceExpression
+      MethodCallExpression
+        ReferenceExpression
+          ReferenceExpression
+            PsiElement(identifier)('myobj')
+          PsiElement(JAVA_DOT)('.')
+          PsiElement(identifier)('ddd')
+        PsiElement(()('(')
+        ArgumentList
+          <empty list>
+        PsiElement())(')')
+      PsiElement(JAVA_DOT)('.')
+      PsiElement(identifier)('ddd')
+    PsiErrorElement:'}' expected
+      <empty list>
+  PsiElement(TEMPLATE_TEXT)('\r\n')

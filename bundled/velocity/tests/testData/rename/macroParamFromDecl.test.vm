@@ -1,0 +1,10 @@
+#macro(OldMacro $<caret>oldparam1 $param2)
+
+#foreach($forVar in ${oldparam1})
+${forVar}
+#end
+$param2
+#end
+
+#OldMacro([1, 2], "bye-bye")
+!!

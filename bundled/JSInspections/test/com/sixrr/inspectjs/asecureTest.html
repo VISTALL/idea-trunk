@@ -1,0 +1,395 @@
+<html><title>Sixth and Red River Software - ASecureCart.Net</title>
+<head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript" type="text/javascript">
+<!-- hide
+
+NS4 = (document.layers);
+     IE4 = (document.all);
+    ver4 = (NS4 || IE4);
+     IE5 = (IE4 && navigator.appVersion.indexOf("5.")!=-1);
+   isMac = (navigator.appVersion.indexOf("Mac") != -1);
+  isMenu = (NS4 || (IE4 && !isMac) || (IE5 && isMac));
+
+  function popUp(){return};
+  function popDown(){return};
+
+  if (!ver4) event = null;
+
+// -->
+
+</script>
+
+<script language="JavaScript1.2" type="text/javascript">
+<!-- hide
+if (isMenu) {
+    menuVersion = 3;
+
+    menuWidth = 150;
+    childOverlap = 8;
+    childOffset = 10;
+    perCentOver = null;
+    secondsVisible = .1;
+
+
+    fntSiz = "8";
+    fntBold = false;
+    fntItal = false;
+    fntFam = "Arial, Trebuchet, sans-serif";
+
+    backCol = "#CCCC99";
+    overCol = "#FFCCCC";
+    overFnt = "purple";
+
+    borWid = 3;
+    borCol = "black";
+    borSty = "solid";
+    itemPad = 3;
+
+    imgSrc = "images/arrow.gif";
+    imgSiz = 16;
+
+    separator = 1;
+    separatorCol = "red";
+
+    isFrames = false;
+    navFrLoc = "left";
+        mainFrName = "main";
+
+    keepHilite = true;
+    clickStart = false;
+    clickKill = false;
+
+}
+// -->
+
+</script>
+
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+if (isMenu) {
+document.write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='hierArrays.js'><\/SCRIPT>");
+}
+//-->
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+if (isMenu) {
+document.write("<SCRIPT LANGUAGE='JavaScript1.2' SRC='hierMenus.js'><\/SCRIPT>");
+}
+//-->
+</script>
+</head>
+<script LANGUAGE='JavaScript' type='text/javascript'>
+<!--
+var submitted = false;
+var b = false;
+var bypass = false;
+function submitCheck()
+{
+	if (submitted)
+	{
+		alert('You have already submitted this application. Click OK .... ');
+		return false;
+	}
+	else if (bypass)
+	{
+		return false;
+	}
+	else
+	{
+		submitted = true;
+		return true;
+	}
+}
+
+function submitReset()
+{
+	submitted=false;
+	//set focus on the second button unless second screen
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.CustName) && (document.frmSecureCart.CustName != 'hidden'))
+	{
+	document.frmSecureCart.CustName.focus();
+	}
+	else if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.option) && 'object' == typeof(document.frmSecureCart.option[1]))
+	{
+	document.frmSecureCart.option[1].focus();
+	}
+}
+
+function ConfirmClear()
+{
+	if (!confirm('Remove all items from cart and clear session?'))
+	{
+		return false;
+	}
+	else
+	{
+		document.frmSecureCart.cartoption.value = 'Clear Cart';
+		return true;
+	}
+}
+
+function AutoSubmit(e)
+{
+	var whichCode = (window.Event) ? e.which : e.keyCode;
+	if (whichCode == 13) {
+		b = true;
+		Recalculate();
+	}
+}
+
+function Recalculate()
+{
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.Coupon))
+	{
+		var coupon = document.frmSecureCart.Coupon.value;
+		if (coupon == '')
+		{
+			document.frmSecureCart.Coupon.value=' ';
+		}
+	}
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.option) && 'object' == typeof(document.frmSecureCart.option[1]) && document.frmSecureCart.option[1].value=='Recalculate')
+	{
+	document.frmSecureCart.option[1].focus();
+	}
+	else if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.option) && 'object' == typeof(document.frmSecureCart.option[2]) && document.frmSecureCart.option[2].value=='Recalculate')
+	{
+	document.frmSecureCart.option[2].focus();
+	}
+	else
+	{
+	}
+	if (b == false)
+	{
+		document.frmSecureCart.submit();
+	}
+}
+function ShowShipping(v)
+{
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.ASiNet_CalculateShipping))
+	{
+	document.frmSecureCart.ASiNet_CalculateShipping.value = v;
+		Recalculate();
+	}
+}
+
+function SetOption(v)
+{
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.cartoption))
+	{
+	document.frmSecureCart.cartoption.value = v;
+	}
+	if (b == false)
+	{
+		document.frmSecureCart.submit();
+	}
+}
+
+function SetOptionOnly(v)
+{
+	if('object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.cartoption))
+	{
+	document.frmSecureCart.cartoption.value = v;
+	}
+}
+
+function IsInteger(fld, e)
+{
+var key = '';
+var i = 0;
+var strCheck = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ `=~!@#$%^&*()_+[]\{}|;:<>?,./';
+var whichCode = (window.Event) ? e.which : e.keyCode;
+if ((whichCode == 13) | (whichCode == 34) | (whichCode == 39) | (whichCode == 92)) {
+return false;  // Enter
+}
+key = String.fromCharCode(whichCode);  // Get key value from key code
+if (strCheck.indexOf(key) > -1) {
+return false;  // Not a valid key
+}
+for(i = 0; i < fld.value.length; i++) {
+if (strCheck.indexOf(fld.value.charAt(i))>=0) {
+return false;
+}
+}
+}
+
+function IsPhoneChar(fld, e)
+{
+var key = '';
+var i = 0;
+var strCheck = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`=~!@#$%^&*_+[]\{}|;:<>?,./';
+var whichCode = (window.Event) ? e.which : e.keyCode;
+if ((whichCode == 13) | (whichCode == 34) | (whichCode == 39) | (whichCode == 92)) {
+return false;  // Enter
+}
+key = String.fromCharCode(whichCode);  // Get key value from key code
+if (strCheck.indexOf(key) > -1) {
+return false;  // Not a valid key
+}
+for(i = 0; i < fld.value.length; i++) {
+if (strCheck.indexOf(fld.value.charAt(i))>=0) {
+return false;
+}
+}
+}
+
+function popup(url,t,l,h,w)
+{
+var params = 'location=no,menubar=no,resizable=yes,top='+t+',left='+l+',height='+h+',width=' + w;
+var p = window.open(url,'securecart', params);
+}
+
+function popup2(url,m,t,l,h,w)
+{
+	if(m == '1' && 'object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.Coupon))
+	{
+		var coupon = document.frmSecureCart.Coupon.value;
+		if (coupon == '')
+		{
+			alert('Please enter a coupon code.');
+		}
+		else
+		{
+			url = url + coupon;
+			popup(url,t,l,h,w);
+		}
+	} else if(m == '2' && 'object' == typeof(document.frmSecureCart) && 'object' == typeof(document.frmSecureCart.GiftCertificate))
+	{
+		var gift = document.frmSecureCart.GiftCertificate.value;
+		if (gift == '')
+		{
+			alert('Please enter a Gift Certificate code.');
+		}
+		else
+		{
+			url = url + gift;
+			popup(url,t,l,h,w);
+		}
+	}
+}
+// -->
+</script>
+
+<BODY onLoad='submitReset();' bgcolor="#FFFFFF" topmargin="0" bottommargin="0" marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" text="#000000">
+<a name='cctop'></a><center><font size='3' face='Verdana, Arial'>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+  <tr>
+    <td valign="top" width="100%">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%" height="121">
+        <tr>
+          <td bgcolor="#CCCCCC" valign="top"><img src="http://www.sixthandredriver.com/test/images/topbanner1.jpg" width="141" height="121"></td>
+          <td width="100%" bgcolor="#CCCCCC" background="http://www.sixthandredriver.com/test/images/topbg.jpg" valign="top"><img src="http://www.sixthandredriver.com/test/images/topbanner2.jpg" height="121" width="540"></td>
+          <td align="right" valign="top"><img src="http://www.sixthandredriver.com/test/images/topbgcorner.jpg" width="200" height="121"></td>
+
+        </tr>
+      </table>
+      <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+        <tr>
+          <td width="141" valign="top" background="http://www.sixthandredriver.com/test/images/copper.jpg">
+            <table width="141" border="0" cellspacing="0" cellpadding="0" height="100%">
+              <tr>
+                <td valign="top"><img src="http://www.sixthandredriver.com/test/images/bottomoflogo.jpg" width="141" height="31"></td>
+              </tr>
+
+              <tr>
+              <font face="Arial, Helvetica, sans-serif" size="2" color="#FFFFFF">
+                <td valign="top" height="100%">
+                                 <table width="90%" border="0" cellspacing="2" cellpadding="4" align="center">
+                    <tr>
+                      <td onMouseOver="style.backgroundColor='336633';popUp('elMenu1',event);return true;" onMouseOut="style.backgroundColor='';popDown('elMenu1');return true;">
+                        <div align="right"><b><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.sixthandredriver.com/test/products.html" style="text-decoration: none"><font color="#FFFFFF">Products</font></a></font></b></div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <td>
+                        <div align="right"><font size="2"></font></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td onMouseOver="style.backgroundColor='336633';" onMouseOut="style.backgroundColor='';">
+                        <div align="right"><b><font face="Arial, Helvetica, sans-serif" size="2"><a href="http://www.sixthandredriver.com/test/index.html" style="text-decoration: none"><font color="#FFFFFF">Home</font></a></font></b></div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div align="right"><font size="2"></font></div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                </font>
+              </tr>
+            </table>
+          </td>
+          <td align="left" valign="top" height="100%" width="100%">
+            <table width="100%" border="0" cellspacing="6" cellpadding="0">
+              <tr>
+                <td valign="top" width="100%">
+<table width='100%' border='0' cellspacing='4' cellpadding='0'><tr>
+
+<td align='middle' valign='top'>
+<form name='frmSecureCart'
+      action='https://www.asecurecart.net/server/cart.aspx/sixthandredriver' method='POST' onSubmit='return submitCheck();'>
+<INPUT TYPE='HIDDEN' NAME='ASi.Net_NoSave' VALUE='1'>
+<INPUT TYPE='HIDDEN' NAME='cartoption' VALUE=''>
+<input type="hidden" Name="ContinueShopping" Value="http://www.sixthandredriver.com/test/products.html">
+<center><TABLE WIDTH='550' BORDER=1 CELLSPACING=0 CELLPADDING=5 BorderColor='Navy'><TR BGCOLOR='SteelBlue'><TD COLSPAN=4 ALIGN='center'><FONT FACE='arial' SIZE='+1' COLOR='white'>Sixth and Red River Software</FONT></TD></TR><TR VALIGN='bottom' BGCOLOR='white'>
+<TD ALIGN='left'><FONT FACE='arial' size='-1' color='#0000A0'><B><center>DESCRIPTION</center></B></FONT></TD>
+<TD ALIGN='center'><FONT FACE='arial' size='-1' color='#0000A0'><B>QTY</B></FONT></TD>
+<TD ALIGN='center'><FONT FACE='arial' size='-1' color='#0000A0'><B>Unit<BR>Price</B></FONT></TD>
+<TD ALIGN='center'><FONT FACE='arial' size='-1' color='#0000A0'><B>Total<BR>Price</B></FONT></TD></TR>
+
+<TR BGCOLOR='white'><TD colspan='4'  align='middle'><font face='arial' size='2'  color='Red'>
+Your Shopping Cart is Empty</FONT></TD></TR>
+<TR BGCOLOR='white'><TD colspan='3'  align='left'><FONT FACE='arial' size='-1' color='#0000A0'><B>Total</B></FONT></TD>
+<TD VALIGN='top' ALIGN='right'><FONT FACE='arial' color='#0000A0'><TT>$0.00</TT></FONT></TD></TR>
+<TR BGCOLOR='white'><TD colspan='4' align='center' nowrap>&nbsp;&nbsp;<INPUT TYPE='button' NAME='option' VALUE='Continue Shopping' onclick='javascript:alert("Not active in View Cart configuration mode");' style='FONT-SIZE: 7pt; CURSOR: hand; TEXT-ALIGN: center; BORDER-RIGHT: gray thin outset; BORDER-TOP: gray thin outset; FONT-WEIGHT: normal; BORDER-LEFT: gray thin outset; COLOR: black; BORDER-BOTTOM: gray thin outset; FONT-FAMILY: Verdana,Arial,Times New Roman; BACKGROUND-COLOR: Gainsboro'>&nbsp;&nbsp;<INPUT TYPE='button' NAME='option' VALUE='Recalculate' onclick='javascript:alert("Your Shopping Cart is Empty");' style='FONT-SIZE: 7pt; CURSOR: hand; TEXT-ALIGN: center; BORDER-RIGHT: gray thin outset; BORDER-TOP: gray thin outset; FONT-WEIGHT: normal; BORDER-LEFT: gray thin outset; COLOR: black; BORDER-BOTTOM: gray thin outset; FONT-FAMILY: Verdana,Arial,Times New Roman; BACKGROUND-COLOR: Gainsboro'>&nbsp;&nbsp;<INPUT TYPE='button' NAME='option' VALUE='Clear Cart' onclick='javascript:alert("Not active in View Cart configuration mode");' style='FONT-SIZE: 7pt; CURSOR: hand; TEXT-ALIGN: center; BORDER-RIGHT: gray thin outset; BORDER-TOP: gray thin outset; FONT-WEIGHT: normal; BORDER-LEFT: gray thin outset; COLOR: black; BORDER-BOTTOM: gray thin outset; FONT-FAMILY: Verdana,Arial,Times New Roman; BACKGROUND-COLOR: Gainsboro'>&nbsp;&nbsp;<INPUT TYPE='submit' NAME='option' VALUE='Check Out Now (Step 1 of 3)'  style='FONT-SIZE: 7pt; CURSOR: hand; TEXT-ALIGN: center; BORDER-RIGHT: gray thin outset; BORDER-TOP: gray thin outset; FONT-WEIGHT: normal; BORDER-LEFT: gray thin outset; COLOR: black; BORDER-BOTTOM: gray thin outset; FONT-FAMILY: Verdana,Arial,Times New Roman; BACKGROUND-COLOR: Gainsboro'></TD>
+</TR>
+</TABLE></center>
+</form>
+</td></tr></table></td>
+              </tr>
+            </table>
+            <br>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="100%">
+                  <hr width="95%">
+                </td>
+              </tr>
+              <tr>
+                <td width="100%">
+                  <div align="center">
+
+                      <font class="footer" face="Arial, Helvetica, sans-serif" size="2">
+                          <font size="1">Copyright Sixth &amp; Red River 2005, All Rights Reserved<br>
+                         <a href =" http://www.sixthandredriver.com/test/termsOfService.html">Terms of Service</a>|<a href =" http://www.sixthandredriver.com/test/privacy.html">Privacy Policy</a><br>
+                              'IntelliJ IDEA' and 'JetBrains' are trademarks of JetBrains S.R.O.  All other trademarks are property of Sixth and Red River Software</font>
+                      </font>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="200" valign="top">&nbsp; </td>
+        </tr>
+      </table>
+
+      </td>
+  </tr>
+</table>
+
+
+
+
+
+
+</font></center></body>
+</html>

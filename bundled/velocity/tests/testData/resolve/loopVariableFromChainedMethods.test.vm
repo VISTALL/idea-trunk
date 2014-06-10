@@ -1,0 +1,4 @@
+#* @vtlvariable name="foo" type="java.util.Map<String, Double>" *#
+#foreach($loopVar in $foo.keySet().iterator())
+$lo<caret>opVar
+#end

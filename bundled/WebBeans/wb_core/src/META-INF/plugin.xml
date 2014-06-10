@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.webBeans</id>
+  <name>Web Beans Support</name>
+
+  <description>WebBeans Support</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>
+
+  <depends>com.intellij.javaee</depends>
+  <depends>JSF</depends>
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.webBeans.WebBeansApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+  <project-components>              
+    <component>
+      <implementation-class>com.intellij.webBeans.WebBeansProjectComponent</implementation-class>
+    </component>
+  </project-components>
+
+  <module-components>
+    <component>
+      <implementation-class>com.intellij.webBeans.jam.WebBeansJamModel</implementation-class>
+    </component>
+  </module-components>
+  
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+    <moduleService serviceInterface="com.intellij.webBeans.manager.WebBeansManager"
+                     serviceImplementation="com.intellij.webBeans.manager.WebBeansManager"/>
+
+    <annotator language="JAVA" implementationClass="com.intellij.webBeans.gutter.WebBeansInjectionsClassAnnotator"/>
+    <annotator language="JAVA" implementationClass="com.intellij.webBeans.gutter.WebBeansEventsModelClassAnnotator"/>
+
+    <semContributor implementation="com.intellij.webBeans.jam.WebBeansSemContributor"/>
+
+    <dom.fileDescription implementation="com.intellij.webBeans.WebBeansDomFileDescription"/>
+
+    <javaee.jsp.el.customJsfContextBeansProvider implementation="com.intellij.webBeans.jsf.WebBeansContextBeansProvider"/>
+
+    <metaDataContributor implementation="com.intellij.webBeans.jam.meta.WebBeansMetaDataContributor"/>
+    <psi.referenceContributor implementation="com.intellij.webBeans.jam.references.WebBeansJamReferenceContributor" />
+
+    <implicitUsageProvider implementation="com.intellij.webBeans.providers.WebBeansImplicitUsageProvider"/>
+    <gotoSymbolContributor implementation="com.intellij.webBeans.providers.WebBeansGotoSymbolProvider"/>
+
+    <toolWindow id="Web Beans"
+                anchor="right"
+                icon="/resources/icons/webBeans.png"
+                factoryClass="com.intellij.webBeans.toolWindow.WebBeansToolWindowFactory"
+                conditionClass="com.intellij.webBeans.toolWindow.WebBeansToolWindowCondition"/>
+
+  </extensions>
+
+  <actions>
+
+  </actions>
+</idea-plugin>

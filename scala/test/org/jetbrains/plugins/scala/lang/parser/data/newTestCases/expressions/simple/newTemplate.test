@@ -1,0 +1,56 @@
+class a {
+  new {
+    var a: Int
+    a = 3
+  }
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        NewTemplateDefinition
+          PsiElement(new)('new')
+          PsiWhiteSpace(' ')
+          ExtendsBlock
+            ScTemplateBody
+              PsiElement({)('{')
+              PsiWhiteSpace('\n    ')
+              ScVariableDeclaration
+                AnnotationsList
+                  <empty list>
+                Modifiers
+                  <empty list>
+                PsiElement(var)('var')
+                PsiWhiteSpace(' ')
+                ListOfIdentifiers
+                  Field identifier
+                    PsiElement(identifier)('a')
+                PsiElement(:)(':')
+                PsiWhiteSpace(' ')
+                SimpleTypeElement
+                  CodeReferenceElement
+                    PsiElement(identifier)('Int')
+              PsiElement(newline)('\n    ')
+              AssignStatement
+                ReferenceExpression
+                  PsiElement(identifier)('a')
+                PsiWhiteSpace(' ')
+                PsiElement(=)('=')
+                PsiWhiteSpace(' ')
+                Literal
+                  PsiElement(integer)('3')
+              PsiWhiteSpace('\n  ')
+              PsiElement(})('}')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

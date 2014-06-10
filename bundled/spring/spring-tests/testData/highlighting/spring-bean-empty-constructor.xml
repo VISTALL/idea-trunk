@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="bean1" class="FooBean"/>
+  <bean id="bean2" class="java.lang.String"/>
+  <bean id="bean3" class="<error>java.lang.Integer</error>" />
+
+  <bean id="bean4" class="<error>FooBean</error>">
+    <constructor-arg value="foo"/>
+  </bean>
+
+  <bean id="factoryBean" class="FactoryBean" />
+
+<bean id="bean5" factory-bean="factoryBean" factory-method="createFooBean" >
+</bean>
+
+<bean id="errorousBean" factory-bean="factoryBean" factory-method="<error>createFooBean</error>" >
+  <constructor-arg value="foo"/>
+</bean>
+
+  <bean id="bean6" factory-bean="factoryBean" factory-method="<error>createFooBeanWithConstructors2</error>" />
+
+  <bean class="BeanWithNoConstructors" id="beanWithNoConstructors"/>
+  <bean class="<error>BeanWithNoConstructors</error>" id="wrongBeanWithNoConstructors">
+    <constructor-arg value="foo"/>
+  </bean>
+</beans>

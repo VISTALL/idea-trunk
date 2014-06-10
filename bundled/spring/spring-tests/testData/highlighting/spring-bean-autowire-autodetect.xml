@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="fooBean" class="FooBean"/>
+  <bean id="fooBean2" class="FooBean2"/>
+  <bean id="fooBean3" class="java.lang.String"/>
+
+  <<error>bean</error> id="testBean_type"  class ="FooBean3" autowire="autodetect" />
+  <bean id="testBean_type2"  class ="FooBean3" autowire="autodetect">
+     <property name="fooBean" ref="fooBean"/>
+  </bean>
+
+
+  <bean id="testBean"  class ="FooBeanWithConstructors3$StringConstructor" autowire="autodetect" />
+  <bean id="testBean2"  class ="FooBeanWithConstructors3" factory-method="getInstance" autowire="autodetect" />
+
+  <bean id="testBean3"  class ="<error>FooBeanWithConstructors4</error>" autowire="autodetect" />
+  <bean id="testBean4"  class ="<error>FooBeanWithConstructors4</error>" factory-method="<error>getInstance</error>" autowire="autodetect" />
+
+  <bean id="testBean5"  class ="<error>FooBeanWithConstructors4</error>" autowire="autodetect">
+     <constructor-arg value="1" />
+  </bean>
+
+  <bean id="testBean6"  class ="<error>FooBeanWithConstructors4</error>" factory-method="<error>getInstance</error>" autowire="autodetect" >
+     <constructor-arg value="1" />
+  </bean>
+
+  <bean id="testBean7"  class ="<error>FooBeanWithConstructors4</error>" autowire="autodetect">
+     <constructor-arg index="0" value="1" />
+  </bean>
+
+ <bean id="parentBean"  class ="FooParentBean" abstract="true">
+    <property name="fooBean" ref="fooBean"/>
+ </bean>
+
+ <bean id="childBean"  class ="FooChildBean" parent="parentBean" autowire="autodetect"/>
+
+ <<error>bean</error> id="childBean2"  class ="FooChildBean" autowire="autodetect"/>
+</beans>

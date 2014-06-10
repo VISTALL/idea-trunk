@@ -1,0 +1,17 @@
+<project name="Layout Grails/Griffon plugin distribution" default="layout">
+  <target name="layout">
+
+    <layout todir="${deploy}/plugins" xmlns="antlib:jetbrains.antlayout">
+      <dir name="GrailsGriffon">
+        <dir name="lib">
+          <jar name="GrailsGriffon.jar">
+            <module name="groovy-mvc"/>
+          </jar>
+          <jar name="groovy_mvc_rt.jar">
+            <module name="groovy-mvc-rt"/>
+          </jar>
+        </dir>
+      </dir>
+    </layout>
+  </target>
+</project>

@@ -1,0 +1,7 @@
+#* @vtlvariable name="foo" type="my.pack.SomeInterface[]" *#
+
+#foreach($item in $foo)
+    #foreach($item in $it<caret>em.numbers)
+        $item
+    #end
+#end

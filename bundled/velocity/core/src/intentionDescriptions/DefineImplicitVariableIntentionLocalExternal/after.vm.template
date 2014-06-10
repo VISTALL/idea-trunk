@@ -1,0 +1,2 @@
+#* @implicitly included *#
+#* @vtlvariable name="foo" type="" file="mytemplate.vm" *#

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Shift operation by inappropriate constant</problem_class>
+    <description>Shift operation 'x&lt;&lt;34' by overly large constant value #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Shift operation by inappropriate constant</problem_class>
+    <description>Shift operation 'x&lt;&lt;-12' by negative constant value #loc</description>
+  </problem>
+</problems>

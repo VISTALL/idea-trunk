@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+   <bean id="listBean" class="ListBean">
+     <constructor-arg>
+         <list>
+          <ref bean="" />
+          <ref local="" />
+        </list>
+     </constructor-arg>
+
+     <property name="list">
+        <list>
+          <ref bean="" />
+          <ref local="" />
+        </list>
+      </property>
+     <property name="genericsList">
+        <list>
+          <ref bean="" />
+          <ref local="" />
+        </list>
+      </property>
+
+   </bean>
+
+  <bean id="s" class="java.lang.String" />
+  <bean id="f" class="FooBeanClass" />
+</beans>

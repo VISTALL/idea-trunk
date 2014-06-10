@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="J2EE_Tests" />
+    <orderEntry type="module" module-name="openapi" />
+    <orderEntry type="module" module-name="QL" />
+    <orderEntry type="module" module-name="jpa-impl" />
+    <orderEntry type="module" module-name="dom-openapi" />
+    <orderEntry type="module" module-name="hibernate-core" />
+    <orderEntry type="module" module-name="codeInsight-tests" />
+    <orderEntry type="module" module-name="testFramework-java" />
+    <orderEntry type="module" module-name="idea" />
+    <orderEntry type="module" module-name="persistence-openapi" />
+    <orderEntry type="library" name="hibernate-3.2" level="project" />
+    <orderEntry type="module" module-name="j2ee-openapi" />
+    <orderEntry type="module" module-name="spring-core" />
+    <orderEntry type="module" module-name="jpa-openapi" />
+    <orderEntry type="module" module-name="xml" />
+    <orderEntry type="module" module-name="jpa-tests" />
+    <orderEntry type="module" module-name="spring-web" />
+    <orderEntry type="module" module-name="hibernate-spring-integration" />
+  </component>
+  <component name="copyright">
+    <Base>
+      <setting name="state" value="1" />
+    </Base>
+  </component>
+</module>
+

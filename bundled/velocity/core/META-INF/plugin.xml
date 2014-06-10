@@ -1,0 +1,136 @@
+<idea-plugin version="2">
+    <name>Velocity support</name>
+    <id>com.intellij.velocity</id>
+    <version>1.0</version>
+    <vendor>JetBrains</vendor>
+    <resource-bundle>messages.VelocityBundle</resource-bundle>
+    <category>Web/JavaEE Technologies</category>
+    <description>Provides syntax and error highlighting, smart editing and inspections for the Velocity template language.</description>
+
+    <extensionPoints>
+        <extensionPoint name="globalVariableProvider" interface="com.intellij.velocity.VtlGlobalVariableProvider"/>
+        <extensionPoint name="globalMacroProvider" interface="com.intellij.velocity.VtlGlobalMacroProvider"/>
+    </extensionPoints>
+
+    <depends optional="true" config-file="velocity-spring.xml">com.intellij.spring</depends>
+    <depends>com.intellij.properties</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+        <colorSettingsPage implementation="com.intellij.velocity.VelocityColorSettingsPage"/>
+
+        <highlightErrorFilter implementation="com.intellij.velocity.inspections.VtlErrorFilter"/>
+
+        <lang.syntaxHighlighterFactory key="VTL" implementationClass="com.intellij.velocity.psi.files.VtlSyntaxHighlighterFactory"/>
+        <syntaxHighlighter key="VTL" implementationClass="com.intellij.velocity.psi.files.VtlSyntaxHighlighter"/>
+
+        <lang.parserDefinition language="VTL"
+                               implementationClass="com.intellij.velocity.VtlParserDefinition"/>
+        <lang.fileViewProviderFactory language="VTL"
+                                      implementationClass="com.intellij.velocity.psi.files.VtlFileViewProviderFactory"/>
+
+        <fileBasedIndex implementation="com.intellij.velocity.VtlFileIndex"/>
+
+        <lang.elementManipulator forClass="com.intellij.velocity.psi.VtlLiteralExpressionType$VtlStringLiteral"
+                                 implementationClass="com.intellij.velocity.editorActions.VtlStringManipulator"/>
+
+        <lang.elementManipulator forClass="com.intellij.velocity.psi.directives.VtlBreak"
+                                 implementationClass="com.intellij.velocity.psi.directives.VtlBreak$Manipulator"/>
+
+        <typedHandler implementation="com.intellij.velocity.editorActions.VelocityTypedHandler"/>
+        <quoteHandler fileType="VTL"
+                      className="com.intellij.velocity.editorActions.VelocityQuoteHandler"/>
+        <lang.braceMatcher language="VTL"
+                           implementationClass="com.intellij.velocity.editorActions.VelocityPairedBraceMatcher"/>
+        <backspaceHandlerDelegate implementation="com.intellij.velocity.editorActions.VelocityBackspaceHandler"/>
+        <lang.psiStructureViewFactory language="VTL"
+                                      implementationClass="com.intellij.velocity.psi.files.VtlStructureViewBuilderProvider"/>
+        <psi.referenceContributor implementation="com.intellij.velocity.VtlReferenceContributor"/>
+
+        <customPropertyScopeProvider implementation="com.intellij.velocity.psi.VtlPropertyScopeProvider"/>
+
+        <lang.foldingBuilder language="VTL"
+                             implementationClass="com.intellij.velocity.VtlFoldingBuilder"/>
+        <lang.findUsagesProvider language="VTL"
+                                 implementationClass="com.intellij.velocity.editorActions.VtlFindUsagesProvider"/>
+        <inspectionToolProvider implementation="com.intellij.velocity.inspections.VtlInspectionToolProvider"/>
+        <renamePsiElementProcessor implementation="com.intellij.velocity.editorActions.VtlRenameProcessor"/>
+        <lang.commenter language="VTL"
+                        implementationClass="com.intellij.velocity.editorActions.VtlCommenter"/>
+
+        <codeInsight.parameterInfo language="VTL"
+                                   implementationClass="com.intellij.velocity.VtlParameterInfoHandler"/>
+        <typeDeclarationProvider implementation="com.intellij.velocity.VtlTypeDeclarationProvider"/>
+        <lang.documentationProvider language="VTL"
+                                    implementationClass="com.intellij.velocity.VtlDocumentationProvider"/>
+
+        <completion.contributor language="any" implementationClass="com.intellij.velocity.editorActions.VtlCompletionContributor"/>
+        <breadcrumbsInfoProvider implementation="com.intellij.velocity.VtlBreadcrumbsInfoProvider"/>
+        <lang.formatter language="VTL"
+                        implementationClass="com.intellij.velocity.psi.formatter.VtlFormattingModelBuilder"/>
+
+        <annotator language="VTL"
+                   implementationClass="com.intellij.velocity.inspections.VtlVariableTypeAnnotator"/>
+        <annotator language="VTL"
+                   implementationClass="com.intellij.velocity.inspections.VtlMacroAnnotator"/>
+
+        <methodReferencesSearch implementation="com.intellij.velocity.psi.reference.VelocityStylePropertySearcher"/>
+
+        <indexPatternBuilder implementation="com.intellij.velocity.VtlIndexPatternBuilder"/>
+
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineImplicitVariableIntention$Local</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineImplicitVariableIntention$LocalExternal</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineImplicitVariableIntention$ModuleWide</className>
+            <category>Velocity</category>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineMacroLibraryRefIntention$Local</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineMacroLibraryRefIntention$LocalExternal</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineMacroLibraryRefIntention$ModuleWide</className>
+            <category>Velocity</category>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefIntention$Local</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefIntention$LocalExternal</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefIntention$ModuleWide</className>
+            <category>Velocity</category>
+        </intentionAction>
+
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefForFilesIntention$Local</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefForFilesIntention$LocalExternal</className>
+            <category>Velocity</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.velocity.inspections.DefineVelocityPropertiesRefForFilesIntention$ModuleWide</className>
+            <category>Velocity</category>
+        </intentionAction>
+
+        <fileTypeFactory implementation="com.intellij.velocity.VelocityApplicationComponent"/>
+    </extensions>
+</idea-plugin>

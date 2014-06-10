@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byType" >
+  <bean id="fooBean" class="FooBean"/>
+  <<error>bean</error> id="fooBean2" class="FooBean2"/>
+
+  <<error>bean</error> id="testBean"  class ="FooBean3" autowire="byType" />
+  <bean id="testBean3"  class ="FooBean3" autowire="byType">
+     <property name="fooBean" ref="fooBean"/>
+  </bean>
+
+
+  <bean id="parentBean"  class ="FooParentBean" abstract="true">
+     <property name="fooBean" ref="fooBean"/>
+  </bean>
+
+  <bean id="childBean"  class ="FooChildBean" parent="parentBean" autowire="byType"/>
+
+  <<error>bean</error> id="childBean2"  class ="FooChildBean" autowire="byType" />
+
+  <<error>bean</error> id="testBean4"  class ="FooBean3" />
+
+  <!-- IDEADEV-20803 -->
+  <bean id="foo5" class="FooBean5" autowire-candidate="false"/>
+  <bean id="foo5_2" class="FooBean5"/>
+
+  <bean id="foo4" class="FooBean4" />
+  <!-- end of IDEADEV-20803 -->
+</beans>

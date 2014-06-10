@@ -1,0 +1,4183 @@
+-- nsdMap ---
+namespace key: http://www.springframework.org/schema/jee
+  name     http://www.springframework.org/schema/jee
+  prefix   
+  pkgName  com.intellij.spring.model.xml.jee
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: spring-beans-2.0.dtd
+  name     spring-beans-2.0.dtd
+  prefix   
+  pkgName  com.intellij.spring.model.xml
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/util
+  name     http://www.springframework.org/schema/util
+  prefix   
+  pkgName  com.intellij.spring.model.xml.util
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.w3.org/2001/XMLSchema
+namespace key: http://www.springframework.org/schema/beans
+  name     http://www.springframework.org/schema/beans
+  prefix   
+  pkgName  com.intellij.spring.model.xml.beans
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/aop
+  name     http://www.springframework.org/schema/aop
+  prefix   
+  pkgName  com.intellij.spring.model.xml.aop
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://java.sun.com/xml/ns/persistence
+  name     http://java.sun.com/xml/ns/persistence
+  prefix   
+  pkgName  com.intellij.javaee.model.xml.persistence
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: spring-beans_1.2.8.dtd
+  name     spring-beans_1.2.8.dtd
+  prefix   
+  pkgName  com.intellij.spring.model.xml
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/lang
+  name     http://www.springframework.org/schema/lang
+  prefix   
+  pkgName  com.intellij.spring.model.xml.lang
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/tool
+  name     http://www.springframework.org/schema/tool
+  prefix   
+  pkgName  com.intellij.spring.model.xml.tool
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.w3.org/2001/XMLSchema-instance
+namespace key: http://www.bea.com/ns/weblogic/90
+  name     http://www.bea.com/ns/weblogic/90
+  prefix   
+  pkgName  com.intellij.javaee.weblogic.model
+  pkgNames [weblogic-rdbms20-persistence-90.xsd, com.intellij.javaee.weblogic.model.persistence]
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: http://java.sun.com/xml/ns/persistence/orm
+  name     http://java.sun.com/xml/ns/persistence/orm
+  prefix   
+  pkgName  com.intellij.javaee.model.xml.persistence.mapping
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.javaee.model.JavaeeDomModelElement
+namespace key: hibernate-mapping-3.0.dtd
+  name     hibernate-mapping-3.0.dtd
+  prefix   
+  pkgName  com.intellij.hibernate.model.xml.mapping
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://www.springframework.org/schema/tx
+  name     http://www.springframework.org/schema/tx
+  prefix   
+  pkgName  com.intellij.spring.model.xml.tx
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: hibernate-configuration-3.0.dtd
+  name     hibernate-configuration-3.0.dtd
+  prefix   
+  pkgName  com.intellij.hibernate.model.xml.config
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+namespace key: http://java.sun.com/xml/ns/javaee
+  name     http://java.sun.com/xml/ns/javaee
+  prefix   
+  pkgName  com.intellij.javaee.model.xml
+  pkgNames [javaee_5.xsd, com.intellij.javaee.model.xml, ejb-jar_3_0.xsd, com.intellij.javaee.model.xml.ejb, web-app_2_5.xsd, com.intellij.javaee.model.xml.web, application_5.xsd, com.intellij.javaee.model.xml.application, application-client_5.xsd, com.intellij.javaee.model.xml.client]
+  enumPkg  com.intellij.javaee.model.enums
+  super    JavaeeDomModelElement
+namespace key: 
+  name     
+  prefix   
+  pkgName  
+  pkgNames null
+  enumPkg  null
+  super    com.intellij.util.xml.DomElement
+-- jtMap ---
+type key: com.intellij.spring.model.xml.aop.Advisor
+  name      Advisor
+  type      CLASS
+  xsName    advisorType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: adviceRef
+    name      adviceRef
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       99
+  field key: order
+    name      order
+    clType    4
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       173
+  field key: pointcut
+    name      pointcut
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       89
+  field key: pointcutRef
+    name      pointcutRef
+    clType    4
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       108
+type key: com.intellij.spring.model.xml.aop.AfterReturningAdvice
+  name      AfterReturningAdvice
+  type      CLASS
+  xsName    afterReturningAdviceType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    [com.intellij.spring.model.xml.aop.BasicAdvice]
+  doc       null
+  field key: argNames
+    name      argNames
+    clType    4
+    required  false
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: method
+    name      method
+    clType    4
+    required  true
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       125
+  field key: pointcut
+    name      pointcut
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       102
+  field key: pointcutRef
+    name      pointcutRef
+    clType    4
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       117
+  field key: returning
+    name      returning
+    clType    4
+    required  false
+    index     4/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       145
+type key: com.intellij.spring.model.xml.aop.AfterThrowingAdvice
+  name      AfterThrowingAdvice
+  type      CLASS
+  xsName    afterThrowingAdviceType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    [com.intellij.spring.model.xml.aop.BasicAdvice]
+  doc       null
+  field key: argNames
+    name      argNames
+    clType    4
+    required  false
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: method
+    name      method
+    clType    4
+    required  true
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       125
+  field key: pointcut
+    name      pointcut
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       102
+  field key: pointcutRef
+    name      pointcutRef
+    clType    4
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       117
+  field key: throwing
+    name      throwing
+    clType    4
+    required  false
+    index     4/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       149
+type key: com.intellij.spring.model.xml.aop.Aspect
+  name      Aspect
+  type      CLASS
+  xsName    aspectType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: afterReturnings
+    name      afterReturnings
+    clType    -3
+    required  false
+    index     0/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.AfterReturningAdvice
+    dupIdx    -1
+    elName    afterReturning
+    elType    AfterReturningAdvice
+    def       new ArrayList(0)
+    doc       148
+  field key: afterThrowings
+    name      afterThrowings
+    clType    -3
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.AfterThrowingAdvice
+    dupIdx    -1
+    elName    afterThrowing
+    elType    AfterThrowingAdvice
+    def       new ArrayList(0)
+    doc       146
+  field key: afters
+    name      afters
+    clType    -3
+    required  false
+    index     2/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.BasicAdvice
+    dupIdx    -1
+    elName    after
+    elType    BasicAdvice
+    def       new ArrayList(0)
+    doc       128
+  field key: arounds
+    name      arounds
+    clType    -3
+    required  false
+    index     3/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.BasicAdvice
+    dupIdx    -1
+    elName    around
+    elType    BasicAdvice
+    def       new ArrayList(0)
+    doc       130
+  field key: befores
+    name      befores
+    clType    -3
+    required  false
+    index     4/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.BasicAdvice
+    dupIdx    -1
+    elName    before
+    elType    BasicAdvice
+    def       new ArrayList(0)
+    doc       129
+  field key: declareParentses
+    name      declareParentses
+    clType    -3
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.DeclareParents
+    dupIdx    -1
+    elName    declareParents
+    elType    DeclareParents
+    def       new ArrayList(0)
+    doc       218
+  field key: pointcut
+    name      pointcut
+    clType    3
+    required  false
+    index     6/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Pointcut
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       131
+  field key: ref
+    name      ref
+    clType    4
+    required  false
+    index     7/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       122
+type key: com.intellij.spring.model.xml.aop.AspectjAutoproxy
+  name      AspectjAutoproxy
+  type      CLASS
+  xsName    aspectj-autoproxyElemType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: includes
+    name      includes
+    clType    -3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Include
+    dupIdx    -1
+    elName    include
+    elType    Include
+    def       new ArrayList(0)
+    doc       243
+  field key: proxyTargetClass
+    name      proxyTargetClass
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+type key: com.intellij.spring.model.xml.aop.BasicAdvice
+  name      BasicAdvice
+  type      CLASS
+  xsName    basicAdviceType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: argNames
+    name      argNames
+    clType    4
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: method
+    name      method
+    clType    4
+    required  true
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       125
+  field key: pointcut
+    name      pointcut
+    clType    4
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       102
+  field key: pointcutRef
+    name      pointcutRef
+    clType    4
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       117
+type key: com.intellij.spring.model.xml.aop.Config
+  name      Config
+  type      CLASS
+  xsName    configElemType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: advisors
+    name      advisors
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Advisor
+    dupIdx    -1
+    elName    advisor
+    elType    Advisor
+    def       new ArrayList(0)
+    doc       130
+  field key: aspects
+    name      aspects
+    clType    -3
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Aspect
+    dupIdx    -1
+    elName    aspect
+    elType    Aspect
+    def       new ArrayList(0)
+    doc       128
+  field key: pointcuts
+    name      pointcuts
+    clType    -3
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Pointcut
+    dupIdx    -1
+    elName    pointcut
+    elType    Pointcut
+    def       new ArrayList(0)
+    doc       132
+  field key: proxyTargetClass
+    name      proxyTargetClass
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+type key: com.intellij.spring.model.xml.aop.DeclareParents
+  name      DeclareParents
+  type      CLASS
+  xsName    declareParentsType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: defaultImpl
+    name      defaultImpl
+    clType    4
+    required  true
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       204
+  field key: implementInterface
+    name      implementInterface
+    clType    4
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       145
+  field key: typesMatching
+    name      typesMatching
+    clType    4
+    required  true
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       234
+type key: com.intellij.spring.model.xml.aop.Include
+  name      Include
+  type      CLASS
+  xsName    includeType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: name
+    name      name
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       216
+type key: com.intellij.spring.model.xml.aop.Pointcut
+  name      Pointcut
+  type      CLASS
+  xsName    pointcutType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    []
+  doc       null
+  field key: expression
+    name      expression
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       155
+  field key: type
+    name      type
+    clType    4
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.aop.Type
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       128
+type key: com.intellij.spring.model.xml.aop.Type
+  name      Type
+  type      ENUM
+  xsName    typeAttrType
+  xsNS      http://www.springframework.org/schema/aop
+  dups      false
+  supers    null
+  doc       null
+  field key: aspectj
+    name      ASPECTJ
+  field key: regex
+    name      REGEX
+type key: com.intellij.spring.model.xml.beans.Alias
+  name      Alias
+  type      CLASS
+  xsName    aliasElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: alias
+    name      alias
+    clType    4
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       105
+  field key: name
+    name      name
+    clType    4
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       110
+type key: com.intellij.spring.model.xml.beans.ArgType
+  name      ArgType
+  type      CLASS
+  xsName    arg-typeElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: match
+    name      match
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       386
+  field key: value
+    name      value
+    clType    6
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.beans.Autowire
+  name      Autowire
+  type      ENUM
+  xsName    autowireAttrType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    null
+  doc       null
+  field key: autodetect
+    name      AUTODETECT
+  field key: byName
+    name      BY_NAME
+  field key: byType
+    name      BY_TYPE
+  field key: constructor
+    name      CONSTRUCTOR
+  field key: default
+    name      DEFAULT
+  field key: no
+    name      NO
+type key: com.intellij.spring.model.xml.beans.BaseCollection
+  name      BaseCollection
+  type      CLASS
+  xsName    baseCollectionType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+type key: com.intellij.spring.model.xml.beans.Bean
+  name      Bean
+  type      CLASS
+  xsName    beanElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified, com.intellij.spring.model.xml.beans.BeanElements]
+  doc       null
+  field key: abstract
+    name      abstract
+    clType    4
+    required  false
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       469
+  field key: autowire
+    name      autowire
+    clType    4
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Autowire
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1878
+  field key: autowireCandidate
+    name      autowireCandidate
+    clType    4
+    required  false
+    index     2/13
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       211
+  field key: class
+    name      class
+    clType    4
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       172
+  field key: constructorArgs
+    name      constructorArgs
+    clType    -3
+    required  false
+    index     4/16
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ConstructorArg
+    dupIdx    -1
+    elName    constructorArg
+    elType    ConstructorArg
+    def       new ArrayList(0)
+    doc       642
+  field key: dependencyCheck
+    name      dependencyCheck
+    clType    4
+    required  false
+    index     5/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DependencyCheck
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       557
+  field key: dependsOn
+    name      dependsOn
+    clType    4
+    required  false
+    index     6/8
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       585
+  field key: description
+    name      description
+    clType    1
+    required  false
+    index     7/14
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       254
+  field key: destroyMethod
+    name      destroyMethod
+    clType    4
+    required  false
+    index     8/10
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       384
+  field key: factoryBean
+    name      factoryBean
+    clType    4
+    required  false
+    index     9/12
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       440
+  field key: factoryMethod
+    name      factoryMethod
+    clType    4
+    required  false
+    index     10/11
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       1405
+  field key: initMethod
+    name      initMethod
+    clType    4
+    required  false
+    index     11/9
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       221
+  field key: lazyInit
+    name      lazyInit
+    clType    4
+    required  false
+    index     12/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       405
+  field key: lookupMethods
+    name      lookupMethods
+    clType    -3
+    required  false
+    index     13/18
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.LookupMethod
+    dupIdx    -1
+    elName    lookupMethod
+    elType    LookupMethod
+    def       new ArrayList(0)
+    doc       520
+  field key: metas
+    name      metas
+    clType    -3
+    required  false
+    index     14/15
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Meta
+    dupIdx    -1
+    elName    meta
+    elType    Meta
+    def       new ArrayList(0)
+    doc       148
+  field key: name
+    name      name
+    clType    4
+    required  false
+    index     15/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       250
+  field key: parent
+    name      parent
+    clType    4
+    required  false
+    index     16/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       788
+  field key: properties
+    name      properties
+    clType    -3
+    required  false
+    index     17/17
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Property
+    dupIdx    -1
+    elName    property
+    elType    Property
+    def       new ArrayList(0)
+    doc       357
+  field key: replacedMethods
+    name      replacedMethods
+    clType    -3
+    required  false
+    index     18/19
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ReplacedMethod
+    dupIdx    -1
+    elName    replacedMethod
+    elType    ReplacedMethod
+    def       new ArrayList(0)
+    doc       319
+  field key: scope
+    name      scope
+    clType    4
+    required  false
+    index     19/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       910
+type key: com.intellij.spring.model.xml.beans.BeanElements
+  name      BeanElements
+  type      GROUP_INTERFACE
+  xsName    beanElements
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: constructorArgs
+    name      constructorArgs
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ConstructorArg
+    dupIdx    -1
+    elName    constructorArg
+    elType    ConstructorArg
+    def       new ArrayList(0)
+    doc       642
+  field key: description
+    name      description
+    clType    1
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       254
+  field key: lookupMethods
+    name      lookupMethods
+    clType    -3
+    required  false
+    index     2/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.LookupMethod
+    dupIdx    -1
+    elName    lookupMethod
+    elType    LookupMethod
+    def       new ArrayList(0)
+    doc       520
+  field key: metas
+    name      metas
+    clType    -3
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Meta
+    dupIdx    -1
+    elName    meta
+    elType    Meta
+    def       new ArrayList(0)
+    doc       148
+  field key: properties
+    name      properties
+    clType    -3
+    required  false
+    index     4/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Property
+    dupIdx    -1
+    elName    property
+    elType    Property
+    def       new ArrayList(0)
+    doc       357
+  field key: replacedMethods
+    name      replacedMethods
+    clType    -3
+    required  false
+    index     5/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ReplacedMethod
+    dupIdx    -1
+    elName    replacedMethod
+    elType    ReplacedMethod
+    def       new ArrayList(0)
+    doc       319
+type key: com.intellij.spring.model.xml.beans.Beans
+  name      Beans
+  type      CLASS
+  xsName    beansElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: aliases
+    name      aliases
+    clType    -3
+    required  false
+    index     0/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Alias
+    dupIdx    -1
+    elName    alias
+    elType    Alias
+    def       new ArrayList(0)
+    doc       183
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     1/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: defaultAutowire
+    name      defaultAutowire
+    clType    4
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultAutowire
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       184
+  field key: defaultDependencyCheck
+    name      defaultDependencyCheck
+    clType    4
+    required  false
+    index     3/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultDependencyCheck
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       208
+  field key: defaultDestroyMethod
+    name      defaultDestroyMethod
+    clType    4
+    required  false
+    index     4/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       202
+  field key: defaultInitMethod
+    name      defaultInitMethod
+    clType    4
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       193
+  field key: defaultLazyInit
+    name      defaultLazyInit
+    clType    4
+    required  false
+    index     6/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       187
+  field key: defaultMerge
+    name      defaultMerge
+    clType    4
+    required  false
+    index     7/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: description
+    name      description
+    clType    1
+    required  false
+    index     8/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       254
+  field key: imports
+    name      imports
+    clType    -3
+    required  false
+    index     9/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Import
+    dupIdx    -1
+    elName    import
+    elType    Import
+    def       new ArrayList(0)
+    doc       153
+type key: com.intellij.spring.model.xml.beans.CollectionElements
+  name      CollectionElements
+  type      GROUP_INTERFACE
+  xsName    collectionElements
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     3/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     4/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     5/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     6/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     7/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     8/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581
+type key: com.intellij.spring.model.xml.beans.ConstructorArg
+  name      ConstructorArg
+  type      CLASS
+  xsName    constructor-argElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: bean
+    name      bean
+    clType    3
+    required  true
+    index     0/5
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       357
+  field key: description
+    name      description
+    clType    1
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       254
+  field key: idref
+    name      idref
+    clType    3
+    required  true
+    index     2/7
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       391
+  field key: index
+    name      index
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       218
+  field key: list
+    name      list
+    clType    3
+    required  true
+    index     4/10
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       391
+  field key: map
+    name      map
+    clType    3
+    required  true
+    index     5/12
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       151
+  field key: null
+    name      null
+    clType    1
+    required  true
+    index     6/9
+    choiceOpt false
+    choice    9
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       283
+  field key: props
+    name      props
+    clType    3
+    required  true
+    index     7/13
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       192
+  field key: ref
+    name      ref
+    clType    3
+    required  true
+    index     8/6
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       203
+  field key: refAttr
+    name      refAttr
+    clType    4
+    required  false
+    index     9/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       127
+  field key: set
+    name      set
+    clType    3
+    required  true
+    index     10/11
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       276
+  field key: type
+    name      type
+    clType    4
+    required  false
+    index     11/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       232
+  field key: value
+    name      value
+    clType    3
+    required  true
+    index     12/8
+    choiceOpt false
+    choice    9
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       581
+  field key: valueAttr
+    name      valueAttr
+    clType    4
+    required  false
+    index     13/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       131
+type key: com.intellij.spring.model.xml.beans.DefaultAutowire
+  name      DefaultAutowire
+  type      ENUM
+  xsName    default-autowireAttrType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    null
+  doc       null
+  field key: autodetect
+    name      AUTODETECT
+  field key: byName
+    name      BY_NAME
+  field key: byType
+    name      BY_TYPE
+  field key: constructor
+    name      CONSTRUCTOR
+  field key: no
+    name      NO
+type key: com.intellij.spring.model.xml.beans.DefaultDependencyCheck
+  name      DefaultDependencyCheck
+  type      ENUM
+  xsName    default-dependency-checkAttrType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    null
+  doc       null
+  field key: all
+    name      ALL
+  field key: none
+    name      NONE
+  field key: objects
+    name      OBJECTS
+  field key: simple
+    name      SIMPLE
+type key: com.intellij.spring.model.xml.beans.DefaultableBoolean
+  name      DefaultableBoolean
+  type      ENUM
+  xsName    defaultable-boolean
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    null
+  doc       null
+  field key: default
+    name      DEFAULT
+  field key: false
+    name      FALSE
+  field key: true
+    name      TRUE
+type key: com.intellij.spring.model.xml.beans.DependencyCheck
+  name      DependencyCheck
+  type      ENUM
+  xsName    dependency-checkAttrType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    null
+  doc       null
+  field key: all
+    name      ALL
+  field key: default
+    name      DEFAULT
+  field key: none
+    name      NONE
+  field key: objects
+    name      OBJECTS
+  field key: simple
+    name      SIMPLE
+type key: com.intellij.spring.model.xml.beans.Entry
+  name      Entry
+  type      CLASS
+  xsName    entryType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.CollectionElements]
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: key
+    name      key
+    clType    3
+    required  false
+    index     2/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Key
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       165
+  field key: keyAttr
+    name      keyAttr
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       176
+  field key: keyRef
+    name      keyRef
+    clType    4
+    required  false
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       149
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     5/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     6/12
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     7/9
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     8/13
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     9/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     10/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: value
+    name      value
+    clType    4
+    required  false
+    index     11/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       130
+  field key: valueRef
+    name      valueRef
+    clType    4
+    required  false
+    index     12/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       124
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     13/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581
+type key: com.intellij.spring.model.xml.beans.Identified
+  name      Identified
+  type      CLASS
+  xsName    identifiedType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       199
+type key: com.intellij.spring.model.xml.beans.Idref
+  name      Idref
+  type      CLASS
+  xsName    idrefElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: bean
+    name      bean
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       98
+  field key: local
+    name      local
+    clType    4
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       252
+type key: com.intellij.spring.model.xml.beans.Import
+  name      Import
+  type      CLASS
+  xsName    importElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: resource
+    name      resource
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       222
+type key: com.intellij.spring.model.xml.beans.Key
+  name      Key
+  type      CLASS
+  xsName    keyElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.CollectionElements]
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     3/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     4/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     5/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     6/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     7/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     8/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581
+type key: com.intellij.spring.model.xml.beans.ListOrSet
+  name      ListOrSet
+  type      CLASS
+  xsName    listOrSetType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.TypedCollection, com.intellij.spring.model.xml.beans.CollectionElements]
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     2/7
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     3/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     4/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     5/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     6/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     7/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     8/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     9/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     10/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581
+type key: com.intellij.spring.model.xml.beans.LookupMethod
+  name      LookupMethod
+  type      CLASS
+  xsName    lookup-methodElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: bean
+    name      bean
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       334
+  field key: name
+    name      name
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       132
+type key: com.intellij.spring.model.xml.beans.Map
+  name      Map
+  type      CLASS
+  xsName    mapType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.TypedCollection]
+  doc       null
+  field key: entries
+    name      entries
+    clType    -3
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Entry
+    dupIdx    -1
+    elName    entry
+    elType    Entry
+    def       new ArrayList(0)
+    doc       232
+  field key: keyType
+    name      keyType
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       154
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+type key: com.intellij.spring.model.xml.beans.Meta
+  name      Meta
+  type      CLASS
+  xsName    metaType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: key
+    name      key
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       115
+  field key: value
+    name      value
+    clType    4
+    required  true
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+type key: com.intellij.spring.model.xml.beans.Prop
+  name      Prop
+  type      CLASS
+  xsName    propElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: key
+    name      key
+    clType    4
+    required  true
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       93
+  field key: value
+    name      value
+    clType    6
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.beans.Property
+  name      Property
+  type      CLASS
+  xsName    propertyType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: bean
+    name      bean
+    clType    3
+    required  true
+    index     0/5
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       357
+  field key: description
+    name      description
+    clType    1
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       254
+  field key: idref
+    name      idref
+    clType    3
+    required  true
+    index     2/7
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       391
+  field key: list
+    name      list
+    clType    3
+    required  true
+    index     3/10
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       391
+  field key: map
+    name      map
+    clType    3
+    required  true
+    index     4/12
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       151
+  field key: meta
+    name      meta
+    clType    3
+    required  true
+    index     5/4
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Meta
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       148
+  field key: name
+    name      name
+    clType    4
+    required  true
+    index     6/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       127
+  field key: null
+    name      null
+    clType    1
+    required  true
+    index     7/9
+    choiceOpt false
+    choice    10
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       283
+  field key: props
+    name      props
+    clType    3
+    required  true
+    index     8/13
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       192
+  field key: ref
+    name      ref
+    clType    3
+    required  true
+    index     9/6
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       203
+  field key: refAttr
+    name      refAttr
+    clType    4
+    required  false
+    index     10/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       118
+  field key: set
+    name      set
+    clType    3
+    required  true
+    index     11/11
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       276
+  field key: value
+    name      value
+    clType    3
+    required  true
+    index     12/8
+    choiceOpt false
+    choice    10
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       581
+  field key: valueAttr
+    name      valueAttr
+    clType    4
+    required  false
+    index     13/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       130
+type key: com.intellij.spring.model.xml.beans.Props
+  name      Props
+  type      CLASS
+  xsName    propsType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.BaseCollection]
+  doc       null
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: props
+    name      props
+    clType    -3
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Prop
+    dupIdx    -1
+    elName    prop
+    elType    Prop
+    def       new ArrayList(0)
+    doc       232
+type key: com.intellij.spring.model.xml.beans.Ref
+  name      Ref
+  type      CLASS
+  xsName    refElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: bean
+    name      bean
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       98
+  field key: local
+    name      local
+    clType    4
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       252
+  field key: parent
+    name      parent
+    clType    4
+    required  false
+    index     2/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       121
+type key: com.intellij.spring.model.xml.beans.ReplacedMethod
+  name      ReplacedMethod
+  type      CLASS
+  xsName    replaced-methodElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: argTypes
+    name      argTypes
+    clType    -3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ArgType
+    dupIdx    -1
+    elName    argType
+    elType    ArgType
+    def       new ArrayList(0)
+    doc       184
+  field key: name
+    name      name
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       338
+  field key: replacer
+    name      replacer
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       322
+type key: com.intellij.spring.model.xml.beans.TypedCollection
+  name      TypedCollection
+  type      CLASS
+  xsName    typedCollectionType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.BaseCollection]
+  doc       null
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+type key: com.intellij.spring.model.xml.beans.Value
+  name      Value
+  type      CLASS
+  xsName    valueElemType
+  xsNS      http://www.springframework.org/schema/beans
+  dups      false
+  supers    []
+  doc       null
+  field key: type
+    name      type
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       252
+  field key: value
+    name      value
+    clType    6
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.jee.Ejb
+  name      Ejb
+  type      CLASS
+  xsName    ejbType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    [com.intellij.spring.model.xml.jee.JndiLocated]
+  doc       null
+  field key: businessInterface
+    name      businessInterface
+    clType    4
+    required  true
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       128
+  field key: cacheHome
+    name      cacheHome
+    clType    4
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       144
+  field key: environment
+    name      environment
+    clType    1
+    required  false
+    index     2/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+  field key: jndiName
+    name      jndiName
+    clType    4
+    required  true
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       96
+  field key: lookupHomeOnStartup
+    name      lookupHomeOnStartup
+    clType    4
+    required  false
+    index     4/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       227
+  field key: resourceRef
+    name      resourceRef
+    clType    4
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+type key: com.intellij.spring.model.xml.jee.EntityManagerFactory
+  name      EntityManagerFactory
+  type      CLASS
+  xsName    entityManagerFactoryType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified]
+  doc       null
+  field key: dataSourceRef
+    name      dataSourceRef
+    clType    4
+    required  false
+    index     0/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: generateDdl
+    name      generateDdl
+    clType    4
+    required  false
+    index     1/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: inject
+    name      inject
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: persistenceUnitName
+    name      persistenceUnitName
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: provider
+    name      provider
+    clType    4
+    required  false
+    index     4/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.jee.Provider
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: providerClass
+    name      providerClass
+    clType    4
+    required  false
+    index     5/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: showSql
+    name      showSql
+    clType    4
+    required  false
+    index     6/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: translate
+    name      translate
+    clType    4
+    required  false
+    index     7/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.jee.JndiLocated
+  name      JndiLocated
+  type      CLASS
+  xsName    jndiLocatedType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified]
+  doc       null
+  field key: environment
+    name      environment
+    clType    1
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+  field key: jndiName
+    name      jndiName
+    clType    4
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       96
+  field key: resourceRef
+    name      resourceRef
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+type key: com.intellij.spring.model.xml.jee.JndiLookup
+  name      JndiLookup
+  type      CLASS
+  xsName    jndi-lookupElemType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    [com.intellij.spring.model.xml.jee.JndiLocated]
+  doc       null
+  field key: cache
+    name      cache
+    clType    4
+    required  false
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       159
+  field key: environment
+    name      environment
+    clType    1
+    required  false
+    index     1/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+  field key: expectedType
+    name      expectedType
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       161
+  field key: jndiName
+    name      jndiName
+    clType    4
+    required  true
+    index     3/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       96
+  field key: lookupOnStartup
+    name      lookupOnStartup
+    clType    4
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       203
+  field key: proxyInterface
+    name      proxyInterface
+    clType    4
+    required  false
+    index     5/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       321
+  field key: resourceRef
+    name      resourceRef
+    clType    4
+    required  false
+    index     6/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+type key: com.intellij.spring.model.xml.jee.Provider
+  name      Provider
+  type      ENUM
+  xsName    providerAttrType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    null
+  doc       null
+  field key: hibernate
+    name      HIBERNATE
+  field key: kodo
+    name      KODO
+  field key: toplink
+    name      TOPLINK
+type key: com.intellij.spring.model.xml.jee.RemoteSlsb
+  name      RemoteSlsb
+  type      CLASS
+  xsName    remote-slsbElemType
+  xsNS      http://www.springframework.org/schema/jee
+  dups      false
+  supers    [com.intellij.spring.model.xml.jee.Ejb]
+  doc       null
+  field key: businessInterface
+    name      businessInterface
+    clType    4
+    required  true
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       128
+  field key: cacheHome
+    name      cacheHome
+    clType    4
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       144
+  field key: environment
+    name      environment
+    clType    1
+    required  false
+    index     2/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+  field key: homeInterface
+    name      homeInterface
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       212
+  field key: jndiName
+    name      jndiName
+    clType    4
+    required  true
+    index     4/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       96
+  field key: lookupHomeOnStartup
+    name      lookupHomeOnStartup
+    clType    4
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       227
+  field key: refreshHomeOnConnectFailure
+    name      refreshHomeOnConnectFailure
+    clType    4
+    required  false
+    index     6/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       371
+  field key: resourceRef
+    name      resourceRef
+    clType    4
+    required  false
+    index     7/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       230
+type key: com.intellij.spring.model.xml.lang.DynamicScript
+  name      DynamicScript
+  type      CLASS
+  xsName    dynamicScriptType
+  xsNS      http://www.springframework.org/schema/lang
+  dups      false
+  supers    [com.intellij.spring.model.xml.lang.SimpleScript]
+  doc       null
+  field key: inlineScript
+    name      inlineScript
+    clType    1
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       164
+  field key: properties
+    name      properties
+    clType    -3
+    required  false
+    index     1/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Property
+    dupIdx    -1
+    elName    property
+    elType    Property
+    def       new ArrayList(0)
+    doc       384
+  field key: refreshCheckDelay
+    name      refreshCheckDelay
+    clType    4
+    required  false
+    index     2/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: scriptInterfaces
+    name      scriptInterfaces
+    clType    4
+    required  true
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       168
+  field key: scriptSource
+    name      scriptSource
+    clType    4
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       226
+type key: com.intellij.spring.model.xml.lang.SimpleScript
+  name      SimpleScript
+  type      CLASS
+  xsName    simpleScriptType
+  xsNS      http://www.springframework.org/schema/lang
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified]
+  doc       null
+  field key: inlineScript
+    name      inlineScript
+    clType    1
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       164
+  field key: properties
+    name      properties
+    clType    -3
+    required  false
+    index     1/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Property
+    dupIdx    -1
+    elName    property
+    elType    Property
+    def       new ArrayList(0)
+    doc       384
+  field key: refreshCheckDelay
+    name      refreshCheckDelay
+    clType    4
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       185
+  field key: scriptSource
+    name      scriptSource
+    clType    4
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       226
+type key: com.intellij.spring.model.xml.tool.Annotation
+  name      Annotation
+  type      CLASS
+  xsName    annotationElemType
+  xsNS      http://www.springframework.org/schema/tool
+  dups      false
+  supers    []
+  doc       null
+  field key: assignableTo
+    name      assignableTo
+    clType    3
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tool.TypedParameter
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: expectedType
+    name      expectedType
+    clType    3
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tool.TypedParameter
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: exports
+    name      exports
+    clType    3
+    required  false
+    index     2/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tool.Exports
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: kind
+    name      kind
+    clType    4
+    required  false
+    index     3/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tool.Kind
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.tool.Exports
+  name      Exports
+  type      CLASS
+  xsName    exportsType
+  xsNS      http://www.springframework.org/schema/tool
+  dups      false
+  supers    []
+  doc       171
+  field key: identifier
+    name      identifier
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       207
+  field key: type
+    name      type
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       143
+type key: com.intellij.spring.model.xml.tool.Kind
+  name      Kind
+  type      ENUM
+  xsName    kindAttrType
+  xsNS      http://www.springframework.org/schema/tool
+  dups      false
+  supers    null
+  doc       null
+  field key: direct
+    name      DIRECT
+  field key: ref
+    name      REF
+type key: com.intellij.spring.model.xml.tool.TypedParameter
+  name      TypedParameter
+  type      CLASS
+  xsName    typedParameterType
+  xsNS      http://www.springframework.org/schema/tool
+  dups      false
+  supers    []
+  doc       null
+  field key: type
+    name      type
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.tx.Advice
+  name      Advice
+  type      CLASS
+  xsName    adviceElemType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified]
+  doc       405
+  field key: attributes
+    name      attributes
+    clType    3
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tx.Attributes
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: transactionManager
+    name      transactionManager
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       338
+type key: com.intellij.spring.model.xml.tx.AnnotationDriven
+  name      AnnotationDriven
+  type      CLASS
+  xsName    annotation-drivenElemType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    []
+  doc       459
+  field key: proxyTargetClass
+    name      proxyTargetClass
+    clType    4
+    required  false
+    index     0/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       188
+  field key: transactionManager
+    name      transactionManager
+    clType    4
+    required  false
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       336
+type key: com.intellij.spring.model.xml.tx.Attributes
+  name      Attributes
+  type      CLASS
+  xsName    attributesType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    []
+  doc       null
+  field key: methods
+    name      methods
+    clType    -3
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tx.Method
+    dupIdx    -1
+    elName    method
+    elType    Method
+    def       new ArrayList(0)
+    doc       null
+type key: com.intellij.spring.model.xml.tx.Isolation
+  name      Isolation
+  type      ENUM
+  xsName    isolationAttrType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    null
+  doc       150
+  field key: DEFAULT
+    name      DEFAULT
+  field key: READ_COMMITTED
+    name      READ_COMMITTED
+  field key: READ_UNCOMMITTED
+    name      READ_UNCOMMITTED
+  field key: REPEATABLE_READ
+    name      REPEATABLE_READ
+  field key: SERIALIZABLE
+    name      SERIALIZABLE
+type key: com.intellij.spring.model.xml.tx.Method
+  name      Method
+  type      CLASS
+  xsName    methodElemType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    []
+  doc       null
+  field key: isolation
+    name      isolation
+    clType    4
+    required  false
+    index     0/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tx.Isolation
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: name
+    name      name
+    clType    4
+    required  true
+    index     1/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       314
+  field key: noRollbackFor
+    name      noRollbackFor
+    clType    4
+    required  false
+    index     2/6
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       205
+  field key: propagation
+    name      propagation
+    clType    4
+    required  false
+    index     3/1
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.tx.Propagation
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: readOnly
+    name      readOnly
+    clType    4
+    required  false
+    index     4/4
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       101
+  field key: rollbackFor
+    name      rollbackFor
+    clType    4
+    required  false
+    index     5/5
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       196
+  field key: timeout
+    name      timeout
+    clType    4
+    required  false
+    index     6/3
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       112
+type key: com.intellij.spring.model.xml.tx.Propagation
+  name      Propagation
+  type      ENUM
+  xsName    propagationAttrType
+  xsNS      http://www.springframework.org/schema/tx
+  dups      false
+  supers    null
+  doc       157
+  field key: MANDATORY
+    name      MANDATORY
+  field key: NESTED
+    name      NESTED
+  field key: NEVER
+    name      NEVER
+  field key: NOT_SUPPORTED
+    name      NOT_SUPPORTED
+  field key: REQUIRED
+    name      REQUIRED
+  field key: REQUIRES_NEW
+    name      REQUIRES_NEW
+  field key: SUPPORTS
+    name      SUPPORTS
+type key: com.intellij.spring.model.xml.util.Constant
+  name      Constant
+  type      CLASS
+  xsName    constantElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    []
+  doc       null
+  field key: staticField
+    name      staticField
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.util.List
+  name      List
+  type      CLASS
+  xsName    listElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.ListOrSet, com.intellij.spring.model.xml.beans.CollectionElements]
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: listClass
+    name      listClass
+    clType    4
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     3/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     4/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     5/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     6/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     7/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     8/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     9/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     10/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     11/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581
+type key: com.intellij.spring.model.xml.util.Map
+  name      Map
+  type      CLASS
+  xsName    mapElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Map]
+  doc       null
+  field key: entries
+    name      entries
+    clType    -3
+    required  false
+    index     0/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Entry
+    dupIdx    -1
+    elName    entry
+    elType    Entry
+    def       new ArrayList(0)
+    doc       232
+  field key: keyType
+    name      keyType
+    clType    4
+    required  false
+    index     1/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       154
+  field key: mapClass
+    name      mapClass
+    clType    4
+    required  false
+    index     2/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     3/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+type key: com.intellij.spring.model.xml.util.Properties
+  name      Properties
+  type      CLASS
+  xsName    propertiesElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.Identified]
+  doc       null
+  field key: location
+    name      location
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.util.PropertyPath
+  name      PropertyPath
+  type      CLASS
+  xsName    property-pathElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    []
+  doc       null
+  field key: path
+    name      path
+    clType    4
+    required  true
+    index     0/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+type key: com.intellij.spring.model.xml.util.Set
+  name      Set
+  type      CLASS
+  xsName    setElemType
+  xsNS      http://www.springframework.org/schema/util
+  dups      false
+  supers    [com.intellij.spring.model.xml.beans.ListOrSet, com.intellij.spring.model.xml.beans.CollectionElements]
+  doc       null
+  field key: beans
+    name      beans
+    clType    -3
+    required  false
+    index     0/3
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Bean
+    dupIdx    -1
+    elName    bean
+    elType    Bean
+    def       new ArrayList(0)
+    doc       357
+  field key: idrefs
+    name      idrefs
+    clType    -3
+    required  false
+    index     1/5
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Idref
+    dupIdx    -1
+    elName    idref
+    elType    Idref
+    def       new ArrayList(0)
+    doc       391
+  field key: lists
+    name      lists
+    clType    -3
+    required  false
+    index     2/8
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    list
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       391
+  field key: maps
+    name      maps
+    clType    -3
+    required  false
+    index     3/10
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Map
+    dupIdx    -1
+    elName    map
+    elType    Map
+    def       new ArrayList(0)
+    doc       151
+  field key: merge
+    name      merge
+    clType    4
+    required  false
+    index     4/2
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.DefaultableBoolean
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       135
+  field key: nulls
+    name      nulls
+    clType    -1
+    required  false
+    index     5/7
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    String
+    def       new ArrayList(0)
+    doc       283
+  field key: propses
+    name      propses
+    clType    -3
+    required  false
+    index     6/11
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Props
+    dupIdx    -1
+    elName    props
+    elType    Props
+    def       new ArrayList(0)
+    doc       192
+  field key: refs
+    name      refs
+    clType    -3
+    required  false
+    index     7/4
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Ref
+    dupIdx    -1
+    elName    ref
+    elType    Ref
+    def       new ArrayList(0)
+    doc       203
+  field key: setClass
+    name      setClass
+    clType    4
+    required  false
+    index     8/0
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       null
+  field key: sets
+    name      sets
+    clType    -3
+    required  false
+    index     9/9
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.ListOrSet
+    dupIdx    -1
+    elName    set
+    elType    ListOrSet
+    def       new ArrayList(0)
+    doc       276
+  field key: valueType
+    name      valueType
+    clType    4
+    required  false
+    index     10/1
+    choiceOpt false
+    choice    null
+    content   null
+    dupIdx    -1
+    elName    null
+    elType    null
+    def       null
+    doc       150
+  field key: values
+    name      values
+    clType    -3
+    required  false
+    index     11/6
+    choiceOpt false
+    choice    null
+    content   com.intellij.spring.model.xml.beans.Value
+    dupIdx    -1
+    elName    value
+    elType    Value
+    def       new ArrayList(0)
+    doc       581

@@ -1,0 +1,63 @@
+<constraint-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns="http://jboss.org/xml/ns/javax/validation/mapping">
+  <default-package>com.bean.validation</default-package>
+  <bean class="UserClass" ignore-annotations="false">
+    <field name="name">
+      <constraint annotation="javax.validation.constraints.Size">
+        <message>Message</message>
+        <groups>
+          <value>javax.validation.groups.Default</value>
+        </groups>
+        <element name="min">5</element>
+      </constraint>
+    </field>
+
+    <!--Find usages test-->
+    <field name="findUsagesTest">
+      <valid/>
+    </field>
+
+    <!--Resolve into a field-->
+    <field name="<error>aaa</error>">
+      <constraint annotation="javax.validation.constraints.<error>foo</error>.<error>Foo</error>">
+        <message>Message</message>
+        <groups>
+          <!--Resolve into packages and classes-->
+          <value>javax.validation.groups.<error>bar</error>.<error>Grp</error></value>
+        </groups>
+      </constraint>
+    </field>
+
+    <!--Constraint should be annotation-->
+    <field name="name">
+      <constraint annotation="<error>java.lang.String</error>"/>
+    </field>
+
+    <!--Constraint should be annotated with @Constraint -->
+    <field name="name">
+      <constraint annotation="<error>com.bean.validation.Anno</error>"/>
+    </field>
+
+    <field name="name">
+      <constraint annotation="javax.validation.constraints.Size">
+        <!--Type checker-->
+        <element name="min"><error>a</error></element>
+      </constraint>
+    </field>
+
+    <!--Resolve into a method-->
+    <getter name="<error>zzz</error>">
+      <valid/>
+    </getter>
+
+    <getter name="firstname">
+      <constraint annotation="javax.validation.constraints.Size">
+        <message>Message</message>
+        <groups>
+          <value>javax.validation.groups.Default</value>
+        </groups>
+        <element name="max">10</element>
+      </constraint>
+    </getter>
+  </bean>
+</constraint-mappings>

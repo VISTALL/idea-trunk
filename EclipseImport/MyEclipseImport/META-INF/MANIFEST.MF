@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-Name: MyEclipseImport Plug-in
+Bundle-SymbolicName: com.intellij.eclipse.myeclipse.export; singleton=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: MyEclipseImport.jar
+Bundle-Activator: com.intellij.eclipse.myeclpse.export.MyEclipseImportPlugin
+Bundle-Vendor: Intellij Labs
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.intellij.eclipse.export,
+ org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ com.genuitec.eclipse.core,
+ com.genuitec.eclipse.j2eedt.core
+Eclipse-AutoStart: true

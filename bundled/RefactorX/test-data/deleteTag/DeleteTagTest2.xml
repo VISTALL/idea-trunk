@@ -1,0 +1,6 @@
+<Foo xmlns:pre="someuri">
+    <BAR>
+        <BAZ/>
+        <pre:BAZ/>
+    </BAR>
+</Foo>

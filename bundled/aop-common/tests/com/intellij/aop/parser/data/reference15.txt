@@ -1,0 +1,8 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiPointcutReferenceExpression
+    AopReferenceExpression
+      AopReferenceExpression
+        PsiElement(AOP_IDENTIFIER)('execution')
+      PsiElement(AOP_DOT)('.')
+      PsiErrorElement:Identifier expected
+        <empty list>

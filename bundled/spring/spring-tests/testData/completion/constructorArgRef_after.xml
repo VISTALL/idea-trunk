@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean name="foo" class="java.lang.String">
+  </bean>
+  <bean name="notMatched" class="FooBean">
+  </bean>
+  <bean name="test" class="FooBean">
+    <constructor-arg ref="foo"/>
+  </bean>
+</beans>

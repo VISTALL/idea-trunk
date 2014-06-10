@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping
+  package="pkg">
+  <query name="<error>qname1</error>" />
+  <query name="<error>qname1</error>" />
+  <class name="User" entity-name="user-uu" table="&quot;user&quot;" lazy="true"/>
+  <<error>class</error> name="User" table="&quot;<error>user`</error>" lazy="true"/>
+  <<error>class</error> name="User" table="`User`" lazy="true">
+    <comment>Users may bid for or sell auction items.</comment>
+
+    <query name="_q1">from User</query>
+
+    <id name="<error>id</error>" column="id" unsaved-value="42">
+      <generator class="hilo">
+        <param name="table">test</param>
+        <param name="max_lo"><error>adf</error></param>
+      </generator>
+    </id>
+
+    <natural-id mutable="true">
+      <property name="<error>userName</error>" column="`NAME`"
+                length="10"/>
+    </natural-id>
+
+    <property name="<error>password</error>"
+              not-null="true"
+              length="15"
+              column="`password`"/>
+
+    <property name="<error>email</error>"/>
+
+    <component name="<error>name</error>">
+      <property name="<error>firstName</error>"
+                length="50"
+                not-null="true"/>
+      <property name="<error>initial</error>"
+                column="`<error>initial</error>`"/>
+      <property name="<error>lastName</error>"
+                length="50"
+                not-null="true"/>
+    </component>
+    <bag name="<error>bids</error>"
+         inverse="true"
+         cascade="save-update,lock,<error>foolock</error>">
+      <key column="<error>bidder</error>"/>
+      <one-to-many class="<error>Bid</error>"/>
+    </bag>
+
+    <bag name="<error>auctions</error>"
+         inverse="true"
+         cascade="save-update,lock">
+      <key column="<error>seller</error>"/>
+      <one-to-many class="<error>AuctionItem</error>"/>
+    </bag>
+
+</class>
+</hibernate-mapping>

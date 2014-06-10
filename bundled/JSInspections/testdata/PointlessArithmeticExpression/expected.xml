@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Pointless arithmetic expression</problem_class>
+    <description>y + 0 can be replaced with y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>3</line>
+    <problem_class>Pointless arithmetic expression</problem_class>
+    <description>y * 0 can be replaced with 0 #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>4</line>
+    <problem_class>Pointless arithmetic expression</problem_class>
+    <description>0 + y can be replaced with y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>5</line>
+    <problem_class>Pointless arithmetic expression</problem_class>
+    <description>y - 0 can be replaced with y #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>Pointless arithmetic expression</problem_class>
+    <description>y * 1 can be replaced with y #loc</description>
+  </problem>
+</problems>

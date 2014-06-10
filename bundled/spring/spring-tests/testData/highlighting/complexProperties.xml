@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="another" class="ComplexPropertiesBean"/>
+  <bean id="included" class="ComplexPropertiesBean">
+    <property name="prop.prop.prop" ref="another"/>
+    <property name="prop.<error>unknown</error>" ref="another"/>
+  </bean>
+
+  <bean id="person" class="Person">
+        <property name="name.firstName" value="Irina"></property>
+    <property name="name.lastName" ref="<error>another</error>"></property>
+    <property name="name.address" ref="address"></property>
+   </bean>
+
+  <bean id="address" class="java.lang.String"/>
+</beans>

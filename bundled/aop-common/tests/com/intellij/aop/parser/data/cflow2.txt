@@ -1,0 +1,6 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiControlFlowPointcutExpression
+    PsiElement(AOP_CFLOW)('cflow')
+    PsiElement(AOP_LEFT_PAR)('(')
+    PsiErrorElement:Pointcut expression expected
+      <empty list>

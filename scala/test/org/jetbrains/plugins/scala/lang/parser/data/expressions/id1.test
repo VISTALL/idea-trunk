@@ -1,0 +1,62 @@
+object A extends B {
+  def foo() {
+    a.b.c.d.e  
+  }
+}
+-----
+ScalaFile
+  ScObject
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(object)('object')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('A')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      PsiElement(extends)('extends')
+      PsiWhiteSpace(' ')
+      ClassParents
+        Constructor
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('B')
+      PsiWhiteSpace(' ')
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        ScFunctionDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(def)('def')
+          PsiWhiteSpace(' ')
+          PsiElement(identifier)('foo')
+          Parameters
+            ParametersClause
+              PsiElement(()('(')
+              PsiElement())(')')
+          PsiWhiteSpace(' ')
+          BlockExpression
+            PsiElement({)('{')
+            PsiWhiteSpace('\n    ')
+            ReferenceExpression
+              ReferenceExpression
+                ReferenceExpression
+                  ReferenceExpression
+                    ReferenceExpression
+                      PsiElement(identifier)('a')
+                    PsiElement(.)('.')
+                    PsiElement(identifier)('b')
+                  PsiElement(.)('.')
+                  PsiElement(identifier)('c')
+                PsiElement(.)('.')
+                PsiElement(identifier)('d')
+              PsiElement(.)('.')
+              PsiElement(identifier)('e')
+            PsiWhiteSpace('  \n  ')
+            PsiElement(})('}')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

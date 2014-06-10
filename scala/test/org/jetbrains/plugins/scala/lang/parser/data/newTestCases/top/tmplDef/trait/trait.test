@@ -1,0 +1,61 @@
+trait a[b <: c] extends {val d = 2} with F with G {}
+-----
+ScalaFile
+  ScTrait
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(trait)('trait')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    TypeParameterClause
+      PsiElement([)('[')
+      TypeParameter
+        PsiElement(identifier)('b')
+        PsiWhiteSpace(' ')
+        PsiElement(<:)('<:')
+        PsiWhiteSpace(' ')
+        SimpleTypeElement
+          CodeReferenceElement
+            PsiElement(identifier)('c')
+      PsiElement(])(']')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      PsiElement(extends)('extends')
+      PsiWhiteSpace(' ')
+      EarlyDefinitions
+        PsiElement({)('{')
+        ScPatternDefinition
+          AnnotationsList
+            <empty list>
+          Modifiers
+            <empty list>
+          PsiElement(val)('val')
+          PsiWhiteSpace(' ')
+          ListOfPatterns
+            ReferencePattern
+              PsiElement(identifier)('d')
+          PsiWhiteSpace(' ')
+          PsiElement(=)('=')
+          PsiWhiteSpace(' ')
+          Literal
+            PsiElement(integer)('2')
+        PsiElement(})('}')
+      PsiWhiteSpace(' ')
+      PsiElement(with)('with')
+      PsiWhiteSpace(' ')
+      TraitParents
+        SimpleTypeElement
+          CodeReferenceElement
+            PsiElement(identifier)('F')
+        PsiWhiteSpace(' ')
+        PsiElement(with)('with')
+        PsiWhiteSpace(' ')
+        SimpleTypeElement
+          CodeReferenceElement
+            PsiElement(identifier)('G')
+      PsiWhiteSpace(' ')
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiElement(})('}')

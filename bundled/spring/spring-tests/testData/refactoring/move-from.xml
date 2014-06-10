@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bea<caret>n class="java.lang.String" id="s">
+      <property name="a">
+        <ref bean="x"/>
+      </property>
+      <property name="a">
+        <ref local="x"/>
+      </property>
+      <property name="a">
+        <idref bean="x"/>
+      </property>
+      <property name="a">
+        <idref local="x"/>
+      </property>
+
+    </bean>
+
+  <bean name="x">
+    <property name="a">
+      <ref bean="s"/>
+    </property>
+    <property name="a">
+      <ref local="s"/>
+    </property>
+    <property name="a">
+      <idref bean="s"/>
+    </property>
+    <property name="a">
+      <idref local="s"/>
+    </property>
+  </bean>
+</beans>

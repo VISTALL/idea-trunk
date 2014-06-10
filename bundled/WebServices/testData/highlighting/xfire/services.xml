@@ -1,0 +1,7 @@
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+  <service>
+    <serviceClass>xfire.XFireWs</serviceClass>
+    <implementationClass>xfire.XFireWs</implementationClass>
+    <serviceFactory>org.codehaus.xfire.xmlbeans.XmlBeansServiceFactory</serviceFactory>
+  </service>
+</beans>

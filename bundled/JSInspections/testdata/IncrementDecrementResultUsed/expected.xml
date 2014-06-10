@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Result of increment or decrement used</problem_class>
+    <description>Result of increment or decrement used</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>6</line>
+    <problem_class>Result of increment or decrement used</problem_class>
+    <description>Result of increment or decrement used</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>10</line>
+    <problem_class>Result of increment or decrement used</problem_class>
+    <description>Result of increment or decrement used</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>14</line>
+    <problem_class>Result of increment or decrement used</problem_class>
+    <description>Result of increment or decrement used</description>
+  </problem>
+</problems>

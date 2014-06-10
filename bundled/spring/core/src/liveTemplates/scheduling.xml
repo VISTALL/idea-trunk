@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="spring">
+  <template id="quartz-job-detail" name="intscheduler"
+            value="&lt;bean name=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.scheduling.quartz.JobDetailBean&quot;&gt;&#10;  &lt;property name=&quot;jobClass&quot; value=&quot;$JOB_CLASS$&quot; /&gt;&#10;  &lt;property name=&quot;jobDataAsMap&quot;&gt;&#10;    &lt;map&gt;&#10;      &lt;entry key=&quot;timeout&quot; value=&quot;5&quot; /&gt;&#10;    &lt;/map&gt;&#10;  &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="JOB_CLASS" expression="descendantClassesEnum(&quot;java.lang.Runnable&quot;, &quot;true&quot;, &quot;false&quot;)"
+              defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="quartz-cron-trigger" name="crontrigger"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.scheduling.quartz.CronTriggerBean&quot;&gt;&#10;    &lt;property name=&quot;jobDetail&quot; ref=&quot;$JOB_DETAIL$&quot; /&gt;&#10;    &lt;!-- run every morning at 6 AM --&gt;&#10;    &lt;property name=&quot;cronExpression&quot; value=&quot;0 0 6 * * ?&quot; /&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="JOB_DETAIL" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="quartz-scheduler-factory" name="scedulerfactorybean"
+            value="&lt;bean class=&quot;org.springframework.scheduling.quartz.SchedulerFactoryBean&quot;&gt;&#10;    &lt;property name=&quot;triggers&quot;&gt;&#10;        &lt;list&gt;&#10;            &lt;ref bean=&quot;$TRIGGER_REF$&quot; /&gt;&#10;        &lt;/list&gt;&#10;    &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TRIGGER_REF" expression="" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="quartz-simple-trigger" name="simpletrigger"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.scheduling.quartz.SimpleTriggerBean&quot;&gt;&#10;    &lt;property name=&quot;jobDetail&quot; ref=&quot;$JOB_DETAIL$&quot; /&gt;&#10;    &lt;!-- 10 seconds --&gt;&#10;    &lt;property name=&quot;startDelay&quot; value=&quot;10000&quot; /&gt;&#10;    &lt;!-- repeat every 50 seconds --&gt;&#10;    &lt;property name=&quot;repeatInterval&quot; value=&quot;50000&quot; /&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="JOB_DETAIL" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jdk-scheduled-timer-task" name="jdkscheduledtimertask"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.scheduling.timer.ScheduledTimerTask&quot;&gt;&#10;    &lt;property name=&quot;timerTask&quot; ref=&quot;$TIMER_TASK$&quot; /&gt;&#10;    &#10;    &lt;property name=&quot;delay&quot; value=&quot;$DELAY$&quot; /&gt;&#10;    &lt;property name=&quot;period&quot; value=&quot;$PERIAD$&quot; /&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="false">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="TIMER_TASK" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="DELAY" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="PERIAD" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+
+  <template id="jdk-timer-factory-bean" name="jdktimerfactorybean"
+            value="&lt;bean id=&quot;$BEAN_NAME$&quot; class=&quot;org.springframework.scheduling.timer.TimerFactoryBean&quot;&gt;&#10;    &lt;property name=&quot;scheduledTimerTasks&quot;&gt;&#10;        &lt;list&gt;&#10;            &lt;ref bean=&quot;$TASK_REF$&quot; /&gt;&#10;        &lt;/list&gt;&#10;    &lt;/property&gt;&#10;&lt;/bean&gt;&#10;"
+            description="" toReformat="false" toShortenFQNames="true">
+    <variable name="BEAN_NAME" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <variable name="TASK_REF" expression="complete()" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="JAVA_CODE" value="false"/>
+      <option name="JAVA_COMMENT" value="false"/>
+      <option name="JAVA_STRING" value="false"/>
+      <option name="XML" value="false"/>
+      <option name="HTML" value="false"/>
+      <option name="JSP" value="false"/>
+      <option name="COMPLETION" value="false"/>
+      <option name="OTHER" value="false"/>
+    </context>
+  </template>
+</templateSet>

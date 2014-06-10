@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="DevKit.ModuleSandboxManager">
+    <option name="SANDBOX_NAME" value="" />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <exclude-exploded />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/testSource" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="JDOM" level="project" />
+    <orderEntry type="library" name="Log4J" level="project" />
+    <orderEntry type="module" module-name="util" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/JNIWrap.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Trove4j" level="project" />
+    <orderEntry type="module" module-name="perforce_util" />
+    <orderEntry type="module" module-name="vcs-api" />
+    <orderEntry type="module" module-name="lang-api" />
+    <orderEntry type="module" module-name="vcs-impl" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ACTIVE_VCS_NAME" value="svn" />
+    <option name="USE_PROJECT_VCS" value="false" />
+  </component>
+  <component name="VcsManagerPerModuleConfiguration">
+    <option name="ACTIVE_VCS_NAME" value="" />
+    <option name="USE_PROJECT_VCS" value="true" />
+  </component>
+  <component name="copyright">
+    <option name="body" value="/*&#10; * Copyright (c) $today.year Your Corporation. All Rights Reserved.&#10; */" />
+    <option name="location" value="1" />
+    <option name="remove" value="true" />
+  </component>
+</module>
+

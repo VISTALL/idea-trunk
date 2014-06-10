@@ -1,0 +1,5 @@
+#set($<caret>newName=2)
+${newName}
+
+#set($newName = 3 + $newName)
+$newName

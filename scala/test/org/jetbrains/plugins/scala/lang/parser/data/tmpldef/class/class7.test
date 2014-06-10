@@ -1,0 +1,28 @@
+sealed class A requires Any extends B
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      PsiElement(sealed)('sealed')
+    PsiWhiteSpace(' ')
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('A')
+    PsiWhiteSpace(' ')
+    RequiresBlock
+      PsiElement(requires)('requires')
+      PsiWhiteSpace(' ')
+      SimpleTypeElement
+        CodeReferenceElement
+          PsiElement(identifier)('Any')
+    PsiWhiteSpace(' ')
+    ExtendsBlock
+      PsiElement(extends)('extends')
+      PsiWhiteSpace(' ')
+      ClassParents
+        Constructor
+          SimpleTypeElement
+            CodeReferenceElement
+              PsiElement(identifier)('B')

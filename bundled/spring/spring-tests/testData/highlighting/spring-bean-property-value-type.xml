@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="fooBean2_1" class="FooBean2">
+    <property name="listProperty">
+        <value>foo</value>
+    </property>
+  </bean>
+  <bean id="fooBean3" class="FooBean3">
+    <property name="fooBean">
+        <value type="FooBean">foo</value>
+    </property>
+  </bean>
+  <bean id="fooBean3_1" class="FooBean3">
+    <property name="fooBean">
+        <value type="FooBean2">foo</value>
+    </property>
+  </bean>
+  <bean id="fooBean2" class="FooBean2">
+    <property name="stringProperty">
+        <value type="java.lang.String">foo</value>
+    </property>
+  </bean>
+  <bean id="fooBean2_2" class="FooBean2">
+    <property name="fooBean3">
+        <value type="<error>java.lang.String</error>" >foo</value>
+    </property>
+  </bean>
+
+</beans>

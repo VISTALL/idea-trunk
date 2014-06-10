@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop">
+    <aop:config>
+      <aop:pointcut expression="<error descr="@this pointcut designator isn't supported by Spring">@this</error>(Anno) and <error descr="adviceexecution pointcut designator isn't supported by Spring">adviceexecution</error>()"/>
+      <aop:pointcut expression="!@annotation(Anno)"/>
+    </aop:config>
+</beans>

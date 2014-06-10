@@ -1,0 +1,20 @@
+<serviceGroup>
+  <service name="MyService">
+    <parameter name="ServiceClass" locked="false">axis.Axis2Ws</parameter>
+    <operation name="*">
+      <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+  </service>
+  <service name="MyService2">
+    <operation name="echo">
+      <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+    <parameter name="ServiceClass" locked="false">axis.Axis2Ws2</parameter>
+  </service>
+  <service name="MyService3">
+    <parameter name="ServiceClass" locked="false">axis.Axis2WsQuickFix</parameter>
+    <operation name="*">
+      <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+  </service>
+</serviceGroup>

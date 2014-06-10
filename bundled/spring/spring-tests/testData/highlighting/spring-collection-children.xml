@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <util:set id="x">
+    <value>a</value>
+    <set/>
+    <bean class="java.lang.Object"/>
+    <null/>
+    <idref local="x"/>
+    <props/>
+    <ref local="x"/>
+    <util:map id="zz"/>
+    <util:list id="stringBean"/>
+    <util:set id="zzzset"/>
+    <util:constant static-field="<error descr="Cannot resolve class 'dd'">dd</error>"/>
+    <util:properties location="<error descr="Cannot resolve file 'aop-common-core.iml'">aop-common-core.iml</error>"/>
+  </util:set>
+</beans>

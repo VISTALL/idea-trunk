@@ -1,0 +1,20 @@
+
+#break
+
+#if( $hello )
+Hello $who
+#break
+#end
+
+#foreach($rrr555 in $fooVar)
+$velocityCount
+
+#if( $hello )
+Hello $who
+#break
+#end
+
+$hello ## displays Hello World!
+#end
+
+

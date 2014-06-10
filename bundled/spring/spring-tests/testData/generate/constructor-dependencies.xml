@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="foo" class="Foo" />
+  <bean id="foo2" class="Foo2" />
+  <bean id="foo3" class="Foo3" />
+  <bean id="foo4" class="Foo4" />
+  <bean id="foo5" class="Foo5" />
+
+  <bean id="fooEmptyConstructor" class="FooEmptyConstructor" />
+  <bean id="fooSimpleConstructor" class="FooSimpleConstructor" >
+    <constructor-arg ref = "foo2"/>
+  </bean>
+  <bean id="fooSimpleConstructor2" class="FooSimpleConstructor" >
+    <constructor-arg ref = "foo3"/>
+  </bean>
+
+  <bean id="fooAutowiredConstructor" class="FooAutowiredConstructor" autowire="constructor">
+    <constructor-arg ref = "foo"/>
+    <constructor-arg ref = "foo3"/>
+  </bean>
+</beans>

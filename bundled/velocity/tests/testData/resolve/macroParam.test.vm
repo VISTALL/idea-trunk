@@ -1,0 +1,5 @@
+#macro(mmm $pp)
+$p<caret>p
+#set($pp = 5)
+$pp
+#end

@@ -1,0 +1,35 @@
+<FOO>
+    <BAR x="true">
+        <BAZ/>
+        <BARANGUS>qwer</BARANGUS>
+    </BAR>
+    <BAR x="true" y="false">
+        <BARANGUS>asdf</BARANGUS>
+    </BAR>
+    <BAR x="true" y="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR>
+    <BAR x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR>
+    <BAR x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR>
+    <BAR pre:x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR>
+    <BAR2 x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR2>
+    <BAR2 x="true" z="false"/>
+    <BAR2 x="true" z="false"/>
+    <BAR2 x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </BAR2>
+    <pre:BAR2 x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </pre:BAR2>
+    <pre:BAR2 x="true" z="false">
+        <BARANGUS>QU</BARANGUS>
+    </pre:BAR2>
+</FOO>

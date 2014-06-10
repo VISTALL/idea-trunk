@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="fooBean" class="FooBean"/>
+
+  <bean id="bean" class="FooBeanWithConstructors3" >
+    <constructor-arg value="1"/>
+  </bean>
+
+  <bean id="bean2" class="FooBeanWithConstructors3$BooleanConstructor" >
+    <constructor-arg value="true"/>
+  </bean>
+  <bean id="bean3" class="FooBeanWithConstructors3$ByteConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean4" class="FooBeanWithConstructors3$CharConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean5" class="FooBeanWithConstructors3$DoubleConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean6" class="FooBeanWithConstructors3$FloatConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean7" class="FooBeanWithConstructors3$IntConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean8" class="FooBeanWithConstructors3$LongConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+
+  <bean id="bean9" class="FooBeanWithConstructors3$ShortConstructor" >
+    <constructor-arg value="1"/>
+  </bean>
+
+
+  <bean id="beanWithStringConstructorArg" class="FooBeanWithConstructors3$StringConstructor" >
+    <constructor-arg value="foo"/>
+  </bean>
+
+  <bean id="bean10" class="FooBeanWithConstructors3$StringConstructor" >
+    <constructor-arg value="foo"/>
+  </bean>
+
+  <!-- factory methods-->
+  <bean id="factory" class="FooBeanWithConstructors3">
+     <constructor-arg value="foo"/>
+  </bean>
+
+
+  <bean id="bean3_f" factory-bean="factory" factory-method="getByte" >
+    <constructor-arg value="1"/>
+  </bean>
+
+  <bean id="bean2_f" factory-bean="factory" factory-method="getBoolean" >
+    <constructor-arg value="true"/>
+  </bean>
+
+  <bean id="bean4_f" factory-bean="factory" factory-method="getChar" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean5_f" factory-bean="factory" factory-method="getDouble" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean6_f" factory-bean="factory" factory-method="getFloat" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean7_f" factory-bean="factory" factory-method="getInt" >
+    <constructor-arg value="1"/>
+  </bean>
+  <bean id="bean8_f" factory-bean="factory" factory-method="getLong" >
+    <constructor-arg value="1"/>
+  </bean>
+
+  <bean id="bean9_f" factory-bean="factory" factory-method="getShort">
+    <constructor-arg value="1"/>
+  </bean>
+
+  <bean id="bean10_f" factory-bean="factory" factory-method="getString" >
+    <constructor-arg value="foo"/>
+  </bean>
+
+</beans>

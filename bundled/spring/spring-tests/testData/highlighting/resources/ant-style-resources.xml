@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  <!-- classpath prefix -->
+  <bean id="pc_1" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my1/my11/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/**/foo_*.properties"/>
+  </bean>
+  
+  <bean id="pc_3" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my?/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_4" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my1/my11/<error>**z</error>/<error>foo_too.properties</error>"/>
+  </bean>
+
+  <bean id="pc_5" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my1/my??/???/???_*.properties"/>
+  </bean>
+
+  <bean id="pc_6" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:confi??/???/???1/**/f*"/>
+  </bean>
+
+  <bean id="pc_7" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my1/my11/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_8" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath:configs/my2/**"/>
+  </bean>
+
+  <!-- classpath* prefix -->
+  <bean id="pc_11" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my1/my11/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_12" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/**/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_13" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my?/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_14" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my1/my11/<error>**z</error>/<error>foo_too.properties</error>"/>
+  </bean>
+
+  <bean id="pc_15" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my1/my??/???/???_*.properties"/>
+  </bean>
+
+  <bean id="pc_16" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:confi??/???/???1/**/f*"/>
+  </bean>
+
+  <bean id="pc_17" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my1/my11/foo/foo_*.properties"/>
+  </bean>
+
+  <bean id="pc_18" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+      <property name="location" value="classpath*:configs/my2/**"/>
+  </bean>
+
+</beans>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="foo" class="FooBean"/>
+  <bean id="foo2" class="FooBean"/>
+  <bean id="fooInteger" class="java.lang.Integer">
+    <constructor-arg index="0" value=""/>
+  </bean>
+
+   <bean id="fooBean_1" class="FooBean10">
+      <error><property name="integerClass" /></error>
+    </bean>
+
+    <bean id="fooBean_2" class="FooBean10">
+      <property name="integerClass" <error>ref="fooInteger"</error> <error>value="1"</error> />
+    </bean>
+
+    <bean id="fooBean_3" class="FooBean10">
+      <property name="string" <error>value="1"</error> >
+        <error><bean class="java.lang.String"/></error>
+      </property>
+    </bean>
+    <bean id="fooBean_4" class="FooBean10">
+      <property name="fooBean" <error>ref="foo"</error>>
+        <error><bean class="FooBean"/></error>
+      </property>
+    </bean>
+
+    <bean id="fooBean_6" class="FooBean10">
+      <property name="fooBean" >
+        <description>!!!</description>
+        <ref bean="foo"/>
+      </property>
+    </bean>
+
+    <bean id="fooBean_7" class="FooBean10">
+      <property name="fooBean" >
+        <ref <error>bean="foo"</error> <error>local="foo2"</error>/>
+      </property>
+    </bean>
+
+    <bean id="fooBean_9" class="FooBean10">
+      <property name="<error>xxx</error>" >
+        <list>
+          <set>
+            <ref <error>bean="foo"</error> <error>local="foo2"</error>/>
+          </set>
+        </list>
+      </property>
+    </bean>
+
+    <bean id="fooBean_10" class="FooBean10">
+      <property name="<error>xxx</error>" >
+        <list>
+          <set>
+            <idref <error>bean="foo"</error> <error>local="foo2"</error>/>
+          </set>
+        </list>
+      </property>
+    </bean>
+</beans>

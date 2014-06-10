@@ -1,0 +1,6 @@
+ $refName 
+ $refName() 
+ $refName.prop   
+ $refName.method()xx 
+ $refName.prop.method(). 
+ $refName.method().prop.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Unnecessary label</problem_class>
+    <description>Unnecessary label label</description>
+  </problem>
+</problems>

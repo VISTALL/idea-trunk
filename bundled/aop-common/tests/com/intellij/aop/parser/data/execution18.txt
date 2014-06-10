@@ -1,0 +1,44 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiExecutionExpression
+    PsiElement(AOP_EXECUTION)('execution')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopReferenceHolder
+      AopReferenceExpression
+        PsiElement(AOP_ASTERISK)('*')
+    AopMemberReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          AopReferenceExpression
+            AopReferenceExpression
+              AopReferenceExpression
+                AopReferenceExpression
+                  PsiElement(AOP_IDENTIFIER)('com')
+                PsiElement(AOP_DOT)('.')
+                PsiElement(AOP_IDENTIFIER)('xyz')
+              PsiElement(AOP_DOT)('.')
+              PsiElement(AOP_IDENTIFIER)('within')
+            PsiElement(AOP_DOT)('.')
+            PsiElement(AOP_IDENTIFIER)('service')
+          PsiElement(AOP_DOT)('.')
+          PsiElement(AOP_ASTERISK)('*')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('a')
+        PsiElement(AOP_ASTERISK)('*')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      AopReferenceHolder
+        PsiErrorElement:Method args pattern expected
+          <empty list>
+      PsiElement(AOP_COMMA)(',')
+      AopReferenceHolder
+        AopReferenceExpression
+          PsiElement(AOP_IDENTIFIER)('com')
+        PsiElement(AOP_DOT_DOT)('..')
+        PsiErrorElement:Identifier expected
+          <empty list>
+      PsiElement(AOP_COMMA)(',')
+      AopReferenceHolder
+        PsiErrorElement:Method args pattern expected
+          <empty list>

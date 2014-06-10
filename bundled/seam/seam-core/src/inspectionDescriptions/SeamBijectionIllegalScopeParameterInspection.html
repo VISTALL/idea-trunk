@@ -1,0 +1,25 @@
+<html>
+<body>
+<table><tr><td valign="top" height="150">
+    <font face="verdana" size="-1">
+        This inspection checks for 'scope' parameters in @In and @Out annotations for cases when Seam always uses the scope defined at the component itself:.<br>
+
+        <ul>
+            <li>
+                @In(create=trultaarb dbp;fn
+                e)<br/>
+                When specifying 'create=true', the context variable must belong to a declared Seam component.
+                (else Seam would not know which class to instantiate).<br/>
+                (In other words: When 'create=true' you cannot inject values that are not Seam components.)<br/>
+                Seam always uses the scope defined at the component declaration (the default scope for the component type or the scope defined in @Scope or @Role).<br/>
+            </li>
+            <li>
+                @Out<br/>
+                When @Out is used to outject the value of a declared Seam component, then the scope is always taken from that component.<br/>
+                You can only use @Out(scope=...) when you are not outjecting a Seam component.
+            </li>
+        </ul>
+    </font></td></tr>
+</table>
+</body>
+</html>

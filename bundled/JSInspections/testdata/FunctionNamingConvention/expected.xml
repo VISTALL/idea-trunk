@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>test.js</file>
+    <line>2</line>
+    <problem_class>Function naming convention</problem_class>
+    <description>Function name 'foo' is too short #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>7</line>
+    <problem_class>Function naming convention</problem_class>
+    <description>Function name 'foo1' doesn't match regex '[a-z][A-Za-z]*' #loc</description>
+  </problem>
+  <problem>
+    <file>test.js</file>
+    <line>12</line>
+    <problem_class>Function naming convention</problem_class>
+    <description>Function name 'foofoofoofoofoofoofoofoofoofoofoo' is too long #loc</description>
+  </problem>
+</problems>

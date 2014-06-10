@@ -1,0 +1,4 @@
+directive #set( $a = (4 + 5)/(6 + (8 * $r) - $g))
+interpolation $obj.meth(2,$r, $dd.tt().uu())
+formal interpolation ${obj.meth(2,$r, $dd.gg($ttt.uuu.uu()),"${gg.h($yy.f, $tt.gg)}",  {4:[6..99], "":true})}
+eof

@@ -1,0 +1,19 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiInitializationPointcutExpression
+    PsiElement(AOP_PREINITIALIZATION)('preinitialization')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopModifierList
+      <empty list>
+    AopConstructorReferenceExpression
+      AopReferenceExpression
+        AopReferenceExpression
+          PsiElement(AOP_ASTERISK)('*')
+        PsiElement(AOP_DOT)('.')
+        PsiElement(AOP_IDENTIFIER)('newa')
+      PsiErrorElement:.new expected
+        <empty list>
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopParameterList
+      <empty list>
+    PsiElement(AOP_RIGHT_PAR)(')')
+    PsiElement(AOP_RIGHT_PAR)(')')

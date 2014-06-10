@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="bean" class="PropertyValueBean">
+    <property name="prop">
+      <warning><value>xx</value></warning>
+      <warning><ref bean="other"/></warning>
+    </property>
+  </bean>
+
+  <bean id="other" class="PropertyValueBean"/>
+
+</beans>

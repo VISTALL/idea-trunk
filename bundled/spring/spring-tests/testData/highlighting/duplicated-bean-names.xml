@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:util="http://www.springframework.org/schema/util">
+
+  <bean id="foo" name=" <error>s</error> , s_1; <error>s_2</error>" class="FooBean"/>
+  <bean id="foo2" name=" a_1 <error>s</error> a_2" class="FooBean"/>
+  <bean id="foo3" name=" b_1 <error>s_2</error>" class="FooBean"/>
+
+
+  <alias name="foo" alias="aaa"/>
+  <alias name="foo" alias="<error>alias_1</error>"/>
+  <alias name="foo2" alias="<error>s_2</error>"/>
+  <alias name="foo3" alias="<error>alias_1</error>"/>
+
+  <!-- IDEADEV-14965 -->
+  <bean id="<error>someName</error>" class="FooBean"/>
+
+  <alias name="someName" alias="someAlias"/>
+  <alias name="someAlias" alias="someName1"/>
+  <alias name="someName1" alias="<error>someName</error>"/>
+
+  <bean id="sss" class="FooBean"/>
+  <alias name="sss" alias="sss"/> <!-- it's valid for spring-->
+
+  <!--   IDEADEV-14960 -->
+  <bean id="<error>fff</error>" name="<error>fff</error>, a; aafffaa <error>fff</error> afff fffaa <error>fff</error>" class="FooBean"/>
+  <bean id="<error>fff</error>" class="FooBean"/>
+
+
+  <!-- IDEADEV-14962 -->
+  <bean id="bbb" name="bean1" class="FooBean"/>
+
+  <alias name="bbb" alias="<error>someAlias3</error>"></alias>
+  <alias name="bean1" alias="<error>someAlias3</error>"/>
+
+  <bean id="zzz" name="<error>zzz_name</error>" class="FooBean"/>
+  <alias name="zzz" alias="zzzAlias"></alias>
+  <alias name="zzzAlias" alias="<error>zzz_name</error>"/>
+</beans>

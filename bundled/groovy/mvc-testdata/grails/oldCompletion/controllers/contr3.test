@@ -1,0 +1,9 @@
+class MyController {
+  def foo = {
+    b<caret>
+  }
+}
+-----
+bindData
+boolean
+byte

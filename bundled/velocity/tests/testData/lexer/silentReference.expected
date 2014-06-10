@@ -1,0 +1,10 @@
+TEMPLATE_TEXT (' ')
+$ ('$!')
+identifier ('refName')
+TEMPLATE_TEXT (' 
+ ')
+${ ('$!{')
+identifier ('refName')
+} ('}')
+TEMPLATE_TEXT ('
+')

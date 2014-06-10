@@ -1,0 +1,10 @@
+#macro(mymacro $p1)
+#end
+
+<error descr="Will be considered as macro call, '(' expected">#mymacro</error>
+#mymacro(6)
+#nomacro
+
+<error descr="Will be considered as macro call, '(' expected">#{mymacro}</error>
+#{mymacro} (6)
+#{nomacro}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<idea-plugin version="2">
+
+  <id>com.intellij.beanValidation</id>
+  <name>Bean Validation Support</name>
+
+  <description>Bean Validation (JSR-303) Support</description>
+
+  <category>Web/JavaEE Technologies</category>
+  <version>1.0</version>
+  <vendor logo="/general/ijLogo.png">JetBrains</vendor>  
+
+  <depends>com.intellij.javaee</depends>  
+
+  <application-components>
+    <component>
+      <implementation-class>com.intellij.beanValidation.BeanValidationApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+  <project-components>              
+    <component>
+      <implementation-class>com.intellij.beanValidation.BeanValidationProjectComponent</implementation-class>
+    </component>
+  </project-components>
+
+  <module-components>
+    <component>
+      <implementation-class>com.intellij.beanValidation.jam.BeanValidationJamModel</implementation-class>
+    </component>
+  </module-components>
+  
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+
+    <moduleService serviceInterface="com.intellij.beanValidation.manager.BeanValidationManager"
+                     serviceImplementation="com.intellij.beanValidation.manager.BeanValidationManager"/>
+
+    <annotator language="JAVA" implementationClass="com.intellij.beanValidation.gutter.BeanValidationInjectionsClassAnnotator"/>
+    <annotator language="JAVA" implementationClass="com.intellij.beanValidation.gutter.BeanValidationEventsModelClassAnnotator"/>
+
+    <semContributor implementation="com.intellij.beanValidation.jam.BeanValidationSemContributor"/>
+
+    <dom.fileDescription implementation="com.intellij.beanValidation.BvMappingDomFileDescription"/>
+    <dom.fileDescription implementation="com.intellij.beanValidation.BvConfigDomFileDescription"/>
+
+    <metaDataContributor implementation="com.intellij.beanValidation.jam.meta.BeanValidationMetaDataContributor"/>
+    <psi.referenceContributor implementation="com.intellij.beanValidation.jam.references.BeanValidationJamReferenceContributor" />
+    <referencesSearch implementation="com.intellij.beanValidation.references.BvPrivateMembersSearcher"/>
+
+    <!--<implicitUsageProvider implementation="com.intellij.beanValidation.providers.BeanValidationImplicitUsageProvider"/>-->
+    <!--<gotoSymbolContributor implementation="com.intellij.beanValidation.providers.BeanValidationGotoSymbolProvider"/>-->
+    <iconProvider implementation="com.intellij.beanValidation.providers.BvIconProvider" />
+
+    <toolWindow id="Bean Validation"
+                anchor="right"
+                icon="/resources/icons/beanValidation.png"
+                factoryClass="com.intellij.beanValidation.toolWindow.BVToolWindowFactory"
+                conditionClass="com.intellij.beanValidation.toolWindow.BVToolWindowCondition"/>
+
+    <standardResourceProvider implementation="com.intellij.beanValidation.BeanValidationResourceProvider"/>
+    <!--<xml.schemaProvider implementation="com.intellij.beanValidation.BeanValidationXmlSchemaProvider" />-->
+  </extensions>
+
+  <actions>
+
+  </actions>
+</idea-plugin>

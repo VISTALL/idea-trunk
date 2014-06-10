@@ -1,0 +1,49 @@
+class a{
+  {
+    case f => g
+    case g => f
+  }
+}
+-----
+ScalaFile
+  ScClass
+    AnnotationsList
+      <empty list>
+    Modifiers
+      <empty list>
+    PsiElement(class)('class')
+    PsiWhiteSpace(' ')
+    PsiElement(identifier)('a')
+    ExtendsBlock
+      ScTemplateBody
+        PsiElement({)('{')
+        PsiWhiteSpace('\n  ')
+        BlockExpression
+          PsiElement({)('{')
+          PsiWhiteSpace('\n    ')
+          CaseClauses
+            CaseClause
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              ReferencePattern
+                PsiElement(identifier)('f')
+              PsiWhiteSpace(' ')
+              PsiElement(=>)('=>')
+              PsiWhiteSpace(' ')
+              ReferenceExpression
+                PsiElement(identifier)('g')
+            PsiWhiteSpace('\n    ')
+            CaseClause
+              PsiElement(case)('case')
+              PsiWhiteSpace(' ')
+              ReferencePattern
+                PsiElement(identifier)('g')
+              PsiWhiteSpace(' ')
+              PsiElement(=>)('=>')
+              PsiWhiteSpace(' ')
+              ReferenceExpression
+                PsiElement(identifier)('f')
+          PsiWhiteSpace('\n  ')
+          PsiElement(})('}')
+        PsiWhiteSpace('\n')
+        PsiElement(})('}')

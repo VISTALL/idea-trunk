@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN" "http://java.sun.com/products/javahelp/map_2_0.dtd">
+
+<map version="1.0">
+    <mapID target="refactorX" url="refactoring/refactorX.html"/>
+    <mapID target="refactoring.deleteAttribute" url="refactoring/deleteAttribute.html"/>
+    <mapID target="refactoring.deleteTag" url="refactoring/deleteTag.html"/>
+    <mapID target="refactoring.wrapTag" url="refactoring/wrapTag.html"/>
+    <mapID target="refactoring.wrapTagContents" url="refactoring/wrapTagContents.html"/>
+    <mapID target="refactoring.unwrapTag" url="refactoring/unwrapTag.html"/>
+    <mapID target="refactoring.attributeToTag" url="refactoring/attributeToTag.html"/>
+    <mapID target="refactoring.tagToAttribute" url="refactoring/tagToAttribute.html"/>
+    <mapID target="refactoring.addAttribute" url="refactoring/addAttribute.html"/>
+    <mapID target="refactoring.addSubtag" url="refactoring/addSubtag.html"/>
+    <mapID target="refactoring.moveAttributeIn" url="refactoring/moveAttributeIn.html"/>
+    <mapID target="refactoring.moveAttributeOut" url="refactoring/moveAttributeOut.html"/>
+    <mapID target="refactoring.changeAttributeValue" url="refactoring/changeAttributeValue.html"/>
+    <mapID target="refactoring.convertContentsToAttribute" url="refactoring/convertContentsToAttribute.html"/>
+    <mapID target="refactoring.collapseTag" url="refactoring/collapseTag.html"/>
+    <mapID target="refactoring.expandTag" url="refactoring/expandTag.html"/>
+    <mapID target="refactoring.splitTag" url="refactoring/splitTag.html"/>
+    <mapID target="refactoring.mergeTags" url="refactoring/mergeTags.html"/>
+    <mapID target="folder" url="images/secondary/bookClosedGreen.gif"/>
+    <mapID target="doc" url="images/secondary/list_shadow.gif"/>
+</map>

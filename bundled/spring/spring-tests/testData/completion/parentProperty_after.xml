@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <bean id="parent">
+    <property name="prop" value="xxx"/>
+  </bean>
+
+  <bean id="child" class="BeanWithOneProperty" parent="parent">
+
+  </bean>
+</beans>

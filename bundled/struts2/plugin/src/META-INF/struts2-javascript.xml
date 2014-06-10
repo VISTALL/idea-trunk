@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<idea-plugin version="2">
+
+  <extensions xmlns="com.intellij">
+
+    <!-- inject JavaScript support into Struts UI tags -->
+    <multiHostInjector implementation="com.intellij.struts2.jsp.TaglibJavaScriptInjector"/>
+  </extensions>
+
+</idea-plugin>

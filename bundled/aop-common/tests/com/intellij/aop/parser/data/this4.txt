@@ -1,0 +1,15 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiThisExpression
+    PsiElement(AOP_THIS)('this')
+    PsiElement(AOP_LEFT_PAR)('(')
+    AopReferenceHolder
+      AopParameterizedTypeExpression
+        AopReferenceExpression
+          PsiElement(AOP_IDENTIFIER)('a')
+        AopTypeParameterList
+          PsiElement(AOP_LT)('<')
+          AopReferenceHolder
+            PsiErrorElement:Type name pattern expected
+              <empty list>
+          PsiElement(AOP_GT)('>')
+    PsiElement(AOP_RIGHT_PAR)(')')

@@ -1,0 +1,5 @@
+AopPointcutExpressionFile:a.pointcutExpression
+  PsiMonitorPointcutExpression
+    PsiElement(AOP_LOCK)('lock')
+    PsiElement(AOP_LEFT_PAR)('(')
+    PsiElement(AOP_RIGHT_PAR)(')')
